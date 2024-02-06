@@ -18,6 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefono_paciente = $_POST['telefono_paciente'];
     $mail_pacientes = $_POST['mail_pacientes'];
 
+    //Hashing de la contraseña
+    $contrasena_pacientes_hash = password_hash($contrasena_pacientes, PASSWORD_DEFAULT);
+
     // El usuario existe, procedemos con la inserción en la tabla de consultas
     $sql_insert_paciente = "INSERT INTO pacientes (usuario_pacientes, contrasena_pacientes, nombre_pacientes, apellidos_pacientes, telefono_paciente, mail_pacientes) VALUES
         ('$usuario_pacientes', '$contrasena_pacientes', '$nombre_pacientes', '$apellidos_pacientes', '$telefono_paciente', '$mail_pacientes')";
