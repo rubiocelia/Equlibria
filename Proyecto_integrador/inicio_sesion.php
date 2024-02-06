@@ -47,11 +47,12 @@ mysqli_close($conexion);
 </head>
 
 <body class="inicioSesion">
-    <div class="formInicioSesion">
     <div class="subrayadoFormulario">
         <h3>Iniciar sesión</h3>
     </div>
-        <form method="post" action="" onsubmit="validarFormularioInicio()">
+    <div class="containerForm">
+        <form class="formInicioSesion" method="post" action="" onsubmit="validarFormularioInicio()">
+            <hr>
             <label for="usuario_pacientes">Usuario:</label>
             <input type="text" id="usuario_pacientes" name="usuario_pacientes">
 
@@ -59,11 +60,10 @@ mysqli_close($conexion);
 
             <label for="contrasena_pacientes">Contraseña:</label>
             <input type="text" id="contrasena_pacientes" name="contrasena_pacientes">
-
+            <hr>
             <br><br>
 
             <button type="submit">Acceder a mi cuenta</button>
-
         </form>
     </div>
 </body>

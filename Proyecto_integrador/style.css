@@ -242,33 +242,55 @@ footer {
   font-size: 75px;
 }
 
-label {
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formInicioSesion {
+  width: 60%;
+  border-radius: 15px;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  max-width: 800px;
+}
+
+.formInicioSesion label {
   display: block;
-  margin: 15px 50px;
+  margin-bottom: 5px;
   font-weight: bold;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin: 15px 50px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.formInicioSesion hr {
+  height: 8px;
+  background-color: var(--verde-oscuro);
+  border-radius: 10px;
+  margin: 28px -50px;
+  width: 115%;
+  text-align: center;
 }
 
-button[type="submit"] {
+/* Estilos para los campos de entrada */
+.formInicioSesion input[type="text"] {
   width: 100%;
   padding: 10px;
-  background-color: #b7b9bb; /* Cambia el color del botón según tu preferencia */
-  color: #fff;
+  margin-bottom: 20px;
+  border: 1px solid var(--verde-oscuro);
+  border-radius: 20px;
+}
+
+/* Estilos para el botón de envío */
+.formInicioSesion button[type="submit"] {
+  background-color: #4caf50; /* Color de fondo verde, o el que prefieras */
+  color: white; /* Texto blanco */
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button[type="submit"]:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+  border-radius: 4px;
+  cursor: pointer; /* Cursor en forma de mano para indicar que es clickeable */
+  width: 100%; /* Ocupa el ancho completo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera para dar profundidad */
 }
 
 /*pagino de inicio*/
