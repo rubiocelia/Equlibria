@@ -7,8 +7,6 @@ $conexion = getConexion();
 // Iniciamos sesión
 session_start();
 
-//q te den elena
-
 // Verificamos si se ha enviado un formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtenemos datos del formulario
