@@ -6,7 +6,6 @@ $conexion = getConexion();
 
 // Iniciamos sesión
 session_start();
-//HOLAAAAAAAAAAAA
 
 // Verificamos si se ha enviado un formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
