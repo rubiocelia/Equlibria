@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefono_paciente = $_POST['telefono_paciente'];
     $mail_pacientes = $_POST['mail_pacientes'];
 
-    // El médico existe, procedemos con la inserción en la tabla de consultas
+    // El usuario existe, procedemos con la inserción en la tabla de consultas
     $sql_insert_paciente = "INSERT INTO pacientes (usuario_pacientes, contrasena_pacientes, nombre_pacientes, apellidos_pacientes, telefono_paciente, mail_pacientes) VALUES
-        ('$usuario_pacientes', '$contrasena_pacientes', '$nombre_pacientes', '$telefono_paciente', '$mail_pacientes', '$apellidos_pacientes')";
+        ('$usuario_pacientes', '$contrasena_pacientes', '$nombre_pacientes', '$apellidos_pacientes', '$telefono_paciente', '$mail_pacientes')";
 
     // Ejecutamos la consulta
     if ($conexion->query($sql_insert_paciente) === TRUE) {
