@@ -225,6 +225,9 @@ footer {
 /* inicio de sesion */
 .inicioSesion {
   background-image: url(img/fondoRegistro.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: "Righteous";
 }
 
@@ -272,8 +275,8 @@ footer {
   text-align: center;
 }
 
-/* Estilos para los campos de entrada */
-.formInicioSesion input[type="text"] {
+.formInicioSesion input {
+  font-family: "Chivo", sans-serif;
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -281,16 +284,20 @@ footer {
   border-radius: 20px;
 }
 
-/* Estilos para el botón de envío */
 .formInicioSesion button[type="submit"] {
-  background-color: #4caf50; /* Color de fondo verde, o el que prefieras */
-  color: white; /* Texto blanco */
+  background-color: var(--verde-oscuro);
+  color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer; /* Cursor en forma de mano para indicar que es clickeable */
-  width: 100%; /* Ocupa el ancho completo */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera para dar profundidad */
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.formInicioSesion button[type="submit"]:hover {
+  background-color: var(--contraste-oscuro);
 }
 
 /*pagino de inicio*/

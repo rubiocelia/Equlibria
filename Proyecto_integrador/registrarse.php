@@ -41,13 +41,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
     <script src="validacion.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Crear cuenta-Equilibria</title>
 </head>
 
-<body>
-    <div id="form-crear-cuenta">
-        <h2>Crear cuenta</h2>
-        <form method="post" action="" onsubmit="return validarFormularioCrear()">
+<body class="inicioSesion">
+    <div class="subrayadoFormulario">
+        <h3>Crear cuenta</h3>
+    </div>
+    <div class="containerForm">
+        <form class="formInicioSesion" method="post" action="" onsubmit="return validarFormularioCrear()">
             <label for="nombre_pacientes">Nombre:</label>
             <input type="text" id="nombre_pacientes" name="nombre_pacientes">
 
