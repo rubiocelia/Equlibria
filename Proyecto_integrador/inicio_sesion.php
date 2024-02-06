@@ -48,7 +48,9 @@ mysqli_close($conexion);
 
 <body class="inicioSesion">
     <div class="formInicioSesion">
-        <h2>Iniciar sesión</h2>
+    <div class="subrayadoFormulario">
+        <h3>Iniciar sesión</h3>
+    </div>
         <form method="post" action="" onsubmit="validarFormularioInicio()">
             <label for="usuario_pacientes">Usuario:</label>
             <input type="text" id="usuario_pacientes" name="usuario_pacientes">
