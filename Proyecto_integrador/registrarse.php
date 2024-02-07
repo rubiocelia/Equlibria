@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Preparar la sentencia
     if ($stmt = $conexion->prepare($sql_insert_paciente)) {
         // Vinculamos los parámetros a la sentencia preparada
-        $stmt->bind_param("******", $usuario_pacientes, $contrasena_pacientes_hash, $nombre_pacientes, $apellidos_pacientes, $telefono_paciente, $mail_pacientes);
+        $stmt->bind_param("ssssis", $usuario_pacientes, $contrasena_pacientes_hash, $nombre_pacientes, $apellidos_pacientes, $telefono_paciente, $mail_pacientes);
 
         // Ejecutamos la sentencia preparada
         if ($stmt->execute()) {
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="validacion.js"></script>
+    <script src="validacion_registrar.js"></script>
     <title>Crear cuenta - Equilibria</title>
 </head>
 <body class="inicioSesion">
@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h3>Crear cuenta</h3>
     </div>
     <div class="containerForm">
-        <form class="formInicioSesion" method="post" action="" onsubmit="return validarFormularioCrear()">
+        <form class="formInicioSesion" method="post" action="">
             <div class="form-row">
                 <div class="form-column">
                     <label for="nombre_pacientes">Nombre:</label>
