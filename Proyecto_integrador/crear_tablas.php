@@ -28,7 +28,7 @@ $sql_pacientes = "CREATE TABLE IF NOT EXISTS pacientes (
     apellidos_pacientes VARCHAR(255) NOT NULL,
     contrasena_pacientes VARCHAR(255) NOT NULL,
     telefono_paciente VARCHAR(255) NOT NULL,
-    mail_pacientes VARCHAR(255) NOT NULL,
+    mail_pacientes VARCHAR(255) NULL,
     genero VARCHAR(10) NOT NULL,
     fecha_nacimiento DATE NOT NULL
 )";
@@ -44,7 +44,7 @@ $sql_profesionales = "CREATE TABLE IF NOT EXISTS profesionales (
 
 $sql_talleres = "CREATE TABLE IF NOT EXISTS talleres (
     id_talleres INT AUTO_INCREMENT PRIMARY KEY,
-    pacientes_apuntados VARCHAR(255) NOT NULL,
+    pacientes_apuntados VARCHAR(255) NULL,
     nombre_talleres VARCHAR(255) NOT NULL,
     descripcion_talleres TEXT,
     precio_talleres VARCHAR(10) NOT NULL,
@@ -54,7 +54,7 @@ $sql_talleres = "CREATE TABLE IF NOT EXISTS talleres (
 
 $sql_cursos = "CREATE TABLE IF NOT EXISTS cursos (
     id_cursos INT AUTO_INCREMENT PRIMARY KEY,
-    pacientes_apuntados VARCHAR(255) NOT NULL,
+    pacientes_apuntados VARCHAR(255) NULL,
     nombre_cursos VARCHAR(255) NOT NULL,
     descripcion_cursos TEXT,
     precio_cursos VARCHAR(10) NOT NULL,
@@ -64,7 +64,7 @@ $sql_cursos = "CREATE TABLE IF NOT EXISTS cursos (
 
 $sql_retiros = "CREATE TABLE IF NOT EXISTS retiros (
     id_retiros INT AUTO_INCREMENT PRIMARY KEY,
-    pacientes_apuntados VARCHAR(255) NOT NULL,
+    pacientes_apuntados VARCHAR(255)  NULL,
     nombre_retiros VARCHAR(255) NOT NULL,
     descripcion_retiros TEXT,
     precio_retiros VARCHAR(10) NOT NULL,
@@ -74,8 +74,8 @@ $sql_retiros = "CREATE TABLE IF NOT EXISTS retiros (
 
 $sql_cita_psicologica = "CREATE TABLE IF NOT EXISTS cita_psicologica (
     id_cita_psicologica INT AUTO_INCREMENT PRIMARY KEY,
-    fechas_cita DATE NOT NULL,
-    hora_cita VARCHAR(255) NOT NULL,
+    fechas_cita DATE NULL,
+    hora_cita VARCHAR(255)  NULL,
     id_pacientes INT NOT NULL,
     id_profesionales INT NOT NULL,
     FOREIGN KEY (id_pacientes) REFERENCES pacientes(id_pacientes),
@@ -167,10 +167,10 @@ if ($conexion->query($sql_reserva_retiros) === TRUE) {
 $sql_insert_profesionales = "INSERT INTO profesionales (nombre_profesionales, apellidos_profesionales, telefono_profesionales, especialidad) VALUES
     ('Mara', 'Sánchez Moreno', '689321579', 'Psicólogo'),
     ('Sofía', 'Sepúlveda Rivera', '648931586','Asistente de personas mayores'),
-    ('Martín', 'Cañadas Carriedo', '6078203648', 'Asistente de personas mayores'),
+    ('Martín', 'Cañadas Carriedo', '647553056', 'Asistente de personas mayores'),
     ('Fernando', 'Rodríguez Bellido', '689321579', 'Asistente de niños'),
     ('Ana', 'Gómez Rodríguez', ' 648931586','Psicóloga'),
-    ('Beatriz', 'Rodrigo Marquínez', '6078203648', 'Asistente de niños')";
+    ('Beatriz', 'Rodrigo Marquínez', '647553057', 'Asistente de niños')";
 
 $sql_insert_pacientes = "INSERT INTO pacientes (DNI, nombre_pacientes, apellidos_pacientes, telefono_paciente, genero, fecha_nacimiento, usuario_pacientes, contrasena_pacientes) VALUES
     ('45735844S', 'Laura', 'Escanes Villar', '623456789', 'F', '1995-04-05', 'lauraescanes', 'Laura95'),

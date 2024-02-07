@@ -2,7 +2,7 @@
 function getConexion() {
     $host = "localhost";
     $usuario = "root";
-    $contrasena = "";
+    $contrasena = "rootroot";
 
     // Realizamos la conexión a MySQL server
     $conexion = new mysqli($host, $usuario, $contrasena);
@@ -17,7 +17,11 @@ function getConexion() {
         // Conectamos con la BBDD
         $conexion->select_db("Equilibria");
     } else {
-        die("La base de datos 'Equilibria' no existe.");
+        if (!$conexion->query("CREATE DATABASE Equilibria")) {
+            die("Error al crear la base de datos: " . $conexion->error);
+        }
+        //agrega la conexión a la base de datos
+        $conexion->select_db("Equilibria");
     }
     return $conexion;
 }
