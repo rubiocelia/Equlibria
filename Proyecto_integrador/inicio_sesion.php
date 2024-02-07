@@ -43,6 +43,7 @@ mysqli_close($conexion);
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="validacion.js"></script>
     <title>Inicio sesión-Equilibria</title>
 </head>
 
