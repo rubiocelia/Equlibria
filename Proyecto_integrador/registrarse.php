@@ -51,36 +51,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <div class="containerForm">
         <form class="formInicioSesion" method="post" action="" onsubmit="return validarFormularioCrear()">
-            <label for="nombre_pacientes">Nombre:</label>
-            <input type="text" id="nombre_pacientes" name="nombre_pacientes">
-
-            <br><br>
-
-            <label for="apellidos_pacientes">Apellidos:</label>
-            <input type="text" id="apellidos_pacientes" name="apellidos_pacientes">
-
-            <br><br>
-
-            <label for="telefono_paciente">Número de Teléfono:</label>
-            <input type="tel" id="telefono_paciente" name="telefono_paciente">
-
-            <br><br>
-
-            <label for="mail_pacientes">Correo Electrónico:</label>
-            <input type="email" id="mail_pacientes" name="mail_pacientes">
-
-            <br><br>
-
-            <label for="usuario_pacientes">Nombre de Usuario:</label>
-            <input type="text" id="usuario_pacientes" name="usuario_pacientes">
-
-            <br><br>
-
-            <label for="contrasena_pacientes">Contraseña:</label>
-            <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
-
-            <br><br>
-
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="nombre_pacientes">Nombre:</label>
+                    <input type="text" id="nombre_pacientes" name="nombre_pacientes">
+                </div>
+                <div class="form-column">
+                    <label for="apellidos_pacientes">Apellidos:</label>
+                    <input type="text" id="apellidos_pacientes" name="apellidos_pacientes">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="telefono_paciente">Número de Teléfono:</label>
+                    <input type="tel" id="telefono_paciente" name="telefono_paciente">
+                </div>
+                <div class="form-column">
+                    <label for="mail_pacientes">Correo Electrónico:</label>
+                    <input type="email" id="mail_pacientes" name="mail_pacientes">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="usuario_pacientes">Nombre de Usuario:</label>
+                    <input type="text" id="usuario_pacientes" name="usuario_pacientes">
+                </div>
+                <div class="form-column">
+                    <label for="contrasena_pacientes">Contraseña:</label>
+                    <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
+                </div>
+            </div>
+            
             <button type="submit">Crear cuenta</button>
         </form>
     </div>
