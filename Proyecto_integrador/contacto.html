@@ -10,33 +10,33 @@
 </head>
 
 <body class="inicioSesion">
-    <div id="form-contactanos">
-        <h2>Contáctanos</h2>
-        <form method="post" action="" onsubmit="return validarFormularioContacto()">
-            <label for="nombreContacto">Nombre:</label>
-            <input type="text" id="nombreContacto" name="nombreContacto">
-
-            <br><br>
-
-            <label for="apellidosContacto">Apellidos:</label>
-            <input type="text" id="apellidosContacto" name="apellidosContacto">
-
-            <br><br>
-
-            <label for="mailContacto">E-mail:</label>
-            <input type="email" id="mailContacto" name="mailContacto">
-
-            <br><br>
-
-            <label for="cuentanos">Cuéntanos tu problema:</label>
-            <br><br>
-            <textarea name="cuentanos" id="cuentanos"></textarea>
-
-            <br><br>
-
-            <button type="submit">Enviar tu información</button>
-        </form>
+    <div class="subrayadoFormulario">
+        <h3>Contáctanos</h3>
     </div>
+    <form class="formInicioSesion" method="post" action="" onsubmit="return validarFormularioContacto()">
+        <label for="nombreContacto">Nombre:</label>
+        <input type="text" id="nombreContacto" name="nombreContacto">
+
+        <br><br>
+
+        <label for="apellidosContacto">Apellidos:</label>
+        <input type="text" id="apellidosContacto" name="apellidosContacto">
+
+        <br><br>
+
+        <label for="mailContacto">E-mail:</label>
+        <input type="email" id="mailContacto" name="mailContacto">
+
+        <br><br>
+
+        <label for="cuentanos">Cuéntanos tu problema:</label>
+        <br><br>
+        <textarea name="cuentanos" id="cuentanos"></textarea>
+
+        <br><br>
+
+        <button type="submit">Enviar tu información</button>
+    </form>
 </body>
 
 </html>

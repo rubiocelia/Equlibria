@@ -280,6 +280,14 @@ footer {
   border-radius: 20px;
 }
 
+.formInicioSesion textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--verde-oscuro);
+  border-radius: 20px;
+}
+
 .formInicioSesion button[type="submit"] {
   background-color: var(--verde-oscuro);
   color: white;
