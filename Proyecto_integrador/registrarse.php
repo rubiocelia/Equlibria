@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="nombre_pacientes">Nombre:</label>
                     <input type="text" id="nombre_pacientes" name="nombre_pacientes">
                 </div>
-                <div class="form-column">
+                <div class="form-column">                      
                     <label for="apellidos_pacientes">Apellidos:</label>
                     <input type="text" id="apellidos_pacientes" name="apellidos_pacientes">
                 </div>
