@@ -43,13 +43,17 @@ mysqli_close($conexion);
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="validacion.js"></script>
     <title>Inicio sesión-Equilibria</title>
 </head>
 
 <body class="inicioSesion">
-    <div class="formInicioSesion">
-        <h2>Iniciar sesión</h2>
-        <form method="post" action="" onsubmit="validarFormularioInicio()">
+    <div class="subrayadoFormulario">
+        <h3>Iniciar sesión</h3>
+    </div>
+    <div class="containerForm">
+        <form class="formInicioSesion" method="post" action="" onsubmit="validarFormularioInicio()">
+            <hr>
             <label for="usuario_pacientes">Usuario:</label>
             <input type="text" id="usuario_pacientes" name="usuario_pacientes">
 
@@ -57,11 +61,10 @@ mysqli_close($conexion);
 
             <label for="contrasena_pacientes">Contraseña:</label>
             <input type="text" id="contrasena_pacientes" name="contrasena_pacientes">
-
+            <hr>
             <br><br>
 
             <button type="submit">Acceder a mi cuenta</button>
-
         </form>
     </div>
 </body>

@@ -223,63 +223,103 @@ footer {
   }
 }
 /* inicio de sesion */
-/* Establecer estilos generales para el cuerpo de la página */
-body.inicioSesion {
-  font-family: "Righteous", cursive;
-  background-color: #f0f0f0;
+.inicioSesion {
+  background-image: url(img/fondoRegistro.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Righteous";
+}
+
+.subrayadoFormulario {
+  background-color: var(--contraste-claro);
+  height: 15px;
+  font-size: 24px;
+  width: 500px;
+  text-align: center;
+  margin: 100px auto;
+}
+
+.subrayadoFormulario h3 {
+  transform: translate(0px, -65px);
+  font-size: 75px;
+}
+
+.containerForm {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
-/* Estilos para el formulario de inicio de sesión */
 .formInicioSesion {
-  background-color: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+  width: 60%;
+  border-radius: 15px;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  max-width: 800px;
+  font-family: "Chivo", sans-serif;
 }
 
-.formInicioSesion h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Estilizar las etiquetas de los campos del formulario */
 .formInicioSesion label {
   display: block;
   margin-bottom: 5px;
-  color: #333;
+  font-weight: bold;
 }
 
-/* Mejorar la apariencia de los campos de entrada */
-.formInicioSesion input[type="text"] {
+.formInicioSesion hr {
+  height: 8px;
+  background-color: var(--verde-oscuro);
+  border-radius: 10px;
+  margin: 28px -50px;
+  width: 115%;
+  text-align: center;
+}
+
+.formInicioSesion input {
+  font-family: "Chivo", sans-serif;
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
+  border: 1px solid var(--verde-oscuro);
+  border-radius: 20px;
 }
 
-/* Estilos para el botón de envío */
-.formInicioSesion button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+.formInicioSesion button[type="submit"] {
+  background-color: var(--verde-oscuro);
   color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
+  width: 60%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  display: block;
+  margin: 20px auto;
 }
 
-.formInicioSesion button:hover {
-  background-color: #0056b3;
+.formInicioSesion button[type="submit"]:hover {
+  background-color: var(--contraste-oscuro);
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form-column:last-child {
+  margin-right: 0;
+}
+
+.formInicioSesion input {
+  width: 100%; /* Asegura que el input ocupe toda la columna */
 }
 
 /*pagino de inicio*/
