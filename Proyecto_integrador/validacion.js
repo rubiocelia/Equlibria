@@ -1,30 +1,3 @@
-function validarFormularioInicio() {
-  var usuarioInicio = document.getElementById("usuarioInicio");
-  var contrasenaInicio = document.getElementById("contrasenaInicio");
-
-  var usuarioInicioPattern = /^[a-zA-Z]+$/; // Expresión regular para letras
-
-  if (usuarioInicio.value.trim() === "") {
-    alert("Rellene el campo de usuario.");
-    return false; // Evitamos el envío del formulario si hay errores
-  } else if (!usuarioInicioPattern.test(usuarioInicio.value)) {
-    alert("Solo se permiten letras en el usuario.");
-    return false;
-  }
-
-  if (contrasenaInicio.value.trim() === "") {
-    alert("Rellene el campo de contraseña.");
-    return false; // Evitamos el envío del formulario si hay errores
-  } else if (contrasenaInicio.length > 20) {
-    alert("El campo de contraseña no puede superar los 20 caracteres.");
-    return false;
-  }
-  alert("Usuario correcto.");
-  return true; // Envíamos el formulario si no hay errores
-}
-
-
-
 function validarFormularioContacto() {
   var nombreContacto = document.getElementById("nombreContacto");
   var apellidosContacto = document.getElementById("apellidosContacto");

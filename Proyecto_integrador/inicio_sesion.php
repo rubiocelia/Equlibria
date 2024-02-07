@@ -21,12 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pacientes = $resultado->fetch_assoc();
         $_SESSION["pacientes"] = $pacientes;
 
-        // Redirigimos a la página de inicio de sesión exitosa
-        header("Location: inicio_sesion.php");
+        // Redirigimos a la página de inicio
+        header("Location: index.html");
         exit();
     } else {
-        // Inicio de sesión fallido, mostramos un mensaje de error
-        echo "Error 333. El usuario o la contraseña introducida no es correcta, por favor introduzca de nuevo los datos.";
+        echo "<script>validarFormularioInicio();</script>";
     }
 }
 
@@ -43,7 +42,7 @@ mysqli_close($conexion);
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="validacion.js"></script>
+    <script src="validar_inicioSesion.js"></script>
     <title>Inicio sesión-Equilibria</title>
 </head>
 
@@ -56,11 +55,18 @@ mysqli_close($conexion);
             <hr>
             <label for="usuario_pacientes">Usuario:</label>
             <input type="text" id="usuario_pacientes" name="usuario_pacientes">
+            <span id="errorUsuario" class="error-mensaje"></span>
 
             <br><br>
 
             <label for="contrasena_pacientes">Contraseña:</label>
-            <input type="text" id="contrasena_pacientes" name="contrasena_pacientes">
+            <div class="input-container">
+                <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
+                <span onclick="togglePasswordVisibility()">
+                    <i class="eye-icon">🙉</i>
+                </span>
+            </div>
+            <span id="errorContrasena" class="error-mensaje"></span>
             <hr>
             <br><br>
 
