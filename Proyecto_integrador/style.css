@@ -217,28 +217,100 @@ footer {
     justify-content: center;
   }
 }
-/* inicio de sesion */
-.inicioSesion {
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s .9s;
+  --transform: translateY(-100vh);
+  --transition: transform .8s;
+}
+
+.modal--show{
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity .6s;
+  --transform: translateY(0);
+  --transition: transform .8s .8s;
+}
+
+.modal__container{
+  margin: auto;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90%;
+  border-radius: 10px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  /* place-items: center; */
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition:var(--transition);
   background-image: url(img/fondoRegistro.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  font-family: "Chivo", sans-serif;
+  font-family: "Righteous";
 }
 
+@media (max-width:800px) {
+
+  .modal__container{
+      padding: 2em 1.5em;
+  }
+
+  .modal__title{
+      font-size: 2rem;
+  }
+}
+
+/* Estilo base para ambos botones */
+.iniciarSesion,
+.registro {
+display: inline-block;
+text-align: center;
+margin-left: 8px;
+border-radius: 10px;
+border: 2px solid var(--verde-oscuro);
+transition: background-color 0.3s, color 0.3s;
+cursor: pointer;
+text-decoration: none;
+}
+
+/* Estilo para el botón "Iniciar Sesión" */
+.iniciarSesion {
+color: black;
+}
+
+/* Estilo para el botón "Registro" */
+.registro {
+background-color: var(--verde-oscuro);
+color: black;
+}
+
+.iniciarSesion:hover,
+.registro:hover {
+background-color: var(--verde-claro);
+}
 .subrayadoFormulario {
   background-color: var(--contraste-claro);
   height: 15px;
-  font-size: 24px;
-  width: 500px;
+  font-size: 30px;
+  width: 425px;
   text-align: center;
-  margin: 100px auto;
+  margin: 30px auto;
 }
 
 .subrayadoFormulario h3 {
-  transform: translate(0px, -65px);
-  font-size: 75px;
-  font-family: "Righteous";
+  transform: translate(0px, -45px);
+  font-size: 60px;
 }
 
 .containerForm {
@@ -248,11 +320,13 @@ footer {
 }
 
 .formInicioSesion {
-  width: 30%;
+  width: 60%;
   border-radius: 15px;
+  padding: 0px;
   margin: auto;
   position: relative;
   max-width: 800px;
+  font-family: "Chivo", sans-serif;
 }
 
 .formInicioSesion label {
@@ -265,23 +339,15 @@ footer {
   height: 8px;
   background-color: var(--verde-oscuro);
   border-radius: 10px;
-  margin: 18px -50px;
-  width: 115%;
+  margin: 28px -50px;
+  width: 125%;
   text-align: center;
-  border-style: none;
 }
 
 .formInicioSesion input {
+  font-family: "Chivo", sans-serif;
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid var(--verde-oscuro);
-  border-radius: 20px;
-}
-
-.formInicioSesion textarea {
-  width: 100%;
-  padding: 15px;
   margin-bottom: 20px;
   border: 1px solid var(--verde-oscuro);
   border-radius: 20px;
@@ -294,11 +360,11 @@ footer {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  width: 70%;
+  width: 60%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.5s ease, color 0.5s ease;
   display: block;
-  margin: 10px auto;
+  margin: 20px auto;
 }
 
 .formInicioSesion button[type="submit"]:hover {
@@ -323,7 +389,15 @@ footer {
 .formInicioSesion input {
   width: 100%; /* Asegura que el input ocupe toda la columna */
 }
-
+.formInicioSesion p {
+  text-align: center;
+  margin-top: -25px;
+  text-decoration: none;
+}
+.formInicioSesion a {
+  text-decoration: none;
+  color: var(--verde-oscuro);
+}
 .error-mensaje {
   color: red;
   display: none;
