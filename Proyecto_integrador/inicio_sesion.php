@@ -25,7 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: index.html");
         exit();
     } else {
-        echo "<script>validarFormularioInicio();</script>";
+        echo "<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            validarFormularioInicio();
+        });
+      </script>";
     }
 }
 
@@ -46,7 +50,7 @@ mysqli_close($conexion);
     <title>Inicio sesión-Equilibria</title>
 </head>
 
-<body class="inicioSesion">
+<body>
     <div class="subrayadoFormulario">
         <h3>Iniciar sesión</h3>
     </div>
