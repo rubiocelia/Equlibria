@@ -86,3 +86,18 @@ function togglePasswordVisibility() {
     eyeIcon.textContent = "🙉"; // Cambia al ícono de ojo abierto
   }
 }
+
+//ventana modal
+const openModal = document.querySelector('.iniciarSesion');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.modal__close');
+
+openModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.add('modal--show');
+});
+
+closeModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.remove('modal--show');
+});
