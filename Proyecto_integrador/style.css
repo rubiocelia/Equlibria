@@ -589,3 +589,12 @@ p {
 .card-link button:hover {
   background-color: var(--contraste-claro);
 }
+
+/* contacto */
+.contacto {
+  background-image: url(img/fondo_quienes_somos.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Chivo", sans-serif;
+}
