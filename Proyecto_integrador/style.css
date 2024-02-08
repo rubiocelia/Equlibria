@@ -398,6 +398,37 @@ footer {
     text-decoration: none;
     color: var(--verde-oscuro);
   }
+
+  .google-signin {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0.5rem 0;
+    border-radius: 1.5rem;
+    color: var(--verde-oscuro);
+    margin-left: 140px;
+    cursor: pointer;
+  }
+    .google-signin {
+      border: 2px solid var(--verde-oscuro);
+    }
+    .google-signin object {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    .google-signin:hover{
+      color: white;
+      background: var(--verde-oscuro);
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    a{
+      text-decoration: none;
+    }
+    
 .error-mensaje {
   color: red;
   display: none;
