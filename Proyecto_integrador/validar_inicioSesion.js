@@ -10,20 +10,36 @@ function validarFormularioInicio() {
   errorContrasena.style.display = "none";
   contrasenaInicio.classList.remove("input-error");
 
-  // Verificación inicial del formulario
+  var valid = true; // Suponemos que el formulario es válido al inicio
+
+  // Verifica si el campo de usuario está vacío
   if (usuarioInicio.value.trim() === "") {
-    errorUsuario.textContent = "El campo de usuario es obligatorio.";
+    errorUsuario.textContent = "Rellene el campo de usuario.";
     errorUsuario.style.display = "block";
     usuarioInicio.classList.add("input-error");
-    return false; // Detiene la ejecución aquí si el usuario no rellenó este campo
+    valid = false;
   }
 
+  // Verifica si el campo de contraseña está vacío
   if (contrasenaInicio.value.trim() === "") {
-    errorContrasena.textContent = "El campo de contraseña es obligatorio.";
+    errorContrasena.textContent = "Rellene el campo de contraseña.";
     errorContrasena.style.display = "block";
     contrasenaInicio.classList.add("input-error");
-    return false; // Detiene la ejecución aquí si la contraseña no se rellenó
+    valid = false;
   }
 
-  return false; // Evita que el formulario se envíe normalmente
+  // Si alguno de los campos está vacío, evita que el formulario se envíe
+  return valid ? true : false; // Retorna true para permitir el envío si todo es válido
+}
+
+function togglePasswordVisibility() {
+  var passwordInput = document.getElementById("contrasena_pacientes");
+  var eyeIcon = document.querySelector(".eye-icon");
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeIcon.textContent = "🙈"; // Cambia al ícono de ojo cerrado
+  } else {
+    passwordInput.type = "password";
+    eyeIcon.textContent = "🙉"; // Cambia al ícono de ojo abierto
+  }
 }
