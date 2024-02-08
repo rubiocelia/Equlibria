@@ -250,7 +250,6 @@ footer {
 .formInicioSesion {
   width: 30%;
   border-radius: 15px;
-  padding: 20px;
   margin: auto;
   position: relative;
   max-width: 800px;
@@ -282,7 +281,7 @@ footer {
 
 .formInicioSesion textarea {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 20px;
   border: 1px solid var(--verde-oscuro);
   border-radius: 20px;
@@ -299,7 +298,7 @@ footer {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.5s ease, color 0.5s ease;
   display: block;
-  margin: auto;
+  margin: 10px auto;
 }
 
 .formInicioSesion button[type="submit"]:hover {
