@@ -25,7 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: index.html");
         exit();
     } else {
-        echo "<script>validarFormularioInicio();</script>";
+        echo "<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                validarFormularioInicio();
+            });
+          </script>";
     }
 }
 

@@ -217,63 +217,62 @@ footer {
     justify-content: center;
   }
 }
-  .modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #111111bd;
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .6s .9s;
-    --transform: translateY(-100vh);
-    --transition: transform .8s;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s 0.9s;
+  --transform: translateY(-100vh);
+  --transition: transform 0.8s;
+}
+
+.modal--show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 0.6s;
+  --transform: translateY(0);
+  --transition: transform 0.8s 0.8s;
+}
+
+.modal__container {
+  margin: auto;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90%;
+  border-radius: 10px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  /* place-items: center; */
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition: var(--transition);
+  background-image: url(img/fondoRegistro.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Righteous";
+}
+
+@media (max-width: 800px) {
+  .modal__container {
+    padding: 2em 1.5em;
   }
 
-  .modal--show{
-    opacity: 1;
-    pointer-events: unset;
-    transition: opacity .6s;
-    --transform: translateY(0);
-    --transition: transform .8s .8s;
+  .modal__title {
+    font-size: 2rem;
   }
+}
 
-  .modal__container{
-    margin: auto;
-    width: 90%;
-    max-width: 800px;
-    max-height: 90%;
-    border-radius: 10px;
-    padding: 3em 2.5em;
-    display: grid;
-    gap: 1em;
-    /* place-items: center; */
-    grid-auto-columns: 100%;
-    transform: var(--transform);
-    transition:var(--transition);
-    background-image: url(img/fondoRegistro.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: "Righteous";
-  }
-
-  @media (max-width:800px) {
-
-    .modal__container{
-        padding: 2em 1.5em;
-    }
-
-    .modal__title{
-        font-size: 2rem;
-    }
-  }
-
-  /* Estilo base para ambos botones */
-  .iniciarSesion,
-  .registro {
+/* Estilo base para ambos botones */
+.iniciarSesion,
+.registro {
   display: inline-block;
   text-align: center;
   margin-left: 8px;
@@ -282,158 +281,174 @@ footer {
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
   text-decoration: none;
-  }
+}
 
-  /* Estilo para el botón "Iniciar Sesión" */
-  .iniciarSesion {
+/* Estilo para el botón "Iniciar Sesión" */
+.iniciarSesion {
   color: black;
-  }
+}
 
-  /* Estilo para el botón "Registro" */
-  .registro {
+/* Estilo para el botón "Registro" */
+.registro {
   background-color: var(--verde-oscuro);
   color: black;
-  }
+}
 
-  .iniciarSesion:hover,
-  .registro:hover {
+.iniciarSesion:hover,
+.registro:hover {
   background-color: var(--verde-claro);
-  }
-  .subrayadoFormulario {
-    background-color: var(--contraste-claro);
-    height: 15px;
-    font-size: 30px;
-    width: 425px;
-    text-align: center;
-    margin: 30px auto;
-  }
+}
+.subrayadoFormulario {
+  background-color: var(--contraste-claro);
+  height: 15px;
+  font-size: 30px;
+  width: 425px;
+  text-align: center;
+  margin: 30px auto;
+}
 
-  .subrayadoFormulario h3 {
-    transform: translate(0px, -45px);
-    font-size: 60px;
-  }
+.subrayadoFormulario h3 {
+  transform: translate(0px, -55px);
+  font-size: 60px;
+}
 
-  .containerForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
 
-  .formInicioSesion {
-    width: 60%;
-    border-radius: 15px;
-    padding: 0px;
-    margin: auto;
-    position: relative;
-    max-width: 800px;
-    font-family: "Chivo", sans-serif;
-  }
+.inicioSesion {
+  background-image: url(img/fondoRegistro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Righteous", cursive;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-  .formInicioSesion label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
+.formInicioSesion {
+  width: 100%;
+  border-radius: 15px;
+  padding: 0px;
+  margin: auto;
+  position: relative;
+  max-width: 800px;
+  font-family: "Chivo", sans-serif;
+}
 
-  .formInicioSesion hr {
-    height: 8px;
-    background-color: var(--verde-oscuro);
-    border-radius: 10px;
-    margin: 28px -50px;
-    width: 125%;
-    text-align: center;
-  }
+.formInicioSesion label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
-  .formInicioSesion input {
-    font-family: "Chivo", sans-serif;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid var(--verde-oscuro);
-    border-radius: 20px;
-  }
+.formInicioSesion hr {
+  height: 8px;
+  background-color: var(--verde-oscuro);
+  border-radius: 10px;
+  border-style: none;
+  margin: 28px -50px;
+  width: 115%;
+  text-align: center;
+}
 
-  .formInicioSesion button[type="submit"] {
-    background-color: var(--verde-oscuro);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: 60%;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.5s ease, color 0.5s ease;
-    display: block;
-    margin: 20px auto;
-  }
+.formInicioSesion input {
+  font-family: "Chivo", sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--verde-oscuro);
+  border-radius: 20px;
+}
 
-  .formInicioSesion button[type="submit"]:hover {
-    background-color: var(--contraste-oscuro);
-  }
+.formInicioSesion button[type="submit"] {
+  background-color: var(--verde-oscuro);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 80%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  display: block;
+  margin: 20px auto;
+}
 
-  .form-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
+.formInicioSesion button[type="submit"]:hover {
+  background-color: var(--contraste-oscuro);
+}
 
-  .form-column {
-    flex: 1;
-    margin-right: 20px;
-  }
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
-  .form-column:last-child {
-    margin-right: 0;
-  }
+.form-column {
+  flex: 1;
+  margin-right: 20px;
+}
 
-  .formInicioSesion input {
-    width: 100%; /* Asegura que el input ocupe toda la columna */
-  }
-  .formInicioSesion p {
-    text-align: center;
-    margin-top: -25px;
-    text-decoration: none;
-  }
-  .formInicioSesion a {
-    text-decoration: none;
-    color: var(--verde-oscuro);
-  }
+.form-column:last-child {
+  margin-right: 0;
+}
 
-  .google-signin {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.6rem;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 0.5rem 0;
-    border-radius: 1.5rem;
-    color: var(--verde-oscuro);
-    margin-left: 140px;
-    cursor: pointer;
-  }
-    .google-signin {
-      border: 2px solid var(--verde-oscuro);
-    }
-    .google-signin object {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-    .google-signin:hover{
-      color: white;
-      background: var(--verde-oscuro);
-      transition: background-color 0.5s ease, color 0.5s ease;
-    }
-    a{
-      text-decoration: none;
-    }
-    #cruz{
-      color:#000;
-      font-size: 40px;
-      margin-top: -80px;
-      margin-left: 675px;
-    }
+.formInicioSesion input {
+  width: 100%; /* Asegura que el input ocupe toda la columna */
+}
+.formInicioSesion p {
+  text-align: center;
+  margin-top: -25px;
+  text-decoration: none;
+}
+.formInicioSesion a {
+  text-decoration: none;
+  color: var(--verde-oscuro);
+}
+
+.google-signin {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  border-radius: 1.5rem;
+  color: var(--verde-oscuro);
+  margin-left: 140px;
+  cursor: pointer;
+}
+.google-signin {
+  border: 2px solid var(--verde-oscuro);
+}
+.google-signin object {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.google-signin:hover {
+  color: white;
+  background: var(--verde-oscuro);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+a {
+  text-decoration: none;
+}
+#cruz {
+  color: #000;
+  font-size: 40px;
+  margin-top: -80px;
+  margin-left: 675px;
+}
 .error-mensaje {
   color: red;
   display: none;
@@ -448,9 +463,15 @@ footer {
 .input-container {
   position: relative;
   align-items: center;
+  width: 100%;
 }
 
 .input-container input[type="password"] {
+  flex: 1;
+  padding-right: 80px;
+}
+
+.input-container input[type="text"] {
   flex: 1;
   padding-right: 80px;
 }
@@ -707,4 +728,63 @@ p {
   background-position: center;
   background-size: cover;
   font-family: "Chivo", sans-serif;
+}
+
+.formInicioSesion textarea {
+  flex: 1;
+  padding-right: 80px;
+  font-family: "Chivo", sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--verde-oscuro);
+  border-radius: 20px;
+}
+/* perfil */
+.perfil {
+  /* background-image: url(img/fondo_quienes_somos.png); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Chivo", sans-serif;
+}
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Espacio entre la imagen de perfil y el formulario */
+}
+
+#profilePic {
+  border-radius: 50%; /* Hace la imagen circular */
+  width: 100px; /* Ajusta estos valores según tus necesidades */
+  height: 100px; /* Ajusta estos valores según tus necesidades */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin perder proporciones */
+  cursor: pointer; /* Indica que se puede hacer clic */
+}
+
+/* calendario */
+
+.calendario {
+  width: 50%;
+  align-content: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Estilo base para los botones */
+.fc .fc-button-primary {
+  background-color: var(--verde-oscuro);
+  color: #ffffff;
+}
+
+/* Estilo para el estado hover de los botones */
+.fc .fc-button-primary:hover {
+  background-color: var(--verde);
+  color: black;
+}
+.fc .fc-day-today {
+  background-color: var(--verde-claro) !important;
 }

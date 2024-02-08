@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Perfil</title>
+    <link rel="stylesheet" href="vendor/fullcalendar/main.css">
+    <link rel="stylesheet" href="src/css/calendar.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core/locales/es.js'></script>
+    <script src='foto.js'></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                locale: 'es', // Establecer el idioma del calendario a español
+                firstDay: 1,
+                initialView: 'dayGridMonth',
+                events: './server/citasCalendario.php', // URL del endpoint que devuelve los eventos en JSON
+                eventColor: '#92AAB3',
+                eventClick: function (info) {
+                    // Crear y mostrar un desplegable con la información del evento en español
+                    var details = `
+                <div class="event-details">
+                <p>ID: ${info.event.id}</p>
+                <p>Especialista: ${info.event.title}</p>
+                <p>Fecha: ${info.event.start.toLocaleString('es')}</p>
+                </div>
+            `;
+                    // Asegúrate de que solo se muestre un desplegable a la vez
+                    var existingDetails = document.querySelector('.event-details');
+                    if (existingDetails) {
+                        existingDetails.parentNode.removeChild(existingDetails);
+                    }
+                    // Insertar el nuevo desplegable
+                    document.body.insertAdjacentHTML('beforeend', details);
+                }
+            });
+            calendar.render();
+        });
+    </script>
+
 </head>
 
-<body>
+<body class="perfil">
     <header class="header">
         <a href="index.html"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.html"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
@@ -69,6 +106,56 @@
         </nav>
     </header>
     <main>
+        <div id="perfil" class="perfil">
+            <div class="subrayadoFormulario">
+                <h3>Cambiar perfil</h3>
+            </div>
+            <div class="containerForm">
+                <div class="profile-pic-container">
+                    <img src="ruta/a/imagen/default.png" alt="Foto de perfil" id="profilePic">
+                    <input type="file" id="profileInput" name="profile_picture" accept="image/*" style="display: none;">
+                </div>
+                <form class="formInicioSesion" method="post" action="">
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="nombre_pacientes">Nombre:</label>
+                            <input type="text" id="nombre_pacientes" name="nombre_pacientes">
+                        </div>
+                        <div class="form-column">
+                            <label for="apellidos_pacientes">Apellidos:</label>
+                            <input type="text" id="apellidos_pacientes" name="apellidos_pacientes">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="telefono_paciente">Número de Teléfono:</label>
+                            <input type="tel" id="telefono_paciente" name="telefono_paciente">
+                        </div>
+                        <div class="form-column">
+                            <label for="mail_pacientes">Correo Electrónico:</label>
+                            <input type="email" id="mail_pacientes" name="mail_pacientes">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="usuario_pacientes">Nombre de Usuario:</label>
+                            <input type="text" id="usuario_pacientes" name="usuario_pacientes">
+                        </div>
+                        <div class="form-column">
+                            <label for="contrasena_pacientes">Contraseña:</label>
+                            <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
+                        </div>
+                    </div>
+
+                    <button type="submit">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+        <div class="calendario" id="calendar">
+
+        </div>
 
     </main>
     <footer>
@@ -122,3 +209,5 @@
         </div>
     </footer>
 </body>
+
+</html>
