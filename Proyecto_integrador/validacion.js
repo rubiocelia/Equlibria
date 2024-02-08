@@ -38,7 +38,7 @@ function validarFormularioContacto() {
 }
 
 //script ventana modal
-const openModal = document.querySelector('.iniciarSesion');
+const openModal = document.querySelector('.iniciarSesionModal');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal__close');
 
