@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="validar_inicioSesion.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Equilibria</title>
 </head>
 
@@ -65,18 +67,19 @@
                     </div>
                 </li>
 
-                <li class="iniciarSesion"><a class="iniciarSesionModal" href="#">Iniciar sesión</a></li>
+                <li class="iniciarSesion"><a href="#" class="hero__cta">Iniciar sesión</a></li>
                 <li class="registro"><a href="registrarse.php">Registrase</a></li>
             </ul>
         </nav>
     </header>
     <section class="modal ">
         <div class="modal__container">
+            <a href="#" class="modal__close"><i id="cruz" class='bx bx-x'></i></a>
             <div class="subrayadoFormulario">
                 <h3>Iniciar sesión</h3>
             </div>
             <a href=""><button type="submit" class="google-signin">
-                <object data="./google.svg"></object>
+                <object data="../Proyecto_integrador/img/google.svg"></object>
                 <span>Inicia sesión con Google</span>
             </button></a>
             <div class="containerForm">
@@ -305,7 +308,7 @@
             <p>&copy; 2024 Equilibria. Todos los derechos reservados.</p>
         </div>
     </footer>
-
+    <script src="main.js"></script>
 </body>
 
 </html>
