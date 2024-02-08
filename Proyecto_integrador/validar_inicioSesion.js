@@ -86,3 +86,4 @@ function togglePasswordVisibility() {
     eyeIcon.textContent = "🙉"; // Cambia al ícono de ojo abierto
   }
 }
+
