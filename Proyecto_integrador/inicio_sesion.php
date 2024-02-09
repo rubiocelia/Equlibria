@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["pacientes"] = $pacientes;
 
         // Redirigimos a la página de inicio
-        header("Location: index.html");
+        header("Location: perfil.html");
         exit();
     } else {
         echo "<script>
