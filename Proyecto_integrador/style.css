@@ -304,11 +304,11 @@ footer {
   font-size: 30px;
   width: 425px;
   text-align: center;
-  margin: 30px auto;
+  margin: 15px auto;
 }
 
 .subrayadoFormulario h3 {
-  transform: translate(0px, -55px);
+  transform: translate(0px, -40px);
   font-size: 60px;
 }
 
@@ -317,6 +317,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 50%;
+  margin-left: 185px;
 }
 
 .inicioSesion {
@@ -331,6 +332,7 @@ footer {
   align-items: center;
   height: 100vh;
   margin: 0;
+  margin-left: 100px;
 }
 
 .formInicioSesion {
@@ -341,6 +343,7 @@ footer {
   position: relative;
   max-width: 800px;
   font-family: "Chivo", sans-serif;
+  align-items: center;
 }
 
 .formInicioSesion label {
@@ -355,19 +358,18 @@ footer {
   border-radius: 10px;
   border-style: none;
   margin: 28px -50px;
-  width: 115%;
+  width: 125%;
   text-align: center;
 }
 
 .formInicioSesion input {
   font-family: "Chivo", sans-serif;
-  width: 100%;
+  width: 125%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid var(--verde-oscuro);
   border-radius: 20px;
 }
-
 .formInicioSesion button[type="submit"] {
   background-color: var(--verde-oscuro);
   color: white;
