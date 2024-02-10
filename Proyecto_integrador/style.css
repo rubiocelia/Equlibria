@@ -305,6 +305,7 @@ footer {
   width: 425px;
   text-align: center;
   margin: 30px auto;
+  font-family: "Righteous", cursive;
 }
 
 .subrayadoFormulario h3 {
@@ -721,7 +722,62 @@ p {
   background-color: var(--contraste-claro);
 }
 
-/* contacto */
+/* pagina perfil */
+
+.editarPerfil {
+  .formInicioSesion {
+    width: 100%;
+    border-radius: 15px;
+    padding: 0px;
+    margin: auto;
+    position: relative;
+    max-width: 800px;
+    font-family: "Chivo", sans-serif;
+  }
+
+  .formInicioSesion label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .formInicioSesion hr {
+    height: 8px;
+    background-color: var(--verde-oscuro);
+    border-radius: 10px;
+    border-style: none;
+    margin: 28px -50px;
+    width: 115%;
+    text-align: center;
+  }
+
+  .editarPerfil input {
+    font-family: "Chivo", sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--verde-oscuro);
+    border-radius: 20px;
+  }
+
+  .formInicioSesion button[type="submit"] {
+    background-color: var(--verde-oscuro);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 80%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .formInicioSesion button[type="submit"]:hover {
+    background-color: var(--contraste-oscuro);
+  }
+}
 .contacto {
   background-image: url(img/fondo_quienes_somos.png);
   background-repeat: no-repeat;
@@ -740,6 +796,7 @@ p {
   border: 1px solid var(--verde-oscuro);
   border-radius: 20px;
 }
+
 /* perfil */
 .perfil {
   /* background-image: url(img/fondo_quienes_somos.png); */

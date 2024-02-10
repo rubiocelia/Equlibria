@@ -69,6 +69,35 @@
     </header>
     <main>
         <div class="subrayadoFormulario">
+            <h3>Editar Perfil</h3>
+        </div>
+        <form class="editarPerfil" method="post" action="actualizar_perfil.php">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            <br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+            <br><br>
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+            <br><br>
+            <label for="nombreUsuario">Nombre de Usuario:</label>
+            <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+            <br><br>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+            <br><br>
+            <label for="fotoPerfil">Foto de Perfil:</label>
+            <input type="file" id="fotoPerfil" name="fotoPerfil">
+            <br><br>
+            <button type="submit">Actualizar Perfil</button>
+        </form>
+
+
+        <div class="subrayadoFormulario">
             <h3>Contáctanos</h3>
         </div>
         <form class="formInicioSesion" method="post" action="" onsubmit="return validarFormularioContacto()">
@@ -149,6 +178,7 @@
             <p>&copy; 2024 Equilibria. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="validacion_contacto.js"></script>
 </body>
 
 </html>
