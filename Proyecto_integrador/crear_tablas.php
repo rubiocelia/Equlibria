@@ -13,12 +13,15 @@ function crearTablas($conexion) {
         if (!$conexion->query("CREATE DATABASE Equilibria")) {
             die("Error al crear la base de datos: " . $conexion->error);
         }
-
         //agrega la conexión a la base de datos
+        $conexion->select_db("Equilibria");
+    } else {
+        $conexion->query("DROP DATABASE Equilibria");
+        $conexion->query("CREATE DATABASE Equilibria");
         $conexion->select_db("Equilibria");
     }
 }
-
+crearTablas($conexion);
 // Creamos tablas si no existen
 $sql_pacientes = "CREATE TABLE IF NOT EXISTS pacientes (
     id_pacientes INT AUTO_INCREMENT PRIMARY KEY,
@@ -72,6 +75,16 @@ $sql_retiros = "CREATE TABLE IF NOT EXISTS retiros (
     instructor_retiros VARCHAR(255) NOT NULL
 )";
 
+$sql_eventos = "CREATE TABLE IF NOT EXISTS eventos (
+    id_evento INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_evento VARCHAR(255) NOT NULL,
+    descripcion_evento TEXT,
+    precio_evento VARCHAR(10) NOT NULL,
+    fechas_evento DATE NOT NULL,
+    instructor_evento VARCHAR(255) NOT NULL,
+    tipo_evento VARCHAR(255) NOT NULL
+)";
+
 $sql_cita_psicologica = "CREATE TABLE IF NOT EXISTS cita_psicologica (
     id_cita_psicologica INT AUTO_INCREMENT PRIMARY KEY,
     fechas_cita DATE NULL,
@@ -106,6 +119,14 @@ $sql_reserva_retiros = "CREATE TABLE IF NOT EXISTS reserva_retiros (
     FOREIGN KEY (id_retiros) REFERENCES retiros(id_retiros)
 )";
 
+$sql_reserva_evento = "CREATE TABLE IF NOT EXISTS reserva_eventos (
+    id_reserva_evento INT AUTO_INCREMENT PRIMARY KEY,
+    id_paciente INT NOT NULL,
+    id_evento INT NOT NULL,
+    FOREIGN KEY (id_paciente) REFERENCES pacientes(id_pacientes),
+    FOREIGN KEY (id_evento) REFERENCES eventos(id_evento)
+)";
+
 // Ejecutamos consultas
 
 if ($conexion->query($sql_pacientes) === TRUE) {
@@ -135,7 +156,13 @@ if ($conexion->query($sql_cursos) === TRUE) {
 if ($conexion->query($sql_retiros) === TRUE) {
     echo "Tabla 'retiros' creada con éxito.<br>";
 } else {
-    echo "Error al crear la tabla 'pacientes': " . $conexion->error . "<br>";
+    echo "Error al crear la tabla 'retiros': " . $conexion->error . "<br>";
+}
+
+if ($conexion->query($sql_eventos) === TRUE) {
+    echo "Tabla 'eventos' creada con éxito.<br>";
+} else {
+    echo "Error al crear la tabla 'eventos': " . $conexion->error . "<br>";
 }
 
 if ($conexion->query($sql_cita_psicologica) === TRUE) {
@@ -160,6 +187,12 @@ if ($conexion->query($sql_reserva_retiros) === TRUE) {
     echo "Tabla 'reserva retiros' creada con éxito.<br>";
 } else {
     echo "Error al crear la tabla 'reserva retiros': " . $conexion->error . "<br>";
+}
+
+if ($conexion->query($sql_reserva_evento) === TRUE) {
+    echo "Tabla 'reserva evento' creada con éxito.<br>";
+} else {
+    echo "Error al crear la tabla 'reserva evento': " . $conexion->error . "<br>";
 }
 
 // Insertamos datos iniciales
@@ -195,6 +228,19 @@ $sql_insert_cursos = "INSERT INTO cursos (nombre_cursos, descripcion_cursos, fec
 $sql_insert_retiros = "INSERT INTO retiros (nombre_retiros, descripcion_retiros, fechas_retiros, precio_retiros, instructor_retiros) VALUES
     ('Retiros de verano', 'Retiros de verano', '2024-04-21', '40,00€', 'Lucca'),
     ('Retiros de verano', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael')";
+
+$sql_insert_eventos = "INSERT INTO eventos (nombre_evento, descripcion_evento, fechas_evento, precio_evento, instructor_evento, tipo_evento) VALUES
+    ('Taller de autoestima', 'Aprenderás sobre autoestima', '2024-02-20', '60,00€', 'Amelia','Taller'),
+    ('Taller mejora tus habiladades sociales', 'Aprenderás a mejorar tus habilidades sociales', '2024-03-09', '50,00€', 'Aaron','Taller'),
+    ('Taller de gestion de la ansiedad', 'Aprederás a gestionar la ansiedad', '2024-05-04', '30,00€', 'Celia','Taller'),
+    ('Taller autoexigencia y perfeccionismo', 'Aprederás sobre autoexigencia y perfeccionismo', '2024-01-09', '70,00€', 'Elena','Taller'),
+    ('Curso de autoestima', 'Aprende a gestionar tu autoestima', '2024-04-01', '40,00€', 'Javier','Curso'),
+    ('Curso de dependencia emocional', 'Aprende a saber llevar tu dependencia emocional', '2024-02-08', '80,00€', 'Juan','Curso'),
+    ('Curos de ansiedad online', 'Aprende a gestionar tu ansiedad', '2024-03-17', '45,00€', 'Alejandro','Curso'),
+    ('Curso para parejas', 'Curso específico de parejas', '2024-07-12', '60,00€', 'Álvaro','Curso'),
+    ('Retiros de verano', 'Retiros de verano', '2024-04-21', '40,00€', 'Lucca','Retiro'),
+    ('Retiros de verano', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael','Retiro')";
+
 
 $sql_insert_reserva_talleres = "INSERT INTO reserva_talleres (id_pacientes, id_talleres) VALUES
     ('3', '2'),
@@ -254,6 +300,12 @@ if ($conexion->query($sql_insert_retiros) === TRUE) {
     echo "Datos iniciales de retiros insertados con éxito.<br>";
 } else {
     echo "Error al insertar datos iniciales de retiros: " . $conexion->error . "<br>";
+}
+
+if ($conexion->query($sql_insert_eventos) === TRUE) {
+    echo "Datos iniciales de eventos insertados con éxito.<br>";
+} else {
+    echo "Error al insertar datos iniciales de eventos: " . $conexion->error . "<br>";
 }
 
 if ($conexion->query($sql_insert_cita_psicologica) === TRUE) {
