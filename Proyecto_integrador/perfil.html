@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="src/css/calendar.css">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core/locales/es.js'></script>
-    <script src='foto.js'></script>
+    <script src='cambiarPerfil.js'></script>
 
     <script>
 
@@ -44,6 +44,7 @@
             calendar.render();
         });
     </script>
+
 
 </head>
 
@@ -110,45 +111,40 @@
             <div class="subrayadoFormulario">
                 <h3>Cambiar perfil</h3>
             </div>
-            <div class="containerForm">
-                <div class="profile-pic-container">
+            <div class="editarPerfil">
+                <div class="fotoPerfil">
                     <img src="ruta/a/imagen/default.png" alt="Foto de perfil" id="profilePic">
-                    <input type="file" id="profileInput" name="profile_picture" accept="image/*" style="display: none;">
+                    <label for="profileInput" class="cambiarFoto">
+                        Cambiar foto
+                    </label>
+                    <input type="file" id="profileInput" name="profile_picture" accept="image/*">
                 </div>
-                <form class="formInicioSesion" method="post" action="">
-                    <div class="form-row">
-                        <div class="form-column">
-                            <label for="nombre_pacientes">Nombre:</label>
-                            <input type="text" id="nombre_pacientes" name="nombre_pacientes">
-                        </div>
-                        <div class="form-column">
-                            <label for="apellidos_pacientes">Apellidos:</label>
-                            <input type="text" id="apellidos_pacientes" name="apellidos_pacientes">
-                        </div>
+                <form class="formEditarPerfil" method="post" action="">
+                    <div class="form-group">
+                        <input type="text" id="nombre_pacientes" name="nombre_pacientes" placeholder="Nombre">
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-column">
-                            <label for="telefono_paciente">Número de Teléfono:</label>
-                            <input type="tel" id="telefono_paciente" name="telefono_paciente">
-                        </div>
-                        <div class="form-column">
-                            <label for="mail_pacientes">Correo Electrónico:</label>
-                            <input type="email" id="mail_pacientes" name="mail_pacientes">
-                        </div>
+                    <div class="form-group">
+                        <input type="text" id="apellidos_pacientes" name="apellidos_pacientes" placeholder="Apellidos">
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-column">
-                            <label for="usuario_pacientes">Nombre de Usuario:</label>
-                            <input type="text" id="usuario_pacientes" name="usuario_pacientes">
-                        </div>
-                        <div class="form-column">
-                            <label for="contrasena_pacientes">Contraseña:</label>
-                            <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
-                        </div>
+                    <div class="form-group">
+                        <input type="email" id="mail_pacientes" name="mail_pacientes" placeholder="Correo electrónico">
                     </div>
 
+                    <div class="form-group-bajo">
+                        <input type="tel" id="telefono_paciente" name="telefono_paciente" placeholder="Teléfono">
+                    </div>
+
+                    <div class="form-group-bajo">
+                        <input type="text" id="usuario_pacientes" name="usuario_pacientes"
+                            placeholder="Nombre de usuario">
+                    </div>
+
+                    <div class="form-group-bajo">
+                        <input type="password" id="contrasena_pacientes" name="contrasena_pacientes"
+                            placeholder="Contraseña">
+                    </div>
                     <button type="submit">Guardar cambios</button>
                 </form>
             </div>
@@ -156,6 +152,33 @@
         <div class="calendario" id="calendar">
 
         </div>
+
+        <div class="subrayadoFormulario">
+            <h3>Contáctanos</h3>
+        </div>
+        <form class="formInicioSesion" method="post" action="" onsubmit="return validarFormularioContacto()">
+            <label for="nombreContacto">Nombre:</label>
+            <input type="text" id="nombreContacto" name="nombreContacto">
+
+            <br><br>
+
+            <label for="apellidosContacto">Apellidos:</label>
+            <input type="text" id="apellidosContacto" name="apellidosContacto">
+
+            <br><br>
+
+            <label for="mailContacto">E-mail:</label>
+            <input type="email" id="mailContacto" name="mailContacto">
+
+            <br><br>
+
+            <label for="cuentanos">Cuéntanos tu problema:</label>
+            <textarea name="cuentanos" id="cuentanos"></textarea>
+
+            <br><br>
+
+            <button type="submit">Enviar tu información</button>
+        </form>
 
     </main>
     <footer>

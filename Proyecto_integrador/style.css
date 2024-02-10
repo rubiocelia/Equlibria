@@ -309,7 +309,7 @@ footer {
 }
 
 .subrayadoFormulario h3 {
-  transform: translate(0px, -100px);
+  transform: translate(0px, -50px);
   font-size: 60px;
 }
 
@@ -342,7 +342,6 @@ footer {
   position: relative;
   max-width: 800px;
   font-family: "Chivo", sans-serif;
-
 }
 
 .formInicioSesion label {
@@ -725,66 +724,57 @@ p {
 
 /* pagina perfil */
 
-.editarPerfil {
-  .formInicioSesion {
-    width: 100%;
-    border-radius: 15px;
-    padding: 0px;
-    margin: auto;
-    position: relative;
-    max-width: 800px;
-    font-family: "Chivo", sans-serif;
-  }
-
-  .formInicioSesion label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-
-  .formInicioSesion hr {
-    height: 8px;
-    background-color: var(--verde-oscuro);
-    border-radius: 10px;
-    border-style: none;
-    margin: 28px -50px;
-    width: 115%;
-    text-align: center;
-  }
-
-  .editarPerfil input {
-    font-family: "Chivo", sans-serif;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid var(--verde-oscuro);
-    border-radius: 20px;
-  }
-
-  .formInicioSesion button[type="submit"] {
-    background-color: var(--verde-oscuro);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: 80%;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.5s ease, color 0.5s ease;
-    display: block;
-    margin: 20px auto;
-  }
-
-  .formInicioSesion button[type="submit"]:hover {
-    background-color: var(--contraste-oscuro);
-  }
-}
-.contacto {
-  background-image: url(img/fondo_quienes_somos.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.formInicioSesion {
+  width: 100%;
+  border-radius: 15px;
+  padding: 0px;
+  margin: auto;
+  position: relative;
+  max-width: 800px;
   font-family: "Chivo", sans-serif;
+}
+
+.formInicioSesion label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formInicioSesion hr {
+  height: 8px;
+  background-color: var(--verde-oscuro);
+  border-radius: 10px;
+  border-style: none;
+  margin: 28px -50px;
+  width: 115%;
+  text-align: center;
+}
+
+.editarPerfil input {
+  font-family: "Chivo", sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--verde-oscuro);
+  border-radius: 20px;
+}
+
+.formInicioSesion button[type="submit"] {
+  background-color: var(--verde-oscuro);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 80%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+.formInicioSesion button[type="submit"]:hover {
+  background-color: var(--contraste-oscuro);
 }
 
 .formInicioSesion textarea {
@@ -805,25 +795,118 @@ p {
   background-position: center;
   background-size: cover;
   font-family: "Chivo", sans-serif;
+  margin-top: 2%;
 }
-.profile-pic-container {
+
+.editarPerfil {
   display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.fotoPerfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 20px; /* Espacio entre la imagen de perfil y el formulario */
+  margin-bottom: 20px;
 }
 
 #profilePic {
   border-radius: 50%; /* Hace la imagen circular */
-  width: 100px; /* Ajusta estos valores según tus necesidades */
-  height: 100px; /* Ajusta estos valores según tus necesidades */
-  object-fit: cover; /* Asegura que la imagen cubra el área sin perder proporciones */
-  cursor: pointer; /* Indica que se puede hacer clic */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.fotoPerfil input[type="file"] {
+  border-radius: 15px;
+  width: 10%;
+}
+
+#profileInput {
+  display: none;
+}
+
+.fotoPerfil label {
+  background-color: var(--verde);
+  color: black;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.fotoPerfil label:hover {
+  background-color: var(--verde-claro);
+  color: black;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.formEditarPerfil {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 225px 100px 225px;
+}
+.formEditarPerfil .form-group {
+  flex: 1 1 33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.formEditarPerfil .form-group-bajo {
+  flex: 1 1 33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.formEditarPerfil input[type="text"],
+.formEditarPerfil input[type="email"],
+.formEditarPerfil input[type="tel"],
+.formEditarPerfil input[type="password"] {
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid var(--verde-oscuro);
+  outline: none;
+}
+.formEditarPerfil input[type="text"]:focus,
+.formEditarPerfil input[type="email"]:focus,
+.formEditarPerfil input[type="tel"]:focus,
+.formEditarPerfil input[type="password"]:focus {
+  border-bottom: 2px solid var(--verde-claro);
+  box-shadow: red;
+}
+
+.formEditarPerfil button {
+  background-color: var(--contraste);
+  padding: 10px;
+  border-radius: 15px;
+  border-style: none;
+  margin: auto;
+  font-family: "Chivo", sans-serif;
+  font-size: 15px;
+}
+
+.formEditarPerfil button:hover {
+  background-color: var(--contraste-claro);
+  padding: 10px;
+  border-radius: 15px;
+  border-style: none;
+  margin: auto;
+  font-family: "Chivo", sans-serif;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* calendario */
 
 .calendario {
-  width: 50%;
+  display: flex;
+  width: 80%;
   align-content: center;
   text-transform: uppercase;
   margin: 0 auto;
