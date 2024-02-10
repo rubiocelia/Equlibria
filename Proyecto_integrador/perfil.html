@@ -153,7 +153,7 @@
 
         </div>
 
-        <div class="faq-container">
+        <div class="faq-container" id="preguntasRespuestas">
             <h1 class="faq-title">Preguntas frecuentes</h1>
 
             <div class="faq-item">
@@ -202,32 +202,34 @@
             </div>
         </div>
 
-        <div class="subrayadoFormulario">
-            <h3>Contáctanos</h3>
+        <div class="contacto" id="contacto">
+            <div class="subrayadoFormulario">
+                <h3>Contáctanos</h3>
+            </div>
+            <form class="formInicioSesion" method="post" action="" onsubmit="return validarFormularioContacto()">
+                <label for="nombreContacto">Nombre:</label>
+                <input type="text" id="nombreContacto" name="nombreContacto">
+
+                <br><br>
+
+                <label for="apellidosContacto">Apellidos:</label>
+                <input type="text" id="apellidosContacto" name="apellidosContacto">
+
+                <br><br>
+
+                <label for="mailContacto">E-mail:</label>
+                <input type="email" id="mailContacto" name="mailContacto">
+
+                <br><br>
+
+                <label for="cuentanos">Cuéntanos tu problema:</label>
+                <textarea name="cuentanos" id="cuentanos"></textarea>
+
+                <br><br>
+
+                <button type="submit">Enviar tu información</button>
+            </form>
         </div>
-        <form class="formInicioSesion" method="post" action="" onsubmit="return validarFormularioContacto()">
-            <label for="nombreContacto">Nombre:</label>
-            <input type="text" id="nombreContacto" name="nombreContacto">
-
-            <br><br>
-
-            <label for="apellidosContacto">Apellidos:</label>
-            <input type="text" id="apellidosContacto" name="apellidosContacto">
-
-            <br><br>
-
-            <label for="mailContacto">E-mail:</label>
-            <input type="email" id="mailContacto" name="mailContacto">
-
-            <br><br>
-
-            <label for="cuentanos">Cuéntanos tu problema:</label>
-            <textarea name="cuentanos" id="cuentanos"></textarea>
-
-            <br><br>
-
-            <button type="submit">Enviar tu información</button>
-        </form>
 
     </main>
     <footer>

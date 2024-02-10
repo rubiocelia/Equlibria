@@ -790,12 +790,15 @@ p {
 
 /* perfil */
 .perfil {
-  /* background-image: url(img/fondo_quienes_somos.png); */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   font-family: "Chivo", sans-serif;
   margin-top: 2%;
+}
+
+.perfil main {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-image: url(img/fondoPerfil.png);
 }
 
 .editarPerfil {
@@ -992,6 +995,7 @@ p {
 .faq-answer p {
   margin: 0;
   padding: 15px 0;
+  font-family: "Chivo", sans-serif;
 }
 
 .faq-icon {
@@ -1012,4 +1016,8 @@ p {
 
 .faq-item.show .faq-icon {
   transform: translateY(-50%) rotate(90deg);
+}
+
+.contacto {
+  margin-top: 5%;
 }
