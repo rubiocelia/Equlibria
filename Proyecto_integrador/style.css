@@ -308,7 +308,7 @@ footer {
 }
 
 .subrayadoFormulario h3 {
-  transform: translate(0px, -45px);
+  transform: translate(0px, -100px);
   font-size: 60px;
 }
 
@@ -316,16 +316,32 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.inicioSesion {
+  background-image: url(img/fondoRegistro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Righteous", cursive;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 100px;
 }
 
 .formInicioSesion {
-  width: 60%;
+  width: 100%;
   border-radius: 15px;
   padding: 0px;
   margin: auto;
   position: relative;
   max-width: 800px;
   font-family: "Chivo", sans-serif;
+
 }
 
 .formInicioSesion label {
@@ -338,8 +354,9 @@ footer {
   height: 8px;
   background-color: var(--verde-oscuro);
   border-radius: 10px;
+  border-style: none;
   margin: 28px -50px;
-  width: 125%;
+  width: 115%;
   text-align: center;
 }
 
@@ -359,7 +376,7 @@ footer {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  width: 60%;
+  width: 80%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.5s ease, color 0.5s ease;
   display: block;
@@ -447,9 +464,15 @@ a {
 .input-container {
   position: relative;
   align-items: center;
+  width: 100%;
 }
 
 .input-container input[type="password"] {
+  flex: 1;
+  padding-right: 80px;
+}
+
+.input-container input[type="text"] {
   flex: 1;
   padding-right: 80px;
 }
@@ -706,6 +729,17 @@ p {
   background-position: center;
   background-size: cover;
   font-family: "Chivo", sans-serif;
+}
+
+.formInicioSesion textarea {
+  flex: 1;
+  padding-right: 80px;
+  font-family: "Chivo", sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--verde-oscuro);
+  border-radius: 20px;
 }
 /* perfil */
 .perfil {
