@@ -850,7 +850,7 @@ p {
 .formEditarPerfil {
   display: flex;
   flex-wrap: wrap;
-  margin: auto 225px 100px 225px;
+  margin: auto 15% 5% 15%;
 }
 .formEditarPerfil .form-group {
   flex: 1 1 33%;
@@ -879,7 +879,6 @@ p {
 .formEditarPerfil input[type="tel"]:focus,
 .formEditarPerfil input[type="password"]:focus {
   border-bottom: 2px solid var(--verde-claro);
-  box-shadow: red;
 }
 
 .formEditarPerfil button {
@@ -928,4 +927,89 @@ p {
 }
 .fc .fc-day-today {
   background-color: var(--verde-claro) !important;
+}
+
+/* preguntas y respuestas */
+.faq-container {
+  padding: 25px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  padding: 20px;
+  background: var(--verde-claro);
+  margin: 0 0 30px 0;
+  font-size: 32px;
+  position: relative;
+}
+
+.faq-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  border-top: 1px solid var(--contraste-oscuro);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.faq-item:first-child {
+  border-top: none;
+}
+
+.faq-item:hover {
+  background: #f8f8f8;
+}
+
+.faq-question {
+  padding: 15px 55px;
+  margin: 0;
+  position: relative;
+  font-weight: bold;
+  font-family: "Chivo", sans-serif;
+}
+
+.faq-answer {
+  font-family: "Chivo", sans-serif;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 55px;
+  color: #333;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 15px 0;
+}
+
+.faq-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.faq-icon svg {
+  fill: #007bff;
+}
+
+.faq-item.show .faq-answer {
+  max-height: 1000px; /* sufficiently large number to handle content's height */
+}
+
+.faq-item.show .faq-icon {
+  transform: translateY(-50%) rotate(90deg);
 }
