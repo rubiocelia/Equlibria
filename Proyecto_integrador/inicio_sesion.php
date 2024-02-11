@@ -51,32 +51,41 @@ mysqli_close($conexion);
 </head>
 
 <body class="inicioSesion">
-    <div class="subrayadoFormulario">
-        <h3>Iniciar sesión</h3>
-    </div>
-    <div class="containerForm">
-        <form class="formInicioSesion" method="post" action="" onsubmit="validarFormularioInicio()">
-            <hr>
-            <label for="usuario_pacientes">Usuario:</label>
-            <input type="text" id="usuario_pacientes" name="usuario_pacientes">
-            <span id="errorUsuario" class="error-mensaje"></span>
-
-            <br><br>
-
-            <label for="contrasena_pacientes">Contraseña:</label>
-            <div class="input-container">
-                <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
-                <span onclick="togglePasswordVisibility()">
-                    <i class="eye-icon">🙉</i>
-                </span>
+<div class="subrayadoFormulario">
+                <h3>Iniciar sesión</h3>
             </div>
-            <span id="errorContrasena" class="error-mensaje"></span>
-            <hr>
-            <br><br>
+            <a href="">
+                <button type="submit" class="google-signin">
+                    <object data="../Proyecto_integrador/img/google.svg"></object>
+                    <span>Inicia sesión con Google</span>
+                </button>
+            </a>
+            <div class="containerForm">
+                <form class="formInicioSesion" method="post" action="inicio_sesion.php"
+                    onsubmit="validarFormularioInicio()">
+                    <hr>
+                    <label for="usuario_pacientes">Usuario:</label>
+                    <input type="text" id="usuario_pacientes" name="usuario_pacientes">
+                    <span id="errorUsuario" class="error-mensaje"></span>
 
-            <button type="submit">Acceder a mi cuenta</button>
-        </form>
-    </div>
+                    <br><br>
+
+                    <label for="contrasena_pacientes">Contraseña:</label>
+                    <div class="input-container">
+                        <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
+                        <span onclick="togglePasswordVisibility()">
+                            <i class="eye-icon">🙉</i>
+                        </span>
+                    </div>
+                    <span id="errorContrasena" class="error-mensaje"></span>
+                    <hr>
+                    <br>
+
+                    <p>¿No tienes una cuenta?<a href="https://www.youtube.com/"> Crea una cuenta</a></p>
+
+                    <button type="submit">Acceder a mi cuenta</button>
+                </form>
+            </div>
 </body>
 
 </html>
