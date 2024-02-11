@@ -17,7 +17,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     .then((response) => response.json())
     .then((data) => {
       if (data.success) {
-        window.location.href = "perfil.html"; // Redirige si el inicio de sesión es exitoso
+        window.location.href = "perfil.php"; // Redirige si el inicio de sesión es exitoso
       } else {
         // Muestra el mensaje de error como los otros mensajes
         document.getElementById("loginError").style.display = "block";

@@ -266,9 +266,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
   width: 50%;
-  margin-top: 20px;
 }
 
 .inicioSesion {
@@ -282,7 +281,7 @@ footer {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 100px;
+  margin-top: 60px;
 }
 
 .formInicioSesion {
@@ -524,7 +523,6 @@ a {
 .error-mensaje {
   color: red;
   display: none;
-  margin-top: 5px;
 }
 
 .input-error {
@@ -552,6 +550,11 @@ a {
   position: absolute;
   right: 10px;
   top: 8px;
+  cursor: pointer;
+}
+.input-container .eye-icon2 {
+  position: absolute;
+  right: 10px;
   cursor: pointer;
 }
 
@@ -860,9 +863,9 @@ p {
 }
 
 /* perfil */
-.perfil {
+.Parteperfil {
   font-family: "Chivo", sans-serif;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 .perfil main {
@@ -986,6 +989,7 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  height: 90vh;
 }
 
 /* Estilo base para los botones */

@@ -1,3 +1,37 @@
+<?php
+require_once("conecta.php");
+
+$conexion = getConexion();
+
+// Asegúrate de tener una sesión iniciada
+session_start();
+
+// Verifica si el ID está presente en la URL
+if (isset($_GET['id'])) {
+    $id_pacientes = $_GET['id'];
+
+    // Consulta para obtener la información del usuario por ID
+    $sql = "SELECT * FROM pacientes WHERE id_pacientes = ?";
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param("i", $id_pacientes);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+    if ($resultado->num_rows > 0) {
+        $paciente = $resultado->fetch_assoc();
+        // Puedes ahora mostrar la información del paciente
+    } else {
+        header("Location: inicio_sesion.php");
+    }
+} else {
+    header("Location: inicio_sesion.php");
+}
+
+// No olvides cerrar la conexión
+mysqli_close($conexion);
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -107,46 +141,50 @@
         </nav>
     </header>
     <main>
-        <div id="perfil" class="perfil">
+        
+        <div id="perfil" class="Parteperfil">
             <div class="subrayadoFormulario">
                 <h3>Cambiar perfil</h3>
             </div>
             <div class="editarPerfil">
-                <div class="fotoPerfil">
+                <!-- <div class="fotoPerfil">
                     <img src="ruta/a/imagen/default.png" alt="Foto de perfil" id="profilePic">
                     <label for="profileInput" class="cambiarFoto">
                         Cambiar foto
                     </label>
                     <input type="file" id="profileInput" name="profile_picture" accept="image/*">
-                </div>
-                <form class="formEditarPerfil" method="post" action="">
+                </div> -->
+                <form class="formEditarPerfil" method="post" action="procesar_editarPerfil.php">
                     <div class="form-group">
-                        <input type="text" id="nombre_pacientes" name="nombre_pacientes" placeholder="Nombre">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" id="apellidos_pacientes" name="apellidos_pacientes" placeholder="Apellidos">
+                        <input type="text" id="nombre_pacientes" name="nombre_pacientes" placeholder="Nombre" value="<?php echo htmlspecialchars($paciente['nombre_pacientes']); ?>">
                     </div>
 
                     <div class="form-group">
-                        <input type="email" id="mail_pacientes" name="mail_pacientes" placeholder="Correo electrónico">
+                        <input type="text" id="apellidos_pacientes" name="apellidos_pacientes" placeholder="Apellidos" value="<?php echo htmlspecialchars($paciente['apellidos_pacientes']); ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="mail_pacientes" name="mail_pacientes" placeholder="Correo electrónico" value="<?php echo htmlspecialchars($paciente['mail_pacientes']); ?>">
                     </div>
 
                     <div class="form-group-bajo">
-                        <input type="tel" id="telefono_paciente" name="telefono_paciente" placeholder="Teléfono">
+                        <input type="tel" id="telefono_paciente" name="telefono_paciente" placeholder="Teléfono" value="<?php echo htmlspecialchars($paciente['telefono_paciente']); ?>">
                     </div>
 
                     <div class="form-group-bajo">
-                        <input type="text" id="usuario_pacientes" name="usuario_pacientes"
-                            placeholder="Nombre de usuario">
+                        <input type="text" id="usuario_pacientes" name="usuario_pacientes" placeholder="Nombre de usuario" value="<?php echo htmlspecialchars($paciente['usuario_pacientes']); ?>">
                     </div>
 
+                    <!-- Por razones de seguridad, no es recomendable precargar o mostrar la contraseña -->
                     <div class="form-group-bajo">
-                        <input type="password" id="contrasena_pacientes" name="contrasena_pacientes"
-                            placeholder="Contraseña">
+                        <input type="password" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
+                        <span onclick="togglePasswordVisibility()">
+                            <i class="eye-icon">🙉</i>
+                        </span>
                     </div>
                     <button type="submit">Guardar cambios</button>
                 </form>
+
             </div>
         </div>
         <div class="calendario" id="calendar">
@@ -283,6 +321,7 @@
         </div>
     </footer>
     <script src='cambiarPerfil.js'></script>
+    <script src='validar_inicioSesion.js'></script>
 
 </body>
 
