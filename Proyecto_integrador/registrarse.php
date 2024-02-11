@@ -56,12 +56,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="validacion_registrar.js"></script>
     <title>Crear cuenta - Equilibria</title>
 </head>
-<body class="inicioSesion">
+<body class="registroFormulario">
     <div class="subrayadoFormulario">
         <h3>Crear cuenta</h3>
     </div>
+    <a href="">
+                <button type="submit" class="google-signin">
+                    <object data="../Proyecto_integrador/img/google.svg"></object>
+                    <span>Regístrate con Google</span>
+                </button>
     <div class="containerForm">
-        <form class="formInicioSesion" method="post" action="">
+        <form class="formRegistro" method="post" action="">
+        <hr>
             <div class="form-row">
                 <div class="form-column">
                     <label for="nombre_pacientes">Nombre:</label>
@@ -94,7 +100,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
                 </div>
             </div>
-            
+            <hr>
+            <p>¿Tienes una cuenta?<a href="inicio_sesion.php"> Inicia sesión en tu cuenta</a></p>
             <button type="submit">Crear cuenta</button>
         </form>
     </div>

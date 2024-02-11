@@ -395,12 +395,132 @@ footer {
 a {
   text-decoration: none;
 }
-#cruz {
-  color: #000;
-  font-size: 40px;
-  margin-top: -80px;
-  margin-left: 675px;
+/*registro*/
+.registroFormulario {
+  background-image: url(img/fondoRegistro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Righteous", cursive;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 100px;
 }
+
+.formRegistro {
+  width: 100%;
+  border-radius: 15px;
+  padding: 0px;
+  margin: 10px;
+  position: relative;
+  max-width: 800px;
+  font-family: "Chivo", sans-serif;
+  margin-top: -10px;
+}
+
+.formRegistro label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000;
+}
+
+.formRegistro hr {
+  height: 8px;
+  background-color: var(--verde-oscuro);
+  border-radius: 10px;
+  border-style: none;
+  margin: 28px -50px;
+  width: 115%;
+  text-align: center;
+}
+
+.formRegistro input {
+  font-family: "Chivo", sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--verde-oscuro);
+  border-radius: 20px;
+}
+
+.formRegistro button[type="submit"] {
+  background-color: var(--verde-oscuro);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 80%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+.formRegistro button[type="submit"]:hover {
+  background-color: var(--contraste-oscuro);
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form-column:last-child {
+  margin-right: 0;
+}
+
+.formRegistro input {
+  width: 100%; /* Asegura que el input ocupe toda la columna */
+}
+.formRegistro p {
+  text-align: center;
+  margin-top: -5px;
+  text-decoration: none;
+  color: #000;
+}
+.formRegistro a {
+  text-decoration: none;
+  color: var(--verde-oscuro);
+}
+
+.google-signin {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  border-radius: 1.5rem;
+  color: var(--verde-oscuro);
+  cursor: pointer;
+  margin-top: 10px;
+}
+.google-signin {
+  border: 2px solid var(--verde-oscuro);
+}
+.google-signin object {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.google-signin:hover {
+  color: white;
+  background: var(--verde-oscuro);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+/*mensaje error */
 .error-mensaje {
   color: red;
   display: none;

@@ -81,7 +81,7 @@ mysqli_close($conexion);
                     <hr>
                     <br>
 
-                    <p>¿No tienes una cuenta?<a href="https://www.youtube.com/"> Crea una cuenta</a></p>
+                    <p>¿No tienes una cuenta?<a href="registrarse.php"> Crea una cuenta</a></p>
 
                     <button type="submit">Acceder a mi cuenta</button>
                 </form>
