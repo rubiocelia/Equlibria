@@ -218,58 +218,6 @@ footer {
   }
 }
 
-/* inicio sesion */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #111111bd;
-  display: flex;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.6s 0.9s;
-  --transform: translateY(-100vh);
-  --transition: transform 0.8s;
-}
-
-.modal--show {
-  opacity: 1;
-  pointer-events: unset;
-  transition: opacity 0.6s;
-  --transform: translateY(0);
-  --transition: transform 0.8s 0.8s;
-}
-
-.modal__container {
-  margin: auto;
-  width: 90%;
-  max-width: 800px;
-  max-height: 90%;
-  border-radius: 10px;
-  padding: 3em 2.5em;
-  display: grid;
-  gap: 1em;
-  grid-auto-columns: 100%;
-  transform: var(--transform);
-  background-image: url(img/fondoRegistro.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  font-family: "Righteous";
-}
-
-@media (max-width: 800px) {
-  .modal__container {
-    padding: 2em 1.5em;
-  }
-
-  .modal__title {
-    font-size: 2rem;
-  }
-}
-
 /* Estilo base para ambos botones */
 .iniciarSesion,
 .registro {
