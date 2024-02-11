@@ -268,7 +268,7 @@ footer {
   align-items: center;
   margin: auto;
   width: 50%;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .inicioSesion {
@@ -286,7 +286,7 @@ footer {
 }
 
 .formInicioSesion {
-  width: 80%;
+  width: 100%;
   border-radius: 15px;
   padding: 0px;
   margin: 10px;
