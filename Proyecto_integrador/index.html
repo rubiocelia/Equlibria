@@ -84,7 +84,7 @@
                 </button>
             </a>
             <div class="containerForm">
-                <form class="formInicioSesion" method="post" action="inicio_sesion.php"
+                <form class="formInicioSesion" id="loginForm" method="post" action="inicio_sesion.php"
                     onsubmit="validarFormularioInicio()">
                     <hr>
                     <label for="usuario_pacientes">Usuario:</label>
@@ -101,6 +101,8 @@
                         </span>
                     </div>
                     <span id="errorContrasena" class="error-mensaje"></span>
+                    <div id="loginError" class="error-mensaje" style="display:none;"></div>
+
                     <hr>
                     <br>
 
@@ -311,6 +313,7 @@
         </div>
     </footer>
     <script src="main.js"></script>
+    <script src="validar_inicioSesion.js"></script>
 </body>
 
 </html>

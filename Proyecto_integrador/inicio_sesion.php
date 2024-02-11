@@ -1,82 +1,38 @@
 <?php
-require_once("conecta.php");
+session_start(); // Inicia una nueva sesión o reanuda la existente
+require_once("conecta.php"); // Asegúrate de tener este archivo para la conexión a la base de datos
 
-$conexion = getConexion();
+$conexion = getConexion(); // Obtiene la conexión a la base de datos
 
-// Iniciamos sesión
-session_start();
+$response = ['success' => false, 'message' => '']; // Prepara una respuesta inicial
 
-// Verificamos el inicio de sesión del paciente
+// Verifica si los datos del formulario han sido enviados
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtenemos los datos del formulario
-    $usuario_pacientes = $_POST["usuario_pacientes"];
-    $contrasena_pacientes = $_POST["contrasena_pacientes"];
+    $usuario = mysqli_real_escape_string($conexion, $_POST['usuario_pacientes']);
+    $contrasena = $_POST['contrasena_pacientes'];
 
-    // Consultamos la base de datos para verificar el inicio de sesión
-    $sql_verificar_pacientes = "SELECT * FROM pacientes WHERE usuario_pacientes = '$usuario_pacientes' AND contrasena_pacientes = '$contrasena_pacientes'";
-    $resultado = $conexion->query($sql_verificar_pacientes);
+    $sql = "SELECT id_pacientes, nombre_pacientes, contrasena_pacientes FROM pacientes WHERE usuario_pacientes = '$usuario'";
+    $resultado = $conexion->query($sql);
 
     if ($resultado->num_rows > 0) {
-        // Inicio de sesión exitoso, almacenamos datos del paciente en la sesión
-        $pacientes = $resultado->fetch_assoc();
-        $_SESSION["pacientes"] = $pacientes;
-
-        // Redirigimos a la página de inicio
-        header("Location: perfil.html");
-        exit();
+        $fila = $resultado->fetch_assoc();
+        if (password_verify($contrasena, $fila['contrasena_pacientes'])) {
+            // Inicio de sesión exitoso
+            $_SESSION['usuario_id'] = $fila['id_pacientes'];
+            $_SESSION['nombre_usuario'] = $fila['nombre_pacientes'];
+            $response['success'] = true;
+            // Redirección con JavaScript
+            echo "<script>alert('Usuario y contraseña correcto'); window.location.href='perfil.html';</script>";
+        } else {
+            // Contraseña incorrecta
+            echo "<script>alert('Contraseña incorrecta'); window.location.href='index.html#loginForm';</script>";
+        }
     } else {
-        echo "<script>
-            document.addEventListener('DOMContentLoaded', function() {
-                validarFormularioInicio();
-            });
-          </script>";
+        // Usuario no encontrado
+        echo "<script>alert('El usuario no existe.'); window.location.href='index.html#loginForm';</script>";
     }
+    
+    $conexion->close(); // Cierra la conexión a la base de datos
+} else {
+    $response['message'] = 'Método de solicitud no admitido.';
 }
-
-// Cerramos conexión
-mysqli_close($conexion);
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="validar_inicioSesion.js"></script>
-    <title>Inicio sesión-Equilibria</title>
-</head>
-
-<body class="inicioSesion">
-    <div class="subrayadoFormulario">
-        <h3>Iniciar sesión</h3>
-    </div>
-    <div class="containerForm">
-        <form class="formInicioSesion" method="post" action="" onsubmit="validarFormularioInicio()">
-            <hr>
-            <label for="usuario_pacientes">Usuario:</label>
-            <input type="text" id="usuario_pacientes" name="usuario_pacientes">
-            <span id="errorUsuario" class="error-mensaje"></span>
-
-            <br><br>
-
-            <label for="contrasena_pacientes">Contraseña:</label>
-            <div class="input-container">
-                <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
-                <span onclick="togglePasswordVisibility()">
-                    <i class="eye-icon">🙉</i>
-                </span>
-            </div>
-            <span id="errorContrasena" class="error-mensaje"></span>
-            <hr>
-            <br><br>
-
-            <button type="submit">Acceder a mi cuenta</button>
-        </form>
-    </div>
-</body>
-
-</html>

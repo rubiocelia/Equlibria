@@ -1,3 +1,34 @@
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Previene el envío del formulario de manera tradicional
+
+  // Primero, valida el formulario
+  if (!validarFormularioInicio()) {
+    // Si la validación falla, detiene la ejecución aquí
+    return;
+  }
+
+  // Si la validación es exitosa, procede con el envío de datos
+  var formData = new FormData(this);
+
+  fetch("inicio_sesion.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        window.location.href = "perfil.html"; // Redirige si el inicio de sesión es exitoso
+      } else {
+        // Muestra el mensaje de error como los otros mensajes
+        document.getElementById("loginError").style.display = "block";
+        document.getElementById("loginError").innerText = data.message; // Asegúrate de que este elemento exista en tu HTML
+      }
+    })
+    .catch((error) => console.error("Error:", error));
+});
+
+// Asegúrate de que la función validarFormularioInicio está correctamente implementada como se muestra arriba.
+
 function validarFormularioInicio() {
   var usuarioInicio = document.getElementById("usuario_pacientes");
   var contrasenaInicio = document.getElementById("contrasena_pacientes");
@@ -43,4 +74,3 @@ function togglePasswordVisibility() {
     eyeIcon.textContent = "🙉"; // Cambia al ícono de ojo abierto
   }
 }
-
