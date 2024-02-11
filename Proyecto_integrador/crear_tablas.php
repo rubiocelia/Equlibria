@@ -198,12 +198,12 @@ if ($conexion->query($sql_reserva_evento) === TRUE) {
 // Insertamos datos iniciales
 
 $sql_insert_profesionales = "INSERT INTO profesionales (nombre_profesionales, apellidos_profesionales, telefono_profesionales, especialidad) VALUES
-    ('Mara', 'Sánchez Moreno', '689321579', 'Psicólogo'),
-    ('Sofía', 'Sepúlveda Rivera', '648931586','Asistente de personas mayores'),
-    ('Martín', 'Cañadas Carriedo', '647553056', 'Asistente de personas mayores'),
-    ('Fernando', 'Rodríguez Bellido', '689321579', 'Asistente de niños'),
-    ('Ana', 'Gómez Rodríguez', ' 648931586','Psicóloga'),
-    ('Beatriz', 'Rodrigo Marquínez', '647553057', 'Asistente de niños')";
+    ('Mara', 'Sánchez Moreno', '689321579', 'Psicologia'),
+    ('Sofía', 'Sepúlveda Rivera', '648931586','Asistencia a personas mayores'),
+    ('Martín', 'Cañadas Carriedo', '647553056', 'Asistencia a personas mayores'),
+    ('Fernando', 'Rodríguez Bellido', '689321579', 'Asistencia a niños'),
+    ('Ana', 'Gómez Rodríguez', ' 648931586','Psicologia'),
+    ('Beatriz', 'Rodrigo Marquínez', '647553057', 'Asistencia a niños')";
 
 $sql_insert_pacientes = "INSERT INTO pacientes (DNI, nombre_pacientes, apellidos_pacientes, telefono_paciente, genero, fecha_nacimiento, usuario_pacientes, contrasena_pacientes) VALUES
     ('45735844S', 'Laura', 'Escanes Villar', '623456789', 'F', '1995-04-05', 'lauraescanes', 'Laura95'),
