@@ -31,7 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Ejecutamos la sentencia preparada
         if ($stmt->execute()) {
-            echo "Paciente creado exitosamente.";
+            header("Location: perfil.html");
+            exit();
         } else {
             echo "Error al crear el paciente: " . $stmt->error;
         }

@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pacientes = $resultado->fetch_assoc();
         $_SESSION["pacientes"] = $pacientes;
 
-        // Redirigimos a la página de inicio
+        // Redirigimos a la página de perfil
         header("Location: perfil.html");
         exit();
     } else {
