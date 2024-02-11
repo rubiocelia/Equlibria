@@ -254,6 +254,7 @@ footer {
   text-align: center;
   margin: 30px auto;
   font-family: "Righteous", cursive;
+  margin-top: -10px;
 }
 
 .subrayadoFormulario h3 {
@@ -267,6 +268,7 @@ footer {
   align-items: center;
   margin: auto;
   width: 50%;
+  margin-top: 100px;
 }
 
 .inicioSesion {
@@ -287,7 +289,7 @@ footer {
   width: 80%;
   border-radius: 15px;
   padding: 0px;
-  margin: auto;
+  margin: 10px;
   position: relative;
   max-width: 800px;
   font-family: "Chivo", sans-serif;
@@ -365,7 +367,7 @@ footer {
 }
 
 .google-signin {
-  width: 60%;
+  width: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,8 +377,8 @@ footer {
   padding: 0.5rem 0;
   border-radius: 1.5rem;
   color: var(--verde-oscuro);
-  margin-left: 140px;
   cursor: pointer;
+  margin-top: 10px;
 }
 .google-signin {
   border: 2px solid var(--verde-oscuro);
