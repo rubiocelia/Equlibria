@@ -58,15 +58,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Crear cuenta - Equilibria</title>
 </head>
 <body class="registroFormulario">
-    <div class="subrayadoFormulario">
+    <div class="subrayadoFormularioRegistro">
         <h3>Crear cuenta</h3>
     </div>
-    <a href="">
                 <button type="submit" class="google-signin">
                     <object data="../Proyecto_integrador/img/google.svg"></object>
                     <span>Regístrate con Google</span>
                 </button>
-    <div class="containerForm">
+     <div class="containerFormRegistro">
         <form class="formRegistro" method="post" action="">
         <hr>
             <div class="form-row">
@@ -105,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>¿Tienes una cuenta?<a href="inicio_sesion.php"> Inicia sesión en tu cuenta</a></p>
             <button type="submit">Crear cuenta</button>
         </form>
-    </div>
+</div>
 </body>
 
 </html>
