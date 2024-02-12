@@ -284,9 +284,8 @@ footer {
   margin-top: 8%;
 }
 
-
 /* css formulario asistentes y psicologos */
-.citaAsistencia{
+.citaAsistencia {
   background-image: url(img/fondoFormularios.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -299,7 +298,6 @@ footer {
   max-height: 100vh;
   margin-top: 8%;
 }
-
 
 .formInicioSesion {
   width: 100%;
@@ -955,6 +953,12 @@ p {
   flex: 1 1 33%;
   padding: 10px;
   box-sizing: border-box;
+}
+
+.formEditarPerfil label {
+  color: rgb(90, 89, 89);
+  font-size: 14px;
+  padding-left: 13px;
 }
 
 .formEditarPerfil input[type="text"],
