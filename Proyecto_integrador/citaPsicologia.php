@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <script src="validacion_reservaEvento.js"></script>
         <title>Pedir Cita - Equilibria</title>
     </head>
-    <body class="inicioSesion">
+    <body class="citaAsistencia">
         <div class="subrayadoFormulario">
             <h3>Reserva ahora tu sesión</h3>
         </div>

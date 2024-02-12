@@ -3,7 +3,6 @@ require_once("conecta.php");
 
 $conexion = getConexion();
 
-// Asegúrate de tener una sesión iniciada
 session_start();
 
 // Verifica si el ID está presente en la URL
@@ -24,7 +23,7 @@ if (isset($_GET['id'])) {
         header("Location: inicio_sesion.php");
     }
 } else {
-    header("Location: inicio_sesion.php");
+    header("Location: perfil.php?id=" . $pacientes['id_pacientes']);
 }
 
 // No olvides cerrar la conexión
@@ -156,31 +155,48 @@ mysqli_close($conexion);
                 </div> -->
                 <form class="formEditarPerfil" method="post" action="procesar_editarPerfil.php">
                     <div class="form-group">
+                        <label for="nombre_pacientes">Nombre</label>
                         <input type="text" id="nombre_pacientes" name="nombre_pacientes" placeholder="Nombre" value="<?php echo htmlspecialchars($paciente['nombre_pacientes']); ?>">
                     </div>
 
                     <div class="form-group">
+                    <label for="apellidos_pacientes">Apellidos</label>
                         <input type="text" id="apellidos_pacientes" name="apellidos_pacientes" placeholder="Apellidos" value="<?php echo htmlspecialchars($paciente['apellidos_pacientes']); ?>">
                     </div>
 
                     <div class="form-group">
+                        <label for="mail_pacientes">Email</label>
                         <input type="email" id="mail_pacientes" name="mail_pacientes" placeholder="Correo electrónico" value="<?php echo htmlspecialchars($paciente['mail_pacientes']); ?>">
                     </div>
 
                     <div class="form-group-bajo">
-                        <input type="tel" id="telefono_paciente" name="telefono_paciente" placeholder="Teléfono" value="<?php echo htmlspecialchars($paciente['telefono_paciente']); ?>">
+                        <label for="telefono_pacientes">Teléfono</label>
+                        <input type="tel" id="telefono_pacientes" name="telefono_paciente" placeholder="Teléfono" value="<?php echo htmlspecialchars($paciente['telefono_paciente']); ?>">
                     </div>
 
                     <div class="form-group-bajo">
-                        <input type="text" id="usuario_pacientes" name="usuario_pacientes" placeholder="Nombre de usuario" value="<?php echo htmlspecialchars($paciente['usuario_pacientes']); ?>">
+                        <label for="DNI">DNI</label>
+                        <input type="text" id="DNI" name="DNI" placeholder="DNI" value="<?php echo htmlspecialchars($paciente['DNI']); ?>">
                     </div>
 
-                    <!-- Por razones de seguridad, no es recomendable precargar o mostrar la contraseña -->
                     <div class="form-group-bajo">
-                        <input type="password" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
-                        <span onclick="togglePasswordVisibility()">
-                            <i class="eye-icon">🙉</i>
-                        </span>
+                    <label for="fechaNacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Fecha de nacimiento" value="<?php echo htmlspecialchars($paciente['fecha_nacimiento']); ?>">
+                    </div>
+
+                    <div class="form-group-bajo">
+                    <label for="genero">Género</label>
+                        <input type="text" id="genero" name="genero" placeholder="Género" value="<?php echo htmlspecialchars($paciente['genero']); ?>">
+                    </div>
+
+                    <div class="form-group-bajo">
+                    <label for="usario_pacientes">Usuario</label>
+                        <input type="text" id="usario_pacientes" name="usario_pacientes" placeholder="Usuario" value="<?php echo htmlspecialchars($paciente['usuario_pacientes']); ?>">
+                    </div>
+
+                    <div class="form-group-bajo">
+                        <label for="contrasena_pacientes">Contraseña</label>
+                        <input type="text" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
                     </div>
                     <button type="submit">Guardar cambios</button>
                 </form>
@@ -322,6 +338,8 @@ mysqli_close($conexion);
     </footer>
     <script src='cambiarPerfil.js'></script>
     <script src='validar_inicioSesion.js'></script>
+    <script src='validar_contacto.js'></script>
+    <script src='faq.js'></script>
 
 </body>
 
