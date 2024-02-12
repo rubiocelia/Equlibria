@@ -194,7 +194,6 @@ mysqli_close($conexion);
                         <input type="text" id="usario_pacientes" name="usario_pacientes" placeholder="Usuario" value="<?php echo htmlspecialchars($paciente['usuario_pacientes']); ?>">
                     </div>
 
-                    <!-- Por razones de seguridad, no es recomendable precargar o mostrar la contraseña -->
                     <div class="form-group-bajo">
                         <label for="contrasena_pacientes">Contraseña</label>
                         <input type="text" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
