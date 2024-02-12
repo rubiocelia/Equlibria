@@ -1,40 +1,53 @@
 <?php
+// Incluir el archivo de conexión a la base de datos
 require_once("conecta.php");
-$conexion = getConexion();
 
-// Asegurándose de que el método utilizado para acceder a esta página es POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recogida de datos del formulario
-    $id_pacientes = $_SESSION['id_pacientes']; // Asumiendo que has almacenado el ID del paciente en la sesión
-    $nombre_pacientes = $_POST['nombre_pacientes'];
-    $apellidos_pacientes = $_POST['apellidos_pacientes'];
-    $mail_pacientes = $_POST['mail_pacientes'];
-    $telefono_paciente = $_POST['telefono_paciente'];
-    $usuario_pacientes = $_POST['usuario_pacientes'];
-    $contrasena_pacientes = $_POST['contrasena_pacientes']; // Considera encriptar esta contraseña antes de almacenarla
+// Iniciar sesión
+session_start();
 
-    // Consulta SQL para actualizar los datos del paciente
-    $sql = "UPDATE pacientes SET nombre_pacientes=?, apellidos_pacientes=?, mail_pacientes=?, telefono_paciente=?, usuario_pacientes=?, contrasena_pacientes=? WHERE id_pacientes=?";
+// Verificar si el usuario ha iniciado sesión y si los datos del formulario están presentes
+if(isset($_SESSION['idPacienteLogin']) && isset($_POST['nombre_pacientes'])) {
+    $conexion = getConexion(); // Asumiendo que getConexion devuelve un objeto de conexión
+
+    // Recuperar los datos del formulario
+    $idPaciente = $_SESSION['idPacienteLogin'];
+    $nombre = $_POST['nombre_pacientes'];
+    $apellidos = $_POST['apellidos_pacientes'];
+    $email = $_POST['mail_pacientes'];
+    $telefono = $_POST['telefono_paciente'];
+    $DNI = $_POST['DNI'];
+    $fechaNacimiento = $_POST['fechaNacimiento'];
+    $genero = $_POST['genero'];
+    $usuario = $_POST['usario_pacientes'];
+    $contrasena = $_POST['contrasena_pacientes']; // Contraseña que el usuario ha ingresado
+
+
+    // Preparar la consulta SQL para actualizar los datos del paciente
+    $sql = "UPDATE pacientes SET nombre_pacientes=?, apellidos_pacientes=?, mail_pacientes=?, telefono_paciente=?, DNI=?, fecha_nacimiento=?, genero=?, usuario_pacientes=?, contrasena_pacientes=? WHERE id_pacientes=?";
 
     $stmt = $conexion->prepare($sql);
-    if ($stmt) {
-        // Encriptar la contraseña antes de almacenarla, por ejemplo, usando password_hash()
-        $contrasena_pacientes_hash = password_hash($contrasena_pacientes, PASSWORD_DEFAULT);
-
-        $stmt->bind_param("ssssssi", $nombre_pacientes, $apellidos_pacientes, $mail_pacientes, $telefono_paciente, $usuario_pacientes, $contrasena_pacientes_hash, $id_pacientes);
+    if($stmt) {
+        // Se pasa la contraseña encriptada en lugar de la contraseña en texto plano
+        $stmt->bind_param("sssssssssi", $nombre, $apellidos, $email, $telefono, $DNI, $fechaNacimiento, $genero, $usuario, $contrasena, $idPaciente);
         
-        if ($stmt->execute()) {
-            // Redirigir a alguna página de confirmación o de perfil
-            header("Location: perfil.php");
+        // Ejecutar la consulta
+        if($stmt->execute()) {
+            // Redireccionar al perfil con un mensaje de éxito
+            echo "<script>alert('Exito al acrualizar');</script>";
+            
         } else {
-            // Manejar el error, por ejemplo, mostrando un mensaje al usuario
-            echo "Error al actualizar el perfil: " . $conexion->error;
+            // Error al actualizar
+            echo "<script>alert('Error al acrualizar');</script>";
         }
-        $stmt->close();
     } else {
-        echo "Error al preparar la consulta: " . $conexion->error;
+        // Error al preparar la consulta
+        echo "<script>alert('Exito al preparar la consulta');</script>";
     }
+    
+    // Cerrar conexión
+    $conexion->close();
+} else {
+    // Redireccionar si el usuario no está logueado o los datos del formulario no están presentes
+    header("Location: inicio_sesion.php");
 }
-
-$conexion->close();
 ?>

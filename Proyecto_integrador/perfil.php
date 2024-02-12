@@ -205,7 +205,10 @@ mysqli_close($conexion);
 
                     <div class="form-group-bajo">
                         <label for="contrasena_pacientes">Contraseña</label>
-                        <input type="text" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
+                        <input type="password" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
+                        <span onclick="togglePasswordVisibility()">
+                            <i class="eye-icon">🙉</i>
+                        </span>
                     </div>
                     <button type="submit">Guardar cambios</button>
                 </form>
