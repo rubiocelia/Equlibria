@@ -280,8 +280,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin-top: 60px;
+  max-height: 100vh;
+  margin-top: 8%;
 }
 
 .formInicioSesion {
@@ -943,6 +943,7 @@ p {
 .formEditarPerfil input[type="text"],
 .formEditarPerfil input[type="email"],
 .formEditarPerfil input[type="tel"],
+.formEditarPerfil input[type="date"],
 .formEditarPerfil input[type="password"] {
   width: 100%;
   padding: 15px 20px;
