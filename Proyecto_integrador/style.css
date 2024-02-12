@@ -1118,3 +1118,32 @@ p {
 .contacto {
   margin-top: 5%;
 }
+
+/* recursos gratuitos */
+.recursosGratuitos {
+}
+
+.tituloPodcast {
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Bellefair";
+  font-size: 30px;
+}
+
+.tituloPodcast img {
+  width: 40px;
+  height: 40px;
+}
+
+.tarjetaPodcast {
+  background-color: var(--verde-claro);
+  width: 20%;
+  height: 450px;
+  border-radius: 15px;
+}
+
+.tarjetaPodcast img {
+  margin: auto;
+}
