@@ -284,6 +284,23 @@ footer {
   margin-top: 8%;
 }
 
+
+/* css formulario asistentes y psicologos */
+.citaAsistencia{
+  background-image: url(img/fondoFormularios.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: "Righteous", cursive;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  margin-top: 8%;
+}
+
+
 .formInicioSesion {
   width: 100%;
   border-radius: 15px;
