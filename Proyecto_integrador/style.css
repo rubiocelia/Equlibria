@@ -424,6 +424,29 @@ a {
   margin: 100px;
 }
 
+.subrayadoFormularioRegistro {
+  background-color: var(--contraste-claro);
+  height: 15px;
+  font-size: 30px;
+  width: 425px;
+  text-align: center;
+  margin: 30px auto;
+  font-family: "Righteous", cursive;
+  margin-top: -120px;
+}
+
+.subrayadoFormularioRegistro h3 {
+  transform: translate(0px, -50px);
+  font-size: 60px;
+}
+.containerFormRegistro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: -10px;
+}
 .formRegistro {
   width: 100%;
   border-radius: 15px;
@@ -432,7 +455,7 @@ a {
   position: relative;
   max-width: 800px;
   font-family: "Chivo", sans-serif;
-  margin-top: -10px;
+  margin-top: 20px;
 }
 
 .formRegistro label {
@@ -571,6 +594,7 @@ a {
   position: absolute;
   right: 10px;
   cursor: pointer;
+  margin-top: 7.5px;
 }
 
 /*pagino de inicio*/
