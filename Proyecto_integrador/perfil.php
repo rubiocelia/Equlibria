@@ -331,6 +331,8 @@ mysqli_close($conexion);
     </footer>
     <script src='cambiarPerfil.js'></script>
     <script src='validar_inicioSesion.js'></script>
+    <script src='validar_contacto.js'></script>
+    <script src='faq.js'></script>
 
 </body>
 
