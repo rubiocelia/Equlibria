@@ -1144,8 +1144,6 @@ p {
 }
 
 /* recursos gratuitos */
-.recursosGratuitos {
-}
 
 .tituloPodcast {
   margin-top: 15px;
@@ -1160,14 +1158,43 @@ p {
   width: 40px;
   height: 40px;
 }
-
 .tarjetaPodcast {
-  background-color: var(--verde-claro);
-  width: 20%;
-  height: 450px;
-  border-radius: 15px;
+  background-color: var(--verde-claro); /* Color de fondo */
+  width: 400px; /* Ancho del contenedor */
+  height: 568px;
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+  padding: 20px; /* Espaciado interno */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  text-align: left; /* Alineación del texto a la izquierda */
+  font-family: "Arial", sans-serif; /* Tipo de letra */
+  margin: auto; /* Centrar el contenedor si es necesario */
 }
 
-.tarjetaPodcast img {
-  margin: auto;
+.fotoPod {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 15px; /* Bordes redondeados para la imagen */
+  margin-bottom: 15px; /* Espaciado debajo de la imagen */
+}
+
+.tarjetaPodcast h2 {
+  color: #333333; /* Color del título */
+  font-size: 38px; /* Tamaño de fuente para el título */
+  margin: 0; /* Remueve márgenes por defecto */
+  padding: 0;
+  font-family: "Bellefair";
+}
+
+.tarjetaPodcast p {
+  color: #333333; /* Color del párrafo */
+  font-size: 14px; /* Tamaño de fuente para el párrafo */
+  margin: 0; /* Remueve márgenes por defecto */
+  padding: 0; /* Remueve paddings por defecto */
+}
+
+.logoPodcast {
+  width: 50px; /* Ancho del logo */
+  height: auto; /* Mantiene la proporción del logo */
+  margin-top: 15px; /* Espaciado encima del logo */
 }
