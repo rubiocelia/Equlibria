@@ -15,16 +15,33 @@ function obtenerProfesionales() {
     $conexion->close();
     return $profesionales;
 }
+// Función para recuperar los datos del paciente
+function obtenerDatosPaciente($idPaciente){
+    $conexion = getConexion();
+    $consulta = $conexion->query("SELECT * FROM pacientes WHERE id_pacientes='$idPaciente'");
+    $paciente = $consulta->fetch_assoc();
+    $conexion->close();
+    return $paciente;
+}
 // Inicializar variables
 $listaProfesionales= [];
 $listaProfesionales = obtenerProfesionales();
 $listaHorasDisponibles= [];
-// Cuando esten las paginas conectadas quitar la siguiente linea. Se recibira en la llamada de POST.
-$idPacienteLogin = 1;
+$idPacienteLogin = null;
+// Validamos que la sesión este iniciada para seguir con la reserva 
+if (isset($_SESSION['idPacienteLogin'])){
+    // Como esta se sesion iniciada recuperamos el idPacienteLogin
+    $idPacienteLogin= $_SESSION['idPacienteLogin'];
+    //session_destroy();
+} else {
+    // Como no se ha inciado sesión mandamos a la pagina de login
+    header("Location: inicio_sesion.php?sendTo=citaPsicologia");
+    exit();
+}
+$datosPaciente = obtenerDatosPaciente($idPacienteLogin);
 
 // Verificamos si se ha enviado un formulario
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $idPacienteLogin = $_POST['idPacienteLogin'] ?? '';
     $id_profesional = $_POST['profesional_seleccionado'] ?? '';
     $fecha_cita = $_POST['fecha_cita'] ?? '';
     $hora_cita = $_POST['hora_cita'] ?? '';
@@ -60,18 +77,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div class="form-row">
                     <div class="form-column">
                         <label for="nombre_paciente">Nombre:</label>
-                        <input type="text" id="nombre_paciente" name="nombre_paciente">
+                        <input type="text" id="nombre_paciente" name="nombre_paciente" value="<?php echo $datosPaciente['nombre_pacientes']; ?>" disabled>
                     </div>
                     <div class="form-column">                      
                         <label for="apellidos_paciente">Apellidos:</label>
-                        <input type="text" id="apellidos_paciente" name="apellidos_paciente">
+                        <input type="text" id="apellidos_paciente" name="apellidos_paciente" value="<?php echo $datosPaciente['apellidos_pacientes']; ?>" disabled>
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-column">
                         <label for="mail_paciente">Correo Electrónico:</label>
-                        <input type="email" id="mail_paciente" name="mail_paciente">
+                        <input type="email" id="mail_paciente" name="mail_paciente" value="<?php echo $datosPaciente['mail_pacientes']; ?>" disabled>
                     </div>
                 </div>
                 <div class="form-row">
@@ -103,8 +120,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                 </div>
 
-                <input type="hidden" name="idPacienteLogin" value="<?php echo $idPacienteLogin; ?>">
                 <button type="submit" name="Enviar">Enviar formulario</button>
+                <button type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver Inicio</button>
             </form>
         </div>
         <script src="cargarHorasDisponibles.js"></script>

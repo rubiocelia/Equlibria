@@ -1,26 +1,3 @@
-<!--
-
-
-SELECT
-	'5' as id_profesionales,
-    horarios.hora as 'hora_cita'
-   /*CASE WHEN (citas.id_cita_psicologica IS NULL) THEN 'Disponible' ELSE 'No Disponible' END AS disponilidad*/
-FROM 
-	(
-        SELECT '17:00' AS 'hora' UNION
-        SELECT '18:00' AS 'hora' UNION
-        SELECT '19:00' AS 'hora' UNION
-        SELECT '20:00' AS 'hora' UNION
-        SELECT '21:00' AS 'hora'
-    ) as horarios
-    LEFT JOIN cita_psicologica as citas ON horarios.hora=citas.hora_cita AND citas.id_profesionales='5' AND citas.fechas_cita='2024-02-11'
-WHERE
-	citas.id_cita_psicologica IS NULL
--->
-
-
-
-
 <?php
 
 require_once("conecta.php");
@@ -38,16 +15,33 @@ function obtenerEventos(){
     $conexion->close();
     return $eventos;
 }
-
+// Función para recuperar los datos del paciente
+function obtenerDatosPaciente($idPaciente){
+    $conexion = getConexion();
+    $consulta = $conexion->query("SELECT * FROM pacientes WHERE id_pacientes='$idPaciente'");
+    $paciente = $consulta->fetch_assoc();
+    $conexion->close();
+    return $paciente;
+}
 // Inicializar variables
 $listaEventos= [];
 $listaEventos = obtenerEventos();
-// Cuando esten las paginas conectadas quitar la siguiente linea. Se recibira en la llamada de POST.
-$idPacienteLogin = 1;
+$idPacienteLogin = null;
+
+// Validamos que la sesión este iniciada para seguir con la reserva 
+if (isset($_SESSION['idPacienteLogin'])){
+    // Como esta se sesion iniciada recuperamos el idPacienteLogin
+    $idPacienteLogin= $_SESSION['idPacienteLogin'];
+    //session_destroy();
+} else {
+    // Como no se ha inciado sesión mandamos a la pagina de login
+    header("Location: inicio_sesion.php?sendTo=reservaEvento");
+    exit();
+}
+$datosPaciente = obtenerDatosPaciente($idPacienteLogin);
 
 // Verificamos si se ha enviado un formulario
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $idPacienteLogin = $_POST['idPacienteLogin'] ?? '';
     $idEventoSeleccionado = $_POST['evento_seleccionado'] ?? '';
     // Acciones que vamos a realizar cuando el submit que ejecuta el POST es ENVIAR.
     if (isset($_POST['Enviar'])) {
@@ -81,18 +75,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div class="form-row">
                     <div class="form-column">
                         <label for="nombre_paciente">Nombre:</label>
-                        <input type="text" id="nombre_paciente" name="nombre_paciente">
+                        <input type="text" id="nombre_paciente" name="nombre_paciente" value="<?php echo $datosPaciente['nombre_pacientes']; ?>" disabled>
                     </div>
                     <div class="form-column">                      
                         <label for="apellidos_paciente">Apellidos:</label>
-                        <input type="text" id="apellidos_paciente" name="apellidos_paciente">
+                        <input type="text" id="apellidos_paciente" name="apellidos_paciente" value="<?php echo $datosPaciente['apellidos_pacientes']; ?>" disabled>
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-column">
                         <label for="mail_paciente">Correo Electrónico:</label>
-                        <input type="email" id="mail_paciente" name="mail_paciente">
+                        <input type="email" id="mail_paciente" name="mail_paciente" value="<?php echo $datosPaciente['mail_pacientes']; ?>" disabled>
                     </div>
                 </div>
                 <div class="form-row">
@@ -107,8 +101,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         </select>
                     </div>
                 </div>
-                <input type="hidden" name="idPacienteLogin" value="<?php echo $idPacienteLogin; ?>">
                 <button type="submit" name="Enviar">Enviar formulario</button>
+                <button type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver Inicio</button>
+
             </form>
         </div>
     </body>

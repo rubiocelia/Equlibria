@@ -1,29 +1,36 @@
 <?php
+// Conexion a BBDD
 require_once("conecta.php");
-
 $conexion = getConexion();
-
+// Contectar con la sesion
 session_start();
-
-// Verifica si el ID está presente en la URL
-if (isset($_GET['id'])) {
-    $id_pacientes = $_GET['id'];
-
+// Funcion para recuperar los datos del paciente
+function obtenerDatosPaciente($idPaciente) {
+    $conexion = getConexion();
     // Consulta para obtener la información del usuario por ID
     $sql = "SELECT * FROM pacientes WHERE id_pacientes = ?";
     $stmt = $conexion->prepare($sql);
-    $stmt->bind_param("i", $id_pacientes);
+    $stmt->bind_param("i", $idPaciente);
     $stmt->execute();
     $resultado = $stmt->get_result();
+    $paciente = $resultado->fetch_assoc();
+    $conexion->close();
+    return $paciente;
+}
 
-    if ($resultado->num_rows > 0) {
-        $paciente = $resultado->fetch_assoc();
-        // Puedes ahora mostrar la información del paciente
-    } else {
-        header("Location: inicio_sesion.php");
-    }
+// Variables de control
+$sesionActiva=false;
+$idPacienteLogin=null;
+$paciente=null;
+// Validamos que la sesión este iniciada
+if (isset($_SESSION['idPacienteLogin'])){
+    // Como esta se sesion iniciada recuperamos el idPacienteLogin
+    $idPacienteLogin= $_SESSION['idPacienteLogin'];
+    $sesionActiva=true;
+    $paciente=obtenerDatosPaciente($idPacienteLogin);
 } else {
-    header("Location: perfil.php?id=" . $pacientes['id_pacientes']);
+    header("Location: inicio_sesion.php");
+    exit();
 }
 
 // No olvides cerrar la conexión
@@ -83,12 +90,12 @@ mysqli_close($conexion);
 
 <body class="perfil">
     <header class="header">
-        <a href="index.html"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
-        <a href="index.html"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
+        <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
+        <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
-            <ul class="menu">
+        <ul class="menu">
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">¿Quiénes somos?</a>
+                    <a href="QuienesSomos.html" class="dropbtn">¿Quiénes somos?</a>
                     <div class="dropdown-content">
                         <a href="#">Nosotros</a>
                         <a href="#">Profesionales</a>
@@ -97,7 +104,7 @@ mysqli_close($conexion);
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Recursos gratuitos</a>
+                    <a href="recursosGratuitos.html" class="dropbtn">Recursos gratuitos</a>
                     <div class="dropdown-content">
                         <a href="#">Podcast</a>
                         <a href="#">Libros autoayuda</a>
@@ -106,7 +113,7 @@ mysqli_close($conexion);
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Servicios</a>
+                    <a href="servicios.php" class="dropbtn">Servicios</a>
                     <div class="dropdown-content">
                         <a href="#">Terapia psicológica</a>
                         <a href="#">Talleres</a>
@@ -116,26 +123,28 @@ mysqli_close($conexion);
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Retiros</a>
+                    <a href="retiros.php" class="dropbtn">Retiros</a>
                     <div class="dropdown-content">
                         <a href="#">Retiro de verano</a>
                         <a href="#">Retiro de invierno</a>
                     </div>
                 </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Perfil</a>
-                    <div class="dropdown-content">
-                        <a href="#">Mi perfil</a>
-                        <a href="#">Calendario</a>
-                        <a href="#">Ayuda</a>
-                        <a href="#">Eliminar cuenta</a>
-                        <a href="#">Cerrar sesión</a>
-                    </div>
-                </li>
-
-                <li class="iniciarSesion"><a href="#">Iniciar sesión</a></li>
-                <li class="registro"><a href="#">Registrase</a></li>
+                <?php if ($sesionActiva): ?>
+                    <li class="dropdown">
+                        <a href="perfil.php" class="dropbtn">Perfil</a>
+                        <div class="dropdown-content">
+                            <a href="perfil.php">Mi perfil</a>
+                            <a href="#">Calendario</a>
+                            <a href="#">Ayuda</a>
+                            <a href="#">Eliminar cuenta</a>
+                            <a href="cerrarSesion.php">Cerrar sesión</a>
+                        </div>
+                    </li>
+                <?php endif; ?>
+                <?php if (!$sesionActiva): ?>
+                    <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
+                    <li class="registro"><a href="registrarse.php">Registrase</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>
