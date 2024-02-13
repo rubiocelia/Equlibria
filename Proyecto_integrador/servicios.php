@@ -85,7 +85,67 @@ if (isset($_SESSION['idPacienteLogin'])){
             </ul>
         </nav>
     </header>
+
     <main>
+
+
+    <div class="pginicio">
+            <h1>Nuestros profesionales te pueden ayudar</h1>
+            <h2>Tu bienestar merece ser prioridad. La terapia puede ser el primer paso</h2>
+            <button class="boton_inicio">¡Pide cita!</button>
+        </div>
+        
+        <div>
+            <div class="subrayado">
+                <h3>Nuestros talleres</h3>
+            </div>
+            <div class="talleresInicio">
+                <div class="taller">
+                    <img src="img/taller1.png">
+                    <h3>Autoestima</h3>
+                    <p>Aprenderás sobre autoestima y como integrarla en tu vida para lograr rebajar los niveles de
+                        ansiedad
+                        y
+                        conocer mejor tu cuerpo y tus habilidades.
+                    </p>
+                    <button>¡Resérvalo!</button>
+                </div>
+
+                <div class="taller">
+                    <img src="img/taller2.png">
+                    <h3>Mejora habilidades sociales</h3>
+                    <p>En este taller de hablididades sociales trabajaremos todas las áreas en las que las habilidades
+                        sociales adquieren un papel importante.
+                    </p>
+                    <button>¡Resérvalo!</button>
+                </div>
+
+                <div class="taller">
+                    <img src="img/taller3.png">
+                    <h3>Gestión de la ansiedad</h3>
+                    <p>Descubre en este taller todo lo que debes saber sobre tu ansiedad. Vamos a aprender a acapetar y
+                        escuchar desde el amor nuestra ansiedad.
+                    </p>
+                    <button>¡Resérvalo!</button>
+                </div>
+
+                <div class="taller">
+                    <img src="img/taller4.png">
+                    <h3>Autoexigencia y perfeccionismo</h3>
+                    <p>En este taller trabajaremos en reconocer y acompañar nuestra autoexigenciaa y profundizaremos en
+                        el origen.
+                    </p>
+                    <button>¡Resérvalo!</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
 
     </main>
     <footer>
