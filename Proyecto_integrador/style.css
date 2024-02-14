@@ -658,6 +658,7 @@ p {
   color: var(--verde-oscuro);
   font-size: 48px;
   font-family: "Bellefair";
+  margin-bottom: 2%;
 }
 
 .bienvenido p {
