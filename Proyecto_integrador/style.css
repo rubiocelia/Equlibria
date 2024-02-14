@@ -651,7 +651,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 25px;
+  margin-bottom: 3%;
 }
 
 .titBienvenido {
@@ -663,7 +663,7 @@ p {
 .bienvenido p {
   font-size: 40px;
   text-align: center;
-  margin: 0 400px;
+  margin: 0 20%;
 }
 
 .talleresInicio {
@@ -672,6 +672,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 5%;
 }
 
 .subrayado {
@@ -696,7 +697,7 @@ p {
   height: 450px;
   border-radius: 10px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin: 50px 150px;
+  margin: 3% 5%;
 }
 
 .taller img {
