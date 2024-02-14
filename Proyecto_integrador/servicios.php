@@ -21,11 +21,11 @@ if (isset($_SESSION['idPacienteLogin'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="elena.css">
     <title>Servicios</title>
 </head>
 
-<body>
+<body class="bodyServicios">
     <header class="header">
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
@@ -89,56 +89,184 @@ if (isset($_SESSION['idPacienteLogin'])){
     <main>
 
 
-    <div class="pginicio">
-            <h1>Nuestros profesionales te pueden ayudar</h1>
-            <h2>Tu bienestar merece ser prioridad. La terapia puede ser el primer paso</h2>
-            <button class="boton_inicio">¡Pide cita!</button>
+<!--------TALLERES----- -->
+    <div class="pgservicios">
+            <h1>Nuestros profesionales te pueden ayudar</h1> <br> <br>
+            <h2>Tu bienestar merece ser prioridad. <br>
+                 La terapia puede ser el primer paso</h2>
+            <button class="boton_servicios">¡Pide cita!</button>
         </div>
         
         <div>
             <div class="subrayado">
                 <h3>Nuestros talleres</h3>
             </div>
-            <div class="talleresInicio">
-                <div class="taller">
+            <div class="talleresServicios">
+                <div class="tallerServicios">
                     <img src="img/taller1.png">
                     <h3>Autoestima</h3>
-                    <p>Aprenderás sobre autoestima y como integrarla en tu vida para lograr rebajar los niveles de
-                        ansiedad
-                        y
-                        conocer mejor tu cuerpo y tus habilidades.
+                    <p>Nuestro curso te enseñará a fortalecer tu autoestima para reducir la ansiedad y mejorar tu bienestar. 
+                        Aprenderás a conocer mejor tu cuerpo y tus habilidades para potenciar tu confianza y alcanzar tus metas.
+                        No solo eso, también profundizaremos en la conexión entre la autoestima y el autoconocimiento.
+                        Exploraremos cómo conocer mejor tu cuerpo, tus habilidades y tus límites contribuye a fortalecer tu autoestima y te ayuda a desarrollar todo tu potencial.
                     </p>
+                    <div class="price-button-container">
+                    <span> Precio:80€</span>
                     <button>¡Resérvalo!</button>
+                    </div>
                 </div>
 
-                <div class="taller">
+                <div class="tallerServicios">
                     <img src="img/taller2.png">
                     <h3>Mejora habilidades sociales</h3>
-                    <p>En este taller de hablididades sociales trabajaremos todas las áreas en las que las habilidades
-                        sociales adquieren un papel importante.
+                    <p>En nuestro taller de habilidades sociales, nos sumergiremos en un viaje completo que abarca todas las áreas 
+                        donde las habilidades sociales desempeñan un papel crucial en la vida cotidiana.
+                        Exploraremos cómo estas habilidades impactan en nuestras interacciones personales, profesionales y en nuestra calidad de vida en general.
                     </p>
+                    <span> Precio:80€</span>
                     <button>¡Resérvalo!</button>
                 </div>
 
-                <div class="taller">
+                <div class="tallerServicios">
                     <img src="img/taller3.png">
                     <h3>Gestión de la ansiedad</h3>
-                    <p>Descubre en este taller todo lo que debes saber sobre tu ansiedad. Vamos a aprender a acapetar y
-                        escuchar desde el amor nuestra ansiedad.
+                    <p>En este taller, te invitamos a embarcarte en un viaje de autoexploración para comprender a fondo tu ansiedad
+                    Además, nos sumergiremos en la importancia de escuchar activamente nuestra ansiedad, reconociendo los mensajes que puede estar tratando de comunicarnos sobre nuestras necesidades emocionales y mentales.
+                     Aprenderás a transformar tu relación con la ansiedad, utilizando su energía para fomentar el crecimiento personal y el bienestar emocional.
                     </p>
+                    <span> Precio:80€</span>
                     <button>¡Resérvalo!</button>
                 </div>
 
-                <div class="taller">
+                <div class="tallerServicios">
                     <img src="img/taller4.png">
                     <h3>Autoexigencia y perfeccionismo</h3>
-                    <p>En este taller trabajaremos en reconocer y acompañar nuestra autoexigenciaa y profundizaremos en
-                        el origen.
+                    <p>En este taller, nos sumergiremos en el complejo mundo de la autoexigencia, explorando sus raíces y aprendiendo a acompañarla de manera compasiva.
+                         Profundizaremos en el origen de nuestra autoexigencia, explorando cómo se forma a lo largo de nuestras vidas y cómo puede impactar nuestra salud emocional y mental.
                     </p>
+                    <span> Precio:80€</span>
                     <button>¡Resérvalo!</button>
                 </div>
             </div>
         </div>
+
+        <!--------CURSOS----- -->
+        <div class="subrayado">
+                <h3>Nuestros cursos</h3>
+            </div>
+       
+        <div class="container">
+            <div class="cursos">
+                <img src="img/cursoAutoestima.png" alt="">
+                <div class="card-description">
+                    <div class="card-title">
+                        <h3>Curso de autoestima</h3>
+                    </div>
+                    <div class="card-text">
+                        <p>
+                            Un curso de autoestima es una experiencia diseñada para fortalecer la confianza y la
+                            autovaloración de los participantes, brindando herramientas para superar
+                            inseguridades y mejorar la relación con uno mismo.
+                        </p>
+                    </div>
+                    <div class="card-link">
+                        <p>Por: Javier </p>
+                        <button>¡Resérvalo!</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cursos">
+                <img src="img/cursoDependenciaEmocional.png" alt="">
+                <div class="card-description">
+                    <div class="card-title">
+                        <h3>Curso de dependencia emocional</h3>
+                    </div>
+                    <div class="card-text">
+                        <p>Este curso sobre Dependencia Emocional te ayudará a liberarte de patrones
+                            destructivos y a cultivar relaciones más saludables a través de la autonomía
+                            emocional y la autoestima.
+                        </p>
+                    </div>
+                    <div class="card-link">
+                        <p>Por: Juan </p>
+                        <button>¡Resérvalo!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cursos">
+                <img src="img/cursoAnsiedadOnline.png" alt="">
+                <div class="card-title">
+                    <h3>Curso ansiedad online</h3>
+                </div>
+                <div class="card-text">
+                    <p>El curso de Ansiedad en línea te brinda las herramientas para comprender y gestionar
+                        la ansiedad desde la comodidad de tu hogar. Aprende estrategias efectivas para
+                        controlar el estrés y recupera tu bienestar emocional.
+                    </p>
+                </div>
+                <div class="card-link">
+                    <p>Por: Alejandro </p>
+                    <button>¡Resérvalo!</button>
+                </div>
+            </div>
+            <div class="cursos">
+                <img src="img/cursoParejas.png" alt="">
+                <div class="card-description">
+                    <div class="card-title">
+                        <h3>Curso para parejas</h3>
+                    </div>
+                    <div class="card-text">
+                        <p>Nuestro curso para parejas es una oportunidad para fortalecer la conexión y mejorar
+                            la comunicación en tu relación. Aprenderás herramientas efectivas para construir una
+                            base sólida y resolver desafíos juntos.
+                        </p>
+                    </div>
+                    <div class="card-link">
+                        <p>Por: Alvaro </p>
+                        <button>¡Resérvalo!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+<!--------ASISTENCIA A DOMICILIO----- -->
+
+      <div class="subrayado2">
+  <h3>Asistencia a domicilio para personas mayores</h3>
+</div>
+
+<div class="section">
+  <div class="content">
+    <div class="profile">
+      <img src="img/prof6.png" alt="Martín Galadas" class="profile-image">
+      <p class="profile-name">Martín Cañadas<br><span class="profile-title">asistente para mayores</span></p>
+    </div>
+    <div class="profile">
+      <img src="img/prof2.png" alt="Sofía Salpoveda" class="profile-image">
+      <p class="profile-name">Sofía Sepúlveda<br><span class="profile-title">asistente para mayores</span></p>
+    </div>
+  </div>
+  <div class="text-content">
+    <p>Comprendemos la importancia de un soporte en salud mental accesible y personalizado para nuestros adultos mayores...</p>
+    <button class="reserve-button">Reserve con nuestros profesionales</button>
+  </div>
+</div>
+
+</div>
+        
+
+
+
+
+
+
+
+
+
+
+
 
 
 

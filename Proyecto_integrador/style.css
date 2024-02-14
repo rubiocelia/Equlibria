@@ -409,7 +409,7 @@ footer {
 a {
   text-decoration: none;
 }
-/*registro*/
+/* /registro/ */
 .registroFormulario {
   background-image: url(img/fondoRegistro.png);
   background-repeat: no-repeat;
@@ -597,7 +597,7 @@ a {
   margin-top: 7.5px;
 }
 
-/*pagino de inicio*/
+/* /pagino de inicio/ */
 .pginicio {
   display: flex;
   flex-direction: column;
