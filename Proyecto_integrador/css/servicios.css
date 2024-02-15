@@ -501,53 +501,58 @@ footer {
 
 
 
+
+
+
+
+
   
 
   /* parte de cursos */
   .container {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola línea */
-    justify-content: center; /* Centra los cursos en el medio de la pantalla horizontalmente */
-    width: 100%; /* Ocupa todo el ancho del viewport */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 100%; 
   }
   
   .cursos {
-    display: flex; /* Usa flexbox para la disposición interna */
-    flex-direction: row; /* Asegura que la imagen y el contenido estén lado a lado */
-    align-items: center; /* Alinea los elementos verticalmente */
-    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor */
-    width: 80%; /* Establece el ancho deseado para los contenedores de los cursos */
-    margin-bottom: 2em; /* Espacio entre cada contenedor de curso */
-    background-color: #ffffff; /* Fondo blanco para las tarjetas de curso */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
-    border-radius: 10px; /* Bordes redondeados para las tarjetas */
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: flex-start; 
+    width: 80%; 
+    margin-bottom: 2em; 
+    background-color: var(--verde-claro); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
   }
   
   .cursos img {
-    width: 30%; /* Ajusta el tamaño de la imagen según sea necesario */
-    height: auto; /* Para mantener la relación de aspecto de la imagen */
-    border-top-left-radius: 10px; /* Redondea solo las esquinas superiores e inferiores izquierdas de la imagen */
+    width: 30%; 
+    height: auto; 
+    border-top-left-radius: 10px; 
     border-bottom-left-radius: 10px;
   }
   
   .card-description {
-    width: 70%; /* Ajusta el ancho del texto según sea necesario */
-    padding: 20px; /* Relleno dentro del contenedor de texto */
+    width: 70%;
+    padding: 20px; 
   }
   
   .card-title h3 {
-    margin: 0 0 10px 0; /* Agrega espacio debajo del título */
-    color: #333; /* Color de texto oscuro para el título */
-    font-size: 1.5rem; /* Tamaño del título */
+    margin: 0 0 10px 0; 
+    color: black; 
+    font-size: 1.5rem;
   }
   
   .card-text p {
-    color: #666; /* Color de texto más suave para la descripción */
+    color: black; /* Color de texto más suave para la descripción */
   }
   
   .card-link {
     align-self: flex-start; /* Alinea el enlace y botón en la parte superior derecha del contenedor */
-    margin-top: 20px; /* Espacio en la parte superior del enlace/botón */
+    margin-top: 20px; 
   }
   
   .card-link button {

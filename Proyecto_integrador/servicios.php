@@ -211,6 +211,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <button>¡Resérvalo!</button>
                 </div>
             </div>
+            </div>
             <div class="cursos">
                 <img src="img/cursoParejas.png" alt="">
                 <div class="card-description">
@@ -251,7 +252,7 @@ if (isset($_SESSION['idPacienteLogin'])){
   </div>
   <div class="text-content">
     <p>Comprendemos la importancia de un soporte en salud mental accesible y personalizado para nuestros adultos mayores...</p>
-    <button class="reserve-button">Reserve con nuestros profesionales</button>
+    <button class="reserve-button">Pide cita</button>
   </div>
 </div>
 
