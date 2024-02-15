@@ -598,7 +598,7 @@ a {
 }
 
 /*pagino de inicio*/
-.pginicio {
+.pgquienessomos {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -674,7 +674,7 @@ p {
   gap: 30px;
 }
 
-.subrayado {
+.subrayadoQuienesSomos {
   background-color: var(--verde);
   height: 10px;
   font-size: 24px;
@@ -683,7 +683,7 @@ p {
   margin: 50px auto;
 }
 
-.subrayado h3 {
+.subrayadoQuienesSomos h3 {
   transform: translate(0px, -20px);
 }
 
