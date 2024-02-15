@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
   // Obtiene el formulario del documento
   var form = document.querySelector('form');
@@ -72,8 +71,25 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
 
-    alert("Formulario enviado con éxito.");
-    return;
-  })
-})
+    //Validacion del usuario, mail y telefono para que no se repitan.
+    if(telefono.value == telefono.value){
+      alert ("Este telefono ya está registrado, por favor introduzca otro numero de teléfono válido.")
+      event.preventDefault();
+      return;
+    }
 
+    if(correo.value == correo.value){
+      alert ("Este correo electrónico ya está registrado, por favor introduzca otro correo válido.")
+      event.preventDefault();
+      return;
+    }
+
+    if(usuarioCrear.value == usuarioCrear.value){
+      alert ("Este nombre de usuario ya está registrado, por favor introduzca otro nombre de usuario.")
+      event.preventDefault();
+      return;
+    }
+
+    alert("Formulario enviado con éxito.");
+  });
+});

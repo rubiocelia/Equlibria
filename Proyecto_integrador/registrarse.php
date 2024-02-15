@@ -42,6 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error al preparar la consulta: " . $conexion->error;
     }
+
+    
+
     // Cerramos conexión
     $conexion->close();
 }
