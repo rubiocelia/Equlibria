@@ -21,7 +21,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="elena.css">
+    <link rel="stylesheet" href="css/servicios.css">
     <title>Servicios</title>
 </head>
 
@@ -196,6 +196,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
             <div class="cursos">
                 <img src="img/cursoAnsiedadOnline.png" alt="">
+                <div class="card-description">
                 <div class="card-title">
                     <h3>Curso ansiedad online</h3>
                 </div>
