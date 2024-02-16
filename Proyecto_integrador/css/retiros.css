@@ -1,0 +1,93 @@
+.talleresServicios {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .subrayado2 {
+    background-color: var(--verde);
+    height: 10px;
+    font-size: 24px;
+    width: 700px;
+    text-align: center;
+    margin: 50px auto;
+  }
+  .subrayado2 h3 {
+    transform: translate(0px, -20px);
+  }
+  
+  .tallerServicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--verde-claro);
+    width: 9000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 50px 150px;
+   
+    
+  }
+  
+  .tallerServicios img {
+    border-radius: 20px 20px 20px 20px;
+    width: 60%;
+    max-height: 350px;
+    height: auto;
+    object-fit: cover; /* Esto cortará cualquier parte extra de la imagen para que encaje en el contenedor */
+   margin-top: 20px;
+    
+  }
+  
+  .tallerServicios h3 {
+    font-size: 28px;
+    font-family: "Bellefair";
+    text-align: center;
+    padding: 25px;
+  }
+  
+  .tallerServicios p {
+    padding: 0 35px;
+    text-align: center;
+    font-family: "Chivo", sans-serif;
+  }
+  
+  .tallerServicios button {
+    border-radius: 15px;
+    width: 120px;
+    height: 40px;
+    border: 2px solid var(--verde-oscuro);
+    background-color: var(--verde-claro);
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 25px;
+    flex: none; 
+    margin-top: 30px;
+  }
+   
+  .tallerServicios button:hover {
+    background-color: var(--verde-oscuro);
+    color: #000000;
+  }
+  .tallerServicios .price-button-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 16px 0; 
+  }
+
+  .course-details {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem; 
+    color: #757575; 
+    margin-top: 10px; 
+    padding: 20px;
+    
+  }
+  

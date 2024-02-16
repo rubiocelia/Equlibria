@@ -321,8 +321,8 @@ footer {
 
 
 
-  /* copiado de index */
-  /* modificar nombre para no interferir */
+
+ /* parte talleres en pag servicios */
   .talleresServicios {
     display: flex;
     width: 100%;
@@ -497,14 +497,6 @@ footer {
 
 
 
-
-
-
-
-
-
-  
-
   /* parte de cursos */
   .contenidoCursos {
     display: flex;
@@ -536,9 +528,9 @@ footer {
   .course-details {
     display: flex;
     align-items: center;
-    font-size: 0.9rem; /* Ajusta esto según necesites */
+    font-size: 0.9rem; 
     color: #757575; 
-    margin-top: 10px; /* Espacio antes de los detalles del curso */
+    margin-top: 10px; 
     padding: 10px;
   }
 
@@ -562,7 +554,7 @@ footer {
   }
   
   .tarjeta-link {
-    align-self: flex-start; /* Alinea el enlace y botón en la parte superior derecha del contenedor */
+    align-self: flex-start; 
     margin-top: 20px; 
   }
   

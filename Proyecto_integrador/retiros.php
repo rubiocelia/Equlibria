@@ -21,7 +21,8 @@ if (isset($_SESSION['idPacienteLogin'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/retiros.css">
     <title>Retiros</title>
 </head>
 
@@ -86,6 +87,74 @@ if (isset($_SESSION['idPacienteLogin'])){
         </nav>
     </header>
     <main>
+
+
+    <!-- RETIRO VERANO -->
+             <div class="subrayado">
+                <h3>Nuestros retiros</h3>
+             </div>
+
+             <div class="talleresServicios">
+                <div class="tallerServicios">
+                    <img src="img/retiroVerano.jpg">
+                    <h3>Retiro verano</h3>
+                    <p>Desconéctate de la rutina y reconéctate contigo mismo en nuestro exclusivo Retiro de Verano al Aire Libre.
+                         Sumérgete en la serenidad de la naturaleza y disfruta de un programa diseñado para enriquecer tu salud mental.
+                          Con actividades relajantes, talleres de mindfulness y el apoyo de expertos en bienestar,
+                           es el momento perfecto para revitalizar tu espíritu. ¡Espacios limitados para una experiencia transformadora!
+                    </p>
+                    <div class="course-details">
+                    <span class="online-details">🛒 Precio: 80€</span>
+                    <button type="button" name="VolverIndex" onclick="window.location.href='reservaEvento.php';">¡Apúntate!</button>
+                 </div>
+                   
+                    </div>
+                </div>
+
+ <!-- RETIRO INVIERNO -->
+
+             <div class="talleresServicios">
+                <div class="tallerServicios">
+                    <img src="img/retiroInvierno.jpg">
+                    <h3>Retiro invierno</h3>
+                    <p>Desconéctate de la rutina y reconéctate contigo mismo en nuestro exclusivo Retiro de Verano al Aire Libre.
+                         Sumérgete en la serenidad de la naturaleza y disfruta de un programa diseñado para enriquecer tu salud mental.
+                          Con actividades relajantes, talleres de mindfulness y el apoyo de expertos en bienestar,
+                           es el momento perfecto para revitalizar tu espíritu. ¡Espacios limitados para una experiencia transformadora!
+                    </p>
+                    <div class="course-details">
+                    <span class="online-details">🛒 Precio: 80€</span>
+                    <button type="button" name="VolverIndex" onclick="window.location.href='reservaEvento.php';">¡Apúntate!</button>
+                 </div>
+                   
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </main>
     <footer>

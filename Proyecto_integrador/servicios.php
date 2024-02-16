@@ -272,11 +272,11 @@ if (isset($_SESSION['idPacienteLogin'])){
   <div class="contenidoAsistentes">
     <div class="perfilesAsistentes">
       <img src="img/prof6.png" alt="Martín Galadas" class="perfil-image">
-      <p class="perfil-nombre">Martín Cañadas<br><span class="perfil-titulo">asistente para mayores</span></p>
+      <p class="perfil-nombre">Martín Cañadas<br><span class="perfil-titulo">Asistente para mayores</span></p>
     </div>
     <div class="perfilesAsistentes">
       <img src="img/prof2.png" alt="Sofía Salpoveda" class="perfil-image">
-      <p class="perfil-nombre">Sofía Sepúlveda<br><span class="perfil-titulo">asistente para mayores</span></p>
+      <p class="perfil-nombre">Sofía Sepúlveda<br><span class="perfil-titulo">Asistente para mayores</span></p>
     </div>
   </div>
   <div class="contenidoTexto">
@@ -302,11 +302,11 @@ if (isset($_SESSION['idPacienteLogin'])){
   <div class="contenidoAsistentes">
     <div class="perfilesAsistentes">
       <img src="img/prof4.png" alt="Fernando Rodríguez" class="perfil-image">
-      <p class="perfil-nombre">Fernando Rodríguez<br><span class="perfil-titulo">asistente para niños/as</span></p>
+      <p class="perfil-nombre">Fernando Rodríguez<br><span class="perfil-titulo">Asistente para niños/as</span></p>
     </div>
     <div class="perfilesAsistentes">
       <img src="img/prof5.png" alt="Beatriz Rodrigo" class="perfil-image">
-      <p class="perfil-nombre">Beatriz Rodrigo <br><span class="perfil-titulo">asistente para niños/as</span></p>
+      <p class="perfil-nombre">Beatriz Rodrigo <br><span class="perfil-titulo">Asistente para niños/as</span></p>
     </div>
   </div>
   <div class="contenidoTexto">
@@ -322,21 +322,6 @@ if (isset($_SESSION['idPacienteLogin'])){
 
 </div>
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
