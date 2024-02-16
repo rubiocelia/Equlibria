@@ -521,9 +521,9 @@ footer {
     flex-direction: row;
     align-items: center; 
     justify-content: flex-start; 
-    width: 80%; 
+    width: 100%; 
     margin-bottom: 2em; 
-    background-color: var(--verde-claro); 
+    background-color: var(--verde-oscuro); 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 10px; 
   }
@@ -547,7 +547,7 @@ footer {
   }
   
   .card-text p {
-    color: black; /* Color de texto más suave para la descripción */
+    color: black; 
   }
   
   .card-link {
