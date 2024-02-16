@@ -398,8 +398,7 @@ footer {
     margin-right: 400px;
     margin-top: 30px;
   }
-  
-  
+
   .tallerServicios button {
     border-radius: 15px;
     width: 120px;
@@ -417,14 +416,10 @@ footer {
     margin-top: 30px;
     margin-bottom: 10px;
   }
-  
   .tallerServicios button:hover {
     background-color: var(--verde-oscuro);
     color: #000000;
   }
-  
-
-  /* añadido nuevo */
   .tallerServicios .price-button-container {
     display: flex;
     justify-content: space-between; 
@@ -436,43 +431,45 @@ footer {
 
   /* parte de asistentes en pag servicios */
 
-  .section {
+  .secionAsistentes {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-    padding: 20px;
+   
+    padding: 2% 15%;
   }
   
-  .content {
+  .contenidoAsistentes {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
   
-  .profile {
+  .perfilesAsistentes {
     text-align: center;
     margin: 10px 0;
   }
   
-  .profile-image {
+  .perfil-image {
     border-radius: 50%;
     width: 100px;
     height: 100px;
   }
   
-  .profile-name {
+  .perfil-nombre {
     margin-top: 0.5em;
     font-weight: bold;
   }
   
-  .profile-title {
+  .perfil-titulo {
     font-size: 0.9em;
     color: grey;
   }
   
-  .text-content {
+  .contenidoTexto {
     max-width: 400px;
-    margin-left: 20px;
+   
   }
   
   .reserve-button {
@@ -509,7 +506,7 @@ footer {
   
 
   /* parte de cursos */
-  .container {
+  .contenidoCursos {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
@@ -523,39 +520,53 @@ footer {
     justify-content: flex-start; 
     width: 100%; 
     margin-bottom: 2em; 
-    background-color: var(--verde-oscuro); 
+    background-color: var(--verde-claro); 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 10px; 
+   
   }
   
   .cursos img {
     width: 30%; 
     height: auto; 
-    border-top-left-radius: 10px; 
-    border-bottom-left-radius: 10px;
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+
+  /* iconos cursos */
+  .course-details {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem; /* Ajusta esto según necesites */
+    color: #757575; 
+    margin-top: 10px; /* Espacio antes de los detalles del curso */
+    padding: 10px;
+  }
+
+  .course-details span {
+    margin-right: 10px; /* Espacio entre los iconos y el texto */
   }
   
-  .card-description {
-    width: 70%;
-    padding: 20px; 
+  .tarjetaDescripcion {
+    width: 50%;
+    padding: 50px; 
   }
   
-  .card-title h3 {
+  .card-titulo h3 {
     margin: 0 0 10px 0; 
     color: black; 
     font-size: 1.5rem;
   }
   
-  .card-text p {
+  .textoTarjeta p {
     color: black; 
   }
   
-  .card-link {
+  .tarjeta-link {
     align-self: flex-start; /* Alinea el enlace y botón en la parte superior derecha del contenedor */
     margin-top: 20px; 
   }
   
-  .card-link button {
+  .tarjeta-link button {
     border-radius: 15px;
     width: 120px;
     height: 40px;
@@ -573,7 +584,7 @@ footer {
     margin-bottom: 10px;
   }
   
-  .card-link button:hover {
+  .tarjeta-link button:hover {
     background-color: var(--verde-oscuro);
     color: #000000;
   }
