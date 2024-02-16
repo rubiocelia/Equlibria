@@ -215,7 +215,7 @@ $sql_insert_pacientes = "INSERT INTO pacientes (DNI, nombre_pacientes, apellidos
 
 $sql_insert_talleres = "INSERT INTO talleres (nombre_talleres, descripcion_talleres, fecha_talleres, precio_talleres, instructor_talleres) VALUES
     ('Taller de autoestima', 'Aprenderás sobre autoestima', '2024-02-20', '60,00€', 'Amelia'),
-    ('Taller mejora tus habiladades sociales', 'Aprenderás a mejorar tus habilidades sociales', '2024-03-09', '50,00€', 'Aaron'),
+    ('Taller mejora tus habilidades sociales', 'Aprenderás a mejorar tus habilidades sociales', '2024-03-09', '50,00€', 'Aaron'),
     ('Taller de gestion de la ansiedad', 'Aprederás a gestionar la ansiedad', '2024-05-04', '30,00€', 'Celia'),
     ('Taller autoexigencia y perfeccionismo', 'Aprederás sobre autoexigencia y perfeccionismo', '2024-01-09', '70,00€', 'Elena')"; 
 
@@ -227,7 +227,7 @@ $sql_insert_cursos = "INSERT INTO cursos (nombre_cursos, descripcion_cursos, fec
 
 $sql_insert_retiros = "INSERT INTO retiros (nombre_retiros, descripcion_retiros, fechas_retiros, precio_retiros, instructor_retiros) VALUES
     ('Retiros de verano', 'Retiros de verano', '2024-04-21', '40,00€', 'Lucca'),
-    ('Retiros de verano', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael')";
+    ('Retiros de invierno', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael')";
 
 $sql_insert_eventos = "INSERT INTO eventos (nombre_evento, descripcion_evento, fechas_evento, precio_evento, instructor_evento, tipo_evento) VALUES
     ('Taller de autoestima', 'Aprenderás sobre autoestima', '2024-02-20', '60,00€', 'Amelia','Taller'),
@@ -239,7 +239,7 @@ $sql_insert_eventos = "INSERT INTO eventos (nombre_evento, descripcion_evento, f
     ('Curos de ansiedad online', 'Aprende a gestionar tu ansiedad', '2024-03-17', '45,00€', 'Alejandro','Curso'),
     ('Curso para parejas', 'Curso específico de parejas', '2024-07-12', '60,00€', 'Álvaro','Curso'),
     ('Retiros de verano', 'Retiros de verano', '2024-04-21', '40,00€', 'Lucca','Retiro'),
-    ('Retiros de verano', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael','Retiro')";
+    ('Retiros de invierno', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael','Retiro')";
 
 
 $sql_insert_reserva_talleres = "INSERT INTO reserva_talleres (id_pacientes, id_talleres) VALUES

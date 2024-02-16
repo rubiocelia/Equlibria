@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+:root {
+  --verde: #d4f4c5;
+  --verde-oscuro: #617c6f;
+  --verde-claro: #edf8d3;
+  --contraste: #f9a473;
+  --contraste-oscuro: #bd9567;
+  --contraste-claro: #f5deb0;
+  --degradado: linear-gradient(
+    247deg,
+    #64a485 6.29%,
+    #7ead96 38.82%,
+    #9dca99 62.65%,
+    #bdf1a4 86.31%
+  );
+}
+
+
+.subrayado {
+    background-color: var(--verde);
+    height: 10px;
+    width: 40%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 50px auto 20px; /
+  }
+  .subrayado h3 {
+    top: -20px; 
+    padding: 0 10px; 
+    font-family: "Bellefair";
+    font-size: 3em; 
+    margin: 0; 
+    transform: translate(0px, -20px);
+  }
+  body.reservaEvento {
+    font-family: "Chivo", sans-serif;
+    background-color: #f4f4f4; 
+    color: black; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.contenedorForm {
+    background-color: white;
+    padding: 40px; /* Espacio alrededor del contenido del formulario */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 80%; 
+    max-width: 900px; 
+}
+.formReserva{
+    display: flex;
+    flex-direction: column;
+}
+.filasFormulario{
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 15px; 
+   
+}
+.columnasForm{
+    display: flex;
+    flex-direction: column;
+    width: 48%; 
+}
+.formReserva input[type="text"],
+.formReserva input[type="email"],
+.formReserva select {
+    padding: 10px; /* Espacio dentro de los inputs y selects */
+    margin-top: 5px; /* Espacio superior para los inputs y selects */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 20px; /* Bordes ligeramente redondeados */
+}
+.formReserva button{
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    font-family: "Chivo", sans-serif;
+    font-size: 18px;
+    border-radius: 15px;
+    border: 2px solid var(--verde-oscuro);
+    background-color: var(--verde-claro);
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .formReserva button:hover {
+    background-color: var(--verde-oscuro);
+    color: #000000;
+  }
