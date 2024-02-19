@@ -25,6 +25,10 @@
 body {
   font-family: "Chivo", sans-serif;
   margin: 0;
+  background-image: url(../img/fondoRecursosGratuitos.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Estilos para el encabezado */
@@ -302,68 +306,143 @@ footer {
 
 /* libros */
 
-.libros-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.libros {
+  margin-bottom: 100px;
+  margin-top: 200px;
 }
 
-.libro-card {
+.navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.flecha-izquierda,
+.flecha-derecha {
+  font-size: 32px;
+  cursor: pointer;
+  margin: 0 35px;
+}
+
+.libros-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.libro_card {
+  display: none;
+  height: auto;
   display: flex;
   flex-direction: row;
   width: 950px;
-  height: 80vh;
+  height: 550px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  margin-bottom: 20px;
   background-color: var(--contraste-claro);
+}
+
+.libros-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .libro-img {
   width: 40%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px 0 0 10px;
 }
 
 .libro-info {
-  padding: 15px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 35px;
+}
+
+.libro-info h2 {
+  font-family: "Righteous";
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.libro-info h3 {
+  font-family: "Bellefair";
+  font-size: 25px;
+  margin-bottom: 25px;
 }
 
 .libro-info p,
-.libro-info h2,
-.libro-info h3,
 .autor {
   font-family: "Chivo", sans-serif;
   margin-top: 10px;
-}
-
-.autor,
-.descripcion {
   font-size: 16px;
-  color: #242323;
   margin: 10px 0;
 }
 
 .btn-comprar {
+  background-color: var(--verde-oscuro);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
   margin: 10px auto;
-  background: none;
-  color: var(--verde-oscuro);
   padding: 10px 20px;
   text-align: center;
-  text-decoration: underline;
   border: none;
   cursor: pointer;
 }
 
-.btn-comprar {
-  background-color: var(--contraste-oscuro);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
 .btn-comprar:hover {
-  background-color: var(--contraste);
+  background-color: var(--verde);
+  transition: background-color 0.3s, color 0.3s;
   color: black;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* videos mindfulness */
+
+.videos {
+  margin-bottom: 100px;
+}
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+}
+
+.video {
+  margin: 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(40% - 10px);
+  background-color: var(--verde);
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+  padding-bottom: 15px;
+  aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto de los videos */
+}
+
+.video h3 {
+  font-family: "Bellefair";
+  font-size: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.video p {
+  font-size: 16px;
+  padding: 0 15px;
 }

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let indiceActual = 0;
-  const tarjetas = document.querySelectorAll(".libro-card");
+  const tarjetas = document.querySelectorAll(".libro_card");
   mostrarTarjeta(indiceActual); // Muestra la primera tarjeta inicialmente
 
   document
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function mostrarTarjeta(indice) {
     tarjetas.forEach((tarjeta, i) => {
-      tarjeta.style.display = i === indice ? "block" : "none"; // Muestra solo la tarjeta actual
+      tarjeta.style.display = i === indice ? "flex" : "none"; // Muestra solo la tarjeta actual
     });
   }
 });
