@@ -43,8 +43,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error al preparar la consulta: " . $conexion->error;
     }
 
-    
-
     // Cerramos conexión
     $conexion->close();
 }
@@ -102,6 +100,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="contrasena_pacientes">Contraseña:</label>
                     <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
                 </div>
+                <div class="containerPassword">
+                        <div class="strengthMeter"></div>
+                    </div>
             </div>
             <hr>
             <p>¿Tienes una cuenta?<a href="inicio_sesion.php"> Inicia sesión en tu cuenta</a></p>

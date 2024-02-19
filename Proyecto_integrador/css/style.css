@@ -1144,3 +1144,101 @@ p {
 .contacto {
   margin-top: 5%;
 }
+
+/* Password */
+
+.containerPassword {
+  position: relative;
+  width: 390px;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  border-radius: 10px solid #111;
+  gap: 5px;
+  margin-top: -30px;
+  padding-bottom: 50px;
+}
+
+.containerPassword .inputArea {
+  position: relative;
+  width: 103%;
+}
+
+.containerPassword .label {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 100px;
+}
+
+.containerPassword .inputArea input {
+  position: relative;
+  width: 115%;
+  border: 1px solid var(--verde-oscuro);
+  outline: none;
+  padding: 10px;
+  color: black;
+  font-size: 1.1em;
+  border-radius: 20px;
+  height: 39px;
+  margin-left: -30px;
+}
+
+.containerPassword .strengthMeter {
+  position: absolute;
+  left: -415px;
+  bottom: 0;
+  width: 210%;
+  height: 3px;
+  background: #222;
+}
+
+.containerPassword .strengthMeter::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 80%;
+  transition: 0.5s;
+  background: #f00;
+}
+
+.containerPassword.weak .strengthMeter::before {
+  width: 10%;
+  background: #f00;
+}
+
+.containerPassword.moderate .strengthMeter::before {
+  width: 70%;
+  background: #eedc3d;
+}
+
+.containerPassword.strong .strengthMeter::before {
+  width: 100%;
+  background: #18e605;
+}
+
+.containerPassword .strengthMeter::after {
+  position: absolute;
+  top: -45px;
+  left: 30px;
+  transition: 0.5s;
+  color: aliceblue;
+}
+
+.containerPassword.containerPassword.weak .strengthMeter::after {
+  content: "Contraseña poco segura";
+  color: #f00;
+}
+
+.containerPassword.containerPassword.containerPassword.moderate .strengthMeter::after {
+  content: "Contraseña segura";
+  color: #eedc3d;
+}
+
+.containerPassword.containerPassword.containerPassword.containerPassword.strong .strengthMeter::after {
+  content: "Contraseña muy segura";
+  color: #18e605;
+}
