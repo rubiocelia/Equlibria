@@ -22,6 +22,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/servicios.css">
+    
     <title>Servicios</title>
 </head>
 
@@ -103,55 +104,51 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
             <div class="talleresServicios">
                 <div class="tallerServicios">
-                    <img src="img/taller1.png">
+                    <img src="img/autoestima.jpg">
                     <h3>Autoestima</h3>
-                    <p>Nuestro curso te enseñará a fortalecer tu autoestima para reducir la ansiedad y mejorar tu bienestar. 
-                        Aprenderás a conocer mejor tu cuerpo y tus habilidades para potenciar tu confianza y alcanzar tus metas.
-                        No solo eso, también profundizaremos en la conexión entre la autoestima y el autoconocimiento.
-                        Exploraremos cómo conocer mejor tu cuerpo, tus habilidades y tus límites contribuye a fortalecer tu autoestima y te ayuda a desarrollar todo tu potencial.
+                    <p>Aprenderás sobre autoestima y como integrarla en tu vida para lograr rebajar los niveles de
+                        ansiedad
+                        y
+                        conocer mejor tu cuerpo y tus habilidades.
                     </p>
-                    <div class="price-button-container">
-                    <span> Precio:80€</span>
-                    <button>¡Resérvalo!</button>
-                    </div>
+                    <span class="online-details">🛒 Precio: 60€</span>
+                    <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                 </div>
 
                 <div class="tallerServicios">
-                    <img src="img/taller2.png">
+                    <img src="img/habilidadesSociales.jpg">
                     <h3>Mejora habilidades sociales</h3>
-                    <p>En nuestro taller de habilidades sociales, nos sumergiremos en un viaje completo que abarca todas las áreas 
-                        donde las habilidades sociales desempeñan un papel crucial en la vida cotidiana.
-                        Exploraremos cómo estas habilidades impactan en nuestras interacciones personales, profesionales y en nuestra calidad de vida en general.
+                    <p>En este taller de hablididades sociales trabajaremos todas las áreas en las que las habilidades
+                        sociales adquieren un papel importante.
                     </p>
-                    <span> Precio:80€</span>
-                    <button>¡Resérvalo!</button>
+                    <span class="online-details">🛒 Precio: 50€</span>
+                    <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                 </div>
 
                 <div class="tallerServicios">
-                    <img src="img/taller3.png">
+                    <img src="img/ansiedad.jpg">
                     <h3>Gestión de la ansiedad</h3>
-                    <p>En este taller, te invitamos a embarcarte en un viaje de autoexploración para comprender a fondo tu ansiedad
-                    Además, nos sumergiremos en la importancia de escuchar activamente nuestra ansiedad, reconociendo los mensajes que puede estar tratando de comunicarnos sobre nuestras necesidades emocionales y mentales.
-                     Aprenderás a transformar tu relación con la ansiedad, utilizando su energía para fomentar el crecimiento personal y el bienestar emocional.
+                    <p>Descubre en este taller todo lo que debes saber sobre tu ansiedad. Vamos a aprender a acapetar y
+                        escuchar desde el amor nuestra ansiedad.
                     </p>
-                    <span> Precio:80€</span>
-                    <button>¡Resérvalo!</button>
+                    <span class="online-details">🛒 Precio: 30€</span>
+                    <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                 </div>
 
                 <div class="tallerServicios">
-                    <img src="img/taller4.png">
+                    <img src="img/autoexigencia.jpg">
                     <h3>Autoexigencia y perfeccionismo</h3>
-                    <p>En este taller, nos sumergiremos en el complejo mundo de la autoexigencia, explorando sus raíces y aprendiendo a acompañarla de manera compasiva.
-                         Profundizaremos en el origen de nuestra autoexigencia, explorando cómo se forma a lo largo de nuestras vidas y cómo puede impactar nuestra salud emocional y mental.
+                    <p>En este taller trabajaremos en reconocer y acompañar nuestra autoexigenciaa y profundizaremos en
+                        el origen.
                     </p>
-                    <span> Precio:80€</span>
-                    <button>¡Resérvalo!</button>
+                    <span class="online-details">🛒 Precio: 70€</span>
+                    <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                 </div>
             </div>
         </div>
 
         <!--------CURSOS----- -->
-        <div class="subrayado">
+        <div class="subrayado3">
                 <h3>Nuestros cursos</h3>
             </div>
        
@@ -179,8 +176,8 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <span class="online-details">🛒 Precio: 80€</span>
                  </div>
                     <div class="tarjeta-link">
-                        <p>Impartido por: Javier </p>
-                        <button>¡Resérvalo!</button>
+                        <p>Impartido por: Javier Chicano</p>
+                        <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                     </div>
                 </div>
             </div>
@@ -189,11 +186,11 @@ if (isset($_SESSION['idPacienteLogin'])){
             <div class="imagenCurso2">
                 <img src="img/autoexigencia.jpg" alt="">
                 </div>
-                <div class="tarjetaDescripcion">
+                <div class="tarjetaDescripcion2">
                     <div class="card-titulo">
                         <h3>Curso de dependencia emocional</h3>
                     </div>
-                    <div class="textoTarjeta">
+                    <div class="textoTarjeta2">
                         <p>Este curso sobre Dependencia Emocional está diseñado como un camino hacia la libertad personal,
                              ofreciendo a los participantes las herramientas y conocimientos necesarios para liberarse de patrones de comportamiento destructivos
                               y fomentar relaciones interpersonales más sanas y equilibradas. A través de la comprensión profunda de la autonomía emocional y el fortalecimiento de la autoestima,
@@ -206,11 +203,12 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <span class="online-details">🛒 Precio: 80€</span>
                  </div>
                     <div class="tarjeta-link">
-                        <p>Impartido por: Juan </p>
-                        <button>¡Resérvalo!</button>
+                        <p>Impartido por: Juan Pepón</p>
+                        <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                     </div>
                 </div>
             </div>
+
             <div class="cursos">
             <div class="imagenCurso">
                 <img src="img/ansiedad.jpg" alt="">
@@ -233,8 +231,8 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <span class="online-details">🛒 Precio: 80€</span>
                  </div>
                 <div class="tarjeta-link">
-                    <p>Impartido por: Alejandro </p>
-                    <button>¡Resérvalo!</button>
+                    <p>Impartido por: Alejandro Junyent </p>
+                    <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                 </div>
             </div>
             </div>
@@ -242,11 +240,11 @@ if (isset($_SESSION['idPacienteLogin'])){
             <div class="imagenCurso2">
                 <img src="img/autoexigencia.jpg" alt="">
                 </div>
-                <div class="tarjetaDescripcion">
+                <div class="tarjetaDescripcion2">
                     <div class="card-titulo">
                         <h3>Curso para parejas</h3>
                     </div>
-                    <div class="textoTarjeta">
+                    <div class="textoTarjeta2">
                         <p>
                             Nuestro curso para parejas está diseñado como una experiencia enriquecedora y transformadora,
                              ideal para aquellos que buscan fortalecer su conexión y mejorar la comunicación dentro de su relación.
@@ -262,8 +260,8 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <span class="online-details">🛒 Precio: 80€</span>
                  </div>
                     <div class="tarjeta-link">
-                        <p>Impartido por: Alvaro </p>
-                        <button>¡Resérvalo!</button>
+                        <p>Impartido por: Álvaro Serrano </p>
+                        <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                     </div>
                 </div>
             </div>
@@ -293,7 +291,7 @@ if (isset($_SESSION['idPacienteLogin'])){
           para ayudar a mejorar la calidad de vida de quienes más lo necesitan. 
           Proporcionamos recursos y capacitación para que las familias puedan apoyar de manera efectiva a sus seres queridos.
 </p>
-    <button class="reserve-button">Pide cita</button>
+    <button class="reserve-button" type="button" onclick="window.location.href='citaAsistencia.php';">Pide cita</button>
   </div>
 </div>
 
@@ -324,7 +322,7 @@ if (isset($_SESSION['idPacienteLogin'])){
            Es un servicio pensado especialmente para aquellas madres y padres que no pueden dedicar el tiempo que les gustaría a sus hijos.
             Nuestros profesionales se encargan de que estén acompañados y cuidados en ese tiempo
 </p>
-    <button class="reserve-button">Pide cita</button>
+    <button class="reserve-button" type="button" onclick="window.location.href='citaAsistencia.php';">Pide cita</button>
   </div>
 </div>
 
