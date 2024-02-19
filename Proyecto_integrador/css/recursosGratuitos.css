@@ -306,10 +306,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 100px;
 }
 
 .libro-card {
+  display: flex;
+  flex-direction: row;
   width: 950px;
   height: 80vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -343,9 +344,7 @@ footer {
   margin: 10px 0;
 }
 
-.btn-comprar,
-.leer-mas-btn {
-  display: block;
+.btn-comprar {
   margin: 10px auto;
   background: none;
   color: var(--verde-oscuro);
