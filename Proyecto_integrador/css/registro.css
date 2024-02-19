@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+:root {
+    --verde: #d4f4c5;
+    --verde-oscuro: #617c6f;
+    --verde-claro: #edf8d3;
+    --contraste: #f9a473;
+    --contraste-oscuro: #bd9567;
+    --contraste-claro: #f5deb0;
+    --degradado: linear-gradient(
+      247deg,
+      #64a485 6.29%,
+      #7ead96 38.82%,
+      #9dca99 62.65%,
+      #bdf1a4 86.31%
+    );
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Chivo", sans-serif;
+    margin: 0;
+  }
+
+  /*registro*/
+.registroFormulario {
+    background-image: url("../img/fondoRegistro.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Righteous", cursive;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 100px;
+  }
+  
+  .subrayadoFormularioRegistro {
+    background-color: var(--contraste-claro);
+    height: 15px;
+    font-size: 30px;
+    width: 425px;
+    text-align: center;
+    margin: 30px auto;
+    font-family: "Righteous", cursive;
+    margin-top: 10px;
+  }
+  
+  .subrayadoFormularioRegistro h3 {
+    transform: translate(0px, -50px);
+    font-size: 60px;
+  }
+  .containerFormRegistro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: -10px;
+  }
+  .formRegistro {
+    width: 100%;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 10px;
+    position: relative;
+    max-width: 800px;
+    font-family: "Chivo", sans-serif;
+    margin-top: 20px;
+  }
+  
+  .formRegistro label {
+    display: block;
+    margin-bottom: 5px;
+    margin: 10px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .formRegistro hr {
+    height: 8px;
+    background-color: var(--verde-oscuro);
+    border-radius: 10px;
+    border-style: none;
+    margin: 28px -50px;
+    width: 115%;
+    text-align: center;
+  }
+  
+  .formRegistro input {
+    font-family: "Chivo", sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--verde-oscuro);
+    border-radius: 20px;
+  }
+  
+  .formRegistro button[type="submit"] {
+    background-color: var(--verde-oscuro);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 80%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .formRegistro button[type="submit"]:hover {
+    background-color: var(--contraste-oscuro);
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .form-column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .form-column:last-child {
+    margin-right: 0;
+  }
+  
+  .formRegistro input {
+    width: 100%; /* Asegura que el input ocupe toda la columna */
+  }
+  .formRegistro p {
+    text-align: center;
+    margin-top: -5px;
+    text-decoration: none;
+    color: #000;
+  }
+  .formRegistro a {
+    text-decoration: none;
+    color: var(--verde-oscuro);
+  }
+  
+  .google-signin {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0.5rem 0;
+    border-radius: 1.5rem;
+    color: var(--verde-oscuro);
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .google-signin {
+    border: 2px solid var(--verde-oscuro);
+  }
+  .google-signin object {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .google-signin:hover {
+    color: white;
+    background: var(--verde-oscuro);
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  /*mensaje error */
+  .error-mensaje {
+    color: red;
+    display: none;
+  }
+  
+  .input-error {
+    border: 1px solid red;
+  }
+  
+  /* ojo */
+  .input-container {
+    position: relative;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input-container input[type="password"] {
+    flex: 1;
+    padding-right: 80px;
+  }
+  
+  .input-container input[type="text"] {
+    flex: 1;
+    padding-right: 80px;
+  }
+  
+  .input-container .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+  }
+  .input-container .eye-icon2 {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    margin-top: 7.5px;
+  }
+
+  /* Password */
+
+  .container {
+    position: relative;
+    width: 390px;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    border-radius: 10px solid #111;
+    gap: 5px;
+    margin-top: -30px;
+    padding-bottom: 50px;
+  }
+  
+  .container .inputArea {
+    position: relative;
+    width: 103%;
+  }
+
+  .container .label {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 100px;
+  }
+  
+  .container .inputArea input {
+    position: relative;
+    width: 115%;
+    border: 1px solid var(--verde-oscuro);
+    outline: none;
+    padding: 10px;
+    color: black;
+    font-size: 1.1em;
+    border-radius: 20px;
+    height: 39px;
+    margin-left: -30px;
+  }
+  
+  .container .strengthMeter {
+    position: absolute;
+    left: -415px;
+    bottom: 0;
+    width: 210%;
+    height: 3px;
+    background: #222;
+  }
+  
+  .container .strengthMeter::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 80%;
+    transition: 0.5s;
+    background: #f00;
+  }
+  
+  .container.weak .strengthMeter::before {
+    width: 10%;
+    background: #f00;
+  }
+  
+  .container.moderate .strengthMeter::before {
+    width: 70%;
+    background: #eedc3d;
+  }
+  
+  .container.strong .strengthMeter::before {
+    width: 100%;
+    background: #18e605;
+  }
+  
+  .container .strengthMeter::after {
+    position: absolute;
+    top: -45px;
+    left: 30px;
+    transition: 0.5s;
+    color: aliceblue;
+  }
+  
+  .container.container.weak .strengthMeter::after {
+    content: "Contraseña poco segura";
+    color: #f00;
+  }
+  
+  .container.container.container.moderate .strengthMeter::after {
+    content: "Contraseña segura";
+    color: #eedc3d;
+  }
+  
+  .container.container.container.container.strong .strengthMeter::after {
+    content: "Contraseña muy segura";
+    color: #18e605;
+  }
