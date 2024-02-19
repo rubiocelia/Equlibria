@@ -220,13 +220,13 @@ $sql_insert_talleres = "INSERT INTO talleres (nombre_talleres, descripcion_talle
     ('Taller autoexigencia y perfeccionismo', 'Aprederás sobre autoexigencia y perfeccionismo', '2024-01-09', '70,00€', 'Elena')"; 
 
 $sql_insert_cursos = "INSERT INTO cursos (nombre_cursos, descripcion_cursos, fechas_cursos, precio_cursos, instructor_cursos) VALUES
-    ('Curso de autoestima', 'Aprende a gestionar tu autoestima', '2024-04-01', '40,00€', 'Javier'),
-    ('Curso de dependencia emocional', 'Aprende a saber llevar tu dependencia emocional', '2024-02-08', '80,00€', 'Juan'),
-    ('Curos de ansiedad online', 'Aprende a gestionar tu ansiedad', '2024-03-17', '45,00€', 'Alejandro'),
-    ('Curso para parejas', 'Curso específico de parejas', '2024-07-12', '60,00€', 'Álvaro')";
+    ('Curso de autoestima', 'Aprende a gestionar tu autoestima', '2024-04-01', '40,00€', 'Javier Chicano'),
+    ('Curso de dependencia emocional', 'Aprende a saber llevar tu dependencia emocional', '2024-02-08', '80,00€', 'Juan Pepón'),
+    ('Curos de ansiedad online', 'Aprende a gestionar tu ansiedad', '2024-03-17', '45,00€', 'Alejandro Junyent '),
+    ('Curso para parejas', 'Curso específico de parejas', '2024-07-12', '60,00€', 'Álvaro Serrano')";
 
 $sql_insert_retiros = "INSERT INTO retiros (nombre_retiros, descripcion_retiros, fechas_retiros, precio_retiros, instructor_retiros) VALUES
-    ('Retiros de verano', 'Retiros de verano', '2024-04-21', '40,00€', 'Lucca'),
+    ('Retiros de verano', 'Retiros de verano', '2024-08-21', '80,00€', 'Lucca'),
     ('Retiros de invierno', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael')";
 
 $sql_insert_eventos = "INSERT INTO eventos (nombre_evento, descripcion_evento, fechas_evento, precio_evento, instructor_evento, tipo_evento) VALUES

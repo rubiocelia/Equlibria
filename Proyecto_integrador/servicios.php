@@ -157,7 +157,9 @@ if (isset($_SESSION['idPacienteLogin'])){
        
         <div class="contenidoCursos">
             <div class="cursos">
+            <div class="imagenCurso">
                 <img src="img/autoestima.jpg" alt="">
+            </div>
                 <div class="tarjetaDescripcion">
                     <div class="card-titulo">
                         <h3>Curso de autoestima</h3>
@@ -184,7 +186,9 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
 
             <div class="cursos">
+            <div class="imagenCurso2">
                 <img src="img/autoexigencia.jpg" alt="">
+                </div>
                 <div class="tarjetaDescripcion">
                     <div class="card-titulo">
                         <h3>Curso de dependencia emocional</h3>
@@ -208,7 +212,9 @@ if (isset($_SESSION['idPacienteLogin'])){
                 </div>
             </div>
             <div class="cursos">
+            <div class="imagenCurso">
                 <img src="img/ansiedad.jpg" alt="">
+                </div>
                 <div class="tarjetaDescripcion">
                 <div class="card-titulo">
                     <h3>Curso ansiedad online</h3>
@@ -233,7 +239,9 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
             </div>
             <div class="cursos">
+            <div class="imagenCurso2">
                 <img src="img/autoexigencia.jpg" alt="">
+                </div>
                 <div class="tarjetaDescripcion">
                     <div class="card-titulo">
                         <h3>Curso para parejas</h3>

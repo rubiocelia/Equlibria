@@ -1,4 +1,20 @@
-.talleresServicios {
+:root {
+  --verde: #d4f4c5;
+  --verde-oscuro: #617c6f;
+  --verde-claro: #edf8d3;
+  --contraste: #f9a473;
+  --contraste-oscuro: #bd9567;
+  --contraste-claro: #f5deb0;
+  --degradado: linear-gradient(
+    247deg,
+    #64a485 6.29%,
+    #7ead96 38.82%,
+    #9dca99 62.65%,
+    #bdf1a4 86.31%
+  );
+}
+
+.tarjetasRetiros {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -7,33 +23,34 @@
   }
   
   .subrayado2 {
-    background-color: var(--verde);
+    background-color: var(--contraste-claro);
     height: 10px;
     font-size: 24px;
-    width: 700px;
+    width: 300px;
     text-align: center;
     margin: 50px auto;
+   
   }
   .subrayado2 h3 {
     transform: translate(0px, -20px);
   }
   
-  .tallerServicios {
+  .retiros {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--verde-claro);
-    width: 9000px;
+    width: 1100px;
     height: auto;
     border-radius: 10px;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin: 50px 150px;
-   
+
     
   }
   
-  .tallerServicios img {
-    border-radius: 20px 20px 20px 20px;
+  .retiros img {
+    border-radius: 10px 10px 10px 10px;
     width: 60%;
     max-height: 350px;
     height: auto;
@@ -42,25 +59,25 @@
     
   }
   
-  .tallerServicios h3 {
+  .retiros h3 {
     font-size: 28px;
     font-family: "Bellefair";
     text-align: center;
     padding: 25px;
   }
   
-  .tallerServicios p {
+  .retiros p {
     padding: 0 35px;
     text-align: center;
     font-family: "Chivo", sans-serif;
   }
   
-  .tallerServicios button {
+  .retiros button {
     border-radius: 15px;
     width: 120px;
     height: 40px;
     border: 2px solid var(--verde-oscuro);
-    background-color: var(--verde-claro);
+    background-color: var(--contraste-claro);
     color: #000000;
     text-align: center;
     cursor: pointer;
@@ -70,24 +87,39 @@
     margin-top: 30px;
   }
    
-  .tallerServicios button:hover {
+  .retiros button:hover {
     background-color: var(--verde-oscuro);
     color: #000000;
   }
-  .tallerServicios .price-button-container {
+  .retiros .price-button-container {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
     margin: 16px 0; 
   }
 
-  .course-details {
+  .detalles-retiros {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     font-size: 0.9rem; 
     color: #757575; 
     margin-top: 10px; 
     padding: 20px;
-    
   }
+
+  .tarjetasRetiros span{
+    padding: 30px;
+    font-family: "Chivo", sans-serif;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 16px 0; 
+    flex: none; 
+    margin: 0; 
+    margin-right: 400px;
+    margin-top: 30px;
+  }
+ 
   

@@ -469,6 +469,7 @@ footer {
   
   .contenidoTexto {
     max-width: 400px;
+    margin-top: 28px;
    
   }
   
@@ -500,22 +501,54 @@ footer {
   /* parte de cursos */
   .contenidoCursos {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
+    flex-direction: column; 
+    align-items: center; 
     width: 100%; 
   }
   
   .cursos {
     display: flex; 
-    flex-direction: row;
-    align-items: center; 
-    justify-content: flex-start; 
     width: 100%; 
     margin-bottom: 2em; 
     background-color: var(--verde-claro); 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
    
   }
+/* Ajusta el tamaño y márgenes de los contenedores de imagen y descripción */
+.imagenCurso, .tarjetaDescripcion {
+  flex: 1; /* Ambos contenedores toman espacio disponible de manera equitativa */
+  margin: 0 1%; /* Reduce el espacio entre imagen y texto */
+  width: 45%; /* O ajusta según tu diseño */
+  /* Agrega márgenes si es necesario para separar los elementos */
+}
+
+/* Alternar la posición de los contenedores para cada tarjeta */
+.cursos:nth-child(odd) {
+  flex-direction: row-reverse;
+   /* La imagen a la derecha y el texto a la izquierda */
+}
+
+.cursos:nth-child(even) {
+  flex-direction: row; /* La imagen a la izquierda y el texto a la derecha */
+}
+/* Ajusta el ancho y alto de la imagen para que llene el alto de la tarjeta */
+.imagenCurso {
+  flex: 0 1 60%; /* Cambia el flex-grow a 0, flex-shrink a 1 y flex-basis a 60% */
+}
+.imagenCurso img {
+  width: 100%; /* Asegura que la imagen llene el contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.imagenCurso2 {
+  flex: 0 1 60%; /* Cambia el flex-grow a 0, flex-shrink a 1 y flex-basis a 60% */
+}
+.imagenCurso2 img {
+  width: 100%; /* Asegura que la imagen llene el contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+ 
+  
+}
   
   .cursos img {
     width: 30%; 
@@ -539,18 +572,21 @@ footer {
   }
   
   .tarjetaDescripcion {
-    width: 50%;
-    padding: 50px; 
+    flex: 0 1 40%; /* Cambia el flex-grow a 0, flex-shrink a 1 y flex-basis a 40% */
+    margin: 0 2%; /* Ajusta los márgenes como sea necesario */
+    padding: 20px; /* Ajusta el padding como sea necesario */
   }
   
   .card-titulo h3 {
-    margin: 0 0 10px 0; 
+    margin: 30px 0 20px 0;
     color: black; 
     font-size: 1.5rem;
+    
   }
   
   .textoTarjeta p {
     color: black; 
+    
   }
   
   .tarjeta-link {
