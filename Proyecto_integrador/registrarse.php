@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Proyecto_integrador/css/registro.css">
     <script src="../Proyecto_integrador/js/validacion_registrar.js"></script>
-    <title>prueba</title>
+    <title>Registro - Equilibria</title>
 </head>
 <body class="registroFormulario">
     <div class="subrayadoFormularioRegistro">
