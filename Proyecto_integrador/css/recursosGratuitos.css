@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+:root {
+  --verde: #d4f4c5;
+  --verde-oscuro: #617c6f;
+  --verde-claro: #edf8d3;
+  --contraste: #f9a473;
+  --contraste-oscuro: #bd9567;
+  --contraste-claro: #f5deb0;
+  --degradado: linear-gradient(
+    247deg,
+    #64a485 6.29%,
+    #7ead96 38.82%,
+    #9dca99 62.65%,
+    #bdf1a4 86.31%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Chivo", sans-serif;
+  margin: 0;
+}
+
+/* Estilos para el encabezado */
+.header {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  max-height: 70px;
+}
+
+.nombre {
+  margin-left: 25px;
+  max-height: 45px;
+}
+
+/* Estilos para el menú */
+nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Estilo base para ambos botones */
+.iniciarSesion,
+.registro {
+  display: inline-block;
+  text-align: center;
+  margin-left: 8px;
+  border-radius: 10px;
+  border: 2px solid var(--verde-oscuro);
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Estilo para el botón "Registro" */
+.registro {
+  background-color: var(--verde-oscuro);
+  color: black;
+}
+
+.iniciarSesion:hover,
+.registro:hover {
+  background-color: var(--verde-claro);
+}
+
+/* Estilos para el dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--verde);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(244, 252, 240, 0.54) 22.4%,
+    #e8f9e0 57.46%,
+    #d4f4c5 100%
+  );
+  color: #333;
+  padding: 20px 0;
+  position: relative;
+}
+
+.redesSociales {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.redesSociales a {
+  margin: 0 20px;
+}
+
+.redesSociales img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.footer-section h3 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--verde-oscuro);
+}
+
+.footer-branding {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid var(--verde-oscuro);
+  /* Línea divisoria */
+  padding-top: 10px;
+}
+
+.footer-branding p {
+  margin: 5px 0;
+}
+
+.nombre_footer {
+  font-family: "Righteous";
+  font-size: 20px;
+}
+
+/* recursos gratuitos */
+
+.tituloPodcast {
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Bellefair";
+  font-size: 30px;
+}
+
+.subrayadoPod {
+  background-color: var(--contraste-claro);
+  height: 10px;
+  font-size: 24px;
+  width: 200px;
+  text-align: center;
+  margin: 25px auto;
+}
+
+.subrayadoPod h3 {
+  transform: translate(0px, -28px);
+  font-family: "Bellefair";
+  font-size: 38px;
+}
+
+.tituloPodcast img {
+  width: 40px;
+  height: 40px;
+}
+
+.tarjPodcasts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.tarjetaPodcast {
+  background-color: var(--verde-claro);
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: "Arial", sans-serif;
+  margin: 10px 25px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fotoPod {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  align-self: center;
+}
+
+.tarjetaPodcast h2 {
+  color: #333333;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+  font-family: "Bellefair";
+  align-self: flex-start;
+}
+
+.tarjetaPodcast p {
+  align-self: flex-start;
+  margin-top: auto;
+  font-size: 14px;
+  margin: 15px 0 0 0;
+  padding: 0;
+}
+
+.logoPodcast {
+  width: 50px;
+  height: auto;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.subrayado {
+  background-color: var(--contraste-claro);
+  height: 10px;
+  font-size: 24px;
+  width: 320px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.subrayado h3 {
+  transform: translate(0px, -28px);
+  font-family: "Bellefair";
+  font-size: 38px;
+}
+
+/* libros */
+
+.libros-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 100px;
+}
+
+.libro-card {
+  width: 950px;
+  height: 80vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: var(--contraste-claro);
+}
+
+.libro-img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.libro-info {
+  padding: 15px;
+}
+
+.libro-info p,
+.libro-info h2,
+.libro-info h3,
+.autor {
+  font-family: "Chivo", sans-serif;
+  margin-top: 10px;
+}
+
+.autor,
+.descripcion {
+  font-size: 16px;
+  color: #242323;
+  margin: 10px 0;
+}
+
+.btn-comprar,
+.leer-mas-btn {
+  display: block;
+  margin: 10px auto;
+  background: none;
+  color: var(--verde-oscuro);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-comprar {
+  background-color: var(--contraste-oscuro);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-comprar:hover {
+  background-color: var(--contraste);
+  color: black;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
