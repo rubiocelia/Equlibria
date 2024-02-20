@@ -25,7 +25,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     //session_destroy();
 } else {
     // Como no se ha inciado sesión mandamos a la pagina de login
-    header("Location: inicio_sesion.php?sendTo=citaPsicologia");
+    header("Location: inicio_sesion.php?sendTo=citaAsitencia");
     exit();
 }
 $datosPaciente = obtenerDatosPaciente($idPacienteLogin);

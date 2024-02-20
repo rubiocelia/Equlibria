@@ -238,7 +238,7 @@ $sql_insert_eventos = "INSERT INTO eventos (nombre_evento, descripcion_evento, f
     ('Curso de dependencia emocional', 'Aprende a saber llevar tu dependencia emocional', '2024-02-08', '80,00€', 'Juan','Curso'),
     ('Curos de ansiedad online', 'Aprende a gestionar tu ansiedad', '2024-03-17', '45,00€', 'Alejandro','Curso'),
     ('Curso para parejas', 'Curso específico de parejas', '2024-07-12', '60,00€', 'Álvaro','Curso'),
-    ('Retiros de verano', 'Retiros de verano', '2024-04-21', '40,00€', 'Lucca','Retiro'),
+    ('Retiros de verano', 'Retiros de verano', '2024-08-21', '80,00€', 'Lucca','Retiro'),
     ('Retiros de invierno', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael','Retiro')";
 
 

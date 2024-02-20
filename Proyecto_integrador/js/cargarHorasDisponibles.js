@@ -1,6 +1,8 @@
 document.getElementById('fecha_cita').addEventListener('change', function() {
   const fechaSeleccionada = this.value;
   const profesional_seleccionado = document.getElementById('profesional_seleccionado').value;
+
+  //si alguna de las dos esta vacia que aparezca disabled y vacia la hora
   if (fechaSeleccionada === '' || profesional_seleccionado === ''){
     const selectHora = document.getElementById('hora_cita');
     selectHora.innerHTML = ''; // Limpiar opciones previas
