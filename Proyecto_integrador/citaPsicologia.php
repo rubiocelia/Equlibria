@@ -64,35 +64,35 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/reservaEventos.css">
         <script src="./js/validacion_reservaEvento.js"></script>
         <title>Pedir Cita - Equilibria</title>
     </head>
-    <body class="citaAsistencia">
-        <div class="subrayadoFormulario">
+    <body class="reservaEvento">
+        <div class="subrayado">
             <h3>Reserva ahora tu sesión</h3>
         </div>
-        <div class="containerForm">
-            <form class="formInicioSesion" method="post" action="citaPsicologia.php">
-                <div class="form-row">
-                    <div class="form-column">
+        <div class="contenedorForm">
+            <form class="formReserva" method="post" action="citaPsicologia.php">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <label for="nombre_paciente">Nombre:</label>
                         <input type="text" id="nombre_paciente" name="nombre_paciente" value="<?php echo $datosPaciente['nombre_pacientes']; ?>" disabled>
                     </div>
-                    <div class="form-column">                      
+                    <div class="columnasForm">                      
                         <label for="apellidos_paciente">Apellidos:</label>
                         <input type="text" id="apellidos_paciente" name="apellidos_paciente" value="<?php echo $datosPaciente['apellidos_pacientes']; ?>" disabled>
                     </div>
                 </div>
                 
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <label for="mail_paciente">Correo Electrónico:</label>
                         <input type="email" id="mail_paciente" name="mail_paciente" value="<?php echo $datosPaciente['mail_pacientes']; ?>" disabled>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <label for="id_Profesional">Elige tu Psicólog@:</label>
                         <select name="profesional_seleccionado" id="profesional_seleccionado" required>
                             <?php if (!empty($listaProfesionales)) : ?>
@@ -103,15 +103,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         </select>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm>
                         <label for="fecha_cita">Elige el día:</label>
                         <input type="date" name="fecha_cita" id="fecha_cita" required>
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <label for="hora_cita">Elige la hora:</label>
                         <select name="hora_cita" id="hora_cita" required disabled>
                             <!-- Las opciones se llenarán dinámicamente con JavaScript -->

@@ -95,7 +95,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             <h1>Nuestros profesionales te pueden ayudar</h1> <br> <br>
             <h2>Tu bienestar merece ser prioridad. <br>
                 La terapia puede ser el primer paso</h2>
-            <button class="boton_servicios">¡Pide cita!</button>
+            <button class="boton_servicios" onclick="window.location.href='citaPsicologia.php';" >¡Pide cita!</button>
         </div>
 
         <div>
@@ -151,7 +151,7 @@ if (isset($_SESSION['idPacienteLogin'])){
         <!--------FRASE ANTES DE CURSOS----- -->
 
         <div class="textoSalud">
-            <h2>"La salud mental es no tener miedo de ser tú mismo."</h2>
+            <h2>🌻 "El cambio comienza con el autoconocimiento y la aceptación." 🌻</h2>
         </div>
 
 
