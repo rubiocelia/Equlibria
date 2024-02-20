@@ -47,6 +47,7 @@ mysqli_close($conexion);
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/perfil.css">
     <link rel="stylesheet" href="vendor/fullcalendar/main.css">
     <link rel="stylesheet" href="src/css/calendar.css">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
