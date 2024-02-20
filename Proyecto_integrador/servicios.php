@@ -173,7 +173,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                 <div class="course-details">
                     <span class="time-details">🕛 9 horas</span>
                     <span class="online-details">💻 Online</span>
-                    <span class="online-details">🛒 Precio: 80€</span>
+                    <span class="online-details">🛒 Precio: 40€</span>
                  </div>
                     <div class="tarjeta-link">
                         <p>Impartido por: Javier Chicano</p>
@@ -228,7 +228,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                 <div class="course-details">
                     <span class="time-details">🕛 8 horas</span>
                     <span class="online-details">💻 Online</span>
-                    <span class="online-details">🛒 Precio: 80€</span>
+                    <span class="online-details">🛒 Precio: 45€</span>
                  </div>
                 <div class="tarjeta-link">
                     <p>Impartido por: Alejandro Junyent </p>
@@ -257,7 +257,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <div class="course-details">
                     <span class="time-details">🕛 15 horas</span>
                     <span class="online-details">💻 Online</span>
-                    <span class="online-details">🛒 Precio: 80€</span>
+                    <span class="online-details">🛒 Precio: 60€</span>
                  </div>
                     <div class="tarjeta-link">
                         <p>Impartido por: Álvaro Serrano </p>
@@ -300,7 +300,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
 <!--------ASISTENCIA A DOMICILIO----- -->
 
-<div class="subrayado2">
+<div class="subrayado4">
   <h3>Asistencia a domicilio para niños/as</h3>
 </div>
 
