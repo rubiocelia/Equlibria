@@ -274,7 +274,7 @@ main{
   background-color: var(--contraste-claro);
   height: 15px;
   font-size: 48px;
-  width: 600px;
+  width: 800px;
   text-align: center;
   margin: 50px auto;
   font-family: "Bellefair";
@@ -306,7 +306,7 @@ main{
   text-align: center;
   margin: 50px auto;
   font-family: "Bellefair";
-  margin-top: 500px;
+  margin-top: 250px;
 }
 
 .subrayadoPsicologos h3 {
@@ -441,6 +441,8 @@ main{
   width: 620px;
   text-align: justify;
   margin-top: -260px;
+  font-size: 16px;
+  font-family: "Bellefair";
 }
 
 .beatriz{
@@ -449,6 +451,16 @@ main{
   text-align: justify;
   margin-top: -260px;
   margin-left: 550px;
+  font-size: 16px;
+  font-family: "Bellefair";
+}
+
+.beatriz p{
+  font-family: "Chivo", sans-serif;
+}
+
+.fernando p{
+  font-family: "Chivo", sans-serif;
 }
 
 .boton-cv-izq {
