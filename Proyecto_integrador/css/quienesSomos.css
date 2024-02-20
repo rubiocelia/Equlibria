@@ -248,14 +248,18 @@ footer {
 }
 
 /*pagino de inicio*/
+main{
+  background-image: url("../img/fondo_quienes_somos.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
 .pgquienessomos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/fondo_quienes_somos.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100vh;
   text-align: center;
 }
@@ -286,7 +290,6 @@ footer {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 20px;
-  margin: 15px 250px;
 }
 
 .subrayadoPsicologos p {
@@ -307,6 +310,46 @@ footer {
 }
 
 .subrayadoPsicologos h3 {
+  transform: translate(0px, -45px);
+}
+
+.subrayadoAsistentesM p {
+  font-size: 40px;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.subrayadoAsistentesM {
+  background-color: var(--contraste-claro);
+  height: 15px;
+  font-size: 48px;
+  width: 650px;
+  text-align: center;
+  margin: 50px auto;
+  font-family: "Bellefair";
+}
+
+.subrayadoAsistentesM h3 {
+  transform: translate(0px, -45px);
+}
+
+.subrayadoAsistentesN p {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.subrayadoAsistentesN {
+  background-color: var(--contraste-claro);
+  height: 15px;
+  font-size: 48px;
+  width: 600px;
+  text-align: center;
+  margin: 50px auto;
+  font-family: "Bellefair";
+}
+
+.subrayadoAsistentesN h3 {
   transform: translate(0px, -45px);
 }
 
@@ -336,8 +379,8 @@ footer {
 
 .profile img {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   margin-bottom: 20px;
   text-align: left;
@@ -351,15 +394,32 @@ footer {
 
 .profile2 img {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   margin-bottom: 20px;
   text-align: right;
 }
 
 .btn {
-  background: #008cba;
+  background: none;
+  color: black;
+  border-color: var(--verde-oscuro);
+  border: 2px solid var(--verde-oscuro);
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--verde);
+}
+
+.btn-big {
+  background: #617C6F;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -367,20 +427,70 @@ footer {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #005f73;
-}
-
-.btn.big {
   padding: 15px 40px;
   font-size: 1.2rem;
+}
+
+.btn-big:hover {
+  background: var(--verde);
+  color: #000;
+}
+
+.fernando{
+  text-align: left;
+  width: 620px;
+  text-align: justify;
+  margin-top: -260px;
+}
+
+.beatriz{
+  text-align: right;
+  width: 620px;
+  text-align: justify;
+  margin-top: -260px;
+  margin-left: 550px;
+}
+
+.boton-cv-izq {
+  text-align: left;
+  margin-left: 190px;
+}
+
+.boton-cv-der {
+  text-align: left;
+  margin-left: 770px;
 }
 
 /* Agrega tus estilos para móvil, tablet, etc. */
 @media (max-width: 768px) {
   .container {
       width: 95%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .fernando{
+    text-align: left;
+    width: 620px;
+    text-align: justify;
+    margin-top: -260px;
+  }
+  
+  .beatriz{
+    text-align: right;
+    width: 620px;
+    text-align: justify;
+    margin-top: -260px;
+    margin-left: 850px;
+  }
+  
+  .boton-cv-izq {
+    text-align: left;
+    margin-left: 190px;
+  }
+  
+  .boton-cv-der {
+    text-align: left;
+    margin-left: 1070px;
   }
 }
