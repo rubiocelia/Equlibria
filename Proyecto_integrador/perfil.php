@@ -46,12 +46,12 @@ mysqli_close($conexion);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="vendor/fullcalendar/main.css">
     <link rel="stylesheet" href="src/css/calendar.css">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core/locales/es.js'></script>
-    <script src='cambiarPerfil.js'></script>
+    <script src='./js/cambiarPerfil.js'></script>
 
     <script>
 
@@ -205,10 +205,8 @@ mysqli_close($conexion);
 
                     <div class="form-group-bajo">
                         <label for="contrasena_pacientes">Contraseña</label>
-                        <input type="password" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
-                        <span onclick="togglePasswordVisibility()">
-                            <i class="eye-icon">🙉</i>
-                        </span>
+                        <input type="text" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
+                        
                     </div>
                     <button type="submit">Guardar cambios</button>
                 </form>
@@ -348,10 +346,10 @@ mysqli_close($conexion);
             <p>&copy; 2024 Equilibria. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src='cambiarPerfil.js'></script>
-    <script src='validar_inicioSesion.js'></script>
-    <script src='validar_contacto.js'></script>
-    <script src='faq.js'></script>
+    <script src='./js/cambiarPerfil.js'></script>
+    <script src='./js/validar_inicioSesion.js'></script>
+    <script src='./js/validar_contacto.js'></script>
+    <script src='./js/faq.js'></script>
 
 </body>
 

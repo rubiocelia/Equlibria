@@ -64,8 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script src="validacion_reservaEvento.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/validacion_reservaEvento.js"></script>
         <title>Pedir Cita - Equilibria</title>
     </head>
     <body class="citaAsistencia">
@@ -124,6 +124,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <button type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver Inicio</button>
             </form>
         </div>
-        <script src="cargarHorasDisponibles.js"></script>
+        <script src="./js/cargarHorasDisponibles.js"></script>
     </body>
 </html>

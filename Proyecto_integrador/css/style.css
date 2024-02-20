@@ -253,7 +253,7 @@ footer {
   width: 425px;
   text-align: center;
   margin: 30px auto;
-  font-family: "Righteous", cursive;
+  font-family: "Righteous";
   margin-top: -10px;
 }
 
@@ -274,7 +274,7 @@ footer {
   background-image: url(img/fondoRegistro.png);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Righteous", cursive;
+  font-family: "Righteous";
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
@@ -289,7 +289,7 @@ footer {
   background-image: url(img/fondoFormularios.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  font-family: "Righteous", cursive;
+  font-family: "Righteous";
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
@@ -409,72 +409,72 @@ footer {
 a {
   text-decoration: none;
 }
-  
-  .google-signin {
-    width: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.6rem;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 0.5rem 0;
-    border-radius: 1.5rem;
-    color: var(--verde-oscuro);
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  .google-signin {
-    border: 2px solid var(--verde-oscuro);
-  }
-  .google-signin object {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  .google-signin:hover {
-    color: white;
-    background: var(--verde-oscuro);
-    transition: background-color 0.5s ease, color 0.5s ease;
-  }
-  /*mensaje error */
-  .error-mensaje {
-    color: red;
-    display: none;
-  }
-  
-  .input-error {
-    border: 1px solid red;
-  }
-  
-  /* ojo */
-  .input-container {
-    position: relative;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .input-container input[type="password"] {
-    flex: 1;
-    padding-right: 80px;
-  }
-  
-  .input-container input[type="text"] {
-    flex: 1;
-    padding-right: 80px;
-  }
-  
-  .input-container .eye-icon {
-    position: absolute;
-    right: 10px;
-    top: 8px;
-    cursor: pointer;
-  }
-  .input-container .eye-icon2 {
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-    margin-top: 7.5px;
-  }
+
+.google-signin {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0.5rem 0;
+  border-radius: 1.5rem;
+  color: var(--verde-oscuro);
+  cursor: pointer;
+  margin-top: 10px;
+}
+.google-signin {
+  border: 2px solid var(--verde-oscuro);
+}
+.google-signin object {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.google-signin:hover {
+  color: white;
+  background: var(--verde-oscuro);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+/*mensaje error */
+.error-mensaje {
+  color: red;
+  display: none;
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+/* ojo */
+.input-container {
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.input-container input[type="password"] {
+  flex: 1;
+  padding-right: 80px;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  padding-right: 80px;
+}
+
+.input-container .eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  cursor: pointer;
+}
+.input-container .eye-icon2 {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  margin-top: 7.5px;
+}
 
 /* /pagino de inicio/ */
 .pginicio {
@@ -788,11 +788,11 @@ p {
   margin-top: 5%;
 }
 
-.perfil main {
+.perfil {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  background-image: url(img/fondoPerfil.png);
+  background-image: url("../img/fondoPerfil.png");
 }
 
 .editarPerfil {
@@ -909,7 +909,7 @@ p {
 
 .calendario {
   display: flex;
-  width: 80%;
+  width: 75%;
   align-content: center;
   text-transform: uppercase;
   margin: 0 auto;
@@ -1112,12 +1112,14 @@ p {
   color: #f00;
 }
 
-.containerPassword.containerPassword.containerPassword.moderate .strengthMeter::after {
+.containerPassword.containerPassword.containerPassword.moderate
+  .strengthMeter::after {
   content: "Contraseña segura";
   color: #eedc3d;
 }
 
-.containerPassword.containerPassword.containerPassword.containerPassword.strong .strengthMeter::after {
+.containerPassword.containerPassword.containerPassword.containerPassword.strong
+  .strengthMeter::after {
   content: "Contraseña muy segura";
   color: #18e605;
 }

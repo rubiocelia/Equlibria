@@ -22,8 +22,8 @@ if (isset($_SESSION['idPacienteLogin'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="validar_inicioSesion.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/validar_inicioSesion.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -237,7 +237,6 @@ if (isset($_SESSION['idPacienteLogin'])){
         </div>
         </div>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="script.js"></script>
     </main>
     <footer>
         <div class="redesSociales">
@@ -289,8 +288,8 @@ if (isset($_SESSION['idPacienteLogin'])){
             <p>&copy; 2024 Equilibria. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="main.js"></script>
-    <script src="validar_inicioSesion.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/validar_inicioSesion.js"></script>
 </body>
 
 </html>
