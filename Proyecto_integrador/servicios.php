@@ -147,6 +147,15 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
         </div>
 
+
+        <!--------FRASE ANTES DE CURSOS----- -->
+
+        <div class="textoSalud">
+            <h2>"La salud mental es no tener miedo de ser tú mismo."</h2>
+        </div>
+
+
+
         <!--------CURSOS----- -->
         <div class="subrayado3">
             <h3>Nuestros cursos</h3>
@@ -317,7 +326,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
         <!--------ASISTENCIA A DOMICILIO----- -->
 
-<div class="subrayado2">
+<div class="subrayado4">
   <h3>Asistencia a domicilio para niños/as</h3>
 </div>
 

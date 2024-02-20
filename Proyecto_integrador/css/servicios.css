@@ -491,6 +491,16 @@ footer {
 
 
 
+/* parte de texto antes de cursos */
+.textoSalud {
+  font-size: 32px;
+  font-family: "Bellefair";
+  color: var(--contraste-oscuro);
+  
+}
+
+
+
 
 
 /* parte de cursos */
