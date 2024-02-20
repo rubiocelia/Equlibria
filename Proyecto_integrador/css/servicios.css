@@ -343,6 +343,17 @@ footer {
   .subrayado2 h3 {
     transform: translate(0px, -20px);
   }
+  .subrayado4 {
+    background-color: var(--verde);
+    height: 10px;
+    font-size: 24px;
+    width: 500px;
+    text-align: center;
+    margin: 50px auto;
+  }
+  .subrayado4 h3 {
+    transform: translate(0px, -20px);
+  }
   
   .tallerServicios {
     display: flex;
@@ -402,7 +413,18 @@ footer {
 
 
   /* parte de asistentes en pag servicios */
-
+  .subrayado4 {
+    background-color: var(--verde);
+    height: 10px;
+    font-size: 24px;
+    width: 500px;
+    text-align: center;
+    margin: 50px auto;
+  }
+  .subrayado3 h4 {
+    transform: translate(0px, -20px);
+  }
+  
   .secionAsistentes {
     display: flex;
     align-items: flex-start;
@@ -469,12 +491,24 @@ footer {
 
 
 
+/* parte de texto antes de cursos */
+.textoSalud {
+  font-size: 30px;
+  font-family: "Bellefair";
+  color: var(--verde-oscuro);
+  text-align: center;
+  margin-bottom: 180px;
+  margin-top: 180px;
+}
+
+
+
 
 
 /* parte de cursos */
 .subrayado3 {
-  background-color: var(--contraste-oscuro);
-  height: 10px;
+  background-color: var(--contraste-claro);
+    height: 10px;
   font-size: 24px;
   width: 300px;
   text-align: center;
@@ -492,7 +526,7 @@ footer {
   gap: 20px;
 }
 
-/* Estilo base para cada curso */
+
 .cursos {
   display: flex;
   width: 100%;
@@ -512,23 +546,22 @@ footer {
 
 /* Estilos comunes para las imágenes y descripciones */
 .imagenCurso, .imagenCurso2, .tarjetaDescripcion, .tarjetaDescripcion2 {
-  
   padding: 20px;
 }
 
 /* Estilo para las imágenes de ambos cursos */
 .cursos .imagenCurso img, .cursos .imagenCurso2 img {
-  width: 60%; /* Ajusta la imagen para llenar el ancho del contenedor */
-  height: 100%; /* Mantiene la proporción de las imágenes */
+  width: 60%; 
+  height: 100%; 
   margin-left: 110px;
   
 }
-/* Asegúrate de que la descripción y la imagen estén alineadas correctamente */
+
 .tarjetaDescripcion {
   flex: 1; /* Distribución equitativa del espacio */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
+  justify-content: center; 
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -536,12 +569,11 @@ footer {
   flex: 1; /* Distribución equitativa del espacio */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
+  justify-content: center; 
   margin-right: 100px;
   margin-left: 100px;
 }
 
-/* Estilos para los detalles del curso */
 .course-details {
   display: flex;
   align-items: center;
@@ -552,10 +584,10 @@ footer {
 }
 
 .course-details span {
-  margin-right: 10px; /* Espacio entre los iconos y el texto */
+  margin-right: 10px; 
 }
 
-/* Estilos para los títulos de las tarjetas */
+
 .card-titulo h3 {
   margin: 30px 0 50px 0;
   color: black;

@@ -1,60 +1,17 @@
 <?php
-
 require_once("conecta.php");
-
 $conexion = getConexion();
-
-// Iniciamos sesión
+// Conectamos a la sesion
 session_start();
-// Función para recuperar todos los eventos
-function obtenerEventos(){
-    $conexion = getConexion();
-    $queryEventos= "SELECT * FROM eventos ORDER BY tipo_evento ASC";
-    $consulta = $conexion->query($queryEventos);
-    $eventos = $consulta->fetch_all(MYSQLI_ASSOC);
-    $conexion->close();
-    return $eventos;
-}
-// Función para recuperar los datos del paciente
-function obtenerDatosPaciente($idPaciente){
-    $conexion = getConexion();
-    $consulta = $conexion->query("SELECT * FROM pacientes WHERE id_pacientes='$idPaciente'");
-    $paciente = $consulta->fetch_assoc();
-    $conexion->close();
-    return $paciente;
-}
-// Inicializar variables
-$listaEventos= [];
-$listaEventos = obtenerEventos();
-$idPacienteLogin = null;
-
-// Validamos que la sesión este iniciada para seguir con la reserva 
+// Variables para controlar el formulario
+$sesionActiva=false;
+$idPacienteLogin=null;
+// Validamos que la sesión este iniciada
 if (isset($_SESSION['idPacienteLogin'])){
     // Como esta se sesion iniciada recuperamos el idPacienteLogin
     $idPacienteLogin= $_SESSION['idPacienteLogin'];
-    //session_destroy();
-} else {
-    // Como no se ha inciado sesión mandamos a la pagina de login
-    header("Location: inicio_sesion.php?sendTo=reservaEvento");
-    exit();
+    $sesionActiva=true;
 }
-$datosPaciente = obtenerDatosPaciente($idPacienteLogin);
-
-// Verificamos si se ha enviado un formulario
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $idEventoSeleccionado = $_POST['evento_seleccionado'] ?? '';
-    // Acciones que vamos a realizar cuando el submit que ejecuta el POST es ENVIAR.
-    if (isset($_POST['Enviar'])) {
-        // Preparamos la sentencia para realizar en insert 
-        $sql_insert_reserva_eventos = "INSERT INTO reserva_eventos (id_paciente, id_evento) VALUES (?, ?)";
-        $insert = $conexion->prepare($sql_insert_reserva_eventos);
-        $insert->bind_param("ii", $idPacienteLogin, $idEventoSeleccionado);
-        // Ejecutamos la sentencia preparada
-        $insert->execute();
-        $insert->close();
-    }
-}
-
 ?>
 
 

@@ -73,8 +73,8 @@
 .formReserva select {
     padding: 10px; /* Espacio dentro de los inputs y selects */
     margin-top: 5px; /* Espacio superior para los inputs y selects */
-    border: 1px solid #ccc; /* Borde suave */
-    border-radius: 20px; /* Bordes ligeramente redondeados */
+    border: 1px solid #617C6F; 
+    border-radius: 20px; 
 }
 .formReserva button{
     margin-top: 20px;
