@@ -23,6 +23,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="./js/validar_inicioSesion.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- box icons -->
