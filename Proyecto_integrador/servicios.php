@@ -22,7 +22,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/servicios.css">
-    
+
     <title>Servicios</title>
 </head>
 
@@ -31,7 +31,7 @@ if (isset($_SESSION['idPacienteLogin'])){
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
-        <ul class="menu">
+            <ul class="menu">
                 <li class="dropdown">
                     <a href="QuienesSomos.html" class="dropbtn">¿Quiénes somos?</a>
                     <div class="dropdown-content">
@@ -68,20 +68,20 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
                 </li>
                 <?php if ($sesionActiva): ?>
-                    <li class="dropdown">
-                        <a href="perfil.php" class="dropbtn">Perfil</a>
-                        <div class="dropdown-content">
-                            <a href="perfil.php">Mi perfil</a>
-                            <a href="#">Calendario</a>
-                            <a href="#">Ayuda</a>
-                            <a href="#">Eliminar cuenta</a>
-                            <a href="cerrarSesion.php">Cerrar sesión</a>
-                        </div>
-                    </li>
+                <li class="dropdown">
+                    <a href="perfil.php" class="dropbtn">Perfil</a>
+                    <div class="dropdown-content">
+                        <a href="perfil.php">Mi perfil</a>
+                        <a href="#">Calendario</a>
+                        <a href="#">Ayuda</a>
+                        <a href="#">Eliminar cuenta</a>
+                        <a href="cerrarSesion.php">Cerrar sesión</a>
+                    </div>
+                </li>
                 <?php endif; ?>
                 <?php if (!$sesionActiva): ?>
-                    <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
-                    <li class="registro"><a href="registrarse.php">Registrase</a></li>
+                <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
+                <li class="registro"><a href="registrarse.php">Registrase</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
@@ -90,19 +90,19 @@ if (isset($_SESSION['idPacienteLogin'])){
     <main>
 
 
-<!--------TALLERES----- -->
-    <div class="pgservicios">
+        <!--------TALLERES----- -->
+        <div class="pgservicios" id="citaPsicologica">
             <h1>Nuestros profesionales te pueden ayudar</h1> <br> <br>
             <h2>Tu bienestar merece ser prioridad. <br>
-                 La terapia puede ser el primer paso</h2>
+                La terapia puede ser el primer paso</h2>
             <button class="boton_servicios">¡Pide cita!</button>
         </div>
-        
+
         <div>
             <div class="subrayado">
                 <h3>Nuestros talleres</h3>
             </div>
-            <div class="talleresServicios">
+            <div class="talleresServicios" id="talleres">
                 <div class="tallerServicios">
                     <img src="img/autoestima.jpg">
                     <h3>Autoestima</h3>
@@ -149,32 +149,34 @@ if (isset($_SESSION['idPacienteLogin'])){
 
         <!--------CURSOS----- -->
         <div class="subrayado3">
-                <h3>Nuestros cursos</h3>
-            </div>
-       
-        <div class="contenidoCursos">
+            <h3>Nuestros cursos</h3>
+        </div>
+
+        <div class="contenidoCursos" id="cursos">
             <div class="cursos">
-            <div class="imagenCurso">
-                <img src="img/autoestima.jpg" alt="">
-            </div>
+                <div class="imagenCurso">
+                    <img src="img/autoestima.jpg" alt="">
+                </div>
                 <div class="tarjetaDescripcion">
                     <div class="card-titulo">
                         <h3>Curso de autoestima</h3>
                     </div>
                     <div class="textoTarjeta">
                         <p>
-                        Un curso de autoestima se presenta como una experiencia transformadora,
-                         cuyo objetivo primordial es fortalecer la confianza personal y fomentar la autovaloración entre sus participantes.
-                          Este tipo de curso está meticulosamente diseñado para ofrecer un conjunto de herramientas prácticas y teóricas 
-                          que permitan a los individuos enfrentar y superar sus inseguridades,
-                           así como mejorar significativamente la relación que mantienen consigo mismos.
+                            Un curso de autoestima se presenta como una experiencia transformadora,
+                            cuyo objetivo primordial es fortalecer la confianza personal y fomentar la autovaloración
+                            entre sus participantes.
+                            Este tipo de curso está meticulosamente diseñado para ofrecer un conjunto de herramientas
+                            prácticas y teóricas
+                            que permitan a los individuos enfrentar y superar sus inseguridades,
+                            así como mejorar significativamente la relación que mantienen consigo mismos.
                         </p>
                     </div>
-                <div class="course-details">
-                    <span class="time-details">🕛 9 horas</span>
-                    <span class="online-details">💻 Online</span>
-                    <span class="online-details">🛒 Precio: 80€</span>
-                 </div>
+                    <div class="course-details">
+                        <span class="time-details">🕛 9 horas</span>
+                        <span class="online-details">💻 Online</span>
+                        <span class="online-details">🛒 Precio: 80€</span>
+                    </div>
                     <div class="tarjeta-link">
                         <p>Impartido por: Javier Chicano</p>
                         <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
@@ -183,25 +185,29 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
 
             <div class="cursos">
-            <div class="imagenCurso2">
-                <img src="img/autoexigencia.jpg" alt="">
+                <div class="imagenCurso2">
+                    <img src="img/autoexigencia.jpg" alt="">
                 </div>
                 <div class="tarjetaDescripcion2">
                     <div class="card-titulo">
                         <h3>Curso de dependencia emocional</h3>
                     </div>
                     <div class="textoTarjeta2">
-                        <p>Este curso sobre Dependencia Emocional está diseñado como un camino hacia la libertad personal,
-                             ofreciendo a los participantes las herramientas y conocimientos necesarios para liberarse de patrones de comportamiento destructivos
-                              y fomentar relaciones interpersonales más sanas y equilibradas. A través de la comprensión profunda de la autonomía emocional y el fortalecimiento de la autoestima,
-                               los asistentes aprenderán a establecer límites saludables y a cultivar un sentido de individualidad que respeta la interdependencia emocional sin caer en la dependencia.
+                        <p>Este curso sobre Dependencia Emocional está diseñado como un camino hacia la libertad
+                            personal,
+                            ofreciendo a los participantes las herramientas y conocimientos necesarios para liberarse de
+                            patrones de comportamiento destructivos
+                            y fomentar relaciones interpersonales más sanas y equilibradas. A través de la comprensión
+                            profunda de la autonomía emocional y el fortalecimiento de la autoestima,
+                            los asistentes aprenderán a establecer límites saludables y a cultivar un sentido de
+                            individualidad que respeta la interdependencia emocional sin caer en la dependencia.
                         </p>
                     </div>
-                <div class="course-details">
-                    <span class="time-details">🕛 6 horas</span>
-                    <span class="online-details">💻 Online</span>
-                    <span class="online-details">🛒 Precio: 80€</span>
-                 </div>
+                    <div class="course-details">
+                        <span class="time-details">🕛 6 horas</span>
+                        <span class="online-details">💻 Online</span>
+                        <span class="online-details">🛒 Precio: 80€</span>
+                    </div>
                     <div class="tarjeta-link">
                         <p>Impartido por: Juan Pepón</p>
                         <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
@@ -210,35 +216,39 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
 
             <div class="cursos">
-            <div class="imagenCurso">
-                <img src="img/ansiedad.jpg" alt="">
+                <div class="imagenCurso">
+                    <img src="img/ansiedad.jpg" alt="">
                 </div>
                 <div class="tarjetaDescripcion">
-                <div class="card-titulo">
-                    <h3>Curso ansiedad online</h3>
+                    <div class="card-titulo">
+                        <h3>Curso ansiedad online</h3>
+                    </div>
+                    <div class="textoTarjeta">
+                        <p>El curso de Ansiedad en línea está meticulosamente diseñado para ofrecerte una comprensión
+                            profunda de la ansiedad,
+                            permitiéndote identificar sus causas, reconocer sus síntomas y aplicar estrategias efectivas
+                            para su gestión,
+                            todo esto desde la comodidad y privacidad de tu hogar.
+                            Este programa educativo te brinda un conjunto de herramientas prácticas y teóricas para
+                            controlar el estrés
+                            y mejorar tu bienestar emocional, guiándote paso a paso en el camino hacia una vida más
+                            tranquila y satisfactoria.
+                        </p>
+                    </div>
+                    <div class="course-details">
+                        <span class="time-details">🕛 8 horas</span>
+                        <span class="online-details">💻 Online</span>
+                        <span class="online-details">🛒 Precio: 80€</span>
+                    </div>
+                    <div class="tarjeta-link">
+                        <p>Impartido por: Alejandro Junyent </p>
+                        <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
+                    </div>
                 </div>
-                <div class="textoTarjeta">
-                    <p>El curso de Ansiedad en línea está meticulosamente diseñado para ofrecerte una comprensión profunda de la ansiedad, 
-                        permitiéndote identificar sus causas, reconocer sus síntomas y aplicar estrategias efectivas para su gestión,
-                         todo esto desde la comodidad y privacidad de tu hogar. 
-                         Este programa educativo te brinda un conjunto de herramientas prácticas y teóricas para controlar el estrés
-                          y mejorar tu bienestar emocional, guiándote paso a paso en el camino hacia una vida más tranquila y satisfactoria.
-                    </p>
-                </div>
-                <div class="course-details">
-                    <span class="time-details">🕛 8 horas</span>
-                    <span class="online-details">💻 Online</span>
-                    <span class="online-details">🛒 Precio: 80€</span>
-                 </div>
-                <div class="tarjeta-link">
-                    <p>Impartido por: Alejandro Junyent </p>
-                    <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
-                </div>
-            </div>
             </div>
             <div class="cursos">
-            <div class="imagenCurso2">
-                <img src="img/autoexigencia.jpg" alt="">
+                <div class="imagenCurso2">
+                    <img src="img/autoexigencia.jpg" alt="">
                 </div>
                 <div class="tarjetaDescripcion2">
                     <div class="card-titulo">
@@ -246,19 +256,24 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
                     <div class="textoTarjeta2">
                         <p>
-                            Nuestro curso para parejas está diseñado como una experiencia enriquecedora y transformadora,
-                             ideal para aquellos que buscan fortalecer su conexión y mejorar la comunicación dentro de su relación.
-                              Este programa ofrece una oportunidad única para profundizar en el entendimiento mutuo 
-                              y descubrir nuevas formas de interactuar que promuevan una base sólida y duradera para la pareja. 
-                              A través de un enfoque práctico y empático, aprenderás herramientas efectivas y estrategias probadas 
-                              para superar los desafíos comunes en las relaciones, fomentando un vínculo más fuerte y saludable entre ambos.
+                            Nuestro curso para parejas está diseñado como una experiencia enriquecedora y
+                            transformadora,
+                            ideal para aquellos que buscan fortalecer su conexión y mejorar la comunicación dentro de su
+                            relación.
+                            Este programa ofrece una oportunidad única para profundizar en el entendimiento mutuo
+                            y descubrir nuevas formas de interactuar que promuevan una base sólida y duradera para la
+                            pareja.
+                            A través de un enfoque práctico y empático, aprenderás herramientas efectivas y estrategias
+                            probadas
+                            para superar los desafíos comunes en las relaciones, fomentando un vínculo más fuerte y
+                            saludable entre ambos.
                         </p>
                     </div>
                     <div class="course-details">
-                    <span class="time-details">🕛 15 horas</span>
-                    <span class="online-details">💻 Online</span>
-                    <span class="online-details">🛒 Precio: 80€</span>
-                 </div>
+                        <span class="time-details">🕛 15 horas</span>
+                        <span class="online-details">💻 Online</span>
+                        <span class="online-details">🛒 Precio: 80€</span>
+                    </div>
                     <div class="tarjeta-link">
                         <p>Impartido por: Álvaro Serrano </p>
                         <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
@@ -268,66 +283,76 @@ if (isset($_SESSION['idPacienteLogin'])){
         </div>
         </div>
 
-<!--------ASISTENCIA A DOMICILIO----- -->
+        <!--------ASISTENCIA A DOMICILIO------->
 
-      <div class="subrayado2">
-  <h3>Asistencia a domicilio para personas mayores</h3>
-</div>
+        <div class="subrayado2">
+            <h3>Asistencia a domicilio para personas mayores</h3>
+        </div>
 
-<div class="secionAsistentes">
-  <div class="contenidoAsistentes">
-    <div class="perfilesAsistentes">
-      <img src="img/prof6.png" alt="Martín Galadas" class="perfil-image">
-      <p class="perfil-nombre">Martín Cañadas<br><span class="perfil-titulo">Asistente para mayores</span></p>
-    </div>
-    <div class="perfilesAsistentes">
-      <img src="img/prof2.png" alt="Sofía Salpoveda" class="perfil-image">
-      <p class="perfil-nombre">Sofía Sepúlveda<br><span class="perfil-titulo">Asistente para mayores</span></p>
-    </div>
-  </div>
-  <div class="contenidoTexto">
-    <p>Comprendemos la importancia de un soporte en salud mental accesible y personalizado para nuestros adultos mayores.
-         Con el compromiso de proporcionar un servicio de atención integral, ofrecemos asistencia a domicilio especializada en salud mental
-          para ayudar a mejorar la calidad de vida de quienes más lo necesitan. 
-          Proporcionamos recursos y capacitación para que las familias puedan apoyar de manera efectiva a sus seres queridos.
-</p>
-    <button class="reserve-button" type="button" onclick="window.location.href='citaAsistencia.php';">Pide cita</button>
-  </div>
-</div>
+        <div class="secionAsistentes" id="asistencia">
+            <div class="contenidoAsistentes">
+                <div class="perfilesAsistentes">
+                    <img src="img/prof6.png" alt="Martín Galadas" class="perfil-image">
+                    <p class="perfil-nombre">Martín Cañadas<br><span class="perfil-titulo">Asistente para mayores</span>
+                    </p>
+                </div>
+                <div class="perfilesAsistentes">
+                    <img src="img/prof2.png" alt="Sofía Salpoveda" class="perfil-image">
+                    <p class="perfil-nombre">Sofía Sepúlveda<br><span class="perfil-titulo">Asistente para
+                            mayores</span></p>
+                </div>
+            </div>
+            <div class="contenidoTexto">
+                <p>Comprendemos la importancia de un soporte en salud mental accesible y personalizado para nuestros
+                    adultos mayores.
+                    Con el compromiso de proporcionar un servicio de atención integral, ofrecemos asistencia a domicilio
+                    especializada en salud mental
+                    para ayudar a mejorar la calidad de vida de quienes más lo necesitan.
+                    Proporcionamos recursos y capacitación para que las familias puedan apoyar de manera efectiva a sus
+                    seres queridos.
+                </p>
+                <button class="reserve-button" type="button" onclick="window.location.href='citaAsistencia.php';">Pide
+                    cita</button>
+            </div>
+        </div>
 
-</div>
+        </div>
 
 
-<!--------ASISTENCIA A DOMICILIO----- -->
+        <!--------ASISTENCIA A DOMICILIO----- -->
 
-<div class="subrayado2">
-  <h3>Asistencia a domicilio para niños/as</h3>
-</div>
+        <div class="subrayado2">
+            <h3>Asistencia a domicilio para niños/as</h3>
+        </div>
 
-<div class="secionAsistentes">
-  <div class="contenidoAsistentes">
-    <div class="perfilesAsistentes">
-      <img src="img/prof4.png" alt="Fernando Rodríguez" class="perfil-image">
-      <p class="perfil-nombre">Fernando Rodríguez<br><span class="perfil-titulo">Asistente para niños/as</span></p>
-    </div>
-    <div class="perfilesAsistentes">
-      <img src="img/prof5.png" alt="Beatriz Rodrigo" class="perfil-image">
-      <p class="perfil-nombre">Beatriz Rodrigo <br><span class="perfil-titulo">Asistente para niños/as</span></p>
-    </div>
-  </div>
-  <div class="contenidoTexto">
-    <p>Entendemos la importancia del bienestar emocional desde las primeras etapas de la vida.
-         Ofrecemos un servicio especializado de asistencia a domicilio para niños pequeños,
-          garantizando un ambiente de apoyo y comprensión que promueva su desarrollo saludable y feliz.
-           Es un servicio pensado especialmente para aquellas madres y padres que no pueden dedicar el tiempo que les gustaría a sus hijos.
-            Nuestros profesionales se encargan de que estén acompañados y cuidados en ese tiempo
-</p>
-    <button class="reserve-button" type="button" onclick="window.location.href='citaAsistencia.php';">Pide cita</button>
-  </div>
-</div>
+        <div class="secionAsistentes">
+            <div class="contenidoAsistentes">
+                <div class="perfilesAsistentes">
+                    <img src="img/prof4.png" alt="Fernando Rodríguez" class="perfil-image">
+                    <p class="perfil-nombre">Fernando Rodríguez<br><span class="perfil-titulo">Asistente para
+                            niños/as</span></p>
+                </div>
+                <div class="perfilesAsistentes">
+                    <img src="img/prof5.png" alt="Beatriz Rodrigo" class="perfil-image">
+                    <p class="perfil-nombre">Beatriz Rodrigo <br><span class="perfil-titulo">Asistente para
+                            niños/as</span></p>
+                </div>
+            </div>
+            <div class="contenidoTexto">
+                <p>Entendemos la importancia del bienestar emocional desde las primeras etapas de la vida.
+                    Ofrecemos un servicio especializado de asistencia a domicilio para niños pequeños,
+                    garantizando un ambiente de apoyo y comprensión que promueva su desarrollo saludable y feliz.
+                    Es un servicio pensado especialmente para aquellas madres y padres que no pueden dedicar el tiempo
+                    que les gustaría a sus hijos.
+                    Nuestros profesionales se encargan de que estén acompañados y cuidados en ese tiempo
+                </p>
+                <button class="reserve-button" type="button" onclick="window.location.href='citaAsistencia.php';">Pide
+                    cita</button>
+            </div>
+        </div>
 
-</div>
-        
+        </div>
+
 
 
 

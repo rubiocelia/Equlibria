@@ -100,6 +100,7 @@ mysqli_close($conexion);
                     <div class="dropdown-content">
                         <a href="#">Nosotros</a>
                         <a href="#">Profesionales</a>
+                        <a href="#">Ayuda</a>
                         <a href="#">Contáctanos</a>
                     </div>
                 </li>
@@ -126,8 +127,8 @@ mysqli_close($conexion);
                 <li class="dropdown">
                     <a href="retiros.php" class="dropbtn">Retiros</a>
                     <div class="dropdown-content">
-                        <a href="#">Retiro de verano</a>
-                        <a href="#">Retiro de invierno</a>
+                        <a href="#">Retiros</a>
+                        <a href="#">Preguntas retiros</a>
                     </div>
                 </li>
                 <?php if ($sesionActiva): ?>
@@ -136,8 +137,6 @@ mysqli_close($conexion);
                         <div class="dropdown-content">
                             <a href="perfil.php">Mi perfil</a>
                             <a href="#">Calendario</a>
-                            <a href="#">Ayuda</a>
-                            <a href="#">Eliminar cuenta</a>
                             <a href="cerrarSesion.php">Cerrar sesión</a>
                         </div>
                     </li>
