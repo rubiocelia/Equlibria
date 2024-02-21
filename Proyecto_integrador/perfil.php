@@ -56,34 +56,18 @@ mysqli_close($conexion);
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                locale: 'es', // Establecer el idioma del calendario a español
-                firstDay: 1,
-                initialView: 'dayGridMonth',
-                events: './server/citasCalendario.php', // URL del endpoint que devuelve los eventos en JSON
-                eventColor: '#92AAB3',
-                eventClick: function (info) {
-                    // Crear y mostrar un desplegable con la información del evento en español
-                    var details = `
-                <div class="event-details">
-                <p>ID: ${info.event.id}</p>
-                <p>Especialista: ${info.event.title}</p>
-                <p>Fecha: ${info.event.start.toLocaleString('es')}</p>
-                </div>
-            `;
-                    // Asegúrate de que solo se muestre un desplegable a la vez
-                    var existingDetails = document.querySelector('.event-details');
-                    if (existingDetails) {
-                        existingDetails.parentNode.removeChild(existingDetails);
-                    }
-                    // Insertar el nuevo desplegable
-                    document.body.insertAdjacentHTML('beforeend', details);
-                }
-            });
-            calendar.render();
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            locale: 'es',
+            firstDay: 1,
+            initialView: 'dayGridMonth',
+            events: 'eventosCalendario.php',
+            eventColor: '#bd9567'
         });
+        calendar.render();
+    });
+
     </script>
 
 
