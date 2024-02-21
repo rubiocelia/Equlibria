@@ -160,6 +160,7 @@ $sql_insert_cita_psicologica = "INSERT INTO cita_psicologica (id_pacientes, id_p
 $sql_insert_reserva_eventos = "INSERT INTO reserva_eventos (id_paciente, id_evento) VALUES
 ('1', '1'),
 ('1', '7'),
+('1', '3'),
 ('3', '4'),
 ('4', '11'),
 ('5', '18'),
