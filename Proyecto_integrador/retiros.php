@@ -23,6 +23,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/retiros.css">
+    <script src='./js/faq.js'></script>
     <title>Retiros</title>
 </head>
 
@@ -209,30 +210,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
             </div>
             
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <script src='./js/faq.js'></script>
 
 
 
