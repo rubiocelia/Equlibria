@@ -9,28 +9,35 @@ $conexion = getConexion();
 $idPacienteLogin = isset($_SESSION['idPacienteLogin']) ? $_SESSION['idPacienteLogin'] : null;
 
 if ($idPacienteLogin) {
-    // Consulta para obtener los eventos a los que el paciente está inscrito
-    $sql = "SELECT e.id_evento, e.nombre_evento, e.descripcion_evento, e.fechas_evento, e.tipo_evento 
-            FROM eventos e
-            INNER JOIN reserva_eventos re ON e.id_evento = re.id_evento
-            WHERE re.id_paciente = ?";
+    // Consulta combinada para obtener los eventos y citas psicológicas
+    $sql = "(SELECT e.id_evento AS id, e.nombre_evento AS title, e.fechas_evento AS start, 'Evento' AS tipo
+             FROM eventos e
+             INNER JOIN reserva_eventos re ON e.id_evento = re.id_evento
+             WHERE re.id_paciente = ?)
+            UNION
+            (SELECT cp.id_cita_psicologica AS id, CONCAT('Cita con ', p.nombre_profesionales, ' ', p.apellidos_profesionales) AS title, cp.fechas_cita AS start, 'Cita' AS tipo
+             FROM cita_psicologica cp
+             INNER JOIN profesionales p ON cp.id_profesionales = p.id_profesionales
+             WHERE cp.id_pacientes = ?)
+            ORDER BY start";
 
     if ($stmt = $conexion->prepare($sql)) {
-        $stmt->bind_param("i", $idPacienteLogin);
+        // Bind the same patient ID twice because it's used in both parts of the UNION query
+        $stmt->bind_param("ii", $idPacienteLogin, $idPacienteLogin);
         $stmt->execute();
         $resultado = $stmt->get_result();
 
-        $eventos = array();
+        $eventosYCitas = array();
         while ($row = $resultado->fetch_assoc()) {
-            // Agrega cada evento a tu array de eventos
-            // Puedes ajustar las claves del array según lo necesites para tu calendario
-            $eventos[] = array(
-                'title' => $row['nombre_evento'],
-                'start' => $row['fechas_evento'],
-                // Agrega cualquier otra propiedad que necesites
+            // Agrega cada evento o cita al arreglo, ajustando las claves según necesites
+            $eventosYCitas[] = array(
+                'id' => $row['id'],
+                'title' => $row['title'],
+                'start' => $row['start'],
+                'tipo' => $row['tipo'] // Esta línea es opcional, si deseas diferenciar entre tipos en el cliente
             );
         }
-        echo json_encode($eventos); // Devuelve el JSON de eventos
+        echo json_encode($eventosYCitas); // Devuelve el JSON de eventos y citas
 
         $stmt->close();
     }
