@@ -1,18 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var form = document.querySelector('form');
-  form.addEventListener('submit', async function(event) {
-      event.preventDefault(); // Evitar el envío hasta confirmar la validación
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.querySelector("form");
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault(); // Evitar el envío hasta confirmar la validación
 
-      var nombre = document.getElementById("nombre_pacientes");
-      var apellidos = document.getElementById("apellidos_pacientes");
-      var telefono = document.getElementById("telefono_paciente");
-      var correo = document.getElementById("mail_pacientes");
-      var usuarioCrear = document.getElementById("usuario_pacientes");
-      var contrasenaNueva = document.getElementById("contrasena_pacientes");
+    var nombre = document.getElementById("nombre_pacientes");
+    var apellidos = document.getElementById("apellidos_pacientes");
+    var telefono = document.getElementById("telefono_paciente");
+    var correo = document.getElementById("mail_pacientes");
+    var usuarioCrear = document.getElementById("usuario_pacientes");
+    var contrasenaNueva = document.getElementById("contrasena_pacientes");
 
     // Validación del nombre
     if (!nombre.value.trim()) {
       alert("Por favor, ingrese su nombre.");
+      nombre.focus();
+      event.preventDefault();
+      return;
+    } else if (/[^a-zA-Z áéíóúÁÉÍÓÚñÑ]/.test(nombre.value)) {
+      // Añadiendo la comprobación de que no contenga números
+      alert("El nombre no debe contener números.");
       nombre.focus();
       event.preventDefault();
       return;
@@ -21,6 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Validación de apellidos
     if (!apellidos.value.trim()) {
       alert("Por favor, ingrese sus apellidos.");
+      apellidos.focus();
+      event.preventDefault();
+      return;
+    } else if (/[^a-zA-Z áéíóúÁÉÍÓÚñÑ]/.test(apellidos.value)) {
+      // Añadiendo la comprobación de que no contenga números
+      alert("Los apellidos no deben contener números.");
       apellidos.focus();
       event.preventDefault();
       return;
@@ -71,55 +83,62 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     //Validacion del usuario, mail y telefono para que no se repitan.
-      // Verificación con la base de datos
-      //Creamos la instancia "FormData" para complilar los valores y enviarlos mediante fetch.
-      
-      var datos = new FormData();
+    // Verificación con la base de datos
+    //Creamos la instancia "FormData" para complilar los valores y enviarlos mediante fetch.
 
-      //Añadimos al objeto "Formdata" los valores que no queremos que se repitan en la base de datos
+    var datos = new FormData();
 
-        datos.append('telefono', telefono.value);
-        datos.append('correo', correo.value);
-        datos.append('usuario', usuarioCrear.value);
+    //Añadimos al objeto "Formdata" los valores que no queremos que se repitan en la base de datos
 
-        //Utilizamos fetch para enviar la solicitud post al formulario y el archivo validar_duplicados.php
-        //será el que manejará la solicitud
+    datos.append("telefono", telefono.value);
+    datos.append("correo", correo.value);
+    datos.append("usuario", usuarioCrear.value);
 
-        fetch('validar_duplicados.php', {
-            method: 'POST',
-            body: datos // Usando FormData
+    //Utilizamos fetch para enviar la solicitud post al formulario y el archivo validar_duplicados.php
+    //será el que manejará la solicitud
 
-            //Manejamos la respuesta del servidor una vez la solicitud este enviada, para que cuando
-            //el servidor responda la respuesta sea recibida como un objeto response que a su vez es procesado
-            //para convertirlo a formato json.
+    fetch("validar_duplicados.php", {
+      method: "POST",
+      body: datos, // Usando FormData
 
-        }).then(response => response.json())
+      //Manejamos la respuesta del servidor una vez la solicitud este enviada, para que cuando
+      //el servidor responda la respuesta sea recibida como un objeto response que a su vez es procesado
+      //para convertirlo a formato json.
+    })
+      .then((response) => response.json())
 
-        //Aqui verificamos que ninguno de los campos de telefono_paciente, mail_pacientes y usuario_pacientes
-        //se pueda repetir y que en caso de que ya este en la base de datos salte un error mediante un alert
+      //Aqui verificamos que ninguno de los campos de telefono_paciente, mail_pacientes y usuario_pacientes
+      //se pueda repetir y que en caso de que ya este en la base de datos salte un error mediante un alert
 
-        .then(data => {
-            var error = false;
-            if (data.telefono) {
-                alert("Este teléfono ya está registrado, por favor introduzca otro número de teléfono válido.");
-                error = true;
-            }
-            if (data.correo) {
-                alert("Este correo electrónico ya está registrado, por favor introduzca otro correo válido.");
-                error = true;
-            }
-            if (data.usuario) {
-                alert("Este nombre de usuario ya está registrado, por favor introduzca otro nombre de usuario.");
-                error = true;
-            }
+      .then((data) => {
+        var error = false;
+        if (data.telefono) {
+          alert(
+            "Este teléfono ya está registrado, por favor introduzca otro número de teléfono válido."
+          );
+          error = true;
+        }
+        if (data.correo) {
+          alert(
+            "Este correo electrónico ya está registrado, por favor introduzca otro correo válido."
+          );
+          error = true;
+        }
+        if (data.usuario) {
+          alert(
+            "Este nombre de usuario ya está registrado, por favor introduzca otro nombre de usuario."
+          );
+          error = true;
+        }
 
-            if (!error) {
-                form.submit(); // Envía el formulario si no hay errores
-            }
-            //En que caso de que la consulta fetch falle saldra un error mediante un alert  
-        }).catch(error => {
-            console.error('Error:', error);
-            alert("Error al verificar los datos.");
-        });
+        if (!error) {
+          form.submit(); // Envía el formulario si no hay errores
+        }
+        //En que caso de que la consulta fetch falle saldra un error mediante un alert
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Error al verificar los datos.");
       });
+  });
 });
