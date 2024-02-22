@@ -416,9 +416,11 @@ main{
 
 .btn:hover {
   background: var(--verde);
+  text-decoration: none;
 }
 
 .btn-big {
+  text-decoration: none;
   background: #617C6F;
   color: white;
   border: none;
@@ -480,6 +482,206 @@ main{
   }
 }
 
+/* preguntas y respuestas */
+.faq-container {
+  padding: 25px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  padding: 20px;
+  background: var(--verde-claro);
+  margin: 0 0 30px 0;
+  font-size: 32px;
+  position: relative;
+}
+
+.faq-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  border-top: 1px solid var(--contraste-oscuro);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.faq-item:first-child {
+  border-top: none;
+}
+
+.faq-item:hover {
+  background: #f8f8f8;
+}
+
+.faq-question {
+  padding: 15px 55px;
+  margin: 0;
+  position: relative;
+  font-weight: bold;
+  font-family: "Chivo", sans-serif;
+}
+
+.faq-answer {
+  font-family: "Chivo", sans-serif;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 55px;
+  color: #333;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 15px 0;
+  font-family: "Chivo", sans-serif;
+}
+
+.faq-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease;
+}
+
+.faq-icon svg {
+  fill: #007bff;
+}
+
+.faq-item.show .faq-answer {
+  max-height: 1000px; /* sufficiently large number to handle content's height */
+}
+
+.faq-item.show .faq-icon {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.subrayadoFormulario {
+  background-color: var(--contraste-claro);
+  height: 15px;
+  font-size: 30px;
+  width: 425px;
+  text-align: center;
+  margin: 30px auto;
+  font-family: "Righteous";
+  margin-top: -10px;
+}
+
+.subrayadoFormulario h3 {
+  transform: translate(0px, -50px);
+  font-size: 60px;
+}
+
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.inicioSesion {
+  background-image: url(img/fondoRegistro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Righteous";
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  margin-top: 8%;
+}
+
+.formInicioSesion {
+  width: 100%;
+  border-radius: 15px;
+  padding: 0px;
+  margin: 10px;
+  position: relative;
+  max-width: 800px;
+  margin-left: 370px;
+  font-family: "Chivo", sans-serif;
+}
+
+.formInicioSesion label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formInicioSesion hr {
+  height: 8px;
+  background-color: var(--verde-oscuro);
+  border-radius: 10px;
+  border-style: none;
+  margin: 28px -50px;
+  width: 115%;
+  text-align: center;
+}
+
+.formInicioSesion input {
+  font-family: "Chivo", sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--verde-oscuro);
+  border-radius: 20px;
+}
+
+.formInicioSesion button[type="submit"] {
+  background-color: var(--verde-oscuro);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 80%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+.formInicioSesion button[type="submit"]:hover {
+  background-color: var(--contraste-oscuro);
+}
+
+.formInicioSesion input {
+  width: 100%; /* Asegura que el input ocupe toda la columna */
+}
+.formInicioSesion p {
+  text-align: center;
+  margin-top: -25px;
+  text-decoration: none;
+}
+.formInicioSesion a {
+  text-decoration: none;
+  color: var(--verde-oscuro);
+}
+
+.contacto {
+  margin-top: 5%;
+}
+
+#cuentanos{
+  width: 800px;
+  height: 200px;
+}
+
 @media (min-width: 1920px) {
   .fernando{
     text-align: left;
@@ -504,5 +706,11 @@ main{
   .boton-cv-der {
     text-align: left;
     margin-left: 1070px;
+  }
+  .formInicioSesion { 
+    margin-left: 550px;
+  }
+  .subrayadoQuienesSomos{
+    margin-top: -700px;
   }
 }
