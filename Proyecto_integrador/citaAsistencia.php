@@ -25,7 +25,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     //session_destroy();
 } else {
     // Como no se ha inciado sesión mandamos a la pagina de login
-    header("Location: inicio_sesion.php?sendTo=citaPsicologia");
+    header("Location: inicio_sesion.php?sendTo=citaAsitencia");
     exit();
 }
 $datosPaciente = obtenerDatosPaciente($idPacienteLogin);
@@ -53,37 +53,37 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/reservaEventos.css">
         <script src="./js/validacion_citaAsistencia.js"></script>
         <title>Pedir Cita - Equilibria</title>
     </head>
-    <body class="citaAsistencia">
-        <div class="subrayadoFormulario">
+    <body class="reservaEvento">
+        <div class="subrayado">
             <h3>Reserva ahora tu asistencia</h3>
         </div>
-        <div class="containerForm">
-            <form class="formInicioSesion" method="post" action="citaAsistencia.php">
+        <div class="contenedorForm">
+            <form class="formReserva" method="post" action="citaAsistencia.php">
                 <!-- Nombre y Apellidos del paciente -->
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <label for="nombre_paciente">Nombre:</label>
                         <input type="text" id="nombre_paciente" name="nombre_paciente" value="<?php echo $datosPaciente['nombre_pacientes']; ?>" disabled>
                     </div>
-                    <div class="form-column">                      
+                    <div class="columnasForm">                      
                         <label for="apellidos_paciente">Apellidos:</label>
                         <input type="text" id="apellidos_paciente" name="apellidos_paciente" value="<?php echo $datosPaciente['apellidos_pacientes']; ?>" disabled>
                     </div>
                 </div>
                 <!-- Email -->
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <label for="mail_paciente">Correo Electrónico:</label>
                         <input type="email" id="mail_paciente" name="mail_paciente" value="<?php echo $datosPaciente['mail_pacientes']; ?>" disabled>
                     </div>
                 </div>
                 <!-- Tipo de asistencia -->
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <label for="id_tipoAsistencia">Elige tu tipo de asistencia:</label>
                         <select name="tipoAsistencia" id="tipoAsistencia" required>
                             <option value="" disabled selected></option>
@@ -93,8 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                 </div>
                 <!-- Seleccionar asistente -->
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <label for="asistente">Elige tu especialista:</label>
                         <select name="id_Asistente" id="id_Asistente" required disabled>
                             <option value="" disabled selected> Pte. de tipo asistencia </option>
@@ -104,15 +104,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                 </div>
                 <!-- Seleccionar dia de asistencia -->
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <label for="lab_fecha_cita">Elige el día:</label>
                         <input type="date" name="fecha_cita" id="fecha_cita" required disabled>
                     </div>
                 </div>
                 <!-- Msj - Fecha no disponible -->
-                <div class="form-row">
-                    <div class="form-column">
+                <div class="filasFormulario">
+                    <div class="columnasForm">
                         <p name="noDisponibles_fechaCita" id="noDisponibles_fechaCita" hidden> No hay citas disponibles </p>
                     </div>
                 </div>

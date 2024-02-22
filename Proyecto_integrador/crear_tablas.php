@@ -45,35 +45,7 @@ $sql_profesionales = "CREATE TABLE IF NOT EXISTS profesionales (
     especialidad VARCHAR(255) NOT NULL
 )";
 
-$sql_talleres = "CREATE TABLE IF NOT EXISTS talleres (
-    id_talleres INT AUTO_INCREMENT PRIMARY KEY,
-    pacientes_apuntados VARCHAR(255) NULL,
-    nombre_talleres VARCHAR(255) NOT NULL,
-    descripcion_talleres TEXT,
-    precio_talleres VARCHAR(10) NOT NULL,
-    fecha_talleres DATE NOT NULL,
-    instructor_talleres VARCHAR(255) NOT NULL
-)";
 
-$sql_cursos = "CREATE TABLE IF NOT EXISTS cursos (
-    id_cursos INT AUTO_INCREMENT PRIMARY KEY,
-    pacientes_apuntados VARCHAR(255) NULL,
-    nombre_cursos VARCHAR(255) NOT NULL,
-    descripcion_cursos TEXT,
-    precio_cursos VARCHAR(10) NOT NULL,
-    fechas_cursos DATE NOT NULL,
-    instructor_cursos VARCHAR(255) NOT NULL
-)";
-
-$sql_retiros = "CREATE TABLE IF NOT EXISTS retiros (
-    id_retiros INT AUTO_INCREMENT PRIMARY KEY,
-    pacientes_apuntados VARCHAR(255)  NULL,
-    nombre_retiros VARCHAR(255) NOT NULL,
-    descripcion_retiros TEXT,
-    precio_retiros VARCHAR(10) NOT NULL,
-    fechas_retiros DATE NOT NULL,
-    instructor_retiros VARCHAR(255) NOT NULL
-)";
 
 $sql_eventos = "CREATE TABLE IF NOT EXISTS eventos (
     id_evento INT AUTO_INCREMENT PRIMARY KEY,
@@ -95,29 +67,7 @@ $sql_cita_psicologica = "CREATE TABLE IF NOT EXISTS cita_psicologica (
     FOREIGN KEY (id_profesionales) REFERENCES profesionales(id_profesionales)
 )";
 
-$sql_reserva_cursos = "CREATE TABLE IF NOT EXISTS reserva_cursos (
-    id_reserva_cursos INT AUTO_INCREMENT PRIMARY KEY,
-    id_pacientes INT NOT NULL,
-    id_cursos INT NOT NULL,
-    FOREIGN KEY (id_pacientes) REFERENCES pacientes(id_pacientes),
-    FOREIGN KEY (id_cursos) REFERENCES cursos(id_cursos)
-)";
 
-$sql_reserva_talleres = "CREATE TABLE IF NOT EXISTS reserva_talleres (
-    id_reserva_talleres INT AUTO_INCREMENT PRIMARY KEY,
-    id_pacientes INT NOT NULL,
-    id_talleres INT NOT NULL,
-    FOREIGN KEY (id_pacientes) REFERENCES pacientes(id_pacientes),
-    FOREIGN KEY (id_talleres) REFERENCES talleres(id_talleres)
-)";
-
-$sql_reserva_retiros = "CREATE TABLE IF NOT EXISTS reserva_retiros (
-    id_reserva_retiros INT AUTO_INCREMENT PRIMARY KEY,
-    id_pacientes INT NOT NULL,
-    id_retiros INT NOT NULL,
-    FOREIGN KEY (id_pacientes) REFERENCES pacientes(id_pacientes),
-    FOREIGN KEY (id_retiros) REFERENCES retiros(id_retiros)
-)";
 
 $sql_reserva_evento = "CREATE TABLE IF NOT EXISTS reserva_eventos (
     id_reserva_evento INT AUTO_INCREMENT PRIMARY KEY,
@@ -141,23 +91,7 @@ if ($conexion->query($sql_profesionales) === TRUE) {
     echo "Error al crear la tabla 'profesionales': " . $conexion->error . "<br>";
 }
 
-if ($conexion->query($sql_talleres) === TRUE) {
-    echo "Tabla 'talleres' creada con éxito.<br>";
-} else {
-    echo "Error al crear la tabla 'talleres': " . $conexion->error . "<br>";
-}
 
-if ($conexion->query($sql_cursos) === TRUE) {
-    echo "Tabla 'cursos' creada con éxito.<br>";
-} else {
-    echo "Error al crear la tabla 'cursos': " . $conexion->error . "<br>";
-}
-
-if ($conexion->query($sql_retiros) === TRUE) {
-    echo "Tabla 'retiros' creada con éxito.<br>";
-} else {
-    echo "Error al crear la tabla 'retiros': " . $conexion->error . "<br>";
-}
 
 if ($conexion->query($sql_eventos) === TRUE) {
     echo "Tabla 'eventos' creada con éxito.<br>";
@@ -169,24 +103,6 @@ if ($conexion->query($sql_cita_psicologica) === TRUE) {
     echo "Tabla 'cita psicológica' creada con éxito.<br>";
 } else {
     echo "Error al crear la tabla 'profesionales': " . $conexion->error . "<br>";
-}
-
-if ($conexion->query($sql_reserva_talleres) === TRUE) {
-    echo "Tabla 'reserva talleres' creada con éxito.<br>";
-} else {
-    echo "Error al crear la tabla 'reserva talleres': " . $conexion->error . "<br>";
-}
-
-if ($conexion->query($sql_reserva_cursos) === TRUE) {
-    echo "Tabla 'reserva cursos' creada con éxito.<br>";
-} else {
-    echo "Error al crear la tabla 'reserva cursos': " . $conexion->error . "<br>";
-}
-
-if ($conexion->query($sql_reserva_retiros) === TRUE) {
-    echo "Tabla 'reserva retiros' creada con éxito.<br>";
-} else {
-    echo "Error al crear la tabla 'reserva retiros': " . $conexion->error . "<br>";
 }
 
 if ($conexion->query($sql_reserva_evento) === TRUE) {
@@ -213,64 +129,47 @@ $sql_insert_pacientes = "INSERT INTO pacientes (DNI, nombre_pacientes, apellidos
     ('25430654P', 'David', 'Del Pino Romero', '687654321', 'F', '1994-03-16', 'daviddelpino', 'David94', 'daviddelpino@gmail.com'),
     ('54633698M', 'Daniel', 'Herrero Martínez', '628196324', 'M', '1989-08-07', 'danielherrero', 'Daniel89', 'danielherrero@gmail.com')";
 
-$sql_insert_talleres = "INSERT INTO talleres (nombre_talleres, descripcion_talleres, fecha_talleres, precio_talleres, instructor_talleres) VALUES
-    ('Taller de autoestima', 'Aprenderás sobre autoestima', '2024-02-20', '60,00€', 'Amelia'),
-    ('Taller mejora tus habilidades sociales', 'Aprenderás a mejorar tus habilidades sociales', '2024-03-09', '50,00€', 'Aaron'),
-    ('Taller de gestion de la ansiedad', 'Aprederás a gestionar la ansiedad', '2024-05-04', '30,00€', 'Celia'),
-    ('Taller autoexigencia y perfeccionismo', 'Aprederás sobre autoexigencia y perfeccionismo', '2024-01-09', '70,00€', 'Elena')"; 
 
-$sql_insert_cursos = "INSERT INTO cursos (nombre_cursos, descripcion_cursos, fechas_cursos, precio_cursos, instructor_cursos) VALUES
-    ('Curso de autoestima', 'Aprende a gestionar tu autoestima', '2024-04-01', '40,00€', 'Javier Chicano'),
-    ('Curso de dependencia emocional', 'Aprende a saber llevar tu dependencia emocional', '2024-02-08', '80,00€', 'Juan Pepón'),
-    ('Curos de ansiedad online', 'Aprende a gestionar tu ansiedad', '2024-03-17', '45,00€', 'Alejandro Junyent '),
-    ('Curso para parejas', 'Curso específico de parejas', '2024-07-12', '60,00€', 'Álvaro Serrano')";
-
-$sql_insert_retiros = "INSERT INTO retiros (nombre_retiros, descripcion_retiros, fechas_retiros, precio_retiros, instructor_retiros) VALUES
-    ('Retiros de verano', 'Retiros de verano', '2024-08-21', '80,00€', 'Lucca'),
-    ('Retiros de invierno', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael')";
 
 $sql_insert_eventos = "INSERT INTO eventos (nombre_evento, descripcion_evento, fechas_evento, precio_evento, instructor_evento, tipo_evento) VALUES
     ('Taller de autoestima', 'Aprenderás sobre autoestima', '2024-02-20', '60,00€', 'Amelia','Taller'),
+    ('Taller de autoestima', 'Aprenderás sobre autoestima', '2024-03-15', '60,00€', 'Amelia','Taller'),
     ('Taller mejora tus habiladades sociales', 'Aprenderás a mejorar tus habilidades sociales', '2024-03-09', '50,00€', 'Aaron','Taller'),
+    ('Taller mejora tus habiladades sociales', 'Aprenderás a mejorar tus habilidades sociales', '2024-05-10', '50,00€', 'Aaron','Taller'),
     ('Taller de gestion de la ansiedad', 'Aprederás a gestionar la ansiedad', '2024-05-04', '30,00€', 'Celia','Taller'),
+    ('Taller de gestion de la ansiedad', 'Aprederás a gestionar la ansiedad', '2024-08-21', '30,00€', 'Celia','Taller'),
     ('Taller autoexigencia y perfeccionismo', 'Aprederás sobre autoexigencia y perfeccionismo', '2024-01-09', '70,00€', 'Elena','Taller'),
+    ('Taller autoexigencia y perfeccionismo', 'Aprederás sobre autoexigencia y perfeccionismo', '2025-01-09', '70,00€', 'Elena','Taller'),
     ('Curso de autoestima', 'Aprende a gestionar tu autoestima', '2024-04-01', '40,00€', 'Javier','Curso'),
+    ('Curso de autoestima', 'Aprende a gestionar tu autoestima', '2025-02-10', '40,00€', 'Javier','Curso'),
     ('Curso de dependencia emocional', 'Aprende a saber llevar tu dependencia emocional', '2024-02-08', '80,00€', 'Juan','Curso'),
+    ('Curso de dependencia emocional', 'Aprende a saber llevar tu dependencia emocional', '2024-12-11', '80,00€', 'Juan','Curso'),
     ('Curos de ansiedad online', 'Aprende a gestionar tu ansiedad', '2024-03-17', '45,00€', 'Alejandro','Curso'),
+    ('Curos de ansiedad online', 'Aprende a gestionar tu ansiedad', '2024-11-08', '45,00€', 'Alejandro','Curso'),
     ('Curso para parejas', 'Curso específico de parejas', '2024-07-12', '60,00€', 'Álvaro','Curso'),
-    ('Retiros de verano', 'Retiros de verano', '2024-04-21', '40,00€', 'Lucca','Retiro'),
+    ('Curso para parejas', 'Curso específico de parejas', '2024-10-29', '60,00€', 'Álvaro','Curso'),
+    ('Retiros de verano', 'Retiros de verano', '2024-08-21', '80,00€', 'Lucca','Retiro'),
     ('Retiros de invierno', 'Retiros de invierno', '2024-02-28', '80,00€', 'Ismael','Retiro')";
 
+$sql_insert_cita_psicologica = "INSERT INTO cita_psicologica (id_pacientes, id_profesionales,fechas_cita,hora_cita) VALUES
+('1', '1', '2024-03-10','17:00'),
+('3', '5','2024-04-11','19:00'),
+('4', '5','2024-05-21','18:00'),
+('2', '1','2024-03-20','20:00')";
 
-$sql_insert_reserva_talleres = "INSERT INTO reserva_talleres (id_pacientes, id_talleres) VALUES
-    ('3', '2'),
-    ('4', '2'),
-    ('6', '2'),
-    ('1', '4'),
-    ('2', '4')";
+$sql_insert_reserva_eventos = "INSERT INTO reserva_eventos (id_paciente, id_evento) VALUES
+('1', '1'),
+('1', '7'),
+('1', '3'),
+('3', '4'),
+('4', '11'),
+('5', '18'),
+('6', '12'),
+('2', '6'),
+('2', '17'),
+('2', '15')";
 
-$sql_insert_reserva_cursos = "INSERT INTO reserva_cursos (id_pacientes, id_cursos) VALUES
-    ('2', '4'),
-    ('6', '4'),
-    ('2', '2'),
-    ('5', '2'),
-    ('1', '3'),
-    ('6', '3')";
 
-$sql_insert_reserva_retiros = "INSERT INTO reserva_retiros (id_pacientes, id_retiros) VALUES
-    ('3', '1'),
-    ('5', '1'),
-    ('1', '1'),
-    ('2', '1'),
-    ('4', '2'),
-    ('6', '2')";
-
-$sql_insert_cita_psicologica = "INSERT INTO cita_psicologica (id_pacientes, id_profesionales) VALUES
-    ('1', '1'),
-    ('3', '5'),
-    ('4', '5'),
-    ('2', '1'),
-    ('6', '1')";
 
 if ($conexion->query($sql_insert_profesionales) === TRUE) {
     echo "Datos iniciales de profesionales insertados con éxito.<br>";
@@ -278,28 +177,12 @@ if ($conexion->query($sql_insert_profesionales) === TRUE) {
     echo "Error al insertar datos iniciales de profesionales: " . $conexion->error . "<br>";
 }
 
-if ($conexion->query($sql_insert_talleres) === TRUE) {
-    echo "Datos iniciales de talleres insertados con éxito.<br>";
-} else {
-    echo "Error al insertar datos iniciales de talleres: " . $conexion->error . "<br>";
-}
+
 
 if ($conexion->query($sql_insert_pacientes) === TRUE) {
     echo "Datos iniciales de pacientes insertados con éxito.<br>";
 } else {
     echo "Error al insertar datos iniciales de pacientes: " . $conexion->error . "<br>";
-}
-
-if ($conexion->query($sql_insert_cursos) === TRUE) {
-    echo "Datos iniciales de cursos insertados con éxito.<br>";
-} else {
-    echo "Error al insertar datos iniciales de cursos: " . $conexion->error . "<br>";
-}
-
-if ($conexion->query($sql_insert_retiros) === TRUE) {
-    echo "Datos iniciales de retiros insertados con éxito.<br>";
-} else {
-    echo "Error al insertar datos iniciales de retiros: " . $conexion->error . "<br>";
 }
 
 if ($conexion->query($sql_insert_eventos) === TRUE) {
@@ -313,24 +196,12 @@ if ($conexion->query($sql_insert_cita_psicologica) === TRUE) {
 } else {
     echo "Error al insertar datos iniciales de cita psicológica: " . $conexion->error . "<br>";
 }
-
-if ($conexion->query($sql_insert_reserva_cursos) === TRUE) {
-    echo "Datos iniciales de reserva cursos insertados con éxito.<br>";
+if ($conexion->query($sql_insert_reserva_eventos) === TRUE) {
+    echo "Datos iniciales de reserva eventos insertados con éxito.<br>";
 } else {
-    echo "Error al insertar datos iniciales de reserva cursos: " . $conexion->error . "<br>";
+    echo "Error al insertar datos iniciales de reserva eventos: " . $conexion->error . "<br>";
 }
 
-if ($conexion->query($sql_insert_reserva_retiros) === TRUE) {
-    echo "Datos iniciales de reserva retiros insertados con éxito.<br>";
-} else {
-    echo "Error al insertar datos iniciales de reserva retiros: " . $conexion->error . "<br>";
-}
-
-if ($conexion->query($sql_insert_reserva_talleres) === TRUE) {
-    echo "Datos iniciales de reserva talleres insertados con éxito.<br>";
-} else {
-    echo "Error al insertar datos iniciales de reserva talleres: " . $conexion->error . "<br>";
-}
 
 // Cerramos conexión
 mysqli_close($conexion);

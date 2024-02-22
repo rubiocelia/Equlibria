@@ -191,14 +191,18 @@
 
 .calendario {
   display: flex;
-  width: 75%;
+  width: 80%;
   align-content: center;
   text-transform: uppercase;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
+}
+
+.fc-event-title {
+  white-space: normal;
 }
 
 /* Estilo base para los botones */
