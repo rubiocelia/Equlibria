@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault();
       return;
     }
-
+    
     // Validación de apellidos
     if (!apellidos.value.trim()) {
       alert("Por favor, ingrese sus apellidos.");
