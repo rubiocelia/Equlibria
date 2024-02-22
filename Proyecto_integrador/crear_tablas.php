@@ -25,7 +25,7 @@ crearTablas($conexion);
 // Creamos tablas si no existen
 $sql_pacientes = "CREATE TABLE IF NOT EXISTS pacientes (
     id_pacientes INT AUTO_INCREMENT PRIMARY KEY,
-    
+    DNI VARCHAR(255) NOT NULL,
     nombre_pacientes VARCHAR(255) NOT NULL,
     usuario_pacientes VARCHAR(255) NOT NULL,
     apellidos_pacientes VARCHAR(255) NOT NULL,
@@ -121,13 +121,13 @@ $sql_insert_profesionales = "INSERT INTO profesionales (nombre_profesionales, ap
     ('Ana', 'Gómez Rodríguez', ' 648931586','Psicologia'),
     ('Beatriz', 'Rodrigo Marquínez', '647553057', 'Asistencia a niños')";
 
-$sql_insert_pacientes = "INSERT INTO pacientes (nombre_pacientes, apellidos_pacientes, telefono_paciente, genero, fecha_nacimiento, usuario_pacientes, contrasena_pacientes, mail_pacientes) VALUES
-    ('Laura', 'Escanes Villar', '623456789', 'F', '1995-04-05', 'lauraescanes', 'Laura95', 'lauraescanes@gmail.com'),
-    ('Ana', 'Herrero Sánchez', '687654321', 'F', '1994-03-16', 'anaherrero' , 'AnaH1994', 'anaherrero@gmail.com'),
-    ('Humberto', 'Fernández Serrano', '656789123', 'M', '1943-08-07', 'humbertofernandez', 'Humberto43', 'humbertofernandez@hotmail.com'),
-    ('Mario', 'Fernández García', '654341495', 'M', '1999-06-05', 'mariofernandez', 'Mario99', 'mariofernandez@gmail.com'),
-    ('David', 'Del Pino Romero', '687654321', 'F', '1994-03-16', 'daviddelpino', 'David94', 'daviddelpino@gmail.com'),
-    ('Daniel', 'Herrero Martínez', '628196324', 'M', '1989-08-07', 'danielherrero', 'Daniel89', 'danielherrero@gmail.com')";
+$sql_insert_pacientes = "INSERT INTO pacientes (DNI, nombre_pacientes, apellidos_pacientes, telefono_paciente, genero, fecha_nacimiento, usuario_pacientes, contrasena_pacientes, mail_pacientes) VALUES
+    ('45735844S', 'Laura', 'Escanes Villar', '623456789', 'F', '1995-04-05', 'lauraescanes', 'Laura95', 'lauraescanes@gmail.com'),
+    ('15430654P', 'Ana', 'Herrero Sánchez', '687654321', 'F', '1994-03-16', 'anaherrero' , 'AnaH1994', 'anaherrero@gmail.com'),
+    ('52633694M', 'Humberto', 'Fernández Serrano', '656789123', 'M', '1943-08-07', 'humbertofernandez', 'Humberto43', 'humbertofernandez@hotmail.com'),
+    ('95535844S', 'Mario', 'Fernández García', '654341495', 'M', '1999-06-05', 'mariofernandez', 'Mario99', 'mariofernandez@gmail.com'),
+    ('25430654P', 'David', 'Del Pino Romero', '687654321', 'F', '1994-03-16', 'daviddelpino', 'David94', 'daviddelpino@gmail.com'),
+    ('54633698M', 'Daniel', 'Herrero Martínez', '628196324', 'M', '1989-08-07', 'danielherrero', 'Daniel89', 'danielherrero@gmail.com')";
 
 
 
