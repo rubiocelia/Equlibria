@@ -33,7 +33,7 @@ if(isset($_SESSION['idPacienteLogin']) && isset($_POST['nombre_pacientes'])) {
         // Ejecutar la consulta
         if($stmt->execute()) {
             // Redireccionar al perfil con un mensaje de éxito
-            echo "<script>alert('Exito al acrualizar');</script>";
+            echo "<script>alert('Exito al actualizar');</script>";
             
         } else {
             // Error al actualizar
