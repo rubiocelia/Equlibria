@@ -167,22 +167,39 @@
   border-bottom: 2px solid var(--verde-claro);
 }
 
+.formEditarPerfil .form-group-half {
+  flex: 0 0 50%; /* toma exactamente la mitad del espacio disponible */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.formEditarPerfil .form-group-full {
+  display: flex; /* usa flexbox para alinear los hijos en una fila */
+  justify-content: space-between; /* distribuye el espacio entre los hijos */
+  width: 100%; /* toma todo el ancho disponible */
+}
+
 .formEditarPerfil button {
   background-color: var(--contraste);
   padding: 10px;
   border-radius: 15px;
   border-style: none;
-  margin: auto;
+  display: block; /* asegura que el botón esté en su propia línea */
+  margin: 20px auto; /* centra el botón debajo de los campos */
   font-family: "Chivo", sans-serif;
   font-size: 15px;
+  cursor: pointer;
+  width: fit-content; /* ajusta el ancho al contenido del botón */
 }
+
+/* Asegúrate de que no haya otras reglas CSS que interfieran con estas. */
 
 .formEditarPerfil button:hover {
   background-color: var(--contraste-claro);
   padding: 10px;
   border-radius: 15px;
+  margin: 20px auto;
   border-style: none;
-  margin: auto;
   font-family: "Chivo", sans-serif;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }

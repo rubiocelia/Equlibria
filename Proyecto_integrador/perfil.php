@@ -168,11 +168,6 @@ mysqli_close($conexion);
                     </div>
 
                     <div class="form-group-bajo">
-                        <label for="DNI">DNI</label>
-                        <input type="text" id="DNI" name="DNI" placeholder="DNI" value="<?php echo htmlspecialchars($paciente['DNI']); ?>">
-                    </div>
-
-                    <div class="form-group-bajo">
                     <label for="fechaNacimiento">Fecha de nacimiento</label>
                         <input type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Fecha de nacimiento" value="<?php echo htmlspecialchars($paciente['fecha_nacimiento']); ?>">
                     </div>
@@ -182,15 +177,16 @@ mysqli_close($conexion);
                         <input type="text" id="genero" name="genero" placeholder="Género" value="<?php echo htmlspecialchars($paciente['genero']); ?>">
                     </div>
 
-                    <div class="form-group-bajo">
-                    <label for="usario_pacientes">Usuario</label>
-                        <input type="text" id="usario_pacientes" name="usario_pacientes" placeholder="Usuario" value="<?php echo htmlspecialchars($paciente['usuario_pacientes']); ?>">
-                    </div>
+                    <div class="form-group-full">
+                        <div class="form-group-half">
+                            <label for="usario_pacientes">Usuario</label>
+                            <input type="text" id="usario_pacientes" name="usario_pacientes" placeholder="Usuario" value="<?php echo htmlspecialchars($paciente['usuario_pacientes']); ?>">
+                        </div>
 
-                    <div class="form-group-bajo">
-                        <label for="contrasena_pacientes">Contraseña</label>
-                        <input type="text" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
-                        
+                        <div class="form-group-half">
+                            <label for="contrasena_pacientes">Contraseña</label>
+                            <input type="password" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
+                        </div>
                     </div>
                     <button type="submit">Guardar cambios</button>
                 </form>
