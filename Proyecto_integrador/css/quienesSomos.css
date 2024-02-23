@@ -274,7 +274,7 @@ main{
   background-color: var(--contraste-claro);
   height: 15px;
   font-size: 48px;
-  width: 800px;
+  width: 700px;
   text-align: center;
   margin: 50px auto;
   font-family: "Bellefair";
@@ -306,7 +306,7 @@ main{
   text-align: center;
   margin: 50px auto;
   font-family: "Bellefair";
-  margin-top: 250px;
+  margin-top: 450px;
 }
 
 .subrayadoPsicologos h3 {
@@ -379,10 +379,10 @@ main{
 
 .profile img {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 345px;
+  height: 342px;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: left;
 }
 
@@ -394,10 +394,10 @@ main{
 
 .profile2 img {
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  width: 345px;
+  height: 342px;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: right;
 }
 
@@ -442,7 +442,7 @@ main{
   text-align: left;
   width: 620px;
   text-align: justify;
-  margin-top: -260px;
+  margin-top: -290px;
   font-size: 16px;
   font-family: "Bellefair";
 }
@@ -451,7 +451,7 @@ main{
   text-align: right;
   width: 620px;
   text-align: justify;
-  margin-top: -260px;
+  margin-top: -290px;
   margin-left: 550px;
   font-size: 16px;
   font-family: "Bellefair";
@@ -461,18 +461,30 @@ main{
   font-family: "Chivo", sans-serif;
 }
 
+.beatriz h2{
+  font-family: "Bellefair";
+  font-size: 36px;
+}
+
 .fernando p{
   font-family: "Chivo", sans-serif;
+}
+
+.fernando h2{
+  font-family: "Bellefair";
+  font-size: 36px;
 }
 
 .boton-cv-izq {
   text-align: left;
   margin-left: 190px;
+  margin-top: 50px;
 }
 
 .boton-cv-der {
   text-align: left;
   margin-left: 770px;
+  margin-top: 50px;
 }
 
 /* Agrega tus estilos para móvil, tablet, etc. */
@@ -613,7 +625,7 @@ main{
   margin: 10px;
   position: relative;
   max-width: 800px;
-  margin-left: 370px;
+  margin-left: 365px;
   font-family: "Chivo", sans-serif;
 }
 
@@ -680,7 +692,9 @@ main{
 #cuentanos{
   width: 800px;
   height: 200px;
+  border-radius: 20px;
 }
+
 
 @media (min-width: 1920px) {
   .fernando{
