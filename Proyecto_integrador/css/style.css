@@ -121,8 +121,17 @@ nav {
   display: block;
 }
 
+
 .dropbtn {
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.dropbtn:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--verde-oscuro);
+  color: var(--verde-oscuro); /
 }
 
 /* Footer */

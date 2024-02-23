@@ -52,23 +52,8 @@ mysqli_close($conexion);
     <link rel="stylesheet" href="src/css/calendar.css">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core/locales/es.js'></script>
-    <script src='./js/cambiarPerfil.js'></script>
+    <script src="./js/calendario.js"></script>
 
-    <script>
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            locale: 'es',
-            firstDay: 1,
-            initialView: 'dayGridMonth',
-            events: 'eventosCalendario.php',
-            eventColor: '#bd9567'
-        });
-        calendar.render();
-    });
-
-    </script>
 
 
 </head>
@@ -185,7 +170,7 @@ mysqli_close($conexion);
 
                         <div class="form-group-half">
                             <label for="contrasena_pacientes">Contraseña</label>
-                            <input type="password" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
+                            <input type="text" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
                         </div>
                     </div>
                     <button type="submit">Guardar cambios</button>

@@ -145,21 +145,23 @@ p {
   font-family: "Chivo", sans-serif;
 }
 
-.taller button {
+.linkIndex {
+  display: flex; /* Establece el modelo de caja flexible */
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
   border-radius: 15px;
-  width: 88px;
+  width: 90px;
   height: 40px;
   border: 2px solid var(--verde-oscuro);
   background-color: var(--verde-claro);
   color: #000000;
-  text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   margin-top: auto;
   margin-bottom: 25px;
 }
 
-.taller button:hover {
+.linkIndex:hover {
   background-color: var(--verde-oscuro);
   color: #000000;
 }

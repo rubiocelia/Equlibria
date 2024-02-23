@@ -93,7 +93,8 @@ if (isset($_SESSION['idPacienteLogin'])){
     <main>
         <div class="pginicio">
             <h1>Aprende a fluir <br> con tus emociones</h1>
-            <button class="boton_inicio">¡Únete a nuestra terapia!</button>
+            <a href="citaPsicologia.php" class="boton_inicio">¡Únete a nuestra terapia!</a>
+
         </div>
         <div class="bienvenido">
             <h3 class="titBienvenido">Bienvenida/o</h3>
@@ -113,7 +114,8 @@ if (isset($_SESSION['idPacienteLogin'])){
                         y
                         conocer mejor tu cuerpo y tus habilidades.
                     </p>
-                    <button>¡Resérvalo!</button>
+                    <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
+
                 </div>
 
                 <div class="taller">
@@ -122,7 +124,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <p>En este taller de hablididades sociales trabajaremos todas las áreas en las que las habilidades
                         sociales adquieren un papel importante.
                     </p>
-                    <button>¡Resérvalo!</button>
+                    <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                 </div>
 
                 <div class="taller">
@@ -131,7 +133,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <p>Descubre en este taller todo lo que debes saber sobre tu ansiedad. Vamos a aprender a acapetar y
                         escuchar desde el amor nuestra ansiedad.
                     </p>
-                    <button>¡Resérvalo!</button>
+                    <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                 </div>
 
                 <div class="taller">
@@ -140,7 +142,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <p>En este taller trabajaremos en reconocer y acompañar nuestra autoexigenciaa y profundizaremos en
                         el origen.
                     </p>
-                    <button>¡Resérvalo!</button>
+                    <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                 </div>
             </div>
         </div>
@@ -177,7 +179,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
                     <div class="card-link">
                         <p>Por: Javier </p>
-                        <button>¡Resérvalo!</button>
+                        <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                     </div>
                 </div>
             </div>
@@ -196,7 +198,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
                     <div class="card-link">
                         <p>Por: Juan </p>
-                        <button>¡Resérvalo!</button>
+                        <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                     </div>
                 </div>
             </div>
@@ -213,7 +215,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                 </div>
                 <div class="card-link">
                     <p>Por: Alejandro </p>
-                    <button>¡Resérvalo!</button>
+                    <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                 </div>
             </div>
             <div class="cursos">
@@ -230,7 +232,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
                     <div class="card-link">
                         <p>Por: Alvaro </p>
-                        <button>¡Resérvalo!</button>
+                        <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                     </div>
                 </div>
             </div>

@@ -171,7 +171,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                 de la
                                 montaña de la serenidad, liberándose de la ansiedad.</span></p>
 
-                            <a href="link_de_compra_libro" class="btn-comprar">Comprar</a>
+                            <a href="https://www.amazon.es/BYE-Ansiedad-tranquilo-Psicolog%C3%ADa-Autoayuda/dp/8441440050/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2007GY3I6HF91&dib=eyJ2IjoiMSJ9.kjWNJBAjGqbChpeMJwGvxCXAXoYAP2RPtsf--ULVTLrdXvxdLzaNq4wse-0m1VGFeW0UioH1_xsergITBNhGkn6owEu1PC7wqNxsiEXhkLJTxC3MuDP-M9FS0Z242SuWepNixuUMsb_hJ2IPgOpmr4QX9oIHY9RoCmGr-qmp6L8N0V8TEeRKVLbiYT88CFBwZ9mGSRQDGCSA0l75zN1Ruw.G39Xcw9HkmyjPeIrWWqz7jqAOtVagKuDRIzHz5zJJCs&dib_tag=se&keywords=Bye+bye+ansiedad+libro&qid=1708708101&sprefix=bye+bye+ansiedad+libro%2Caps%2C117&sr=8-1" class="btn-comprar" target="_blank">Comprar</a>
                         </div>
                     </div>
 
@@ -190,7 +190,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                 El libro ha sido exitoso en ventas y elogiado en revistas de psicología gracias a su
                                 enfoque
                                 cercano y humorístico."</p>
-                            <a href="link_de_compra_libro" class="btn-comprar">Comprar</a>
+                            <a href="https://www.amazon.es/El-fin-ansiedad-Libro-pr%C3%A1ctico/dp/8417664335/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=30FNG890Y0POB&dib=eyJ2IjoiMSJ9.k3gP6HoG4Ve8-e9rLEOGN98euIVEDM-XC8osItlZtb6VTLPkC6byyHSHi66yTgtwpY_Yl3Nj6Gr1y5OSweWugOlJn9aE2eBeunePG1ghh2ZSx6k0jNLkXJDIHiT3C8HAiLWgBCNX_pxJz_1VGQP403ETfQIkrCXo5YM3k1r_khj4chEkP1nIAO_47Sy4Hmx3U8fkADcTjlS83WupBCWR6aK_iZDY_EPrY-JZuYLRdZRb8mckfdwnNnMHODpONKSh-2aHsPlUJhqflZClURn6kWGuaryDCWTKgpog8nzywD0.0POWSt1etnSoxTU2AQ0eDksamI3dF9I32V698k6sPx4&dib_tag=se&keywords=el+fin+de+la+ansiedad+libro&qid=1708708259&sprefix=el+finde+la+ansiedad+libro%2Caps%2C117&sr=8-1" class="btn-comprar" target="_blank">Comprar</a>
                         </div>
                     </div>
 
@@ -207,7 +207,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                 y
                                 la atención plena para desactivar los desencadenantes de la ansiedad y mejorar el
                                 bienestar."</p>
-                            <a href="link_de_compra_libro" class="btn-comprar">Comprar</a>
+                            <a href="https://www.amazon.es/Deshacer-ansiedad-ciencia-preocupaci%C3%B3n-Divulgaci%C3%B3n/dp/8449338999/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2FH8RL83XTE04&dib=eyJ2IjoiMSJ9.DyoT5ZcwVDkUYKMX63Xe_wuLEhjTUN2i7PZSQQXT6NaVTLPkC6byyHSHi66yTgtwHr3i0ITn1ehOchLKbh1FKjd5J8HtqAh_ivNb8hlZ3ysqVDgEh0RwRm1KTelHRrjmMXT8l-LuQhpqJqxiIsekYLxqzdlADb5mac8k9VvQ4rcCDna5f5SqC_r_-wLv56ZQYv5a-Ps2STAlh8B6LCoMI2dfDIz-Oy-aB7oYG4rajYQsfAtIfgRWS3cT6ct5HBpXDRc8i35CrfFu8TJfI86slrGo-oIeYYlTQLVstPGnvIE.fvxaV2VHEprPe3XponaNoFdBjgYs_W5f5FJTEd6wBlE&dib_tag=se&keywords=deshacer+la+ansiedad+libro&qid=1708708290&sprefix=deshacer+la+ansieda+libro%2Caps%2C124&sr=8-1" class="btn-comprar" target="_blank">Comprar</a>
                         </div>
                     </div>
 
@@ -225,7 +225,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                 objetivos en la vida, ejercitar la voluntad, poner en marcha la inteligencia emocional,
                                 desarrollar la asertividad, evitar el exceso de autocrítica y autoexigencia, reivindicar
                                 el papel del optimismo..."</p>
-                            <a href="link_de_compra_libro" class="btn-comprar">Comprar</a>
+                            <a href="https://www.amazon.es/C%C3%B3mo-hacer-pasen-cosas-buenas/dp/8467053305/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1J9TOQ27S9RRN&dib=eyJ2IjoiMSJ9.L5Y2PJYBYYH-Fh0nvZBDWkdl1TIHJZtDIJKWx9yAIr-w0T81FGVmuFLbYjNV98UlFqrEE_q49Le0YLk54CPVDxflb2aNQPYXq5Lps99yI8vEazPFcsxnEe9e1d-R-NoSuLqsVfSiv6FFznjsoatraq64iX-SB5ipypJOpQbOW1sSKbnatSlqoRMll6GvhI5VQwapQsGF_k7vT97qPWAjBVGH3plt95YfqGjEC4JxzvuCP-mUjdoUJq5NkmV0RJsY9ohrNHMiWseIimPrA-AlERsT6JQqeR8BWTjSV1Q0VBs.OFF1LZQbqB47vF8KyRmprO5FDUUSWQzdma_CREtqJ1k&dib_tag=se&keywords=como+hacer+que+te+pasen+cosas+buenas&qid=1708708315&sprefix=como+hacer+que+te+pasen+cosas+benas%2Caps%2C123&sr=8-1" class="btn-comprar" target="_blank">Comprar</a>
                         </div>
                     </div>
 
@@ -244,7 +244,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                 timidez,
                                 permitiendo a cualquiera convertirse en su mejor versión: una persona libre, poderosa y
                                 feliz."</p>
-                            <a href="link_de_compra_libro" class="btn-comprar">Comprar</a>
+                            <a href="https://www.amazon.es/Sin-miedo-comprobado-obsesiones-hipocondr%C3%ADa/dp/8425361109/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=34UX0ZA1WRONU&dib=eyJ2IjoiMSJ9.6T60ryL8luqEQBJYAiVEz_8yp8lohl-Zyzp4sJZPTm_tdpLa4QhP5JqBudyYxZI3NmtklDt2YF2w4S1BJmfGDzeQ-k8hLWg4Cj9seoQaSLCPr3Fs5Wq-dYpMSBcPXmMtW9ELyFk-CD9A9-NcgBQTRbHVKkqg3Whv_JsWowVXSD79DEEPIQTuik2HAxXw3WkbjPMWu-7jzPT__rKrEcJTyh_LBKBu6Tn_eDCyqgpLCVziGpco30g78R_3riYVTVcpNmlxtRmLRjUilS0XZGmOyN-_HCR6PslKxMRFlnRWdI0.2sdMc9es0TZIjUZi_QTa1Rh5D44QAtxR0Yq3AU2j8PA&dib_tag=se&keywords=Sin+miedo&qid=1708708340&sprefix=sin+miedo%2Caps%2C135&sr=8-1" class="btn-comprar" target="_blank">Comprar</a>
                         </div>
                     </div>
                     <span class="flecha-derecha">🡢</span>

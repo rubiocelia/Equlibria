@@ -210,16 +210,11 @@
   display: flex;
   width: 80%;
   align-content: center;
-  text-transform: uppercase;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-}
-
-.fc-event-title {
-  white-space: normal;
 }
 
 /* Estilo base para los botones */
@@ -235,4 +230,27 @@
 }
 .fc .fc-day-today {
   background-color: var(--verde-claro) !important;
+}
+
+.fc-daygrid-event-dot {
+  display: none;
+}
+
+.fc-event {
+  background-color: #bd9567;
+  color: white;
+}
+
+.fc-event:hover {
+  background-color: #bd9567;
+  color: white;
+  cursor: default;
+}
+
+/* Cambia los títulos de los eventos a fuente normal */
+.fc-event-title,
+.fc-event-time {
+  font-weight: normal !important;
+  padding: 5px;
+  white-space: normal;
 }
