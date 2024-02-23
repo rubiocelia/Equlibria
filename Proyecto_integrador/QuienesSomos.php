@@ -280,7 +280,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
         </div>
         
-        <br><br><br>
+        <br><br>
         <div class="contacto" id="contacto">
             <div class="subrayadoFormulario">
                 <h3>Contáctanos</h3>

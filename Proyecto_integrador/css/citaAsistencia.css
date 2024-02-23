@@ -20,7 +20,7 @@
 .subrayado {
     background-color: var(--verde);
     height: 10px;
-    width: 43%; 
+    width: 40%; 
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -35,7 +35,7 @@
     transform: translate(0px, -20px);
   }
   body.citaAsistencia {
-    background-image: url("../img/fondoFormularioAsist.png");
+    background-image: url("../img/formulariofondo.png");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Chivo", sans-serif;
@@ -50,7 +50,7 @@
 }
 .contenedorForm {
     background-color: white;
-    padding: 40px; /* Espacio alrededor del contenido del formulario */
+    padding: 40px; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     width: 80%; 
@@ -73,30 +73,53 @@
 }
 .formReserva input[type="text"],
 .formReserva input[type="email"],
+.formReserva input[type="date"],
 .formReserva select {
     padding: 10px; /* Espacio dentro de los inputs y selects */
     margin-top: 5px; /* Espacio superior para los inputs y selects */
     border: 1px solid #617C6F; 
     border-radius: 20px; 
 }
-.formReserva button{
-    margin-top: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    height: 40px;
-    font-family: "Chivo", sans-serif;
-    font-size: 18px;
-    border-radius: 15px;
-    border: 2px solid var(--verde-oscuro);
-    background-color: var(--verde-claro);
-    color: #000000;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .formReserva button:hover {
-    background-color: var(--verde-oscuro);
-    color: #000000;
-  }
+.botonform{
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 32px;
+  font-family: "Chivo", sans-serif;
+  font-size: 15px;
+  border-radius: 15px;
+  border: 2px solid var(--verde-oscuro);
+  background-color: var(--verde-claro);
+  color: #000000;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  
+}
+.botonform:hover {
+  background-color: var(--verde-oscuro);
+  color: #000000;
+}
+.botonVolver{
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 105px;
+  height: 32px;
+  font-family: "Chivo", sans-serif;
+  font-size: 15px;
+  border-radius: 15px;
+  border: 2px solid var(--verde-oscuro);
+  background-color: var(--verde-claro);
+  color: #000000;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.botonVolver:hover {
+  background-color: var(--verde-oscuro);
+  color: #000000;
+}

@@ -101,8 +101,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         </select>
                     </div>
                 </div>
-                <button type="submit" name="Enviar">Enviar formulario</button>
-                <button type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver Inicio</button>
+                <button class="botonform" type="submit" name="Enviar">Enviar formulario</button>
+                <button class="botonVolver" type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver inicio </button>
 
             </form>
         </div>
