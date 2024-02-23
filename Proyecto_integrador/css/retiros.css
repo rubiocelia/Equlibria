@@ -82,44 +82,125 @@
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    margin-bottom: 25px;
-    flex: none; 
-    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-top: 0;
   }
    
   .retiros button:hover {
     background-color: var(--verde-oscuro);
     color: #000000;
   }
-  .retiros .price-button-container {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    margin: 16px 0; 
-  }
+ 
 
   .detalles-retiros {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem; 
+    justify-content: center;
+    font-size: 1rem; 
     color: #757575; 
-    margin-top: 10px; 
+    margin-top: 25px; 
     padding: 20px;
+    gap: 190px;
   }
+  .price-container {
+    margin-right: 10px; /* Espaciado entre el precio y el botón */
+}
 
   .tarjetasRetiros span{
-    padding: 30px;
     font-family: "Chivo", sans-serif;
     text-align: center;
-    display: inline-block;
+    align-items: center; 
+    display: inline-flex;
     padding: 5px 10px;
-    margin: 16px 0; 
-    flex: none; 
-    margin: 0; 
-    margin-right: 400px;
-    margin-top: 30px;
+    margin: 0;  
+   
   }
  
+  /* parte faq */
+  .faq-container {
+    padding: 25px 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .faq-title {
+    text-align: center;
+    padding: 20px;
+    background: var(--contraste-claro);
+    margin: 0 0 30px 0;
+    font-size: 32px;
+    position: relative;
+  }
+  
+  .faq-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-item {
+    border-top: 1px solid var(--contraste-oscuro);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .faq-item:first-child {
+    border-top: none;
+  }
+  
+  .faq-item:hover {
+    background: #f8f8f8;
+  }
+  
+  .faq-question {
+    padding: 15px 55px;
+    margin: 0;
+    position: relative;
+    font-weight: bold;
+    font-family: "Chivo", sans-serif;
+  }
+  
+  .faq-answer {
+    font-family: "Chivo", sans-serif;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 55px;
+    color: #333;
+  }
+  
+  .faq-answer p {
+    margin: 0;
+    padding: 15px 0;
+    font-family: "Chivo", sans-serif;
+  }
+  
+  .faq-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease;
+  }
+  
+  .faq-icon svg {
+    fill: #007bff;
+  }
+  
+  .faq-item.show .faq-answer {
+    max-height: 1000px; /* sufficiently large number to handle content's height */
+  }
+  
+  .faq-item.show .faq-icon {
+    transform: translateY(-50%) rotate(90deg);
+  }
+  
   

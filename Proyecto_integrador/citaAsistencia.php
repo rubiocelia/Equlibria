@@ -53,11 +53,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/reservaEventos.css">
+        <link rel="stylesheet" href="./css/citaAsistencia.css">
         <script src="./js/validacion_citaAsistencia.js"></script>
         <title>Pedir Cita - Equilibria</title>
     </head>
-    <body class="reservaEvento">
+    <body class="citaAsistencia">
         <div class="subrayado">
             <h3>Reserva ahora tu asistencia</h3>
         </div>

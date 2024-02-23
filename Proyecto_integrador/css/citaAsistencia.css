@@ -20,7 +20,7 @@
 .subrayado {
     background-color: var(--verde);
     height: 10px;
-    width: 35%; 
+    width: 43%; 
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -34,8 +34,8 @@
     margin: 0; 
     transform: translate(0px, -20px);
   }
-  body.reservaEvento {
-    background-image: url("../img/fondoform.png");
+  body.citaAsistencia {
+    background-image: url("../img/fondoFormularioAsist.png");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Chivo", sans-serif;
@@ -49,7 +49,7 @@
     margin: 0;
 }
 .contenedorForm {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     padding: 40px; /* Espacio alrededor del contenido del formulario */
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -95,7 +95,6 @@
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    
   }
   .formReserva button:hover {
     background-color: var(--verde-oscuro);
