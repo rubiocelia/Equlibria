@@ -29,59 +29,60 @@ if (isset($_SESSION['idPacienteLogin'])){
 
 <body>
     <header class="header">
-        <a href="index.html"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
-        <a href="index.html"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
+        <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
+        <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
-            <ul class="menu">
+        <ul class="menu">
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">¿Quiénes somos?</a>
+                    <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
                     <div class="dropdown-content">
-                        <a href="#">Nosotros</a>
-                        <a href="#">Profesionales</a>
-                        <a href="#">Contáctanos</a>
+                        <a href="QuienesSomos.php#quienesSomos">Nosotros</a>
+                        <a href="QuienesSomos.php#psicologos">Profesionales</a>
+                        <a href="QuienesSomos.php#preguntasRespuestas">Ayuda</a>
+                        <a href="QuienesSomos.php#contacto">Contáctanos</a>
                     </div>
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Recursos gratuitos</a>
+                    <a href="recursosGratuitos.php" class="dropbtn">Recursos gratuitos</a>
                     <div class="dropdown-content">
-                        <a href="#">Podcast</a>
-                        <a href="#">Libros autoayuda</a>
-                        <a href="#">Videos mindfulness</a>
+                        <a href="recursosGratuitos.php#podcast">Podcast</a>
+                        <a href="recursosGratuitos.php#librosAutoayuda">Libros autoayuda</a>
+                        <a href="recursosGratuitos.php#videos">Videos mindfulness</a>
                     </div>
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Servicios</a>
+                    <a href="servicios.php" class="dropbtn">Servicios</a>
                     <div class="dropdown-content">
-                        <a href="#">Terapia psicológica</a>
-                        <a href="#">Talleres</a>
-                        <a href="#">Cursos</a>
-                        <a href="#">Asistencia a domicilio</a>
+                        <a href="servicios.php#citaPsicologica">Terapia psicológica</a>
+                        <a href="servicios.php#talleres">Talleres</a>
+                        <a href="servicios.php#cursos">Cursos</a>
+                        <a href="servicios.php#asistencia">Asistencia a domicilio</a>
                     </div>
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropbtn">Retiros</a>
+                    <a href="retiros.php" class="dropbtn">Retiros</a>
                     <div class="dropdown-content">
-                        <a href="#">Retiro de verano</a>
-                        <a href="#">Retiro de invierno</a>
+                        <a href="retiros.php#retiros">Retiros</a>
+                        <a href="retiros.php#preguntasRespuestas">Preguntas retiros</a>
                     </div>
                 </li>
-
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Perfil</a>
-                    <div class="dropdown-content">
-                        <a href="#">Mi perfil</a>
-                        <a href="#">Calendario</a>
-                        <a href="#">Ayuda</a>
-                        <a href="#">Eliminar cuenta</a>
-                        <a href="#">Cerrar sesión</a>
-                    </div>
-                </li>
-
-                <li class="iniciarSesion"><a href="#">Iniciar sesión</a></li>
-                <li class="registro"><a href="#">Registrase</a></li>
+                <?php if ($sesionActiva): ?>
+                    <li class="dropdown">
+                        <a href="perfil.php" class="dropbtn">Perfil</a>
+                        <div class="dropdown-content">
+                            <a href="perfil.php#perfil">Mi perfil</a>
+                            <a href="perfil.php#calendario">Calendario</a>
+                            <a href="cerrarSesion.php">Cerrar sesión</a>
+                        </div>
+                    </li>
+                <?php endif; ?>
+                <?php if (!$sesionActiva): ?>
+                    <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
+                    <li class="registro"><a href="registrarse.php">Registrase</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>
@@ -338,40 +339,36 @@ if (isset($_SESSION['idPacienteLogin'])){
 
         <div class="footer-container">
             <div class="footer-section">
-                <h3>Cursos</h3>
-                <a href="#">Curso para parejas</a>
-                <a href="#">Inteligencia emocional</a>
-                <a href="#">Curso autoestima</a>
-                <a href="#">Dependencia emocional</a>
-                <a href="#">Ansiedad online</a>
+                <h3>Nosotros</h3>
+                <a href="QuienesSomos.php#quienesSomos">Nosotros</a>
+                <a href="QuienesSomos.php#psicologos">Profesionales</a>
+                <a href="QuienesSomos.php#preguntasRespuestas">Ayuda</a>
+                <a href="QuienesSomos.php#contacto">Contáctanos</a>
             </div>
             <div class="footer-section">
-                <h3>Recursos gratuitos</h3>
-                <a href="#">Podcast</a>
-                <a href="#">Libros autoayuda</a>
-                <a href="#">Tutoriales mindfulness</a>
+                <h3>Servicios</h3>
+                <a href="servicios.php#citaPsicologica">Terapia psicológica</a>
+                <a href="servicios.php#talleres">Talleres</a>
+                <a href="servicios.php#cursos">Cursos</a>
+                <a href="servicios.php#asistencia">Asistencia a domicilio</a>
             </div>
             <div class="footer-section">
                 <h3>Mi cuenta</h3>
-                <a href="#">Calendario</a>
-                <a href="#">Mi perfil</a>
-                <a href="#">Ayuda</a>
-                <a href="#">Eliminar cuenta</a>
+                <a href="perfil.php#perfil">Mi perfil</a>
+                <a href="perfil.php#calendario">Calendario</a>
             </div>
             <div class="footer-section">
-                <h3>Taller</h3>
-                <a href="#">Autoestima</a>
-                <a href="#">Mejora tus habilidades sociales</a>
-                <a href="#">Autoexigencia</a>
-                <a href="#">Gestión de la ansiedad</a>
-            </div>
+                <h3>Recursos gratuitos</h3>
+                <a href="recursosGratuitos.php#podcast">Podcast</a>
+                <a href="recursosGratuitos.php#librosAutoayuda">Libros autoayuda</a>
+                <a href="recursosGratuitos.php#videos">Tutoriales mindfulness</a>
+            </div>            
             <div class="footer-section">
-                <h3>Nosotros</h3>
-                <a href="#">Profesionales</a>
-                <a href="#">Opiniones</a>
-                <a href="#">Contáctanos</a>
-                <a href="#">¿Quiénes somos?</a>
+                <h3>Retiros</h3>
+                <a href="retiros.php#retiros">Retiros</a>
+                <a href="retiros.php#preguntasRespuestas">Preguntas retiros</a>
             </div>
+            
         </div>
         <div class="footer-branding">
             <p class="nombre_footer">Equilibria</p>
