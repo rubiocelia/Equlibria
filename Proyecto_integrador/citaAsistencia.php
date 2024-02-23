@@ -25,7 +25,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     //session_destroy();
 } else {
     // Como no se ha inciado sesión mandamos a la pagina de login
-    header("Location: inicio_sesion.php?sendTo=citaAsitencia");
+    header("Location: inicio_sesion.php?sendTo=citaAsistencia");
     exit();
 }
 $datosPaciente = obtenerDatosPaciente($idPacienteLogin);
@@ -117,8 +117,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                 </div>
 
-                <button type="submit" name="btn_Enviar" id="btn_Enviar">Enviar formulario</button>
-                <button type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver Inicio</button>
+                <button class="botonform" type="submit" name="btn_Enviar" id="btn_Enviar">Enviar formulario</button>
+                <button class="botonVolver" type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver Inicio</button>
             </form>
         </div>
         <script src="./js/cargarDinamicaAsistencia.js"></script>

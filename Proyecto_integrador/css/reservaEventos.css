@@ -35,7 +35,7 @@
     transform: translate(0px, -20px);
   }
   body.reservaEvento {
-    background-image: url("../img/fondoform.png");
+    background-image: url("../img/formulariofondo.png");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Chivo", sans-serif;
@@ -50,7 +50,7 @@
 }
 .contenedorForm {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px; /* Espacio alrededor del contenido del formulario */
+    padding: 40px; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     width: 80%; 
@@ -79,15 +79,15 @@
     border: 1px solid #617C6F; 
     border-radius: 20px; 
 }
-.formReserva button{
+.botonform{
     margin-top: 20px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 180px;
-    height: 40px;
+    width: 150px;
+    height: 32px;
     font-family: "Chivo", sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 15px;
     border: 2px solid var(--verde-oscuro);
     background-color: var(--verde-claro);
@@ -97,7 +97,28 @@
     transition: background-color 0.3s, color 0.3s;
     
   }
-  .formReserva button:hover {
+  .botonform:hover {
+    background-color: var(--verde-oscuro);
+    color: #000000;
+  }
+  .botonVolver{
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    height: 32px;
+    font-family: "Chivo", sans-serif;
+    font-size: 15px;
+    border-radius: 15px;
+    border: 2px solid var(--verde-oscuro);
+    background-color: var(--verde-claro);
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .botonVolver:hover {
     background-color: var(--verde-oscuro);
     color: #000000;
   }

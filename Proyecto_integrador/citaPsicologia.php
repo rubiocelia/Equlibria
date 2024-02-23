@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                 </div>
                 <div class="filasFormulario">
-                    <div class="columnasForm>
+                    <div class="columnasForm">
                         <label for="fecha_cita">Elige el día:</label>
                         <input type="date" name="fecha_cita" id="fecha_cita" required>
                     </div>
@@ -120,8 +120,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                 </div>
 
-                <button type="submit" name="Enviar">Enviar formulario</button>
-                <button type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver Inicio</button>
+                <button class="botonform" type="submit" name="Enviar">Enviar formulario</button>
+                <button class="botonVolver" type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver Inicio</button>
             </form>
         </div>
         <script src="./js/cargarHorasDisponibles.js"></script>
