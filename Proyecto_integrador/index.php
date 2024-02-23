@@ -178,7 +178,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                         </p>
                     </div>
                     <div class="card-link">
-                        <p>Por: Javier </p>
+                        <p>Por: Javier Chicano </p>
                         <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                     </div>
                 </div>
@@ -197,7 +197,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                         </p>
                     </div>
                     <div class="card-link">
-                        <p>Por: Juan </p>
+                        <p>Por: Juan Pepón</p>
                         <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                     </div>
                 </div>
@@ -214,7 +214,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </p>
                 </div>
                 <div class="card-link">
-                    <p>Por: Alejandro </p>
+                    <p>Por: Alejandro Junyent</p>
                     <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                 </div>
             </div>
@@ -231,7 +231,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                         </p>
                     </div>
                     <div class="card-link">
-                        <p>Por: Alvaro </p>
+                        <p>Por: Alvaro Serrano</p>
                         <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                     </div>
                 </div>
