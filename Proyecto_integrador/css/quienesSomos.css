@@ -438,43 +438,6 @@ main{
   color: #000;
 }
 
-.fernando{
-  text-align: left;
-  width: 620px;
-  text-align: justify;
-  margin-top: -290px;
-  font-size: 16px;
-  font-family: "Bellefair";
-}
-
-.beatriz{
-  text-align: right;
-  width: 620px;
-  text-align: justify;
-  margin-top: -290px;
-  margin-left: 550px;
-  font-size: 16px;
-  font-family: "Bellefair";
-}
-
-.beatriz p{
-  font-family: "Chivo", sans-serif;
-}
-
-.beatriz h2{
-  font-family: "Bellefair";
-  font-size: 36px;
-}
-
-.fernando p{
-  font-family: "Chivo", sans-serif;
-}
-
-.fernando h2{
-  font-family: "Bellefair";
-  font-size: 36px;
-}
-
 .boton-cv {
   text-align: center;
   height: 40px;
@@ -744,14 +707,15 @@ main{
 .testimonial-slide h3 {
   font-size: 2.5rem;
   margin: 2rem 0;
-  font-family: "Chivo", sans-serif;
+  font-family: "Bellefair";
 }
 
 .testimonial-slide p {
-  font-size: 1.4rem;
+  font-size: 16px;
   text-align: center;
-  font-family: "Bellefair";
+  font-family: "Chivo", sans-serif;
   text-align: justify;
+  width: 650px;
 }
 
 .testimonial-box .swiper-button-next,
