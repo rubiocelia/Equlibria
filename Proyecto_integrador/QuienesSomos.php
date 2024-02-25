@@ -21,6 +21,10 @@ if (isset($_SESSION['idPacienteLogin'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../Proyecto_integrador/css/quienesSomos.css">
     <script src="../Proyecto_integrador/js/validar_contacto.js"></script>
@@ -101,132 +105,124 @@ if (isset($_SESSION['idPacienteLogin'])){
             <div class="subrayadoPsicologos">
             <h3>Psicólogos</h3>
             </div>
-            <div class="profile">
-                <img src="../Proyecto_integrador/img/prof1.png" alt="Ana Gómez Rodríguez">
-                <div class="beatriz">
-                <h2>Ana Gómez Rodríguez</h2>
-                <br>
-                <p>La psicóloga especializada en ansiedad de Equilibria, se distingue por su enfoque 
-                    compasivo y expertise en el manejo de trastornos ansiosos. Con una sólida formación,
-                    Ana trabaja incansablemente para proporcionar a sus pacientes herramientas efectivas
-                    y estrategias personalizadas. Su compromiso con el bienestar emocional se refleja 
-                    en cada sesión, guiando a aquellos que buscan equilibrio hacia una vida más tranquila 
-                    y plena.</p>
-                </div>
-                <div class="boton-cv-der">
-                    <button class="btn">Ver CV</button>
+            <div class="" id="menu-icon"></div>
+            <div class="testimonial-container">
+                <div class="testimonial-wrapper">
+                    <div class="testimonial-box mySwiper">
+                        <div class="testimonial-content swiper-wrapper">
+                            <div class="testimonial-slide swiper-slide">
+                                <img src="../Proyecto_integrador/img/prof1.png" alt="">
+                                <h3>Ana Gómez Rodríguez</h3>
+                                <p>La psicóloga especializada en ansiedad de Equilibria, se distingue por su enfoque compasivo y 
+                                    expertise en el manejo de trastornos ansiosos. Con una sólida formación, Ana trabaja incansablemente 
+                                    para proporcionar a sus pacientes herramientas efectivas y estrategias personalizadas. Su compromiso 
+                                    con el bienestar emocional se refleja en cada sesión, guiando a aquellos que buscan equilibrio hacia 
+                                    una vida más tranquila y plena.</p>
+                                    <br><br>
+                                    <button class="boton-cv">Ver CV</button>
+                            </div>
+                            <div class="testimonial-slide swiper-slide">
+                                <img src="../Proyecto_integrador/img/prof5.png" alt="">
+                                <h3>Mara Sánchez Moreno</h3>
+                                <p>Mara Sánchez Moreno, destacada psicóloga de terapia de parejas en Equilibria, se especializa en fortalecer 
+                                    relaciones y cultivar conexiones saludables. Con una perspectiva compasiva, Mara aborda desafíos en la 
+                                    comunicación y resolución de conflictos, trabajando con parejas para crear un espacio de comprensión mutua. 
+                                    Su enfoque basado en evidencia y experiencia clínica ha llevado a resultados positivos, consolidando a Mara 
+                                    como una profesional confiable en el campo de la psicología de parejas en Equilibria.</p>
+                                    <br><br>
+                                    <button class="boton-cv">Ver CV</button>
+                            </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <br>
-        <div class="container2">
-            <div class="profile2">
-                <img src="../Proyecto_integrador/img/prof5.png" alt="Mara Sánchez Moreno">
-                <div class="fernando">
-                <h2>Mara Sánchez Moreno</h2>
-                <br>
-                <p>Mara Sánchez Moreno, destacada psicóloga de terapia de parejas en Equilibria, se 
-                    especializa en fortalecer relaciones y cultivar conexiones saludables. Con una 
-                    perspectiva compasiva, Mara aborda desafíos en la comunicación y resolución de 
-                    conflictos, trabajando con parejas para crear un espacio de comprensión mutua. 
-                    Su enfoque basado en evidencia y experiencia clínica ha llevado a resultados 
-                    positivos, consolidando a Mara como una profesional confiable en el campo de la 
-                    psicología de parejas en Equilibria.</p>
-                </div>
-                <div class="boton-cv-izq">
-                    <button class="btn">Ver CV</button>
-                </div>
-            </div>
-        </div>
-            <div class="container3">
-                <a href="citaPsicologia.php"><button class="btn-big">¡Reserva con tu psicólogo!</button></a>
+        <div class="container3">
+            <a href="citaPsicologia.php"><button class="btn-big">¡Reserva con tu psicólogo!</button></a>
         </div>
         <br><br><br><br>
         <div class="container">
             <div class="subrayadoAsistentesM">
             <h3>Asistentes para mayores</h3>    
             </div>
-            <div class="profile">
-                <img src="../Proyecto_integrador/img/prof6.png" alt="Ana Gómez Rodríguez">
-                <div class="beatriz">
-                <h2>Martín Cañadas Carriedo</h2>
-                <br>
-                <p>Martín Cañadas Carriedo, el asistente para personas mayores de Equilibria, es un 
-                    dedicado profesional comprometido con el bienestar y la comodidad de los clientes 
-                    mayores. Con un enfoque amable y compasivo, Martín brinda apoyo integral, desde 
-                    actividades diarias hasta compañía emocional. Su experiencia en el cuidado de 
-                    personas mayores y su atención personalizada lo convierten en un recurso valioso 
-                    para mejorar la calidad de vida de quienes confían en Equilibria para el cuidado 
-                    de sus seres queridos.</p>
-                </div>
-                <div class="boton-cv-der">
-                    <button class="btn">Ver CV</button>
-                </div>
-            </div>
-            <br>
-        </div>
-        <div class="container2">
-            <div class="profile2">
-                <img src="../Proyecto_integrador/img/prof2.png" alt="Mara Sánchez Moreno">
-                <div class="fernando">
-                <h2>Sofía Sepúlveda Rivera</h2>
-                <br>
-                <p>Sofía Sepúlveda Rivera, la asistente para personas mayores de Equilibria, se 
-                    distingue por su compromiso inquebrantable con el bienestar y la atención 
-                    individualizada. Con empatía y dedicación, Sofía proporciona un apoyo integral, 
-                    abordando las necesidades diarias y brindando compañía afectuosa. Su enfoque 
-                    centrado en la persona y su experiencia en el cuidado de adultos mayores hacen de 
-                    ella una valiosa integrante del equipo de Equilibria, comprometida con mejorar la 
-                    calidad de vida de quienes confían en sus servicios.</p>
-                </div>
-                <div class="boton-cv-izq">
-                    <button class="btn">Ver CV</button>
+            <div class="" id="menu-icon"></div>
+            <div class="testimonial-container">
+                <div class="testimonial-wrapper">
+                    <div class="testimonial-box mySwiper">
+                        <div class="testimonial-content swiper-wrapper">
+                            <div class="testimonial-slide swiper-slide">
+                                <img src="../Proyecto_integrador/img/prof6.png" alt="">
+                                <h3>Martín Cañadas Carriedo</h3>
+                                <p>Martín Cañadas Carriedo, el asistente para personas mayores de Equilibria, es un dedicado profesional 
+                                    comprometido con el bienestar y la comodidad de los clientes mayores. Con un enfoque amable y compasivo, 
+                                    Martín brinda apoyo integral, desde actividades diarias hasta compañía emocional. Su experiencia en el 
+                                    cuidado de personas mayores y su atención personalizada lo convierten en un recurso valioso para mejorar 
+                                    la calidad de vida de quienes confían en Equilibria para el cuidado de sus seres queridos.</p>
+                                    <br><br>
+                                    <button class="boton-cv">Ver CV</button>
+                            </div>
+                            <div class="testimonial-slide swiper-slide">
+                                <img src="../Proyecto_integrador/img/prof2.png" alt="">
+                                <h3>Sofía Sepúlveda Rivera</h3>
+                                <p>Sofía Sepúlveda Rivera, la asistente para personas mayores de Equilibria, se distingue por su compromiso 
+                                    inquebrantable con el bienestar y la atención individualizada. Con empatía y dedicación, Sofía proporciona 
+                                    un apoyo integral, abordando las necesidades diarias y brindando compañía afectuosa. Su enfoque centrado en
+                                    la persona y su experiencia en el cuidado de adultos mayores hacen de ella una valiosa integrante del equipo 
+                                    de Equilibria, comprometida con mejorar la calidad de vida de quienes confían en sus servicios.</p>
+                                    <br><br>
+                                    <button class="boton-cv">Ver CV</button>
+                            </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
         <br><br><br><br>
         <div class="container">
             <div class="subrayadoAsistentesN">
             <h3>Asistentes para niños</h3>    
             </div>
-            <div class="profile">
-                <img src="../Proyecto_integrador/img/prof4.png" alt="Ana Gómez Rodríguez">
-                <div class="beatriz">
-                <h2>Beatriz Rodrigo Marquínez</h2>
-                <br>
-                <p>Beatriz Rodrigo Marquínez, la asistente para niños de Equilibria, destaca por su 
-                    dedicación y cariño en la atención infantil. Con un enfoque lúdico y educativo, 
-                    Beatriz se esfuerza por crear un entorno seguro y estimulante para los pequeños. 
-                    Su compromiso con el desarrollo integral se refleja en cada interacción, brindando 
-                    apoyo tanto emocional como práctico. Beatriz, integrante vital del equipo de 
-                    Equilibria, trabaja incansablemente para asegurar que cada niño experimente un 
-                    crecimiento saludable y positivo.</p>
-                </div>
-                <div class="boton-cv-der">
-                    <button class="btn">Ver CV</button>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="container2">
-            <div class="profile2">
-                <img src="../Proyecto_integrador/img/prof3.png" alt="Mara Sánchez Moreno">
-                <div class="fernando">
-                <h2>Fernando Rodríguez Bellido</h2>
-                <br>
-                <p>Fernando Rodríguez Bellido, el asistente para niños en Equilibria, se distingue por 
-                    su entusiasmo contagioso y enfoque centrado en el bienestar infantil. Con habilidades 
-                    pedagógicas y un trato amigable, Fernando crea un ambiente educativo y divertido para 
-                    los pequeños a su cargo. Su compromiso con el desarrollo integral se refleja en 
-                    actividades estimulantes y apoyo emocional constante. Como parte fundamental del 
-                    equipo de Equilibria, Fernando trabaja incansablemente para fomentar un crecimiento 
-                    positivo y saludable en cada niño.</p>
-                </div>
-                <div class="boton-cv-izq">
-                    <button class="btn">Ver CV</button>
+            <div class="" id="menu-icon"></div>
+            <div class="testimonial-container">
+                <div class="testimonial-wrapper">
+                    <div class="testimonial-box mySwiper">
+                        <div class="testimonial-content swiper-wrapper">
+                            <div class="testimonial-slide swiper-slide">
+                                <img src="../Proyecto_integrador/img/prof4.png" alt="">
+                                <h3>Beatriz Rodrigo Marquínez</h3>
+                                <p>Beatriz Rodrigo Marquínez, la asistente para niños de Equilibria, destaca por su dedicación y cariño en la 
+                                    atención infantil. Con un enfoque lúdico y educativo, Beatriz se esfuerza por crear un entorno seguro y 
+                                    estimulante para los pequeños. Su compromiso con el desarrollo integral se refleja en cada interacción, 
+                                    brindando apoyo tanto emocional como práctico. Beatriz, integrante vital del equipo de Equilibria, trabaja 
+                                    incansablemente para asegurar que cada niño experimente un crecimiento saludable y positivo.</p>
+                                    <br><br>
+                                    <button class="boton-cv">Ver CV</button>
+                            </div>
+                            <div class="testimonial-slide swiper-slide">
+                                <img src="../Proyecto_integrador/img/prof3.png" alt="">
+                                <h3>Fernando Rodríguez Bellido</h3>
+                                <p>Fernando Rodríguez Bellido, el asistente para niños en Equilibria, se distingue por su entusiasmo contagioso 
+                                    y enfoque centrado en el bienestar infantil. Con habilidades pedagógicas y un trato amigable, Fernando crea 
+                                    un ambiente educativo y divertido para los pequeños a su cargo. Su compromiso con el desarrollo integral se 
+                                    refleja en actividades estimulantes y apoyo emocional constante. Como parte fundamental del equipo de Equilibria, 
+                                    Fernando trabaja incansablemente para fomentar un crecimiento positivo y saludable en cada niño.</p>
+                                    <br><br>
+                                    <button class="boton-cv">Ver CV</button>
+                            </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
             <div class="container3">
                 <a href="citaAsistencia.php"><button class="btn-big">¡Reserva con tu asistente!</button></a>
         </div>
@@ -357,5 +353,10 @@ if (isset($_SESSION['idPacienteLogin'])){
             <p>&copy; 2024 Equilibria. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/faq.js"></script>
+    <script src="./js/quienesSomos.js"></script>
 </body>
