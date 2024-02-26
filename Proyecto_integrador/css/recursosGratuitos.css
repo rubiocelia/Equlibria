@@ -205,7 +205,7 @@ footer {
 /* recursos gratuitos */
 
 .podcast {
-  width: 80vw;
+  width: 90vw;
   margin: auto;
 }
 
@@ -456,26 +456,34 @@ footer {
 
 /* tablet */
 @media screen and (max-width: 992px) {
-  .tarjetaPodcast {
-    width: 20%;
+  .podcast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Ajusta esto según necesites */
+    gap: 10px; /* Espacio entre los elementos de podcast */
   }
+  .podcast {
+    width: 40%;
+  }
+
   .libro_card {
-    flex-direction: column;
-    width: 50%;
-    height: auto;
+    margin: 0 auto;
+    flex-direction: row;
+    width: 80%;
+    height: 75vh;
   }
 
   .libro-img {
     margin: auto;
-    width: 30%;
-    height: auto; /* Ajustar la altura automáticamente */
+    width: 40%;
+    height: 100%;
     border-radius: 10px 10px 0 0; /* Redondear las esquinas superiores */
   }
 
   .libro-info {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: auto; /* Hacer que el ancho se ajuste al contenedor */
+    font-size: 1em;
+    margin: 25px 15px;
+    width: auto;
   }
 
   .videos,
@@ -491,5 +499,13 @@ footer {
   .video-gallery,
   .tarjPodcasts {
     gap: 40px; /* Reducir el espacio entre elementos */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
   }
 }

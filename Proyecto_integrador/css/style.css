@@ -463,3 +463,11 @@ a {
   cursor: pointer;
   margin-top: 7.5px;
 }
+
+@media screen and (max-width: 992px) {
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+  }
+}
