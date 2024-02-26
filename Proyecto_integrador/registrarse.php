@@ -4,6 +4,17 @@ require_once("conecta.php");
 
 $conexion = getConexion();
 
+// Función para recuperar el id del paciente registrado
+function obtenerIdNewPaciente($userNewPaciente){
+    $conexion = getConexion();
+    $sql_get_pacientes = "SELECT * FROM pacientes WHERE usuario_pacientes = ?";
+    $stmt = $conexion->prepare($sql_get_pacientes);
+    $stmt->bind_param("s", $userNewPaciente);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    $datosPaciente = $resultado->fetch_assoc();
+    return $datosPaciente['id_pacientes'];
+}
 // Iniciamos sesión
 session_start();
 
@@ -31,7 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Ejecutamos la sentencia preparada
         if ($stmt->execute()) {
-            header("Location: inicio_sesion.php");
+            $_SESSION["idPacienteLogin"] = obtenerIdNewPaciente($usuario_pacientes);
+            header("Location: perfil.php");
             exit();
         } else {
             echo "Error al crear el paciente: " . $stmt->error;
