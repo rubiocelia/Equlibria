@@ -121,13 +121,26 @@ $sql_insert_profesionales = "INSERT INTO profesionales (nombre_profesionales, ap
     ('Ana', 'Gómez Rodríguez', ' 648931586','Psicologia'),
     ('Beatriz', 'Rodrigo Marquínez', '647553057', 'Asistencia a niños')";
 
+// Laura1995
+$passLaura= password_hash('Laura1995', PASSWORD_DEFAULT);
+// AnaH1994
+$passAna= password_hash('AnaH1994', PASSWORD_DEFAULT);
+// Humberto1943
+$passHumberto= password_hash('Humberto1943', PASSWORD_DEFAULT);
+// Mario1999
+$passMario= password_hash('Mario1999', PASSWORD_DEFAULT);
+// David1994
+$passDavid= password_hash('David1994', PASSWORD_DEFAULT);
+// Daniel1989
+$passDaniel= password_hash('Daniel1989', PASSWORD_DEFAULT);
+
 $sql_insert_pacientes = "INSERT INTO pacientes (nombre_pacientes, apellidos_pacientes, telefono_paciente, genero, fecha_nacimiento, usuario_pacientes, contrasena_pacientes, mail_pacientes) VALUES
-    ( 'Laura', 'Escanes Villar', '623456789', 'F', '1995-04-05', 'lauraescanes', 'Laura95', 'lauraescanes@gmail.com'),
-    ( 'Ana', 'Herrero Sánchez', '687654321', 'F', '1994-03-16', 'anaherrero' , 'AnaH1994', 'anaherrero@gmail.com'),
-    ( 'Humberto', 'Fernández Serrano', '656789123', 'M', '1943-08-07', 'humbertofernandez', 'Humberto43', 'humbertofernandez@hotmail.com'),
-    ( 'Mario', 'Fernández García', '654341495', 'M', '1999-06-05', 'mariofernandez', 'Mario99', 'mariofernandez@gmail.com'),
-    ( 'David', 'Del Pino Romero', '687654321', 'F', '1994-03-16', 'daviddelpino', 'David94', 'daviddelpino@gmail.com'),
-    ( 'Daniel', 'Herrero Martínez', '628196324', 'M', '1989-08-07', 'danielherrero', 'Daniel89', 'danielherrero@gmail.com')";
+    ( 'Laura', 'Escanes Villar', '623456789', 'F', '1995-04-05', 'lauraescanes', '$passLaura', 'lauraescanes@gmail.com'),
+    ( 'Ana', 'Herrero Sánchez', '687654321', 'F', '1994-03-16', 'anaherrero' , '$passAna', 'anaherrero@gmail.com'),
+    ( 'Humberto', 'Fernández Serrano', '656789123', 'M', '1943-08-07', 'humbertofernandez', '$passHumberto', 'humbertofernandez@hotmail.com'),
+    ( 'Mario', 'Fernández García', '654341495', 'M', '1999-06-05', 'mariofernandez', '$passMario', 'mariofernandez@gmail.com'),
+    ( 'David', 'Del Pino Romero', '687654321', 'F', '1994-03-16', 'daviddelpino', '$passDavid', 'daviddelpino@gmail.com'),
+    ( 'Daniel', 'Herrero Martínez', '628196324', 'M', '1989-08-07', 'danielherrero', '$passDaniel', 'danielherrero@gmail.com')";
 
 
 
