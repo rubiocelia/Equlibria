@@ -60,10 +60,12 @@ mysqli_close($conexion);
 
 <body class="perfil">
     <header class="header">
+
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
-        <ul class="menu">
+            
+            <ul class="menu">
                 <li class="dropdown">
                     <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
                     <div class="dropdown-content">
@@ -101,76 +103,78 @@ mysqli_close($conexion);
                     </div>
                 </li>
                 <?php if ($sesionActiva): ?>
-                    <li class="dropdown">
-                        <a href="perfil.php" class="dropbtn">Perfil</a>
-                        <div class="dropdown-content">
-                            <a href="perfil.php#perfil">Mi perfil</a>
-                            <a href="perfil.php#calendario">Calendario</a>
-                            <a href="cerrarSesion.php">Cerrar sesión</a>
-                        </div>
-                    </li>
+                <li class="dropdown">
+                    <a href="perfil.php" class="dropbtn">Perfil</a>
+                    <div class="dropdown-content">
+                        <a href="perfil.php#perfil">Mi perfil</a>
+                        <a href="perfil.php#calendario">Calendario</a>
+                        <a href="cerrarSesion.php">Cerrar sesión</a>
+                    </div>
+                </li>
                 <?php endif; ?>
                 <?php if (!$sesionActiva): ?>
-                    <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
-                    <li class="registro"><a href="registrarse.php">Registrase</a></li>
+                <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
+                <li class="registro"><a href="registrarse.php">Registrase</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
     </header>
     <main>
-        
+
         <div id="perfil" class="Parteperfil">
             <div class="subrayadoFormulario">
                 <h3>Cambiar perfil</h3>
             </div>
             <div class="editarPerfil">
-                <!-- <div class="fotoPerfil">
-                    <img src="ruta/a/imagen/default.png" alt="Foto de perfil" id="profilePic">
-                    <label for="profileInput" class="cambiarFoto">
-                        Cambiar foto
-                    </label>
-                    <input type="file" id="profileInput" name="profile_picture" accept="image/*">
-                </div> -->
                 <form class="formEditarPerfil" method="post" action="procesar_editarPerfil.php">
                     <div class="form-group">
                         <label for="nombre_pacientes">Nombre</label>
-                        <input type="text" id="nombre_pacientes" name="nombre_pacientes" placeholder="Nombre" value="<?php echo htmlspecialchars($paciente['nombre_pacientes']); ?>">
+                        <input type="text" id="nombre_pacientes" name="nombre_pacientes" placeholder="Nombre"
+                            value="<?php echo htmlspecialchars($paciente['nombre_pacientes']); ?>">
                     </div>
 
                     <div class="form-group">
-                    <label for="apellidos_pacientes">Apellidos</label>
-                        <input type="text" id="apellidos_pacientes" name="apellidos_pacientes" placeholder="Apellidos" value="<?php echo htmlspecialchars($paciente['apellidos_pacientes']); ?>">
+                        <label for="apellidos_pacientes">Apellidos</label>
+                        <input type="text" id="apellidos_pacientes" name="apellidos_pacientes" placeholder="Apellidos"
+                            value="<?php echo htmlspecialchars($paciente['apellidos_pacientes']); ?>">
                     </div>
 
                     <div class="form-group">
                         <label for="mail_pacientes">Email</label>
-                        <input type="email" id="mail_pacientes" name="mail_pacientes" placeholder="Correo electrónico" value="<?php echo htmlspecialchars($paciente['mail_pacientes']); ?>">
+                        <input type="email" id="mail_pacientes" name="mail_pacientes" placeholder="Correo electrónico"
+                            value="<?php echo htmlspecialchars($paciente['mail_pacientes']); ?>">
                     </div>
 
                     <div class="form-group-bajo">
                         <label for="telefono_pacientes">Teléfono</label>
-                        <input type="tel" id="telefono_pacientes" name="telefono_paciente" placeholder="Teléfono" value="<?php echo htmlspecialchars($paciente['telefono_paciente']); ?>">
+                        <input type="tel" id="telefono_pacientes" name="telefono_paciente" placeholder="Teléfono"
+                            value="<?php echo htmlspecialchars($paciente['telefono_paciente']); ?>">
                     </div>
 
                     <div class="form-group-bajo">
-                    <label for="fechaNacimiento">Fecha de nacimiento</label>
-                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Fecha de nacimiento" value="<?php echo htmlspecialchars($paciente['fecha_nacimiento']); ?>">
+                        <label for="fechaNacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="Fecha de nacimiento"
+                            value="<?php echo htmlspecialchars($paciente['fecha_nacimiento']); ?>">
                     </div>
 
                     <div class="form-group-bajo">
-                    <label for="genero">Género</label>
-                        <input type="text" id="genero" name="genero" placeholder="Género" value="<?php echo htmlspecialchars($paciente['genero']); ?>">
+                        <label for="genero">Género</label>
+                        <input type="text" id="genero" name="genero" placeholder="Género"
+                            value="<?php echo htmlspecialchars($paciente['genero']); ?>">
                     </div>
 
                     <div class="form-group-full">
                         <div class="form-group-half">
                             <label for="usario_pacientes">Usuario</label>
-                            <input type="text" id="usario_pacientes" name="usario_pacientes" placeholder="Usuario" value="<?php echo htmlspecialchars($paciente['usuario_pacientes']); ?>">
+                            <input type="text" id="usario_pacientes" name="usario_pacientes" placeholder="Usuario"
+                                value="<?php echo htmlspecialchars($paciente['usuario_pacientes']); ?>">
                         </div>
 
                         <div class="form-group-half">
                             <label for="contrasena_pacientes">Contraseña</label>
-                            <input type="text" id="contrasena_pacientes" name="contrasena_pacientes" placeholder="Contraseña"value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
+                            <input type="text" id="contrasena_pacientes" name="contrasena_pacientes"
+                                placeholder="Contraseña"
+                                value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
                         </div>
                     </div>
                     <button type="submit">Guardar cambios</button>
@@ -217,13 +221,13 @@ mysqli_close($conexion);
                 <a href="recursosGratuitos.php#podcast">Podcast</a>
                 <a href="recursosGratuitos.php#librosAutoayuda">Libros autoayuda</a>
                 <a href="recursosGratuitos.php#videos">Tutoriales mindfulness</a>
-            </div>            
+            </div>
             <div class="footer-section">
                 <h3>Retiros</h3>
                 <a href="retiros.php#retiros">Retiros</a>
                 <a href="retiros.php#preguntasRespuestas">Preguntas retiros</a>
             </div>
-            
+
         </div>
         <div class="footer-branding">
             <p class="nombre_footer">Equilibria</p>

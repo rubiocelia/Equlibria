@@ -35,6 +35,8 @@ if (isset($_SESSION['idPacienteLogin'])){
 <header class="header">
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
+        
+        
         <nav>
         <ul class="menu">
                 <li class="dropdown">
