@@ -34,8 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault();
       return;
     }
-
-    alert("Reserva finalizada exitosamente.");
     return;
   })
 })

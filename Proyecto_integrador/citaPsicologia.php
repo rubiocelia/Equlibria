@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/citaPsicologia.css">
-        <script src="./js/validacion_reservaEvento.js"></script>
+        <script src="./js/validacion_citaPsicologia.js"></script>
         <title>Pedir Cita - Equilibria</title>
     </head>
     <body class="citaPsicologia">
