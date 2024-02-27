@@ -65,6 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/citaPsicologia.css">
+        <link rel="icon" href="img/logo.png" type="image/x-icon">
         <script src="./js/validacion_citaPsicologia.js"></script>
         <title>Pedir Cita - Equilibria</title>
     </head>
@@ -121,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
 
                 <button class="botonform" type="submit" name="Enviar">Enviar formulario</button>
-                <button class="botonVolver" type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver Inicio</button>
+                <button class="botonVolver" type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver inicio</button>
             </form>
         </div>
         <script src="./js/cargarHorasDisponibles.js"></script>
