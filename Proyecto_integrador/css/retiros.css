@@ -56,6 +56,7 @@
     border-radius: 10px 10px 10px 10px;
     width: 60%;
     max-height: 350px;
+    max-width: 100%;
     height: auto;
     object-fit: cover; /* Esto cortará cualquier parte extra de la imagen para que encaje en el contenedor */
     margin-top: 20px;
@@ -208,5 +209,49 @@
   .faq-item.show .faq-icon {
     transform: translateY(-50%) rotate(90deg);
   }
+  .retiros,
+.faq-container {
+    width: 90%; /* En lugar de un ancho fijo, un porcentaje del ancho del padre */
+    max-width: 1100px; /* Establece un ancho máximo */
+    margin: 20px auto; /* Margen automático para centrar */
+}
+
+
+  /* Consulta de medios para ajustar estilos en tablet */
+@media screen and (max-width: 992px) {
+  .retiros,
+  .faq-container {
+      width: 95%; /* Cambia el ancho en tablet */
+  }
+}
+
+/* Consulta de medios para ajustar estilos en dispositivos móviles */
+@media screen and (max-width: 575px) {
+  .tarjetasRetiros {
+    padding: 0 10px; /* Mantiene el relleno horizontal */
+  }
+  
+  .retiros {
+    width: 100%; /* Asegura que los retiros ocupen todo el ancho disponible */
+    margin: 20px 0; /* Mantiene el margen superior e inferior para separar las tarjetas */
+  }
+  
+  .detalles-retiros {
+    padding: 0 8px; /* Mantiene el relleno interno */
+    flex-direction: column; /* Cambia la dirección de flexbox a columna */
+    align-items: center; /* Centra los elementos en la columna */
+    gap: 10px; /* Añade un espacio entre los elementos del flexbox */
+  }
+  
+  .detalles-retiros span {
+    margin-bottom: 10px; /* Ajusta el margen inferior para el contenedor de precio */
+    text-align: center; /* Centra el texto del precio si es necesario */
+  }
+  
+  .retiros button {
+    width: 80%; /* Ajusta el ancho del botón si es necesario */
+    margin: 10px auto; /* Centra el botón y elimina el margen superior específico */
+  }
+}
 
 
