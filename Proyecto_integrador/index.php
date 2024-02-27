@@ -34,11 +34,9 @@ if (isset($_SESSION['idPacienteLogin'])){
 <body class="inicio">
 <header class="header">
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
-        <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
-        
-        
+        <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>    
         <nav>
-        <ul class="menu">
+            <ul class="menu">
                 <li class="dropdown">
                     <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
                     <div class="dropdown-content">
@@ -142,7 +140,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <img src="img/taller4.png">
                     <h3>Autoexigencia y perfeccionismo</h3>
                     <p>En este taller trabajaremos en reconocer y acompañar nuestra autoexigenciaa y profundizaremos en
-                        el origen.
+                        el origen. No tengas miedo.
                     </p>
                     <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                 </div>
@@ -195,7 +193,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <div class="card-text">
                         <p>Este curso sobre Dependencia Emocional te ayudará a liberarte de patrones
                             destructivos y a cultivar relaciones más saludables a través de la autonomía
-                            emocional y la autoestima.
+                            emocional y la autoestima. Aprenderas lo que necesitas saber sobre ello.
                         </p>
                     </div>
                     <div class="card-link">

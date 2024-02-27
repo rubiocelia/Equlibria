@@ -464,6 +464,12 @@ a {
   margin-top: 7.5px;
 }
 
+/* menu hamburguesa */
+
+
+
+
+/* footer responsive */
 @media screen and (max-width: 992px) {
   .footer-section {
     display: flex;
@@ -471,3 +477,6 @@ a {
     padding: 15px 25px;
   }
 }
+
+
+
