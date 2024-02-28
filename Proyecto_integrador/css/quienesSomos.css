@@ -453,7 +453,7 @@ main{
   width: 188px;
   border-radius: 10px;
   cursor: pointer;
-  border-color: var(--verde-oscuro);
+  border-color: var(--verde-oscuro) solid 2px;
   background: none;
   transition: background 0.3s ease;
 }
@@ -461,6 +461,7 @@ main{
 .boton-cv:hover{
   background-color: var(--verde-oscuro);
   color: white;
+  border-color: var(--verde-oscuro) solid;
 }
 
 /* Agrega tus estilos para móvil, tablet, etc. */
