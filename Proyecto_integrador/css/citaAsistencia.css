@@ -20,7 +20,7 @@
 .subrayado {
     background-color: var(--verde);
     height: 10px;
-    width: 40%; 
+    width: auto; 
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -53,23 +53,23 @@
     padding: 40px; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    width: 80%; 
-    max-width: 900px; 
+    width: 70%; 
+    max-width: 750px; 
 }
 .formReserva{
     display: flex;
     flex-direction: column;
 }
 .filasFormulario{
-    display: flex;
-    justify-content: space-between; 
-    margin-bottom: 15px; 
+  display: flex;
+  flex-direction: column; 
    
 }
 .columnasForm{
     display: flex;
     flex-direction: column;
-    width: 48%; 
+    width: 100%; 
+    margin-bottom: 15px;
 }
 .formReserva input[type="text"],
 .formReserva input[type="email"],
@@ -122,4 +122,34 @@
 .botonVolver:hover {
   background-color: var(--verde-oscuro);
   color: #000000;
+}
+
+/* Estilos para pantallas más pequeñas que 992px */
+@media only screen and (max-width: 992px) {
+  .filasFormulario {
+      flex-direction: column; 
+  }
+  .columnasForm {
+      width: 100%; 
+      margin-bottom: 10px; 
+  }
+  
+}
+
+
+/* Estilos para pantallas más pequeñas que 575px */
+@media only screen and (max-width: 575px) {
+  .subrayado h3 {
+      font-size: 1.5rem; 
+  }
+  .contenedorForm {
+      padding: 20px; 
+  }
+    .columnasForm {
+        width: 100%; 
+    }
+  .botonform,
+  .botonVolver {
+      width: 100%; 
+  }
 }
