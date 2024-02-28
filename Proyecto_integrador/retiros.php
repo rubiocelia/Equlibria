@@ -97,7 +97,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
             <div class="tarjetasRetiros">
                 <div class="retiros">
-                    <img src="img/retiroVerano.jpg">
+                    <img src="img/retiroVerano.jpg" alt="retiroVerano">
                     <h3>Retiro verano</h3>
                     <p>Escapa de la rutina y redescubre tu bienestar en nuestro Retiro de Verano al Aire Libre.
                         Este refugio único en medio de la naturaleza ofrece un programa especializado para mejorar tu
@@ -127,7 +127,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
             <div class="tarjetasRetiros">
                 <div class="retiros">
-                    <img src="img/retiroInvierno.jpg">
+                    <img src="img/retiroInvierno.jpg" alt="retiroInvierno">
                     <h3>Retiro invierno</h3>
                     <p>
                         Sumérgete en la magia del invierno y redescubre tu paz interior en nuestro exclusivo Retiro de

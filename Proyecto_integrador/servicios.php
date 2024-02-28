@@ -104,7 +104,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
             <div class="talleresServicios" id="talleres">
                 <div class="tallerServicios">
-                    <img src="img/autoestima.jpg">
+                    <img src="img/autoestima.jpg" alt="autoestima">
                     <h3>Autoestima</h3>
                     <p>Aprenderás sobre autoestima y como integrarla en tu vida para lograr rebajar los niveles de
                         ansiedad
@@ -116,7 +116,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                 </div>
 
                 <div class="tallerServicios" id="habilidadSocial">
-                    <img src="img/habilidadesSociales.jpg">
+                    <img src="img/habilidadesSociales.jpg" alt="habilidadesSociales">
                     <h3>Mejora habilidades sociales</h3>
                     <p>En este taller de hablididades sociales trabajaremos todas las áreas en las que las habilidades
                         sociales adquieren un papel importante.
@@ -126,7 +126,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                 </div>
 
                 <div class="tallerServicios">
-                    <img src="img/ansiedad.jpg">
+                    <img src="img/ansiedad.jpg" alt="ansiedad">
                     <h3>Gestión de la ansiedad</h3>
                     <p>Descubre en este taller todo lo que debes saber sobre tu ansiedad. Vamos a aprender a acapetar y
                         escuchar desde el amor nuestra ansiedad.
@@ -136,7 +136,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                 </div>
 
                 <div class="tallerServicios">
-                    <img src="img/autoexigencia.jpg">
+                    <img src="img/autoexigencia.jpg" alt="autoexigencia">
                     <h3>Autoexigencia y perfeccionismo</h3>
                     <p>En este taller trabajaremos en reconocer y acompañar nuestra autoexigenciaa y profundizaremos en
                         el origen.
@@ -164,7 +164,7 @@ if (isset($_SESSION['idPacienteLogin'])){
         <div class="contenidoCursos" id="cursos">
             <div class="cursos">
                 <div class="imagenCurso">
-                    <img src="img/cursoAutoestima2.png" alt="">
+                    <img src="img/cursoAutoestima2.png" alt="cursoAutoestima">
                 </div>
                 <div class="tarjetaDescripcion">
                     <div class="card-titulo">
@@ -195,7 +195,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
             <div class="cursos">
                 <div class="imagenCurso2">
-                    <img src="img/cursoDependenciaEmocional2.png" alt="">
+                    <img src="img/cursoDependenciaEmocional2.png" alt="cursoDependencia">
                 </div>
                 <div class="tarjetaDescripcion2">
                     <div class="card-titulo">
@@ -226,7 +226,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
             <div class="cursos">
                 <div class="imagenCurso">
-                    <img src="img/cursoAnsiedadOnline2.png" alt="">
+                    <img src="img/cursoAnsiedadOnline2.png" alt="ansiedad2">
                 </div>
                 <div class="tarjetaDescripcion">
                 <div class="card-titulo">
@@ -253,7 +253,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
             <div class="cursos">
                 <div class="imagenCurso2">
-                    <img src="img/cursoParejas2.png" alt="">
+                    <img src="img/cursoParejas2.png" alt="parejas">
                 </div>
                 <div class="tarjetaDescripcion2">
                     <div class="card-titulo">
@@ -333,12 +333,12 @@ if (isset($_SESSION['idPacienteLogin'])){
         <div class="secionAsistentes">
             <div class="contenidoAsistentes">
                 <div class="perfilesAsistentes">
-                    <img src="img/prof4.png" alt="Fernando Rodríguez" class="perfil-image">
+                    <img src="img/prof4.png" alt="Beatriz Rodrigo" class="perfil-image">
                     <p class="perfil-nombre">Beatriz Rodrigo<br><span class="perfil-titulo">Asistente para
                             niños/as</span></p>
                 </div>
                 <div class="perfilesAsistentes">
-                    <img src="img/prof3.png" alt="Beatriz Rodrigo" class="perfil-image">
+                    <img src="img/prof3.png" alt="Fernando Rodríguez" class="perfil-image">
                     <p class="perfil-nombre">Fernando Rodríguez <br><span class="perfil-titulo">Asistente para
                             niños/as</span></p>
                 </div>
