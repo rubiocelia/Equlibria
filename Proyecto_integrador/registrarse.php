@@ -73,10 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="subrayadoFormularioRegistro">
         <h3>Crear cuenta</h3>
     </div>
-                <button type="submit" class="google-signin">
-                    <object data="../Proyecto_integrador/img/google.svg"></object>
-                    <span>Regístrate con Google</span>
-                </button>
      <div class="containerFormRegistro">
         <form class="formRegistro" method="post" action="">
         <hr>
@@ -121,6 +117,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>¿Tienes una cuenta?<a href="inicio_sesion.php"> Inicia sesión en tu cuenta</a></p>
             <button type="submit">Crear cuenta</button>
         </form>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h4>Atención</h4>
+            <p id="modal-message">Mensaje del modal</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
+        </div>
     </div>
     <script src="../Proyecto_integrador/js/registro.js"></script>
 </body>
