@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </head>
     <body class="reservaEvento">
         <div class="subrayado">
-            <h3>Aprende con nosotr@s</h3>
+            <h3>¡Apúntate!</h3>
         </div>
         <div class="contenedorForm">
             <form class="formReserva" method="post" action="reservaEvento.php">
