@@ -63,6 +63,7 @@ nav {
 
 .menu li a {
   display: block;
+  flex-direction: column;
   padding: 10px 20px;
   text-decoration: none;
   color: black;
@@ -186,36 +187,23 @@ nav {
     margin: 10px 0;
   }
 
-  /* Estilo para los enlaces del menú */
   .menu a {
     text-decoration: none;
     font-size: 24px;
-    color: white; /* O cualquier color que prefieras */
-    padding: 100px;
+    color: black;
+    padding: 10px;
     display: block;
-  }
-  .header .menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 60px;
-    background-color: white;
-    width: 100%;
-    text-align: center;
   }
 
   .header .menu.open {
     display: block;
-    margin-top: 10px;
+    z-index: 999;
+    text-align: center;
   }
-  .menu.active {
-    display: inline-block; /* Cambiar a flex para mostrar el menú */
-    padding: 10;
-    width: 100%;
-  }
-  .dropdown-content {
-    display: none;
-    padding: 10;
+
+  .dropdown {
+    position: relative;
+    display: block;
   }
 }
 
@@ -291,7 +279,6 @@ footer {
   font-family: "Righteous";
   font-size: 20px;
 }
-
 
 /* Estilo base para ambos botones */
 .iniciarSesion,
@@ -580,7 +567,6 @@ a {
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
   }
 
   /* Estilo para los elementos del menú */
@@ -592,7 +578,6 @@ a {
   .menu a {
     text-decoration: none;
     font-size: 24px;
-    color: white; /* O cualquier color que prefieras */
     padding: 100px;
     display: block;
   }
@@ -601,7 +586,6 @@ a {
     position: absolute;
     right: 0;
     top: 60px;
-    background: white;
     width: 100%;
     text-align: center;
   }
@@ -628,8 +612,7 @@ a {
 @media screen and (max-width: 992px) {
   .hamburger {
     display: block;
-    text-align: right;
-    margin-left: 240px;
+    margin-left: auto;
   }
 
   .menu {
@@ -665,32 +648,43 @@ a {
   .menu a {
     text-decoration: none;
     font-size: 24px;
-    color: white; /* O cualquier color que prefieras */
     padding: 100px;
     display: block;
   }
+
+  .dropbtn {
+    flex-direction: column;
+  }
+
   .header .menu {
     display: none;
     position: absolute;
     right: 0;
     top: 60px;
-    background-color: white;
     width: 100%;
     text-align: center;
   }
 
   .header .menu.open {
     display: block;
+    flex-direction: column;
     margin-top: 10px;
+    background-color: var(--verde-claro);
+    height: 320px;
   }
+
+  .dropbtn:hover {
+    background-color: var(--verde);
+  }
+
   .menu.active {
-    display: inline-block; /* Cambiar a flex para mostrar el menú */
+    display: inline-block;
     padding: 10;
     width: 100%;
   }
-  .dropdown-content {
+
+  .header .menu.open .dropdown-content {
     display: none;
-    padding: 10;
   }
 }
 
@@ -702,6 +696,3 @@ a {
     padding: 15px 25px;
   }
 }
-
-
-

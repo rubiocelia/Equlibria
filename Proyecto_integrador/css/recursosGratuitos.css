@@ -314,7 +314,7 @@ body {
     margin: auto;
     width: 45%;
     height: 100%;
-    border-radius: 10px 10px 0 0; /* Redondear las esquinas superiores */
+    border-radius: 10px 0 0 10px; /* Redondear las esquinas superiores */
   }
 
   .libro-info {
@@ -349,12 +349,12 @@ body {
 
   .video,
   .tarjetaPodcast {
-    width: 90%; /* Ajustar el ancho al 90% del contenedor para centrarlo */
+    width: 90%;
   }
 
   .video-gallery,
   .tarjPodcasts {
-    gap: 40px; /* Reducir el espacio entre elementos */
+    gap: 40px;
   }
 }
 
