@@ -36,6 +36,8 @@ if (isset($_SESSION['idPacienteLogin'])){
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
+        <button class="hamburger" aria-label="Abrir menú">☰</button>
+       
         <ul class="menu">
                 <li class="dropdown">
                     <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
@@ -305,7 +307,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                 <button type="submit">Enviar tu información</button>
             </form>
         </div>
-        <br>
+        <br><br>
     </main>
     <footer>
         <div class="redesSociales">
