@@ -1005,21 +1005,6 @@ main{
     margin-top: -400px;
     padding: 200px 0px;
   }
-  .subrayadoFormulario{
-    background-color: var(--contraste-claro);
-    height: 15px;
-    font-size: 28px;
-    width: 425px;
-    text-align: center;
-    margin: 30px auto;
-    font-family: "Righteous";
-    margin-top: -10px;
-  }
-
-  .subrayadoFormulario h3 {
-    transform: translate(0px, -50px);
-    font-size: 60px;
-  }
   .btn-big{
     margin-top: -80px;
     width: 200px;
@@ -1095,5 +1080,114 @@ main{
   
   .testimonial-box .swiper-pagination-bullet-active {
     background: var(--verde-oscuro);
+  }
+
+  .subrayadoFormulario{
+    background-color: var(--contraste-claro);
+    height: 8px;
+    font-size: 28px;
+    width: 200px;
+    text-align: center;
+    margin: 30px auto;
+    font-family: "Bellefair";
+    margin-top: -10px;
+  }
+
+  .subrayadoFormulario h3 {
+    transform: translate(0px, -20px);
+    font-size: 28px;
+  }
+  .inicioSesion {
+    background-image: url(img/fondoRegistro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Righteous";
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    margin-top: 8%;
+  }
+  
+  .formInicioSesion {
+    width: 80%;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 10px;
+    position: relative;
+    max-width: 800px;
+    font-family: "Chivo", sans-serif;
+    margin-left: 50px;
+  }
+  
+  .formInicioSesion label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .formInicioSesion hr {
+    height: 8px;
+    background-color: var(--verde-oscuro);
+    border-radius: 10px;
+    border-style: none;
+    margin: 28px -50px;
+    width: 115%;
+    text-align: center;
+  }
+  
+  .formInicioSesion input {
+    font-family: "Chivo", sans-serif;
+    width: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--verde-oscuro);
+    border-radius: 20px;
+  }
+  
+  .formInicioSesion button[type="submit"] {
+    background-color: var(--verde-oscuro);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 80%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .formInicioSesion button[type="submit"]:hover {
+    background-color: var(--contraste-oscuro);
+  }
+  
+  .formInicioSesion input {
+    width: 100%; /* Asegura que el input ocupe toda la columna */
+  }
+  .formInicioSesion p {
+    text-align: center;
+    margin-top: -25px;
+    text-decoration: none;
+  }
+  .formInicioSesion a {
+    text-decoration: none;
+    color: var(--verde-oscuro);
+  }
+  
+  .contacto {
+    margin-top: 5%;
+  }
+  
+  #cuentanos{
+    width: 400px;
+    height: 100px;
+    border-radius: 20px;
+    resize: none;
+    padding: 10px;
+    font-family: "Bellefair";
   }
 }
