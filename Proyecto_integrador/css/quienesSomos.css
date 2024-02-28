@@ -26,28 +26,14 @@ body {
   font-family: "Chivo", sans-serif;
   margin: 0;
 }
-
-/* Estilos para la página de inicio específicamente */
-.inicio {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  font-family: "Chivo", sans-serif;
-  color: #000000;
-  height: 100vh;
-}
-
-main {
-  flex-direction: column;
-  display: flex;
-  height: 100%;
-}
-
 /* Estilos para el encabezado */
 .header {
   background-color: #ffffff;
   display: flex;
   align-items: center;
   padding: 0 20px;
+  position: relative;
+  z-index: 1000;
 }
 
 .logo {
@@ -67,10 +53,11 @@ nav {
 
 .menu {
   list-style-type: none;
-  display: flex;
+  display: block;
   justify-content: flex-end;
   align-items: center;
   padding-right: 0;
+  width: 100%;
 }
 
 .menu li a {
@@ -78,6 +65,19 @@ nav {
   padding: 10px 20px;
   text-decoration: none;
   color: black;
+}
+
+.menu.active {
+  display: block; /* Mostrar el menú cuando se hace clic en el icono de la hamburguesa */
+}
+
+/* Estilo básico para el botón de hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* Estilo base para ambos botones */
@@ -105,6 +105,13 @@ nav {
 }
 
 /* Estilos para el dropdown */
+
+/* Mostrar el contenido del dropdown en hover o en un clic para dispositivos táctiles/mobiles */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -113,8 +120,9 @@ nav {
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
+  left: 0;
   background-color: #ffffff;
+  top: 100%;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -253,6 +261,7 @@ main{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  align-items: center;
 }
 
 .pgquienessomos {
@@ -265,20 +274,20 @@ main{
 }
 
 .subrayadoQuienesSomos p {
-  font-size: 40px;
-  text-align: center;
+  font-size: 30px;
   margin-top: 10px;
+  text-align: justify center;
 }
 
 .subrayadoQuienesSomos {
   background-color: var(--contraste-claro);
   height: 15px;
   font-size: 48px;
-  width: 700px;
+  width: 650px;
   text-align: center;
   margin: 50px auto;
   font-family: "Bellefair";
-  margin-top: -500px;
+  margin-top: -550px;
 }
 
 .subrayadoQuienesSomos h3 {
@@ -306,7 +315,7 @@ main{
   text-align: center;
   margin: 50px auto;
   font-family: "Bellefair";
-  margin-top: 450px;
+  margin-top: 15px;
 }
 
 .subrayadoPsicologos h3 {
@@ -592,7 +601,6 @@ main{
   margin: 10px;
   position: relative;
   max-width: 800px;
-  margin-left: 365px;
   font-family: "Chivo", sans-serif;
 }
 
@@ -660,6 +668,9 @@ main{
   width: 800px;
   height: 200px;
   border-radius: 20px;
+  resize: none;
+  padding: 10px;
+  font-family: "Bellefair";
 }
 
 .testimonial-container {
@@ -711,6 +722,8 @@ main{
 }
 
 .testimonial-slide p {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 16px;
   text-align: center;
   font-family: "Chivo", sans-serif;
@@ -739,35 +752,348 @@ main{
   background: var(--verde-oscuro);
 }
 
-@media (min-width: 1920px) {
-  .fernando{
-    text-align: left;
-    width: 620px;
-    text-align: justify;
-    margin-top: -260px;
+
+/* Estilos para pantallas de tablet */
+@media only screen and (max-width: 1024px) {
+  /* Modifica aquí los estilos para tablet */
+  .subrayadoQuienesSomos{
+    text-align: center;
+    margin-left: 285px;
   }
-  
-  .beatriz{
-    text-align: right;
-    width: 620px;
-    text-align: justify;
-    margin-top: -260px;
-    margin-left: 850px;
+  .testimonial-slide h3{
+    text-align: center;
   }
-  
-  .boton-cv-izq {
-    text-align: left;
-    margin-left: 190px;
-  }
-  
-  .boton-cv-der {
-    text-align: left;
-    margin-left: 1070px;
-  }
-  .formInicioSesion { 
-    margin-left: 550px;
+  .testimonial-slide p{
+    width: 400px;
   }
   .subrayadoQuienesSomos{
-    margin-top: -700px;
+    margin-top: -400px;
+    width: 500px;
+  }
+  .subrayadoPsicologos{
+    margin-top: 150px;
+    margin-left: 175px;
+    margin-top: 300px;
+    width: 700px;
+  }
+  .subrayadoAsistentesM{
+    margin-top: 150px;
+    margin-left: 275px;
+    margin-top: 300px;
+    width: 600px;
+  }
+  .testimonial-container .testimonial-wrapper{
+    width: 500px;
+    margin-left: 290px;
+  }
+}
+
+/* Esconde el menú por defecto en pantallas pequeñas y muestra el botón de hamburguesa */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    text-align: right;
+    margin-left: 240px;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999; /* Asegúrate de que esté sobre otros elementos */
+  }
+  
+  /* Estilo para la lista del menú */
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+  
+  /* Estilo para los elementos del menú */
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  /* Estilo para los enlaces del menú */
+  .menu a {
+    text-decoration: none;
+    font-size: 24px;
+    color: white; /* O cualquier color que prefieras */
+    padding: 100px;
+    display: block;
+  }
+  .header .menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.header .menu.open {
+    display: block;
+    margin-top: 10px;
+}
+  .menu.active {
+    display: inline-block; /* Cambiar a flex para mostrar el menú */
+    padding: 10;
+    width: 100%;
+  }
+  .dropdown-content {
+    display: none;
+    padding: 10;
+  }
+}
+
+/* Estilos para pantallas de dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .hamburger {
+    display: block;
+    text-align: right;
+    margin-left: 240px;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999; /* Asegúrate de que esté sobre otros elementos */
+  }
+  
+  /* Estilo para la lista del menú */
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+  
+  /* Estilo para los elementos del menú */
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  /* Estilo para los enlaces del menú */
+  .menu a {
+    text-decoration: none;
+    font-size: 24px;
+    color: white; /* O cualquier color que prefieras */
+    padding: 100px;
+    display: block;
+  }
+  .header .menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: white;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header .menu.open {
+    display: block;
+    margin-top: 10px;
+    background-color: white;
+    height: 250px;
+  }
+  .menu.active {
+    display: inline-block; /* Cambiar a flex para mostrar el menú */
+    padding: 10;
+    width: 100%;
+    background-color: whitesmoke;
+  }
+  .dropdown-content {
+    display: none;
+    padding: 10;
+  }
+  .subrayadoQuienesSomos{
+    margin-top: 50px;
+  }
+  .subrayadoQuienesSomos p {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify center;
+  }
+  
+  .subrayadoQuienesSomos {
+    background-color: var(--contraste-claro);
+    height: 10px;
+    font-size: 28px;
+    width: 300px;
+    text-align: center;
+    margin: 50px auto;
+    font-family: "Bellefair";
+    margin-top: -550px;
+  }
+  
+  .subrayadoQuienesSomos h3 {
+    transform: translate(0px, -25px);
+  }
+  .subrayadoPsicologos{
+    background-color: var(--contraste-claro);
+    height: 10px;
+    font-size: 28px;
+    width: 200px;
+    text-align: center;
+    margin: 100px auto;
+    font-family: "Bellefair";
+    margin-top: -230px;
+    margin-left: 135px;
+  }
+  .subrayadoPsicologos h3 {
+    transform: translate(0px, -25px);
+  }
+  .subrayadoAsistentesM {
+    background-color: var(--contraste-claro);
+    height: 10px;
+    font-size: 28px;
+    width: 400px;
+    text-align: center;
+    margin: 200px auto;
+    font-family: "Bellefair";
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  .subrayadoAsistentesM h3 {
+    transform: translate(0px, -25px);
+  }
+  .subrayadoAsistentesN {
+    background-color: var(--contraste-claro);
+    height: 10px;
+    font-size: 28px;
+    width: 350px;
+    text-align: center;
+    margin: 50px auto;
+    font-family: "Bellefair";
+    margin-top: -210px;
+    margin-left: 65px;
+  }
+  .subrayadoAsistentesN h3 {
+    transform: translate(0px, -25px);
+  }
+  .testimonial-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    border-radius: 20px;
+    height: 100%;
+    margin-left: -115px;
+    margin-top: -400px;
+    padding: 200px 0px;
+  }
+  .subrayadoFormulario{
+    background-color: var(--contraste-claro);
+    height: 15px;
+    font-size: 28px;
+    width: 425px;
+    text-align: center;
+    margin: 30px auto;
+    font-family: "Righteous";
+    margin-top: -10px;
+  }
+
+  .subrayadoFormulario h3 {
+    transform: translate(0px, -50px);
+    font-size: 60px;
+  }
+  .btn-big{
+    margin-top: -80px;
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+  }
+  
+  .testimonial-container .testimonial-wrapper {
+    position: relative;
+    max-width: 80rem;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .testimonial-wrapper .testimonial-box {
+    padding: 1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+  
+  .testimonial-content .testimonial-slide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: none;
+    border-radius: 2rem;
+    box-shadow: 0 .5rem .5rem var(--verde-oscuro);
+    padding: 1rem 3rem;
+    border-top: .8rem solid var(--verde-oscuro);
+    border-bottom: .8rem solid var(--verde-oscuro);
+  }
+  
+  .testimonial-slide img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .5rem solid var(--verde-oscuro);
+  }
+  
+  .testimonial-slide h3 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    font-family: "Bellefair";
+  }
+  
+  .testimonial-slide p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Chivo", sans-serif;
+    text-align: justify;
+    width: 250px;
+  }
+  
+  .testimonial-box .swiper-button-next,
+  .testimonial-box .swiper-button-prev {
+    color: var(--verde-oscuro);
+  }
+  
+  .testimonial-box .swiper-button-next {
+    right: 0;
+  }
+  
+  .testimonial-box .swiper-button-prev {
+    left: 0;
+  }
+  
+  .testimonial-box .swiper-pagination-bullet {
+    background: rgba(0, 0, 0, .8);
+  }
+  
+  .testimonial-box .swiper-pagination-bullet-active {
+    background: var(--verde-oscuro);
   }
 }
