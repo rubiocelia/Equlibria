@@ -15,7 +15,7 @@
     #bdf1a4 86.31%
   );
 }
-/* Resetea el padding y el margin para remover los espacios predeterminados */
+
 * {
   margin: 0;
   padding: 0;
@@ -133,7 +133,7 @@ body {
   width: 430px;
   height: 580px;
   border-radius: 15px;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   margin: 3% 5%;
 }
 
@@ -143,9 +143,9 @@ body {
   height: 50%;
   object-fit: cover;
 }
-.talleresServicios span {
+/* .talleresServicios span {
   margin-top: 20px;
-}
+} */
 
 .tallerServicios h3 {
   font-size: 24px;
@@ -170,8 +170,7 @@ body {
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  margin-top: auto;
-  margin-bottom: 25px;
+  margin: 8px auto;
 }
 .tallerServicios button:hover {
   background-color: var(--verde-oscuro);
@@ -311,7 +310,6 @@ body {
   padding: 20px;
 }
 
-/* Estilo para las imágenes de ambos cursos */
 .cursos .imagenCurso img,
 .cursos .imagenCurso2 img {
   width: 60%;
@@ -345,9 +343,9 @@ body {
   padding: 10px;
 }
 
-.course-details span {
+/* .course-details span {
   margin-right: 10px;
-}
+} */
 
 .card-titulo h3 {
   margin: 30px 0 50px 0;
@@ -382,4 +380,96 @@ body {
 .tarjeta-link button:hover {
   background-color: var(--verde-oscuro);
   color: #000000;
+}
+.infotalleres {
+  display: flex;
+  flex-direction: column; /* Organiza los hijos en una columna */
+  justify-content: center; /* Centra los hijos verticalmente si hay espacio adicional */
+  
+}
+.infotalleres .online-details{
+  margin: 30px auto;
+}
+
+.tallerServicios h3,
+.tallerServicios span,
+.tallerServicios .precio,
+.tallerServicios button {
+  margin-bottom: 10px; /* Añade un poco de espacio debajo de cada elemento */
+}
+
+
+
+/* para tablet */
+@media only screen and (max-width: 992px) {
+  .pgservicios h1 {
+    font-size: 3em;
+  }
+  .pgservicios h2 {
+    font-size: 2.4em;
+  }
+  .boton_servicios {
+    width: 250px;
+    height: 60px;
+    font-size: 28px;
+    margin-top: 80px;
+  }
+.tallerServicios {
+  margin: 0 auto;
+  flex-direction:row;
+  width: 80%;
+  height: 50vh;
+  align-items: center;
+}
+.talleresServicios img{
+  flex: 0 0 40%;
+  object-fit: cover;
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+.tallerServicios button {
+  margin-top: 20px; /* Agrega un margen en la parte superior */
+}
+
+
+
+
+}
+
+/* para movil */
+@media only screen and (max-width: 575px) {
+  .pgservicios h1 {
+    font-size: 2.5em;
+  }
+  .pgservicios h2 {
+    font-size: 2em;
+  }
+  .boton_servicios {
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    margin-top: 60px;
+  }
+  .tallerServicios {
+    width: 100%;
+    margin: 3% 0;
+  }
+  .tallerServicios img {
+    width: 100%;
+    height: auto;
+  }
+  .tarjetaDescripcion,
+  .tarjetaDescripcion2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .reserve-button {
+    margin-top: 20px;
+  }
+  .contenidoTexto {
+    max-width: 100%;
+    margin-top: 20px;
+  }
 }
