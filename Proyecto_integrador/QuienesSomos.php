@@ -32,13 +32,13 @@ if (isset($_SESSION['idPacienteLogin'])){
 </head>
 
 <body>
-<header class="header">
+    <header class="header">
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
-        <button class="hamburger" aria-label="Abrir menú">☰</button>
-       
-        <ul class="menu">
+            <button class="hamburger" aria-label="Abrir menú">☰</button>
+
+            <ul class="menu">
                 <li class="dropdown">
                     <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
                     <div class="dropdown-content">
@@ -76,18 +76,18 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
                 </li>
                 <?php if ($sesionActiva): ?>
-                    <li class="dropdown">
-                        <a href="perfil.php" class="dropbtn">Perfil</a>
-                        <div class="dropdown-content">
-                            <a href="perfil.php#perfil">Mi perfil</a>
-                            <a href="perfil.php#calendario">Calendario</a>
-                            <a href="cerrarSesion.php">Cerrar sesión</a>
-                        </div>
-                    </li>
+                <li class="dropdown">
+                    <a href="perfil.php" class="dropbtn">Perfil</a>
+                    <div class="dropdown-content">
+                        <a href="perfil.php#perfil">Mi perfil</a>
+                        <a href="perfil.php#calendario">Calendario</a>
+                        <a href="cerrarSesion.php">Cerrar sesión</a>
+                    </div>
+                </li>
                 <?php endif; ?>
                 <?php if (!$sesionActiva): ?>
-                    <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
-                    <li class="registro"><a href="registrarse.php">Registrase</a></li>
+                <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
+                <li class="registro"><a href="registrarse.php">Registrase</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
@@ -96,16 +96,30 @@ if (isset($_SESSION['idPacienteLogin'])){
         <div class="pgquienessomos" id="quienesSomos">
             <div class="subrayadoQuienesSomos">
                 <h3>¿Quiénes somos?</h3>
-                <p>En Equilibria, nos dedicamos apasionadamente a cultivar el bienestar mental y emocional. Somos un equipo de profesionales comprometidos, liderados por expertos en psicología como la renombrada psicóloga Ana Gómez Rodríguez. 
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5NYLyyKOadA?si=MXEN4cN1T0jYHHX_"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="parrafo">
+                <p>En Equilibria, nos dedicamos apasionadamente a cultivar el bienestar mental y emocional. Somos un
+                    equipo de profesionales comprometidos, liderados por expertos en psicología como la renombrada
+                    psicóloga Ana Gómez Rodríguez.
                     <br><br>
-                    Especializados en el tratamiento de la ansiedad y diversos problemas psicológicos, ofrecemos cursos y talleres de autoayuda diseñados para empoderar a nuestros clientes en su viaje hacia la salud mental. 
+                    Especializados en el tratamiento de la ansiedad y diversos problemas psicológicos, ofrecemos cursos
+                    y talleres de autoayuda diseñados para empoderar a nuestros clientes en su viaje hacia la salud
+                    mental.
                     <br><br>
-                    En Equilibria, creemos en el poder de la autenticidad y la comprensión, creando un espacio donde cada individuo pueda encontrar equilibrio y fortaleza emocional.</p>
+                    En Equilibria, creemos en el poder de la autenticidad y la comprensión, creando un espacio donde
+                    cada individuo pueda encontrar equilibrio y fortaleza emocional.
+                </p>
             </div>
         </div>
         <div class="container" id="psicologos">
             <div class="subrayadoPsicologos">
-            <h3>Psicólogos</h3>
+                <h3>Psicólogos</h3>
             </div>
             <div class="" id="menu-icon"></div>
             <div class="testimonial-container">
@@ -115,40 +129,49 @@ if (isset($_SESSION['idPacienteLogin'])){
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof1.png" alt="ana">
                                 <h3>Ana Gómez Rodríguez</h3>
-                                <p>La psicóloga especializada en ansiedad de Equilibria, se distingue por su enfoque compasivo y 
-                                    expertise en el manejo de trastornos ansiosos. Con una sólida formación, Ana trabaja incansablemente 
-                                    para proporcionar a sus pacientes herramientas efectivas y estrategias personalizadas. Su compromiso 
-                                    con el bienestar emocional se refleja en cada sesión, guiando a aquellos que buscan equilibrio hacia 
+                                <p>La psicóloga especializada en ansiedad de Equilibria, se distingue por su enfoque
+                                    compasivo y
+                                    expertise en el manejo de trastornos ansiosos. Con una sólida formación, Ana trabaja
+                                    incansablemente
+                                    para proporcionar a sus pacientes herramientas efectivas y estrategias
+                                    personalizadas. Su compromiso
+                                    con el bienestar emocional se refleja en cada sesión, guiando a aquellos que buscan
+                                    equilibrio hacia
                                     una vida más tranquila y plena.</p>
-                                    <br><br>
-                                    <button class="boton-cv">Ver CV</button>
+                                <br><br>
+                                <button class="boton-cv">Ver CV</button>
                             </div>
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof5.png" alt="mara">
                                 <h3>Mara Sánchez Moreno</h3>
-                                <p>Mara Sánchez Moreno, destacada psicóloga de terapia de parejas en Equilibria, se especializa en fortalecer 
-                                    relaciones y cultivar conexiones saludables. Con una perspectiva compasiva, Mara aborda desafíos en la 
-                                    comunicación y resolución de conflictos, trabajando con parejas para crear un espacio de comprensión mutua. 
-                                    Su enfoque basado en evidencia y experiencia clínica ha llevado a resultados positivos, consolidando a Mara 
-                                    como una profesional confiable en el campo de la psicología de parejas en Equilibria.</p>
-                                    <br><br>
-                                    <button class="boton-cv">Ver CV</button>
+                                <p>Mara Sánchez Moreno, destacada psicóloga de terapia de parejas en Equilibria, se
+                                    especializa en fortalecer
+                                    relaciones y cultivar conexiones saludables. Con una perspectiva compasiva, Mara
+                                    aborda desafíos en la
+                                    comunicación y resolución de conflictos, trabajando con parejas para crear un
+                                    espacio de comprensión mutua.
+                                    Su enfoque basado en evidencia y experiencia clínica ha llevado a resultados
+                                    positivos, consolidando a Mara
+                                    como una profesional confiable en el campo de la psicología de parejas en
+                                    Equilibria.</p>
+                                <br><br>
+                                <button class="boton-cv">Ver CV</button>
                             </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
                         </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
+        </div>
         <div class="container3">
             <a href="citaPsicologia.php"><button class="btn-big">¡Reserva con tu psicólogo!</button></a>
         </div>
         <br><br><br><br>
         <div class="container">
             <div class="subrayadoAsistentesM">
-            <h3>Asistentes para mayores</h3>    
+                <h3>Asistentes para mayores</h3>
             </div>
             <div class="" id="menu-icon"></div>
             <div class="testimonial-container">
@@ -158,37 +181,47 @@ if (isset($_SESSION['idPacienteLogin'])){
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof6.png" alt="martin">
                                 <h3>Martín Cañadas Carriedo</h3>
-                                <p>Martín Cañadas Carriedo, el asistente para personas mayores de Equilibria, es un dedicado profesional 
-                                    comprometido con el bienestar y la comodidad de los clientes mayores. Con un enfoque amable y compasivo, 
-                                    Martín brinda apoyo integral, desde actividades diarias hasta compañía emocional. Su experiencia en el 
-                                    cuidado de personas mayores y su atención personalizada lo convierten en un recurso valioso para mejorar 
-                                    la calidad de vida de quienes confían en Equilibria para el cuidado de sus seres queridos.</p>
-                                    <br><br>
-                                    <button class="boton-cv">Ver CV</button>
+                                <p>Martín Cañadas Carriedo, el asistente para personas mayores de Equilibria, es un
+                                    dedicado profesional
+                                    comprometido con el bienestar y la comodidad de los clientes mayores. Con un enfoque
+                                    amable y compasivo,
+                                    Martín brinda apoyo integral, desde actividades diarias hasta compañía emocional. Su
+                                    experiencia en el
+                                    cuidado de personas mayores y su atención personalizada lo convierten en un recurso
+                                    valioso para mejorar
+                                    la calidad de vida de quienes confían en Equilibria para el cuidado de sus seres
+                                    queridos.</p>
+                                <br><br>
+                                <button class="boton-cv">Ver CV</button>
                             </div>
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof2.png" alt="sofia">
                                 <h3>Sofía Sepúlveda Rivera</h3>
-                                <p>Sofía Sepúlveda Rivera, la asistente para personas mayores de Equilibria, se distingue por su compromiso 
-                                    inquebrantable con el bienestar y la atención individualizada. Con empatía y dedicación, Sofía proporciona 
-                                    un apoyo integral, abordando las necesidades diarias y brindando compañía afectuosa. Su enfoque centrado en
-                                    la persona y su experiencia en el cuidado de adultos mayores hacen de ella una valiosa integrante del equipo 
-                                    de Equilibria, comprometida con mejorar la calidad de vida de quienes confían en sus servicios.</p>
-                                    <br><br>
-                                    <button class="boton-cv">Ver CV</button>
+                                <p>Sofía Sepúlveda Rivera, la asistente para personas mayores de Equilibria, se
+                                    distingue por su compromiso
+                                    inquebrantable con el bienestar y la atención individualizada. Con empatía y
+                                    dedicación, Sofía proporciona
+                                    un apoyo integral, abordando las necesidades diarias y brindando compañía afectuosa.
+                                    Su enfoque centrado en
+                                    la persona y su experiencia en el cuidado de adultos mayores hacen de ella una
+                                    valiosa integrante del equipo
+                                    de Equilibria, comprometida con mejorar la calidad de vida de quienes confían en sus
+                                    servicios.</p>
+                                <br><br>
+                                <button class="boton-cv">Ver CV</button>
                             </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
                         </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
+        </div>
         <br><br><br><br>
         <div class="container">
             <div class="subrayadoAsistentesN">
-            <h3>Asistentes para niños</h3>    
+                <h3>Asistentes para niños</h3>
             </div>
             <div class="" id="menu-icon"></div>
             <div class="testimonial-container">
@@ -198,35 +231,45 @@ if (isset($_SESSION['idPacienteLogin'])){
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof4.png" alt="beatriz">
                                 <h3>Beatriz Rodrigo Marquínez</h3>
-                                <p>Beatriz Rodrigo Marquínez, la asistente para niños de Equilibria, destaca por su dedicación y cariño en la 
-                                    atención infantil. Con un enfoque lúdico y educativo, Beatriz se esfuerza por crear un entorno seguro y 
-                                    estimulante para los pequeños. Su compromiso con el desarrollo integral se refleja en cada interacción, 
-                                    brindando apoyo tanto emocional como práctico. Beatriz, integrante vital del equipo de Equilibria, trabaja 
-                                    incansablemente para asegurar que cada niño experimente un crecimiento saludable y positivo.</p>
-                                    <br><br>
-                                    <button class="boton-cv">Ver CV</button>
+                                <p>Beatriz Rodrigo Marquínez, la asistente para niños de Equilibria, destaca por su
+                                    dedicación y cariño en la
+                                    atención infantil. Con un enfoque lúdico y educativo, Beatriz se esfuerza por crear
+                                    un entorno seguro y
+                                    estimulante para los pequeños. Su compromiso con el desarrollo integral se refleja
+                                    en cada interacción,
+                                    brindando apoyo tanto emocional como práctico. Beatriz, integrante vital del equipo
+                                    de Equilibria, trabaja
+                                    incansablemente para asegurar que cada niño experimente un crecimiento saludable y
+                                    positivo.</p>
+                                <br><br>
+                                <button class="boton-cv">Ver CV</button>
                             </div>
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof3.png" alt="fernando">
                                 <h3>Fernando Rodríguez Bellido</h3>
-                                <p>Fernando Rodríguez Bellido, el asistente para niños en Equilibria, se distingue por su entusiasmo contagioso 
-                                    y enfoque centrado en el bienestar infantil. Con habilidades pedagógicas y un trato amigable, Fernando crea 
-                                    un ambiente educativo y divertido para los pequeños a su cargo. Su compromiso con el desarrollo integral se 
-                                    refleja en actividades estimulantes y apoyo emocional constante. Como parte fundamental del equipo de Equilibria, 
-                                    Fernando trabaja incansablemente para fomentar un crecimiento positivo y saludable en cada niño.</p>
-                                    <br><br>
-                                    <button class="boton-cv">Ver CV</button>
+                                <p>Fernando Rodríguez Bellido, el asistente para niños en Equilibria, se distingue por
+                                    su entusiasmo contagioso
+                                    y enfoque centrado en el bienestar infantil. Con habilidades pedagógicas y un trato
+                                    amigable, Fernando crea
+                                    un ambiente educativo y divertido para los pequeños a su cargo. Su compromiso con el
+                                    desarrollo integral se
+                                    refleja en actividades estimulantes y apoyo emocional constante. Como parte
+                                    fundamental del equipo de Equilibria,
+                                    Fernando trabaja incansablemente para fomentar un crecimiento positivo y saludable
+                                    en cada niño.</p>
+                                <br><br>
+                                <button class="boton-cv">Ver CV</button>
                             </div>
-                            </div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
                         </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
-            <div class="container3">
-                <a href="citaAsistencia.php"><button class="btn-big">¡Reserva con tu asistente!</button></a>
+        </div>
+        <div class="container3">
+            <a href="citaAsistencia.php"><button class="btn-big">¡Reserva con tu asistente!</button></a>
         </div>
         <br><br><br><br>
         <div class="faq-container" id="preguntasRespuestas">
@@ -277,7 +320,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                 </div>
             </div>
         </div>
-        
+
         <br><br>
         <div class="contacto" id="contacto">
             <div class="subrayadoFormulario">
@@ -342,13 +385,13 @@ if (isset($_SESSION['idPacienteLogin'])){
                 <a href="recursosGratuitos.php#podcast">Podcast</a>
                 <a href="recursosGratuitos.php#librosAutoayuda">Libros autoayuda</a>
                 <a href="recursosGratuitos.php#videos">Tutoriales mindfulness</a>
-            </div>            
+            </div>
             <div class="footer-section">
                 <h3>Retiros</h3>
                 <a href="retiros.php#retiros">Retiros</a>
                 <a href="retiros.php#preguntasRespuestas">Preguntas retiros</a>
             </div>
-            
+
         </div>
         <div class="footer-branding">
             <p class="nombre_footer">Equilibria</p>

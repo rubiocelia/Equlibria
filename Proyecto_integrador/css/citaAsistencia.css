@@ -26,8 +26,7 @@
     align-items: center;
     margin: 50px auto 20px; /
   }
-  .subrayado h3 {
-    top: -20px; 
+  .subrayado h3 { 
     padding: 0 10px; 
     font-family: "Bellefair";
     font-size: 3em; 
@@ -53,8 +52,8 @@
     padding: 40px; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    width: 70%; 
-    max-width: 750px; 
+    width: 50%;
+    height: 75vh; 
 }
 .formReserva{
     display: flex;
@@ -81,7 +80,7 @@
     border-radius: 20px; 
 }
 .botonform{
-  margin-top: 20px;
+  margin-top: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +102,7 @@
   color: #000000;
 }
 .botonVolver{
-  margin-top: 20px;
+  margin-top: 1em;
   display: inline-flex;
   align-items: center;
   justify-content: center;

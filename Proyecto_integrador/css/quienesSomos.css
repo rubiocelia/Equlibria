@@ -256,7 +256,7 @@ footer {
 }
 
 /*pagino de inicio*/
-main{
+main {
   background-image: url("../img/fondo_quienes_somos.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -273,7 +273,7 @@ main{
   text-align: center;
 }
 
-.subrayadoQuienesSomos p {
+.pgquienessomos p {
   font-size: 30px;
   margin-top: 10px;
   text-align: justify center;
@@ -281,17 +281,20 @@ main{
 
 .subrayadoQuienesSomos {
   background-color: var(--contraste-claro);
-  height: 15px;
-  font-size: 48px;
-  width: 650px;
+  height: 10px;
+  font-size: 24px;
+  width: 300px;
   text-align: center;
-  margin: 50px auto;
-  font-family: "Bellefair";
-  margin-top: -550px;
+  margin: 25px auto;
 }
 
 .subrayadoQuienesSomos h3 {
-  transform: translate(0px, -45px);
+  transform: translate(0px, -28px);
+  font-family: "Bellefair";
+  font-size: 38px;
+}
+
+.video {
 }
 
 .container {
@@ -412,7 +415,7 @@ main{
 
 .btn-big {
   text-decoration: none;
-  background: #617C6F;
+  background: #617c6f;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -439,7 +442,7 @@ main{
   transition: background 0.3s ease;
 }
 
-.boton-cv:hover{
+.boton-cv:hover {
   background-color: var(--verde-oscuro);
   color: white;
   border: var(--verde-claro) solid;
@@ -448,7 +451,7 @@ main{
 /* Agrega tus estilos para móvil, tablet, etc. */
 @media (max-width: 768px) {
   .container {
-      width: 95%;
+    width: 95%;
   }
 }
 
@@ -647,7 +650,7 @@ main{
   margin-top: 5%;
 }
 
-#cuentanos{
+#cuentanos {
   width: 800px;
   height: 200px;
   border-radius: 20px;
@@ -684,10 +687,10 @@ main{
   flex-direction: column;
   background: none;
   border-radius: 2rem;
-  box-shadow: 0 .5rem .5rem var(--verde-oscuro);
+  box-shadow: 0 0.5rem 0.5rem var(--verde-oscuro);
   padding: 3rem 5rem;
-  border-top: .8rem solid var(--verde-oscuro);
-  border-bottom: .8rem solid var(--verde-oscuro);
+  border-top: 0.8rem solid var(--verde-oscuro);
+  border-bottom: 0.8rem solid var(--verde-oscuro);
 }
 
 .testimonial-slide img {
@@ -695,7 +698,7 @@ main{
   height: 14rem;
   object-fit: cover;
   border-radius: 50%;
-  border: .5rem solid var(--verde-oscuro);
+  border: 0.5rem solid var(--verde-oscuro);
 }
 
 .testimonial-slide h3 {
@@ -728,44 +731,43 @@ main{
 }
 
 .testimonial-box .swiper-pagination-bullet {
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .testimonial-box .swiper-pagination-bullet-active {
   background: var(--verde-oscuro);
 }
 
-
 /* Estilos para pantallas de tablet */
 @media only screen and (max-width: 1024px) {
   /* Modifica aquí los estilos para tablet */
-  .subrayadoQuienesSomos{
+  .subrayadoQuienesSomos {
     text-align: center;
     margin-left: 285px;
   }
-  .testimonial-slide h3{
+  .testimonial-slide h3 {
     text-align: center;
   }
-  .testimonial-slide p{
+  .testimonial-slide p {
     width: 400px;
   }
-  .subrayadoQuienesSomos{
+  .subrayadoQuienesSomos {
     margin-top: -400px;
     width: 500px;
   }
-  .subrayadoPsicologos{
+  .subrayadoPsicologos {
     margin-top: 150px;
     margin-left: 175px;
     margin-top: 300px;
     width: 700px;
   }
-  .subrayadoAsistentesM{
+  .subrayadoAsistentesM {
     margin-top: 150px;
     margin-left: 275px;
     margin-top: 300px;
     width: 600px;
   }
-  .testimonial-container .testimonial-wrapper{
+  .testimonial-container .testimonial-wrapper {
     width: 500px;
     margin-left: 290px;
   }
@@ -789,7 +791,7 @@ main{
     bottom: 0;
     z-index: 999; /* Asegúrate de que esté sobre otros elementos */
   }
-  
+
   /* Estilo para la lista del menú */
   .menu ul {
     list-style-type: none;
@@ -802,12 +804,12 @@ main{
     align-items: center;
     background-color: whitesmoke;
   }
-  
+
   /* Estilo para los elementos del menú */
   .menu li {
     margin: 10px 0;
   }
-  
+
   /* Estilo para los enlaces del menú */
   .menu a {
     text-decoration: none;
@@ -824,12 +826,12 @@ main{
     background-color: white;
     width: 100%;
     text-align: center;
-}
+  }
 
-.header .menu.open {
+  .header .menu.open {
     display: block;
     margin-top: 10px;
-}
+  }
   .menu.active {
     display: inline-block; /* Cambiar a flex para mostrar el menú */
     padding: 10;
@@ -859,7 +861,7 @@ main{
     bottom: 0;
     z-index: 999; /* Asegúrate de que esté sobre otros elementos */
   }
-  
+
   /* Estilo para la lista del menú */
   .menu ul {
     list-style-type: none;
@@ -872,12 +874,12 @@ main{
     align-items: center;
     background-color: whitesmoke;
   }
-  
+
   /* Estilo para los elementos del menú */
   .menu li {
     margin: 10px 0;
   }
-  
+
   /* Estilo para los enlaces del menú */
   .menu a {
     text-decoration: none;
@@ -912,7 +914,7 @@ main{
     display: none;
     padding: 10;
   }
-  .subrayadoQuienesSomos{
+  .subrayadoQuienesSomos {
     margin-top: 50px;
   }
   .subrayadoQuienesSomos p {
@@ -920,7 +922,7 @@ main{
     margin-top: 10px;
     text-align: justify center;
   }
-  
+
   .subrayadoQuienesSomos {
     background-color: var(--contraste-claro);
     height: 10px;
@@ -931,11 +933,11 @@ main{
     font-family: "Bellefair";
     margin-top: -550px;
   }
-  
+
   .subrayadoQuienesSomos h3 {
     transform: translate(0px, -25px);
   }
-  .subrayadoPsicologos{
+  .subrayadoPsicologos {
     background-color: var(--contraste-claro);
     height: 10px;
     font-size: 28px;
@@ -988,52 +990,52 @@ main{
     margin-top: -400px;
     padding: 200px 0px;
   }
-  .btn-big{
+  .btn-big {
     margin-top: -80px;
     width: 200px;
     height: 100px;
     font-size: 20px;
   }
-  
+
   .testimonial-container .testimonial-wrapper {
     position: relative;
     max-width: 80rem;
     width: 100%;
     padding: 2rem;
   }
-  
+
   .testimonial-wrapper .testimonial-box {
     padding: 1rem;
     border-radius: 2rem;
     overflow: hidden;
   }
-  
+
   .testimonial-content .testimonial-slide {
     display: flex;
     align-items: center;
     flex-direction: column;
     background: none;
     border-radius: 2rem;
-    box-shadow: 0 .5rem .5rem var(--verde-oscuro);
+    box-shadow: 0 0.5rem 0.5rem var(--verde-oscuro);
     padding: 1rem 3rem;
-    border-top: .8rem solid var(--verde-oscuro);
-    border-bottom: .8rem solid var(--verde-oscuro);
+    border-top: 0.8rem solid var(--verde-oscuro);
+    border-bottom: 0.8rem solid var(--verde-oscuro);
   }
-  
+
   .testimonial-slide img {
     width: 12rem;
     height: 12rem;
     object-fit: cover;
     border-radius: 50%;
-    border: .5rem solid var(--verde-oscuro);
+    border: 0.5rem solid var(--verde-oscuro);
   }
-  
+
   .testimonial-slide h3 {
     font-size: 2.5rem;
     margin: 2rem 0;
     font-family: "Bellefair";
   }
-  
+
   .testimonial-slide p {
     display: flex;
     flex-wrap: wrap;
@@ -1043,29 +1045,29 @@ main{
     text-align: justify;
     width: 250px;
   }
-  
+
   .testimonial-box .swiper-button-next,
   .testimonial-box .swiper-button-prev {
     color: var(--verde-oscuro);
   }
-  
+
   .testimonial-box .swiper-button-next {
     right: 0;
   }
-  
+
   .testimonial-box .swiper-button-prev {
     left: 0;
   }
-  
+
   .testimonial-box .swiper-pagination-bullet {
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, 0.8);
   }
-  
+
   .testimonial-box .swiper-pagination-bullet-active {
     background: var(--verde-oscuro);
   }
 
-  .subrayadoFormulario{
+  .subrayadoFormulario {
     background-color: var(--contraste-claro);
     height: 8px;
     font-size: 28px;
@@ -1093,7 +1095,7 @@ main{
     max-height: 100vh;
     margin-top: 8%;
   }
-  
+
   .formInicioSesion {
     width: 80%;
     border-radius: 15px;
@@ -1104,13 +1106,13 @@ main{
     font-family: "Chivo", sans-serif;
     margin-left: 50px;
   }
-  
+
   .formInicioSesion label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
   }
-  
+
   .formInicioSesion hr {
     height: 8px;
     background-color: var(--verde-oscuro);
@@ -1120,7 +1122,7 @@ main{
     width: 115%;
     text-align: center;
   }
-  
+
   .formInicioSesion input {
     font-family: "Chivo", sans-serif;
     width: 50px;
@@ -1129,7 +1131,7 @@ main{
     border: 1px solid var(--verde-oscuro);
     border-radius: 20px;
   }
-  
+
   .formInicioSesion button[type="submit"] {
     background-color: var(--verde-oscuro);
     color: white;
@@ -1143,11 +1145,11 @@ main{
     display: block;
     margin: 20px auto;
   }
-  
+
   .formInicioSesion button[type="submit"]:hover {
     background-color: var(--contraste-oscuro);
   }
-  
+
   .formInicioSesion input {
     width: 100%; /* Asegura que el input ocupe toda la columna */
   }
@@ -1160,12 +1162,12 @@ main{
     text-decoration: none;
     color: var(--verde-oscuro);
   }
-  
+
   .contacto {
     margin-top: 5%;
   }
-  
-  #cuentanos{
+
+  #cuentanos {
     width: 400px;
     height: 100px;
     border-radius: 20px;

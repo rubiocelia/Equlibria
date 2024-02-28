@@ -97,7 +97,7 @@ mysqli_close($conexion);
                     <div class="input-container">
                         <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
                         <span onclick="togglePasswordVisibility()">
-                            <i class="eye-icon">🙉</i>
+                            <span class="eye-icon">🙉</span>
                         </span>
                     </div>
                     <span id="errorContrasena" class="error-mensaje"></span>
