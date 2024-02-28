@@ -244,6 +244,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
+  width: 90vw;
 }
 
 .tarjetaPodcast {
@@ -339,12 +340,11 @@ footer {
 }
 
 .libro_card {
-  display: none;
-  height: auto;
-  display: flex;
   flex-direction: row;
-  width: 950px;
-  height: 550px;
+  width: 80%;
+  height: 85vh;
+  display: none;
+  display: flex;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: var(--contraste-claro);
@@ -352,12 +352,12 @@ footer {
 
 .libros-container {
   display: flex;
-  justify-content: space-around;
 }
 
 .libro-img {
   width: 40%;
   height: 100%;
+  display: block;
   object-fit: cover;
   border-radius: 10px 0 0 10px;
 }
@@ -372,22 +372,22 @@ footer {
 
 .libro-info h2 {
   font-family: "Righteous";
-  font-size: 40px;
-  margin-bottom: 10px;
+  font-size: 3.5vw;
+  margin-bottom: 1.25vw;
 }
 
 .libro-info h3 {
   font-family: "Bellefair";
-  font-size: 25px;
-  margin-bottom: 25px;
+  font-size: 2.2vw;
+  margin-bottom: 3.125vw;
 }
 
 .libro-info p,
 .autor {
   font-family: "Chivo", sans-serif;
-  margin-top: 10px;
-  font-size: 16px;
-  margin: 10px 0;
+  margin-top: 1.25vw;
+  font-size: 1em;
+  margin: 1.25vw 0;
 }
 
 .btn-comprar {
@@ -456,16 +456,35 @@ footer {
 
 /* tablet */
 @media screen and (max-width: 992px) {
+  body {
+    font-family: "Chivo", sans-serif;
+    margin: 0;
+    background-image: url(../img/fondoRecursosGratuitos.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 90%;
+  }
+
+  .tarjPodcasts .tarjetaPodcast {
+    width: 40%;
+  }
+
+  .fotoPod {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .libro_card {
     margin: 0 auto;
     flex-direction: row;
-    width: 80%;
-    height: 75vh;
+    width: 87%;
+    height: 85vh;
   }
 
   .libro-img {
     margin: auto;
-    width: 40%;
+    width: 45%;
     height: 100%;
     border-radius: 10px 10px 0 0; /* Redondear las esquinas superiores */
   }
@@ -476,8 +495,27 @@ footer {
     width: auto;
   }
 
-  .videos,
-  .tarjPodcasts {
+  .libro-info h2 {
+    font-family: "Righteous";
+    font-size: 3.5vw;
+    margin-bottom: 1.25vw;
+  }
+
+  .libro-info h3 {
+    font-family: "Bellefair";
+    font-size: 2.2vw;
+    margin-bottom: 3.125vw;
+  }
+
+  .libro-info p,
+  .autor {
+    font-family: "Chivo", sans-serif;
+    margin-top: 1.25vw;
+    font-size: 1.8vw;
+    margin: 1.25vw 0;
+  }
+
+  .videos {
     flex-direction: column;
   }
 
