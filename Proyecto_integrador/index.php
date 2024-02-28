@@ -114,7 +114,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                         y
                         conocer mejor tu cuerpo y tus habilidades.
                     </p>
-                    <a href="reservaEvento.php" class="linkIndex2">¡Resérvalo!</a>
+                    <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
 
                 </div>
 
@@ -124,7 +124,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <p>En este taller de hablididades sociales trabajaremos todas las áreas en las que las habilidades
                         sociales adquieren un papel importante.
                     </p>
-                    <a href="reservaEvento.php" class="linkIndex2">¡Resérvalo!</a>
+                    <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                 </div>
 
                 <div class="taller">
@@ -133,7 +133,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <p>Descubre en este taller todo lo que debes saber sobre tu ansiedad. Vamos a aprender a acapetar y
                         escuchar desde el amor nuestra ansiedad.
                     </p>
-                    <a href="reservaEvento.php" class="linkIndex2">¡Resérvalo!</a>
+                    <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                 </div>
 
                 <div class="taller">
@@ -142,7 +142,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <p>En este taller trabajaremos en reconocer y acompañar nuestra autoexigenciaa y profundizaremos en
                         el origen. No tengas miedo.
                     </p>
-                    <a href="reservaEvento.php" class="linkIndex2">¡Resérvalo!</a>
+                    <a href="reservaEvento.php" class="linkIndex">¡Resérvalo!</a>
                 </div>
             </div>
         </div>

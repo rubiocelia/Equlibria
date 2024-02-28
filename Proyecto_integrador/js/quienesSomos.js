@@ -1,37 +1,35 @@
 /*========== scroll sections active link ==========*/
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll("header nav a");
 
 window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        };
-    });
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
+      });
+    }
+  });
 
+  /*========== sticky navbar ==========*/
+  let header = document.querySelector(".header");
 
-/*========== sticky navbar ==========*/
-let header = document.querySelector('.header');
+  header.classList.toggle("sticky", window.scrollY > 100);
 
-header.classList.toggle('sticky', window.scrollY > 100);
-
-
-/*========== remove menu icon navbar when click navbar link (scroll) ==========*/
-menuIcon.classList.remove('bx-x');
-navbar.classList.remove('active');
-
+  /*========== remove menu icon navbar when click navbar link (scroll) ==========*/
+  menuIcon.classList.remove("bx-x");
+  navbar.classList.remove("active");
 };
 
-
-  /*========== swiper ==========*/
+/*========== swiper ==========*/
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 50,
@@ -50,21 +48,17 @@ var swiper = new Swiper(".mySwiper", {
 /*========== scroll reveal ==========*/
 ScrollReveal({
   // reset: true,
-  distance: '80px',
+  distance: "80px",
   duration: 2000,
-  delay: 200
+  delay: 200,
 });
 
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
-ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
-
-document.addEventListener('DOMContentLoaded', function() {
-    var hamburger = document.querySelector('.hamburger');
-    var menu = document.querySelector('.menu');
-
-    hamburger.addEventListener('click', function() {
-        menu.classList.toggle('open');
-    });
+ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
+ScrollReveal().reveal(
+  ".home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form",
+  { origin: "bottom" }
+);
+ScrollReveal().reveal(".home-content h1, .about-img img", { origin: "left" });
+ScrollReveal().reveal(".home-content h3, .home-content p, .about-content", {
+  origin: "right",
 });

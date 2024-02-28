@@ -65,49 +65,6 @@
   align-content: center;
 }
 
-.fotoPerfil {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-#profilePic {
-  border-radius: 50%; /* Hace la imagen circular */
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.fotoPerfil input[type="file"] {
-  border-radius: 15px;
-  width: 10%;
-}
-
-#profileInput {
-  display: none;
-}
-
-.fotoPerfil label {
-  background-color: var(--verde);
-  color: black;
-  border-radius: 15px;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.fotoPerfil label:hover {
-  background-color: var(--verde-claro);
-  color: black;
-  border-radius: 15px;
-  padding: 10px;
-  cursor: pointer;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-}
-
 .formEditarPerfil {
   display: flex;
   flex-wrap: wrap;
@@ -150,15 +107,15 @@
 }
 
 .formEditarPerfil .form-group-half {
-  flex: 0 0 50%; /* toma exactamente la mitad del espacio disponible */
+  flex: 0 0 50%;
   padding: 10px;
   box-sizing: border-box;
 }
 
 .formEditarPerfil .form-group-full {
-  display: flex; /* usa flexbox para alinear los hijos en una fila */
-  justify-content: space-between; /* distribuye el espacio entre los hijos */
-  width: 100%; /* toma todo el ancho disponible */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .formEditarPerfil button {
@@ -173,8 +130,6 @@
   font-size: 15px;
   cursor: pointer;
 }
-
-/* Asegúrate de que no haya otras reglas CSS que interfieran con estas. */
 
 .formEditarPerfil button:hover {
   border: 2px solid var(--verde-oscuro);
