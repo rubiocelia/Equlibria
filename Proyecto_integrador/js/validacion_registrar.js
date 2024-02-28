@@ -1,24 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
   var form = document.querySelector("form");
-  form.addEventListener("submit", async function (event) {
-    event.preventDefault(); // Evitar el envío hasta confirmar la validación
+  form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevenir el envío del formulario
 
-    var nombre = document.getElementById("nombre_pacientes");
-    var apellidos = document.getElementById("apellidos_pacientes");
-    var telefono = document.getElementById("telefono_paciente");
-    var correo = document.getElementById("mail_pacientes");
-    var usuarioCrear = document.getElementById("usuario_pacientes");
-    var contrasenaNueva = document.getElementById("contrasena_pacientes");
+      // Definición de variables y funciones
+      var nombre = document.getElementById("nombre_pacientes");
+      var apellidos = document.getElementById("apellidos_pacientes");
+      var telefono = document.getElementById("telefono_paciente");
+      var correo = document.getElementById("mail_pacientes");
+      var usuarioCrear = document.getElementById("usuario_pacientes");
+      var contrasenaNueva = document.getElementById("contrasena_pacientes");
 
-    // Validación del nombre
-    if (!nombre.value.trim()) {
-      alert("Por favor, ingrese su nombre.");
-      nombre.focus();
-      event.preventDefault();
-      return;
-    } else if (/[^a-zA-Z áéíóúÁÉÍÓÚñÑ]/.test(nombre.value)) {
+      function showModal(message) {
+          document.getElementById('modal-message').innerText = message;
+          document.getElementById('modal').style.display = 'block';
+      }
+
+      // Añade un evento al botón de cerrar del modal
+      document.querySelector('.modal-close').addEventListener('click', function() {
+          document.getElementById('modal').style.display = 'none';
+      });
+
+      // Coloca aquí la validación modificada, utilizando showModal para mostrar errores
+      // Ejemplo:
+      if (!nombre.value.trim()) {
+          showModal("Por favor, ingrese su nombre.");
+          nombre.focus();
+          return;
+      } else if (/[^a-zA-Z áéíóúÁÉÍÓÚñÑ]/.test(nombre.value)) {
       // Añadiendo la comprobación de que no contenga números
-      alert("El nombre no debe contener números.");
+      showModal("El nombre no debe contener números.");
       nombre.focus();
       event.preventDefault();
       return;
@@ -26,13 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Validación de apellidos
     if (!apellidos.value.trim()) {
-      alert("Por favor, ingrese sus apellidos.");
+      showModal("Por favor, ingrese sus apellidos.");
       apellidos.focus();
       event.preventDefault();
       return;
     } else if (/[^a-zA-Z áéíóúÁÉÍÓÚñÑ]/.test(apellidos.value)) {
       // Añadiendo la comprobación de que no contenga números
-      alert("Los apellidos no deben contener números.");
+      showModal("Los apellidos no deben contener números.");
       apellidos.focus();
       event.preventDefault();
       return;
@@ -41,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Validación del número de teléfono
     var patronTelefono = /^[0-9]{9}$/;
     if (!patronTelefono.test(telefono.value)) {
-      alert("Ingrese un número de teléfono válido (9 dígitos).");
+      showModal("Ingrese un número de teléfono válido (9 dígitos).");
       telefono.focus();
       event.preventDefault();
       return;
@@ -50,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Validación del correo electrónico
     var patronCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!patronCorreo.test(correo.value)) {
-      alert("Ingrese un correo electrónico válido.");
+      showModal("Ingrese un correo electrónico válido.");
       correo.focus();
       event.preventDefault();
       return;
@@ -62,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       usuarioCrear.value.trim() === "" ||
       !patronUsuario.test(usuarioCrear.value)
     ) {
-      alert(
+      showModal(
         "Ingrese un nombre de usuario válido (solo letras, números y guiones bajos)."
       );
       usuarioCrear.focus();
@@ -74,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // La contraseña debe tener al menos 8 caracteres, al menos una letra y un número
     var patronContrasena = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
     if (!patronContrasena.test(contrasenaNueva.value)) {
-      alert(
+      showModal(
         "La contraseña debe tener al menos 8 caracteres, incluyendo letras y números."
       );
       contrasenaNueva.focus();
@@ -108,24 +119,24 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
 
       //Aqui verificamos que ninguno de los campos de telefono_paciente, mail_pacientes y usuario_pacientes
-      //se pueda repetir y que en caso de que ya este en la base de datos salte un error mediante un alert
+      //se pueda repetir y que en caso de que ya este en la base de datos salte un error mediante un showModal
 
       .then((data) => {
         var error = false;
         if (data.telefono) {
-          alert(
+          showModal(
             "Este teléfono ya está registrado, por favor introduzca otro número de teléfono válido."
           );
           error = true;
         }
         if (data.correo) {
-          alert(
+          showModal(
             "Este correo electrónico ya está registrado, por favor introduzca otro correo válido."
           );
           error = true;
         }
         if (data.usuario) {
-          alert(
+          showModal(
             "Este nombre de usuario ya está registrado, por favor introduzca otro nombre de usuario."
           );
           error = true;
@@ -134,11 +145,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!error) {
           form.submit(); // Envía el formulario si no hay errores
         }
-        //En que caso de que la consulta fetch falle saldra un error mediante un alert
+        //En que caso de que la consulta fetch falle saldra un error mediante un showModal
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("Error al verificar los datos.");
+        showModal("Error al verificar los datos.");
       });
   });
 });

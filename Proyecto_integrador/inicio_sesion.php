@@ -83,12 +83,6 @@ mysqli_close($conexion);
 <div class="subrayadoFormulario">
                 <h3>Iniciar sesión</h3>
             </div>
-            <a href="">
-                <button type="submit" class="google-signin">
-                    <object data="../Proyecto_integrador/img/google.svg"></object>
-                    <span>Inicia sesión con Google</span>
-                </button>
-            </a>
             <div class="containerForm">
                 <form class="formInicioSesion" method="post" action="inicio_sesion.php"
                     onsubmit="validarFormularioInicio()">

@@ -413,24 +413,6 @@ main {
   text-align: right;
 }
 
-.btn {
-  background: none;
-  color: black;
-  border-color: var(--verde-oscuro);
-  border: 2px solid var(--verde-oscuro);
-  padding: 10px 20px;
-  margin-top: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 200px;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: var(--verde);
-  text-decoration: none;
-}
-
 .btn-big {
   text-decoration: none;
   background: #617c6f;
@@ -456,15 +438,14 @@ main {
   width: 188px;
   border-radius: 10px;
   cursor: pointer;
-  border-color: var(--verde-oscuro) solid 2px;
-  background: none;
+  border: var(--verde-oscuro) solid 2px;
   transition: background 0.3s ease;
 }
 
 .boton-cv:hover {
   background-color: var(--verde-oscuro);
   color: white;
-  border-color: var(--verde-oscuro) solid;
+  border: var(--verde-claro) solid;
 }
 
 /* Agrega tus estilos para móvil, tablet, etc. */
@@ -606,6 +587,7 @@ main {
   position: relative;
   max-width: 800px;
   font-family: "Chivo", sans-serif;
+  margin: auto;
 }
 
 .formInicioSesion label {
