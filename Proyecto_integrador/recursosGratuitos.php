@@ -90,7 +90,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <main>
         <div class="podcast" id="podcast">
             <div class="tituloPodcast">
-                <img src="img/spotify.png" alt="">
+                <img src="img/spotify.png" alt="logo spotify">
                 <div class="subrayadoPod">
                     <h3>Podcasts</h3>
                 </div>
@@ -98,7 +98,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             <div class="tarjPodcasts">
                 <div class="tarjetaPodcast">
                     <a href="https://open.spotify.com/show/4S9Df6SgTiy9V0WQqC0mu9" target="_blank"><img class="fotoPod"
-                            src="img/pdct.png" alt="podcast1"></a>
+                            src="img/pdct.png" alt="podcast Vivir positivo y sin ansiedad "></a>
                     <h2>Vivir positivo y sin ansiedad</h2>
                     <p> By UTVCO</p>
                     <img class="logoPodcast" src="img/logoSpotify.png" alt="podcast logo">
@@ -106,7 +106,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
                 <div class="tarjetaPodcast">
                     <a href="https://open.spotify.com/show/333BYqSFiwCNDu0ewIa2Eu" target="_blank"><img class="fotoPod"
-                            src="img/pdct4.png" alt="podcast1"></a>
+                            src="img/pdct4.png" alt="podcast El mensaje de la ansiedad"></a>
                     <h2>El mensaje de la ansiedad</h2>
                     <p> By DESANSIEDAD</p>
                     <img class="logoPodcast" src="img/logoSpotify.png" alt="podcast logo">
@@ -114,7 +114,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
                 <div class="tarjetaPodcast">
                     <a href="https://open.spotify.com/show/3wFVDyEHFtFS91qbL50hch" target="_blank"><img class="fotoPod"
-                            src="img/pdct3.png" alt="podcast1"></a>
+                            src="img/pdct3.png" alt="podcast Sin miedo"></a>
                     <h2>Sin miedo</h2>
                     <p> By RAFEL SANTANDREU</p>
                     <img class="logoPodcast" src="img/logoSpotify.png" alt="podcast logo">
@@ -122,7 +122,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
                 <div class="tarjetaPodcast">
                     <a href="https://open.spotify.com/show/2l1ghVilJaxdTb2XSzP7wp" target="_blank"><img class="fotoPod"
-                            src="img/pdct2.png" alt="podcast1"></a>
+                            src="img/pdct2.png" alt="podcast Mindfulness supera la ansiedad"></a>
                     <h2>Mindfulness supera la ansiedad</h2>
                     <p> By SUPERA LA ANSIEDAD</p>
                     <img class="logoPodcast" src="img/logoSpotify.png" alt="podcast logo">
@@ -130,7 +130,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
                 <div class="tarjetaPodcast">
                     <a href="https://open.spotify.com/show/5Nw7iAXxoP7roodIYiCHhc" target="_blank"><img class="fotoPod"
-                            src="img/pdct5.png" alt="podcast1"></a>
+                            src="img/pdct5.png" alt="podcast Ansiedad"></a>
                     <h2>Ansiedad</h2>
                     <p> By KASSANDRA CALDERON</p>
                     <img class="logoPodcast" src="img/logoSpotify.png" alt="podcast logo">
@@ -138,7 +138,7 @@ if (isset($_SESSION['idPacienteLogin'])){
 
                 <div class="tarjetaPodcast">
                     <a href="https://open.spotify.com/show/6thp7hhpxcM1fyqqI01qsq" target="_blank"><img class="fotoPod"
-                            src="img/pdct6.png" alt="podcast1"></a>
+                            src="img/pdct6.png" alt="podcast Cómo sobrellevar la ANSIEDAD"></a>
                     <h2>Cómo sobrellevar la ANSIEDAD</h2>
                     <p> By ANDRE SOSA</p>
                     <img class="logoPodcast" src="img/logoSpotify.png" alt="podcast logo">
@@ -154,7 +154,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                 <span class="flecha-izquierda">🡠</span>
                 <div class="libros-container">
                     <div class="libro_card">
-                        <img src="img/libro1.png" alt="Portada del Libro" class="libro-img">
+                        <img src="img/libro1.png" alt="Portada del Libro" class="libro-img" alt="Libro bye bye ansiedad">
                         <div class="libro-info">
                             <h2>Bye bye ansiedad</h2>
                             <h3>El método eficaz para vivir tranquilo</h3>
@@ -177,7 +177,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
 
                     <div class="libro_card">
-                        <img src="img/libro2.png" alt="Portada del Libro" class="libro-img">
+                        <img src="img/libro2.png" alt="Portada del Libro" class="libro-img" alt="El fin de la ansiedad">
                         <div class="libro-info">
                             <h2>El fin de la ansiedad</h2>
                             <h3>El mensaje que cambiará tu vida</h3>
@@ -196,7 +196,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
 
                     <div class="libro_card">
-                        <img src="img/libro3.png" alt="Portada del Libro" class="libro-img">
+                        <img src="img/libro3.png" alt="Portada del Libro" class="libro-img" alt="Deshacer la Ansiedad">
                         <div class="libro-info">
                             <h2>Deshacer la Ansiedad</h2>
                             <p class="autor">Por Judson Brewer</p>
@@ -213,7 +213,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
 
                     <div class="libro_card">
-                        <img src="img/libro4.png" alt="Portada del Libro" class="libro-img">
+                        <img src="img/libro4.png" alt="Portada del Libro" class="libro-img" alt="Cómo hacer que te pasen cosas buenas">
                         <div class="libro-info">
                             <h2>Cómo hacer que te pasen cosas buenas</h2>
                             <p class="autor">Por Marian Rojas Estapé</p>
@@ -231,7 +231,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     </div>
 
                     <div class="libro_card">
-                        <img src="img/libro5.png" alt="Portada del Libro" class="libro-img">
+                        <img src="img/libro5.png" alt="Portada del Libro" class="libro-img" alt="Sin miedo">
                         <div class="libro-info">
                             <h2>Sin miedo</h2>
                             <h3>El mensaje que cambiará tu vida</h3>
