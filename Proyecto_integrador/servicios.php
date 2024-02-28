@@ -22,6 +22,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/servicios.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Servicios</title>
 </head>
@@ -92,8 +93,8 @@ if (isset($_SESSION['idPacienteLogin'])){
         <!--------TALLERES----- -->
         <div class="pgservicios" id="citaPsicologica">
             <h1>Nuestros profesionales te pueden ayudar</h1> <br> <br>
-            <h2>Tu bienestar merece ser prioridad. <br>
-                La terapia puede ser el primer paso</h2>
+            <h2>Tu bienestar merece ser prioridad, <br>
+                la terapia puede ser el primer paso.</h2>
             <button class="boton_servicios" onclick="window.location.href='citaPsicologia.php';" >¡Pide cita!</button>
         </div>
 
@@ -150,7 +151,7 @@ if (isset($_SESSION['idPacienteLogin'])){
         <!--------FRASE ANTES DE CURSOS----- -->
 
         <div class="textoSalud">
-            <h2>🌻 "El cambio comienza con el autoconocimiento y la aceptación." 🌻</h2>
+            <h2>🌻 "El cambio comienza con el <span class="palDif">autoconocimiento</span> y la <span class="palDif">aceptación</span>." 🌻</h2>
         </div>
 
 
@@ -333,12 +334,12 @@ if (isset($_SESSION['idPacienteLogin'])){
             <div class="contenidoAsistentes">
                 <div class="perfilesAsistentes">
                     <img src="img/prof4.png" alt="Fernando Rodríguez" class="perfil-image">
-                    <p class="perfil-nombre">Fernando Rodríguez<br><span class="perfil-titulo">Asistente para
+                    <p class="perfil-nombre">Beatriz Rodrigo<br><span class="perfil-titulo">Asistente para
                             niños/as</span></p>
                 </div>
                 <div class="perfilesAsistentes">
-                    <img src="img/prof5.png" alt="Beatriz Rodrigo" class="perfil-image">
-                    <p class="perfil-nombre">Beatriz Rodrigo <br><span class="perfil-titulo">Asistente para
+                    <img src="img/prof3.png" alt="Beatriz Rodrigo" class="perfil-image">
+                    <p class="perfil-nombre">Fernando Rodríguez <br><span class="perfil-titulo">Asistente para
                             niños/as</span></p>
                 </div>
             </div>
