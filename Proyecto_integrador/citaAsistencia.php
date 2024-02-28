@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </head>
     <body class="citaAsistencia">
         <div class="subrayado">
-            <h3>Reserva ahora tu asistencia</h3>
+            <h3>Haz tu reserva</h3>
         </div>
         <div class="contenedorForm">
             <form class="formReserva" method="post" action="citaAsistencia.php">

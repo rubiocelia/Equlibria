@@ -20,7 +20,7 @@
 .subrayado {
     background-color: var(--verde);
     height: 10px;
-    width: 36%; 
+    width: auto; 
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -55,7 +55,7 @@
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     width: 80%; 
-    max-width: 900px; 
+    max-width: 750px; 
 }
 .formReserva{
     display: flex;
@@ -63,14 +63,15 @@
 }
 .filasFormulario{
     display: flex;
-    justify-content: space-between; 
-    margin-bottom: 15px; 
+    flex-direction: column;
+   
    
 }
 .columnasForm{
     display: flex;
     flex-direction: column;
-    width: 48%; 
+    width: 100%; 
+    margin-bottom: 15px;
 }
 .formReserva input[type="text"],
 .formReserva input[type="email"],
@@ -125,89 +126,30 @@
   color: #000000;
 }
 
-/* Media Query para tablets y pantallas hasta 992px de ancho  */
-@media (max-width: 992px) {
-    .contenedorForm {
-        width: 90%; /* Aumenta el ancho para utilizar más espacio disponible */
-        padding: 20px; /* Reduce el padding para adaptarse a pantallas más pequeñas */
-    }
-    
-    .filasFormulario {
-        flex-direction: column; /* Cambia la dirección de las filas para que los elementos se apilen verticalmente */
-    }
-
-    .columnasForm {
-        width: 100%; /* Ajusta las columnas para ocupar el 100% del ancho disponible en la fila */
-        margin-bottom: 15px; /* Añade un margen inferior para separar las columnas cuando se apilan */
-      
-    }
-
-    .subrayado {
-        width: 70%; /* Ajusta el ancho del subrayado para que se vea mejor en pantallas más pequeñas */
-    }
-
-    .subrayado h3 {
-        font-size: 2em; /* Ajusta el tamaño del texto para que sea más adecuado para pantallas más pequeñas */
-    }
-
-    .botonform, .botonVolver {
-        width: 50%; /* Cambia el ancho a auto para que los botones se ajusten al contenido */
-        padding: 10px 20px; /* Aumenta el padding para hacer los botones más fáciles de tocar en pantallas táctiles */
-    }
+/* Estilos para pantallas más pequeñas que 992px */
+@media only screen and (max-width: 992px) {
+  .filasFormulario {
+      flex-direction: column; 
+  }
+  .columnasForm {
+      width: 100%; 
+      margin-bottom: 10px; 
+  }
 }
 
-/* Media Query para dispositivos móviles hasta 575px de ancho  */
-@media (max-width: 575px) {
+/* Estilos para pantallas más pequeñas que 575px */
+@media only screen and (max-width: 575px) {
+  .subrayado h3 {
+      font-size: 2rem; 
+  }
   .contenedorForm {
-    width: 90%; /* Reduce el ancho para no ocupar todo el espacio disponible */
-    margin: 0 auto; /* Centra el formulario en la página con márgenes automáticos */
-    padding: 15px; /* Mantiene el padding para espacio interno */
-}
-
-.subrayado {
-    width: 100%; /* Asegura que el subrayado se ajuste al ancho del contenedor */
-    margin: 30px auto 15px; /* Ajusta los márgenes para una mejor visualización */
-}
-
-.subrayado h3 {
-    font-size: 1.5em; /* Adecúa el tamaño del texto para pantallas pequeñas */
-    padding: 0 5px; /* Ajusta el padding lateral */
-}
-
-.filasFormulario {
-    flex-direction: column; /* Acomoda los elementos verticalmente para facilitar el acceso */
-}
-
-.columnasForm {
-    width: 100%; /* Permite que las columnas usen el ancho completo dentro del contenedor */
-}
-
-.formReserva input[type="text"],
-.formReserva input[type="email"],
-.formReserva input[type="date"],
-.formReserva select {
-    border-radius: 15px; /* Suaviza los bordes para un aspecto más agradable */
-  
-}
-
-.botonform, .botonVolver {
-  padding: 10px 20px;
-  font-size: 14px; /* Tamaño de letra legible */
-  margin: 10px auto; /* Margen automático para centrar los botones */
-  border-radius: 15px; /* Bordes redondeados para estética */
-  display: block; /* Asegura que el botón sea un bloque para aplicar márgenes automáticos */
-  width: 40%;
-  text-align: center;
-  line-height: normal; /* Puede ajustar esta propiedad si el texto no se centra verticalmente */
-  height:40px;
-}
-
-.contenedorBotones {
-  display: flex;
-  justify-content: center; /* Centra los botones horizontalmente */
-  flex-direction: column; /* Organiza los botones en una columna */
-  align-items: center; /* Centra los botones verticalmente */
-  width: 100%; /* Asegura que el contenedor abarque todo el ancho disponible */
-  margin-top: 20px;  /* Asegura que los botones también estén centrados horizontalmente */
-}
+      padding: 20px; 
+  }
+    .columnasForm {
+        width: 100%; 
+    }
+  .botonform,
+  .botonVolver {
+      width: 100%; 
+  }
 }
