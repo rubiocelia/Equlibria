@@ -14,11 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
       function showModal(message) {
           document.getElementById('modal-message').innerText = message;
           document.getElementById('modal').style.display = 'block';
+          document.getElementById('modal-backdrop').style.display = 'block';
       }
 
       // Añade un evento al botón de cerrar del modal
       document.querySelector('.modal-close').addEventListener('click', function() {
           document.getElementById('modal').style.display = 'none';
+          document.getElementById('modal-backdrop').style.display = 'none';
       });
 
       // Coloca aquí la validación modificada, utilizando showModal para mostrar errores

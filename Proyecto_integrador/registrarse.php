@@ -119,14 +119,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
     <!-- Modal Structure -->
+    <div id="modal-backdrop" class="modal-backdrop" style="display:none;">
     <div id="modal" class="modal" style="display:none;">
         <div class="modal-content">
-            <h4>Atención</h4>
+            <h2>Atención ⚠️</h2>
+            <br>
             <p id="modal-message">Mensaje del modal</p>
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
         </div>
+    </div>
     </div>
     <script src="../Proyecto_integrador/js/registro.js"></script>
 </body>

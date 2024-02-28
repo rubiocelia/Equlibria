@@ -294,8 +294,8 @@ main {
   font-size: 38px;
 }
 
-.video {
-}
+/* .video {
+} */
 
 .container {
   display: flex;
@@ -774,7 +774,7 @@ main {
 }
 
 /* Esconde el menú por defecto en pantallas pequeñas y muestra el botón de hamburguesa */
-@media (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .hamburger {
     display: block;
     text-align: right;
@@ -844,7 +844,7 @@ main {
 }
 
 /* Estilos para pantallas de dispositivos móviles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 575px) {
   .hamburger {
     display: block;
     text-align: right;
