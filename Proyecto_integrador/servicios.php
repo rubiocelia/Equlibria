@@ -105,6 +105,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             <div class="talleresServicios" id="talleres">
                 <div class="tallerServicios">
                     <img src="img/autoestima.jpg" alt="autoestima">
+                    <div class="infotalleres">
                     <h3>Autoestima</h3>
                     <p>Aprenderás sobre autoestima y como integrarla en tu vida para lograr rebajar los niveles de
                         ansiedad
@@ -114,19 +115,24 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <span class="online-details">🛒 Precio: 60€</span>
                     <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                 </div>
+            </div>
 
                 <div class="tallerServicios" id="habilidadSocial">
+                
                     <img src="img/habilidadesSociales.jpg" alt="habilidadesSociales">
+                    <div class="infotalleres">
                     <h3>Mejora habilidades sociales</h3>
                     <p>En este taller de hablididades sociales trabajaremos todas las áreas en las que las habilidades
-                        sociales adquieren un papel importante.
+                         adquieren un papel importante.
                     </p>
                     <span class="online-details">🛒 Precio: 50€</span>
                     <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                 </div>
+                </div>
 
                 <div class="tallerServicios">
                     <img src="img/ansiedad.jpg" alt="ansiedad">
+                    <div class="infotalleres">
                     <h3>Gestión de la ansiedad</h3>
                     <p>Descubre en este taller todo lo que debes saber sobre tu ansiedad. Vamos a aprender a acapetar y
                         escuchar desde el amor nuestra ansiedad.
@@ -134,15 +140,18 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <span class="online-details">🛒 Precio: 30€</span>
                     <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
                 </div>
+                </div>
 
                 <div class="tallerServicios">
                     <img src="img/autoexigencia.jpg" alt="autoexigencia">
+                    <div class="infotalleres">
                     <h3>Autoexigencia y perfeccionismo</h3>
                     <p>En este taller trabajaremos en reconocer y acompañar nuestra autoexigenciaa y profundizaremos en
                         el origen.
                     </p>
                     <span class="online-details">🛒 Precio: 70€</span>
                     <button type="button" onclick="window.location.href='reservaEvento.php';">¡Resérvalo!</button>
+                </div>
                 </div>
             </div>
         </div>
