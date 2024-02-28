@@ -22,24 +22,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $contrasena_pacientes = $_POST["contrasena_pacientes"];
 
         // Consultamos la base de datos para verificar el inicio de sesión
-        $sql_verificar_pacientes = "SELECT * FROM pacientes WHERE usuario_pacientes = ? AND contrasena_pacientes = ?";
+        $sql_verificar_pacientes = "SELECT * FROM pacientes WHERE usuario_pacientes = ?";
         $stmt = $conexion->prepare($sql_verificar_pacientes);
-        $stmt->bind_param("ss", $usuario_pacientes, $contrasena_pacientes);
+        $stmt->bind_param("s", $usuario_pacientes);
         $stmt->execute();
         $resultado = $stmt->get_result();
         // Valimos que se hayan devuelto resultados para incluirlos en la sesion
         if ($resultado->num_rows > 0) {
-            // Inicio de sesión exitoso, almacenamos datos del paciente en la sesión
+            // Recuperamos los datos del paciente encontrado.
             $datosPaciente = $resultado->fetch_assoc();
-            $_SESSION["idPacienteLogin"] = $datosPaciente['id_pacientes'];
-
-            // Redirigimos a la página de perfil incluyendo el ID del usuario en la URL
-            if($urlDestino==''){
-                header("Location: perfil.php");
+            // Verificamos la contraseña
+            if (password_verify($contrasena_pacientes, $datosPaciente['contrasena_pacientes'])) {
+                //Contraseña valida - Iniciamos la sesión
+                // Inicio de sesión exitoso, almacenamos datos del paciente en la sesión
+                $_SESSION["idPacienteLogin"] = $datosPaciente['id_pacientes'];
+                // Redirigimos a la página de perfil incluyendo el ID del usuario en la URL
+                if($urlDestino==''){
+                    header("Location: perfil.php");
+                } else {
+                    header("Location: ".$urlDestino.".php");
+                }
+                exit();
             } else {
-                header("Location: ".$urlDestino.".php");
+                //Contraseña no valida
+                echo "<script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        validarFormularioInicio();
+                    });
+                </script>";
             }
-            exit();
         } else {
             echo "<script>
                 document.addEventListener('DOMContentLoaded', function() {

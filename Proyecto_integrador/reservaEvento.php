@@ -27,6 +27,7 @@ function obtenerDatosPaciente($idPaciente){
 $listaEventos= [];
 $listaEventos = obtenerEventos();
 $idPacienteLogin = null;
+$reservaFinalizada=false;
 
 // Validamos que la sesión este iniciada para seguir con la reserva 
 if (isset($_SESSION['idPacienteLogin'])){
@@ -52,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Ejecutamos la sentencia preparada
         $insert->execute();
         $insert->close();
+        $reservaFinalizada=true;
     }
 }
 
@@ -63,12 +65,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/reservaEventos.css">
+        <link rel="icon" href="img/logo.png" type="image/x-icon">
         <script src="./js/validacion_reservaEvento.js"></script>
         <title>Reservar - Equilibria</title>
     </head>
     <body class="reservaEvento">
         <div class="subrayado">
-            <h3>Aprende con nosotr@s</h3>
+            <h3>¡Apúntate!</h3>
         </div>
         <div class="contenedorForm">
             <form class="formReserva" method="post" action="reservaEvento.php">
@@ -101,6 +104,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         </select>
                     </div>
                 </div>
+                <!-- Msj - Reserva finalizada exitosamente -->
+                <?php if ($reservaFinalizada): ?>
+                    <p name="submitFinalizado" id="submitFinalizado"> Reserva realizada con éxito </p>
+                <?php endif; ?>
+                
                 <button class="botonform" type="submit" name="Enviar">Enviar formulario</button>
                 <button class="botonVolver" type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver inicio </button>
 

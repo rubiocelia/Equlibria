@@ -195,6 +195,7 @@ footer {
   margin-top: 20px;
   border-top: 1px solid var(--verde-oscuro); /* Línea divisoria */
   padding-top: 10px;
+  font-family: "Chivo", sans-serif;
 }
 
 .footer-branding p {
@@ -205,6 +206,7 @@ footer {
   font-family: "Righteous";
   font-size: 20px;
 }
+
 
 /* Estilo base para ambos botones */
 .iniciarSesion,
@@ -463,3 +465,20 @@ a {
   cursor: pointer;
   margin-top: 7.5px;
 }
+
+/* menu hamburguesa */
+
+
+
+
+/* footer responsive */
+@media screen and (max-width: 992px) {
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+  }
+}
+
+
+

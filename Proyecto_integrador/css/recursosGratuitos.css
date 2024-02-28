@@ -204,10 +204,10 @@ footer {
 
 /* recursos gratuitos */
 
-/* .podcast {
-  width: 80vw;
+.podcast {
+  width: 90vw;
   margin: auto;
-} */
+}
 
 .tituloPodcast {
   margin-top: 15px;
@@ -256,7 +256,7 @@ footer {
   box-sizing: border-box;
   text-align: left;
   font-family: "Arial", sans-serif;
-  margin: 10px 25px 10px 10px;
+  margin: 10px 25px 10px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -450,4 +450,52 @@ footer {
 .video p {
   font-size: 16px;
   padding: 0 15px;
+}
+
+/* responsive */
+
+/* tablet */
+@media screen and (max-width: 992px) {
+  .libro_card {
+    margin: 0 auto;
+    flex-direction: row;
+    width: 80%;
+    height: 75vh;
+  }
+
+  .libro-img {
+    margin: auto;
+    width: 40%;
+    height: 100%;
+    border-radius: 10px 10px 0 0; /* Redondear las esquinas superiores */
+  }
+
+  .libro-info {
+    font-size: 1em;
+    margin: 25px 15px;
+    width: auto;
+  }
+
+  .videos,
+  .tarjPodcasts {
+    flex-direction: column;
+  }
+
+  .video,
+  .tarjetaPodcast {
+    width: 90%; /* Ajustar el ancho al 90% del contenedor para centrarlo */
+  }
+
+  .video-gallery,
+  .tarjPodcasts {
+    gap: 40px; /* Reducir el espacio entre elementos */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+  }
 }

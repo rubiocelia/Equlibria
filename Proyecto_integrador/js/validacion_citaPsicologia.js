@@ -52,6 +52,20 @@ document.addEventListener("DOMContentLoaded", function() {
       fechaCita.focus();
       event.preventDefault();
       return;
+    }else {
+      // Obtenemos la fecha actual
+      var fechaActual = new Date();
+      fechaActual.setHours(0, 0, 0, 0);
+      // Pasamos la fecha_cita a formato fecha
+      var fecha_Cita = new Date(fechaCita.value);
+      fecha_Cita.setHours(0, 0, 0, 0);
+      // Validacion Fecha pasada
+      if (fecha_Cita < fechaActual) {
+        alert("Por favor, seleccione una fecha igual o superior a hoy.");
+        horaCita.focus();
+        event.preventDefault();
+        return;
+      }
     }
     // Validación de la hora
     if (!horaCita.value.trim()) {

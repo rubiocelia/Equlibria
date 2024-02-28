@@ -8,6 +8,7 @@ body {
   font-family: "Chivo", sans-serif;
   margin: 0;
 }
+
 /* Estilos para la página de inicio específicamente */
 .inicio {
   display: grid;
@@ -22,7 +23,8 @@ main {
   display: flex;
   height: 100%;
 }
-/* /pagino de inicio/ */
+
+/* /Página de inicio/ */
 .pginicio {
   display: flex;
   flex-direction: column;
@@ -35,26 +37,26 @@ main {
   text-align: center;
 }
 
-h1 {
+.pginicio h1 {
   font-family: "Righteous";
-  font-size: 80px;
+  font-size: 5em; /* Mantenemos el tamaño */
   color: var(--verde-oscuro);
 }
 
-p {
+.bienvenido p {
   /* font-size: 16px; */
   font-family: "Bellefair";
 }
 
 .boton_inicio {
-  margin-top: 95px;
+  margin-top: 95px; /* Mantenemos el tamaño */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 397px;
-  height: 82px;
+  width: 397px; /* Mantenemos el tamaño */
+  height: 82px; /* Mantenemos el tamaño */
   font-family: "Chivo", sans-serif;
-  font-size: 32px;
+  font-size: 32px; /* Mantenemos el tamaño */
   border-radius: 15px;
   border: 2px solid var(--verde-oscuro);
   background-color: var(--verde-claro);
@@ -81,13 +83,13 @@ p {
 
 .titBienvenido {
   color: var(--verde-oscuro);
-  font-size: 48px;
+  font-size: 48px; /* Mantenemos el tamaño */
   font-family: "Bellefair";
   margin-bottom: 2%;
 }
 
 .bienvenido p {
-  font-size: 40px;
+  font-size: 40px; /* Mantenemos el tamaño */
   text-align: center;
   margin: 0 20%;
 }
@@ -104,7 +106,7 @@ p {
 .subrayado {
   background-color: var(--verde);
   height: 10px;
-  font-size: 24px;
+  font-size: 24px; /* Mantenemos el tamaño */
   width: 300px;
   text-align: center;
   margin: 50px auto;
@@ -119,8 +121,8 @@ p {
   flex-direction: column;
   align-items: center;
   background-color: var(--contraste-claro);
-  width: 400px;
-  height: 450px;
+  width: 400px; /* Mantenemos el tamaño */
+  height: 450px; /* Mantenemos el tamaño */
   border-radius: 10px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin: 3% 5%;
@@ -128,12 +130,12 @@ p {
 
 .taller img {
   border-radius: 10px 10px 0 0;
-  width: 400px;
+  width: 400px; /* Mantenemos el tamaño */
   height: auto;
 }
 
 .taller h3 {
-  font-size: 24px;
+  font-size: 24px; /* Mantenemos el tamaño */
   font-family: "Bellefair";
   text-align: center;
   padding: 25px;
@@ -146,19 +148,18 @@ p {
 }
 
 .linkIndex {
-  display: flex; /* Establece el modelo de caja flexible */
-  align-items: center; /* Centra el contenido verticalmente */
-  justify-content: center; /* Centra el contenido horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 15px;
-  width: 90px;
+  width: 50%;
   height: 40px;
   border: 2px solid var(--verde-oscuro);
   background-color: var(--verde-claro);
   color: #000000;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  margin-top: auto;
-  margin-bottom: 25px;
+  margin-top: 15px;
 }
 
 .linkIndex:hover {
@@ -177,20 +178,20 @@ p {
 .profesionales h2 {
   color: var(--verde-oscuro);
   font-family: "Bellefair";
-  font-size: 40px;
+  font-size: 40px; /* Mantenemos el tamaño */
   margin-bottom: 20px;
 }
 
 .profesionales img {
-  width: 200px;
+  width: 200px; /* Mantenemos el tamaño */
 }
 
 .profesionales button {
   border-radius: 10px;
   border: 2px solid var(--verde-oscuro);
   background-color: var(--verde-claro);
-  width: 250px;
-  height: 35px;
+  width: 250px; /* Mantenemos el tamaño */
+  height: 35px; /* Mantenemos el tamaño */
   font-size: 16px;
 }
 
@@ -209,57 +210,45 @@ p {
 
 .cursos {
   background-color: var(--verde-claro);
-  border-radius: 15px;
-  max-width: 500px;
-  width: calc(50% - 20px);
-  margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 3vh; /* aproximadamente equivalente a 15px para un ancho de 200px */
+  width: auto;
+  max-width: calc(50% - 2vw); /* 20px en una pantalla de 1000px de ancho */
+  margin: 2vw auto; /* 20px en una pantalla de 1000px de ancho */
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* equivalente a 0 4px 8px rgba(0, 0, 0, 0.2) en una pantalla de 1000px de ancho */
 }
 
 .cursos img {
   display: block;
-  height: 180px;
+  height: 10vw;
   width: auto;
-  margin: 10px auto;
+  max-width: 100%;
+  margin: 1vw auto;
 }
 
 .card-title h3 {
   text-align: center;
-  padding: 10px 0;
+  padding: 1vw 0;
 }
 
 .card-text p {
-  padding: 35px;
+  padding: 2vw;
   margin: 0;
-  font-size: 16px;
+  font-size: 1.3vw;
   font-family: "Chivo", sans-serif;
 }
 
 .card-link {
-  border-radius: 15px;
+  border-radius: 3vh;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 1.5vw;
 }
 
 .card-link p {
-  margin: 0;
-  padding: 0 15px;
+  margin: auto;
+  padding: 0 1vw;
   font-family: "Chivo", sans-serif;
-}
-
-.card-link button {
-  width: 20%;
-  padding: 10px;
-  border: none;
-  background-color: var(--contraste);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.card-link button:hover {
-  background-color: var(--contraste-claro);
 }
