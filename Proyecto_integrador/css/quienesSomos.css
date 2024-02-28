@@ -911,16 +911,19 @@ main{
     background: white;
     width: 100%;
     text-align: center;
-}
+  }
 
-.header .menu.open {
+  .header .menu.open {
     display: block;
     margin-top: 10px;
-}
+    background-color: white;
+    height: 250px;
+  }
   .menu.active {
     display: inline-block; /* Cambiar a flex para mostrar el menú */
     padding: 10;
     width: 100%;
+    background-color: whitesmoke;
   }
   .dropdown-content {
     display: none;
@@ -955,7 +958,7 @@ main{
     font-size: 28px;
     width: 200px;
     text-align: center;
-    margin: 50px auto;
+    margin: 100px auto;
     font-family: "Bellefair";
     margin-top: -230px;
     margin-left: 135px;
@@ -969,8 +972,10 @@ main{
     font-size: 28px;
     width: 400px;
     text-align: center;
-    margin: 50px auto;
+    margin: 200px auto;
     font-family: "Bellefair";
+    margin-top: 50px;
+    margin-left: 30px;
   }
   .subrayadoAsistentesM h3 {
     transform: translate(0px, -25px);
@@ -979,10 +984,12 @@ main{
     background-color: var(--contraste-claro);
     height: 10px;
     font-size: 28px;
-    width: 400px;
+    width: 350px;
     text-align: center;
     margin: 50px auto;
     font-family: "Bellefair";
+    margin-top: -210px;
+    margin-left: 65px;
   }
   .subrayadoAsistentesN h3 {
     transform: translate(0px, -25px);
@@ -995,8 +1002,29 @@ main{
     border-radius: 20px;
     height: 100%;
     margin-left: -115px;
-    margin-top: -250px;
+    margin-top: -400px;
     padding: 200px 0px;
+  }
+  .subrayadoFormulario{
+    background-color: var(--contraste-claro);
+    height: 15px;
+    font-size: 28px;
+    width: 425px;
+    text-align: center;
+    margin: 30px auto;
+    font-family: "Righteous";
+    margin-top: -10px;
+  }
+
+  .subrayadoFormulario h3 {
+    transform: translate(0px, -50px);
+    font-size: 60px;
+  }
+  .btn-big{
+    margin-top: -80px;
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
   }
   
   .testimonial-container .testimonial-wrapper {
@@ -1019,7 +1047,7 @@ main{
     background: none;
     border-radius: 2rem;
     box-shadow: 0 .5rem .5rem var(--verde-oscuro);
-    padding: 3rem 5rem;
+    padding: 1rem 3rem;
     border-top: .8rem solid var(--verde-oscuro);
     border-bottom: .8rem solid var(--verde-oscuro);
   }
