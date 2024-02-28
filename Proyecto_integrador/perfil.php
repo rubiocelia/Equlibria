@@ -130,19 +130,19 @@ mysqli_close($conexion);
                     <div class="form-group">
                         <label for="nombre_pacientes">Nombre</label>
                         <input type="text" id="nombre_pacientes" name="nombre_pacientes" placeholder="Nombre"
-                            value="<?php echo htmlspecialchars($paciente['nombre_pacientes']); ?>">
+                            value="<?php echo htmlspecialchars($paciente['nombre_pacientes']); ?>" required>
                     </div>
 
                     <div class="form-group">
                         <label for="apellidos_pacientes">Apellidos</label>
                         <input type="text" id="apellidos_pacientes" name="apellidos_pacientes" placeholder="Apellidos"
-                            value="<?php echo htmlspecialchars($paciente['apellidos_pacientes']); ?>">
+                            value="<?php echo htmlspecialchars($paciente['apellidos_pacientes']); ?>" required>
                     </div>
 
                     <div class="form-group">
                         <label for="mail_pacientes">Email</label>
                         <input type="email" id="mail_pacientes" name="mail_pacientes" placeholder="Correo electrónico"
-                            value="<?php echo htmlspecialchars($paciente['mail_pacientes']); ?>">
+                            value="<?php echo htmlspecialchars($paciente['mail_pacientes']); ?>" required>
                     </div>
 
                     <div class="form-group-bajo">
@@ -163,20 +163,7 @@ mysqli_close($conexion);
                             value="<?php echo htmlspecialchars($paciente['genero']); ?>">
                     </div>
 
-                    <div class="form-group-full">
-                        <div class="form-group-half">
-                            <label for="usario_pacientes">Usuario</label>
-                            <input type="text" id="usario_pacientes" name="usario_pacientes" placeholder="Usuario"
-                                value="<?php echo htmlspecialchars($paciente['usuario_pacientes']); ?>">
-                        </div>
-
-                        <div class="form-group-half">
-                            <label for="contrasena_pacientes">Contraseña</label>
-                            <input type="text" id="contrasena_pacientes" name="contrasena_pacientes"
-                                placeholder="Contraseña"
-                                value="<?php echo htmlspecialchars($paciente['contrasena_pacientes']); ?>">
-                        </div>
-                    </div>
+                    
                     <button type="submit">Guardar cambios</button>
                 </form>
 

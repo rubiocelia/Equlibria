@@ -17,16 +17,14 @@ if(isset($_SESSION['idPacienteLogin']) && isset($_POST['nombre_pacientes'])) {
     $telefono = $_POST['telefono_paciente'];
     $fechaNacimiento = $_POST['fechaNacimiento'];
     $genero = $_POST['genero'];
-    $usuario = $_POST['usario_pacientes'];
-    $contrasena = $_POST['contrasena_pacientes']; // Contraseña que el usuario ha ingresado
 
     // Preparar la consulta SQL para actualizar los datos del paciente
-    $sql = "UPDATE pacientes SET nombre_pacientes=?, apellidos_pacientes=?, mail_pacientes=?, telefono_paciente=?, fecha_nacimiento=?, genero=?, usuario_pacientes=?, contrasena_pacientes=? WHERE id_pacientes=?";
+    $sql = "UPDATE pacientes SET nombre_pacientes=?, apellidos_pacientes=?, mail_pacientes=?, telefono_paciente=?, fecha_nacimiento=?, genero=? WHERE id_pacientes=?";
 
     $stmt = $conexion->prepare($sql);
     if($stmt) {
         // Se pasa la contraseña encriptada en lugar de la contraseña en texto plano
-        $stmt->bind_param("ssssssssi", $nombre, $apellidos, $email, $telefono, $fechaNacimiento, $genero, $usuario, $contrasena, $idPaciente);
+        $stmt->bind_param("ssssssi", $nombre, $apellidos, $email, $telefono, $fechaNacimiento, $genero, $idPaciente);
         
         // Ejecutar la consulta
         if($stmt->execute()) {

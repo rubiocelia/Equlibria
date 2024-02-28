@@ -37,13 +37,13 @@ main {
   text-align: center;
 }
 
-h1 {
+.pginicio h1 {
   font-family: "Righteous";
   font-size: 5em; /* Mantenemos el tamaño */
   color: var(--verde-oscuro);
 }
 
-p {
+.bienvenido p {
   /* font-size: 16px; */
   font-family: "Bellefair";
 }
