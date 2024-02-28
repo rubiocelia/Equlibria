@@ -433,19 +433,22 @@ main {
 }
 
 .boton-cv {
-  text-align: center;
+  display: flex; /* Establece el contenedor como un flexbox */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
   height: 40px;
   width: 188px;
-  border-radius: 10px;
+  border-radius: 15px;
   cursor: pointer;
   border: var(--verde-oscuro) solid 2px;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  color: black;
 }
 
 .boton-cv:hover {
-  background-color: var(--verde-oscuro);
-  color: white;
-  border: var(--verde-claro) solid;
+  background-color: var(--verde);
+  border: 1px var(--verde-oscuro) solid;
 }
 
 /* Agrega tus estilos para móvil, tablet, etc. */

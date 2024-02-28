@@ -139,7 +139,8 @@ if (isset($_SESSION['idPacienteLogin'])){
                                     equilibrio hacia
                                     una vida más tranquila y plena.</p>
                                 <br><br>
-                                <button class="boton-cv">Ver CV</button>
+                                <a href="cv/cv_anaGomez.pdf" class="boton-cv" target="_blank">Ver CV</a>
+
                             </div>
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof5.png" alt="mara">
@@ -155,7 +156,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                     como una profesional confiable en el campo de la psicología de parejas en
                                     Equilibria.</p>
                                 <br><br>
-                                <button class="boton-cv">Ver CV</button>
+                                <a href="cv/cv_mara.pdf" class="boton-cv" target="_blank">Ver CV</a>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -192,7 +193,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                     la calidad de vida de quienes confían en Equilibria para el cuidado de sus seres
                                     queridos.</p>
                                 <br><br>
-                                <button class="boton-cv">Ver CV</button>
+                                <a href="cv/cv_martin_equilibria.pdf" class="boton-cv" target="_blank">Ver CV</a>
                             </div>
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof2.png" alt="sofia">
@@ -208,7 +209,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                     de Equilibria, comprometida con mejorar la calidad de vida de quienes confían en sus
                                     servicios.</p>
                                 <br><br>
-                                <button class="boton-cv">Ver CV</button>
+                                <a href="cv/cv_sofia_equilibria.pdf" class="boton-cv" target="_blank">Ver CV</a>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -242,7 +243,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                     incansablemente para asegurar que cada niño experimente un crecimiento saludable y
                                     positivo.</p>
                                 <br><br>
-                                <button class="boton-cv">Ver CV</button>
+                                <a href="cv/cv_beatriz.pdf" class="boton-cv" target="_blank">Ver CV</a>
                             </div>
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof3.png" alt="fernando">
@@ -258,7 +259,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                     Fernando trabaja incansablemente para fomentar un crecimiento positivo y saludable
                                     en cada niño.</p>
                                 <br><br>
-                                <button class="boton-cv">Ver CV</button>
+                                <a href="cv/cv_fernando.pdf" class="boton-cv" target="_blank">Ver CV</a>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
