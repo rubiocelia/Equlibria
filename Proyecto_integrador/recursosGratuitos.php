@@ -24,6 +24,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/recursosGratuitos.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Recursos gratuitos</title>
 </head>
 

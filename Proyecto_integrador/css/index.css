@@ -99,7 +99,6 @@ main {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
   margin-bottom: 5%;
 }
 
@@ -114,7 +113,7 @@ main {
 
 .subrayado h3 {
   transform: translate(0px, -20px);
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .taller {
@@ -126,7 +125,7 @@ main {
   height: 450px; /* Mantenemos el tamaño */
   border-radius: 10px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin: 3% 5%;
+  margin: 3% 4%;
 }
 
 .taller img {
@@ -153,10 +152,10 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  width: 50%;
+  width: 30%;
   height: 40px;
   border: 2px solid var(--verde-oscuro);
-  background-color: var(--verde-claro);
+  background-color: var(--contraste-claro);
   color: #000000;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -168,36 +167,58 @@ main {
   color: #000000;
 }
 
+.linkIndex2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 30%;
+  height: 40px;
+  border: 2px solid var(--verde-oscuro);
+  background-color: var(--verde-claro);
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 15px;
+}
+
+.linkIndex2:hover {
+  background-color: var(--verde-oscuro);
+  color: #000000;
+}
+
 .profesionales {
   text-align: center;
   background-image: url("../img/fondoProfresionalesInicio.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20px;
+  padding: 50px;
 }
 
 .profesionales h2 {
   color: var(--verde-oscuro);
   font-family: "Bellefair";
-  font-size: 40px; /* Mantenemos el tamaño */
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
 .profesionales img {
-  width: 200px; /* Mantenemos el tamaño */
+  width: 200px;
 }
 
 .profesionales button {
   border-radius: 10px;
   border: 2px solid var(--verde-oscuro);
   background-color: var(--verde-claro);
-  width: 250px; /* Mantenemos el tamaño */
-  height: 35px; /* Mantenemos el tamaño */
+  width: 15%;
+  height: 15%;
+  transition: background-color 0.3s, color 0.3s;
   font-size: 16px;
+  margin-top: 20px;
 }
 
 .profesionales button:hover {
-  background-color: var(--verde);
+  background-color: var(--verde-oscuro);
   color: black;
 }
 
@@ -205,17 +226,16 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 20px;
-  margin: 250px;
+  margin: 0 15%;
 }
 
 .cursos {
   background-color: var(--verde-claro);
-  border-radius: 3vh; /* aproximadamente equivalente a 15px para un ancho de 200px */
+  border-radius: 3vh;
   width: auto;
-  max-width: calc(50% - 2vw); /* 20px en una pantalla de 1000px de ancho */
-  margin: 2vw auto; /* 20px en una pantalla de 1000px de ancho */
-  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2); /* equivalente a 0 4px 8px rgba(0, 0, 0, 0.2) en una pantalla de 1000px de ancho */
+  max-width: calc(50% - 2vw);
+  margin: 2vw auto;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
 }
 
 .cursos img {
