@@ -26,6 +26,21 @@
   text-align: center;
 }
 
+.subrayadoFormulario {
+  background-color: var(--contraste-claro);
+  height: 15px;
+  font-size: 30px;
+  width: 425px;
+  text-align: center;
+  margin: 30px auto;
+  font-family: "Righteous";
+  margin-top: -10px;
+}
+
+.subrayadoFormulario h3 {
+  transform: translate(0px, -50px);
+  font-size: 60px;
+}
 .editarPerfil input {
   font-family: "Chivo", sans-serif;
   width: 100%;
