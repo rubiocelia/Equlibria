@@ -23,6 +23,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/servicios.css">
     <link rel="stylesheet" href="css/style.css">
+    
 
     <title>Servicios</title>
 </head>
@@ -32,6 +33,7 @@ if (isset($_SESSION['idPacienteLogin'])){
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
+        <button class="hamburger" aria-label="Abrir menú">☰</button>
         <ul class="menu">
                 <li class="dropdown">
                     <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
@@ -77,6 +79,9 @@ if (isset($_SESSION['idPacienteLogin'])){
                             <a href="perfil.php#calendario">Calendario</a>
                             <a href="cerrarSesion.php">Cerrar sesión</a>
                         </div>
+                    </li>
+                    <li class="botonResponsive">
+                    <a href="cerrarSesion.php">Cerrar sesión</a>
                     </li>
                 <?php endif; ?>
                 <?php if (!$sesionActiva): ?>
@@ -300,7 +305,7 @@ if (isset($_SESSION['idPacienteLogin'])){
         <!--------ASISTENCIA A DOMICILIO------->
 
         <div class="subrayado2">
-            <h3>Asistencia a domicilio para personas mayores</h3>
+            <h3>Asistencia para personas mayores</h3>
         </div>
 
         <div class="secionAsistentes" id="asistencia">
@@ -321,7 +326,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     adultos mayores.
                     Con el compromiso de proporcionar un servicio de atención integral, ofrecemos asistencia a domicilio
                     especializada en salud mental
-                    para ayudar a mejorar la calidad de vida de quienes más lo necesitan.
+                    para ayudar a mejorar la calidad de vida de quienes más lo necesitan. 
                     Proporcionamos recursos y capacitación para que las familias puedan apoyar de manera efectiva a sus
                     seres queridos.
                 </p>
@@ -413,4 +418,5 @@ if (isset($_SESSION['idPacienteLogin'])){
             <p>&copy; 2024 Equilibria. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="./js/main.js"></script>
 </body>

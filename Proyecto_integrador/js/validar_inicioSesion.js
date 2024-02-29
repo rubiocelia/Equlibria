@@ -20,44 +20,64 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         window.location.href = "perfil.html"; // Redirige si el inicio de sesión es exitoso
       } else {
         // Muestra el mensaje de error como los otros mensajes
-        document.getElementById("loginError").style.display = "block";
-        document.getElementById("loginError").innerText = data.message; // Asegúrate de que este elemento exista en tu HTML
+        showModal("Nombre de usuario o contraseña incorrectos."); 
       }
     })
-    .catch((error) => console.error("Error:", error));
+    .catch((error) => console.error(showModal("Nombre de usuario o contraseña incorrectos."))); 
 });
 
 // Asegúrate de que la función validarFormularioInicio está correctamente implementada como se muestra arriba.
 
 function validarFormularioInicio() {
-  var usuarioInicio = document.getElementById("usuario_pacientes");
-  var contrasenaInicio = document.getElementById("contrasena_pacientes");
-  var errorUsuario = document.getElementById("errorUsuario");
-  var errorContrasena = document.getElementById("errorContrasena");
+  var usuarioCrear = document.getElementById("usuario_pacientes");
+  var contrasenaNueva = document.getElementById("contrasena_pacientes");
 
-  // Reinicia los estados de error
-  errorUsuario.style.display = "none";
-  usuarioInicio.classList.remove("input-error");
-  errorContrasena.style.display = "none";
-  contrasenaInicio.classList.remove("input-error");
+  // Función para mostrar el modal con mensajes
+  function showModal(message) {
+    document.getElementById('modal-message').innerText = message;
+    document.getElementById('modal').style.display = 'block';
+    document.getElementById('modal-backdrop').style.display = 'block';
+  }
+
+  // Evento para cerrar el modal
+  document.querySelector('.modal-close').addEventListener('click', function() {
+      document.getElementById('modal').style.display = 'none';
+      document.getElementById('modal-backdrop').style.display = 'none';
+  });
+
+  if (!usuarioCrear.value.trim()) {
+    showModal("Rellene el campo de usuario."); // Llamada correcta a showModal
+    usuarioCrear.focus();
+    event.preventDefault();
+    return false;
+  }
+
+  if (!contrasenaNueva.value.trim()) {
+    showModal("Rellene el campo de contraseña."); // Llamada correcta a showModal
+    contrasenaNueva.focus();
+    event.preventDefault();
+    return false;
+  }
+
+  // Validación del nombre de usuario y contraseña
+  var patronUsuario = /^[a-zA-Z0-9_]+$/; // Letras, números y guiones bajos
+  var patronContrasena = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+    if (!patronUsuario.test(usuarioCrear.value)) {
+      showModal("Ingrese un nombre de usuario válido (solo letras, números y guiones bajos).");
+      usuarioCrear.focus();
+      event.preventDefault();
+      return false;
+      } 
+
+  if (!patronContrasena.test(contrasenaNueva.value)) {
+    showModal("La contraseña debe tener al menos 8 caracteres, incluyendo letras y números.");
+    contrasenaNueva.focus();
+    event.preventDefault();
+    return false;
+    }
 
   var valid = true; // Suponemos que el formulario es válido al inicio
-
-  // Verifica si el campo de usuario está vacío
-  if (usuarioInicio.value.trim() === "") {
-    errorUsuario.textContent = "Rellene el campo de usuario.";
-    errorUsuario.style.display = "block";
-    usuarioInicio.classList.add("input-error");
-    valid = false;
-  }
-
-  // Verifica si el campo de contraseña está vacío
-  if (contrasenaInicio.value.trim() === "") {
-    errorContrasena.textContent = "Rellene el campo de contraseña.";
-    errorContrasena.style.display = "block";
-    contrasenaInicio.classList.add("input-error");
-    valid = false;
-  }
 
   // Si alguno de los campos está vacío, evita que el formulario se envíe
   return valid ? true : false; // Retorna true para permitir el envío si todo es válido

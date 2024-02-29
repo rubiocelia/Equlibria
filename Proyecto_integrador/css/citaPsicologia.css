@@ -77,8 +77,8 @@
 .formReserva input[type="email"],
 .formReserva input[type="date"],
 .formReserva select {
-    padding: 10px; /* Espacio dentro de los inputs y selects */
-    margin-top: 5px; /* Espacio superior para los inputs y selects */
+    padding: 10px; 
+    margin-top: 5px; 
     border: 1px solid #617C6F; 
     border-radius: 20px; 
 }
