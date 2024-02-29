@@ -305,7 +305,7 @@ if (isset($_SESSION['idPacienteLogin'])){
         <!--------ASISTENCIA A DOMICILIO------->
 
         <div class="subrayado2">
-            <h3>Asistencia a domicilio para personas mayores</h3>
+            <h3>Asistencia para personas mayores</h3>
         </div>
 
         <div class="secionAsistentes" id="asistencia">

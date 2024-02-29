@@ -106,7 +106,7 @@ body {
   background-color: var(--verde);
   height: 10px;
   font-size: 24px;
-  width: 700px;
+  width: 500px;
   text-align: center;
   margin: 50px auto;
 }
@@ -318,7 +318,7 @@ body {
 }
 
 .tarjetaDescripcion {
-  flex: 1; /* Distribución equitativa del espacio */
+  flex: 1; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -343,9 +343,9 @@ body {
   padding: 10px;
 }
 
-/* .course-details span {
+.course-details span {
   margin-right: 10px;
-} */
+}
 
 .card-titulo h3 {
   margin: 30px 0 50px 0;
@@ -383,8 +383,8 @@ body {
 }
 .infotalleres {
   display: flex;
-  flex-direction: column; /* Organiza los hijos en una columna */
-  justify-content: center; /* Centra los hijos verticalmente si hay espacio adicional */
+  flex-direction: column; 
+  justify-content: center; 
   
 }
 .infotalleres .online-details{
@@ -395,7 +395,7 @@ body {
 .tallerServicios span,
 .tallerServicios .precio,
 .tallerServicios button {
-  margin-bottom: 10px; /* Añade un poco de espacio debajo de cada elemento */
+  margin-bottom: 10px; 
 }
 
 
@@ -440,8 +440,8 @@ body {
   margin-top: 20px; 
 }
 .cursos {
-  flex-direction: column; /* Cambia la disposición a columna */
-  align-items: center; /* Centra los elementos */
+  flex-direction: column; 
+  align-items: center; 
   text-align: center;
 }
 .cursos .imagenCurso img,
@@ -453,7 +453,7 @@ body {
 
 .tarjetaDescripcion,
 .tarjetaDescripcion2 {
-  width: 90%; /* Ancho del texto ajustado */
+  width: 90%; 
   margin: 0 auto;
   
 }
@@ -488,38 +488,111 @@ body {
 
 /* para movil */
 @media only screen and (max-width: 575px) {
-
-  
+  .pgservicios{
+    background-image: none;
+  }
   .pgservicios h1 {
-    font-size: 2.5em;
+    font-size: 2.5em; 
   }
   .pgservicios h2 {
-    font-size: 2em;
+    font-size: 1.8em; 
   }
   .boton_servicios {
-    width: 200px;
+    width: 200px; 
     height: 50px;
     font-size: 24px;
-    margin-top: 60px;
+    margin-top: 50px;
+  }
+  .talleresServicios{
+    flex-direction: column;
+    align-items: center;
   }
   .tallerServicios {
-    width: 100%;
-    margin: 3% 0;
+    width: 90%; 
+    margin-bottom: 20px; 
   }
-  .tallerServicios img {
-    width: 100%;
-    height: auto;
+  .cursos .imagenCurso img,
+  .cursos .imagenCurso2 img {
+    width: 60%; 
   }
   .tarjetaDescripcion,
   .tarjetaDescripcion2 {
-    margin-left: 0;
-    margin-right: 0;
+    width: 100%;
+    margin: 0 0; 
+    
   }
-  .reserve-button {
-    margin-top: 20px;
+  .course-details {
+    flex-direction: column; 
+    margin: 10px 0; 
   }
+  .course-details span {
+    margin: 5px 0;
+  }
+  .tarjeta-link {
+    margin: 10px 0; 
+  }
+  .tarjeta-link p {
+    font-size: 16px; 
+  }
+  .tarjeta-link button {
+    width: auto; 
+    padding: 10px 20px; 
+    margin: 10px auto;
+    text-align: center;
+  }
+ 
   .contenidoTexto {
-    max-width: 100%;
-    margin-top: 20px;
+    text-align: center;
+    padding: 0 5%;
+    margin: 20px 0; 
+  
   }
+  .secionAsistentes, .contenidoAsistentes, .perfilesAsistentes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+ 
+  .secionAsistentes {
+    flex-direction: column; 
+    padding: 5%; 
+  }
+
+  
+  .contenidoAsistentes {
+    width: 100%;
+    align-items: center; 
+  }
+
+
+  .perfilesAsistentes {
+    margin: 10px auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+ 
+  .perfil-image {
+    width: 120px; 
+    height: 120px; 
+    margin-bottom: 10px; 
+  }
+
+  
+  .perfil-nombre, .perfil-titulo {
+    text-align: center; 
+    margin-bottom: 5px; 
+  }
+
+
+  .reserve-button {
+    width: auto; 
+    padding: 10px 20px;
+    font-size: 16px; 
+    margin: 10px auto; 
+  }
+
 }
