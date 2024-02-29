@@ -64,8 +64,7 @@ mysqli_close($conexion);
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
-            
-            
+            <button class="hamburger" aria-label="Abrir menú">☰</button>            
             <ul class="menu">
                 <li class="dropdown">
                     <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
@@ -111,6 +110,9 @@ mysqli_close($conexion);
                         <a href="perfil.php#calendario">Calendario</a>
                         <a href="cerrarSesion.php">Cerrar sesión</a>
                     </div>
+                </li>
+                <li class="botonResponsive">
+                    <a href="cerrarSesion.php">Cerrar sesión</a>
                 </li>
                 <?php endif; ?>
                 <?php if (!$sesionActiva): ?>
@@ -226,6 +228,7 @@ mysqli_close($conexion);
     <script src='./js/validar_inicioSesion.js'></script>
     <script src='./js/validar_contacto.js'></script>
     <script src='./js/faq.js'></script>
+    <script src="./js/main.js"></script>
 
 </body>
 
