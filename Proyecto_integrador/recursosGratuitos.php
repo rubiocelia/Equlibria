@@ -33,57 +33,61 @@ if (isset($_SESSION['idPacienteLogin'])){
         <a href="index.php"><img class="logo" src="img/logo2.png" alt="" class="logo"></a>
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
-        <ul class="menu">
-                <li class="dropdown">
-                    <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
-                    <div class="dropdown-content">
-                        <a href="QuienesSomos.php#quienesSomos">Nosotros</a>
-                        <a href="QuienesSomos.php#psicologos">Profesionales</a>
-                        <a href="QuienesSomos.php#preguntasRespuestas">Ayuda</a>
-                        <a href="QuienesSomos.php#contacto">Contáctanos</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="recursosGratuitos.php" class="dropbtn">Recursos gratuitos</a>
-                    <div class="dropdown-content">
-                        <a href="recursosGratuitos.php#podcast">Podcast</a>
-                        <a href="recursosGratuitos.php#librosAutoayuda">Libros autoayuda</a>
-                        <a href="recursosGratuitos.php#videos">Videos mindfulness</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="servicios.php" class="dropbtn">Servicios</a>
-                    <div class="dropdown-content">
-                        <a href="servicios.php#citaPsicologica">Terapia psicológica</a>
-                        <a href="servicios.php#talleres">Talleres</a>
-                        <a href="servicios.php#cursos">Cursos</a>
-                        <a href="servicios.php#asistencia">Asistencia a domicilio</a>
-                    </div>
-                </li>
-
-                <li class="dropdown">
-                    <a href="retiros.php" class="dropbtn">Retiros</a>
-                    <div class="dropdown-content">
-                        <a href="retiros.php#retiros">Retiros</a>
-                        <a href="retiros.php#preguntasRespuestas">Preguntas retiros</a>
-                    </div>
-                </li>
-                <?php if ($sesionActiva): ?>
+            <button class="hamburger" aria-label="Abrir menú">☰</button>
+            <ul class="menu">
                     <li class="dropdown">
-                        <a href="perfil.php" class="dropbtn">Perfil</a>
+                        <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
                         <div class="dropdown-content">
-                            <a href="perfil.php#perfil">Mi perfil</a>
-                            <a href="perfil.php#calendario">Calendario</a>
-                            <a href="cerrarSesion.php">Cerrar sesión</a>
+                            <a href="QuienesSomos.php#quienesSomos">Nosotros</a>
+                            <a href="QuienesSomos.php#psicologos">Profesionales</a>
+                            <a href="QuienesSomos.php#preguntasRespuestas">Ayuda</a>
+                            <a href="QuienesSomos.php#contacto">Contáctanos</a>
                         </div>
                     </li>
-                <?php endif; ?>
-                <?php if (!$sesionActiva): ?>
-                    <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
-                    <li class="registro"><a href="registrarse.php">Registrase</a></li>
-                <?php endif; ?>
+
+                    <li class="dropdown">
+                        <a href="recursosGratuitos.php" class="dropbtn">Recursos gratuitos</a>
+                        <div class="dropdown-content">
+                            <a href="recursosGratuitos.php#podcast">Podcast</a>
+                            <a href="recursosGratuitos.php#librosAutoayuda">Libros autoayuda</a>
+                            <a href="recursosGratuitos.php#videos">Videos mindfulness</a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="servicios.php" class="dropbtn">Servicios</a>
+                        <div class="dropdown-content">
+                            <a href="servicios.php#citaPsicologica">Terapia psicológica</a>
+                            <a href="servicios.php#talleres">Talleres</a>
+                            <a href="servicios.php#cursos">Cursos</a>
+                            <a href="servicios.php#asistencia">Asistencia a domicilio</a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="retiros.php" class="dropbtn">Retiros</a>
+                        <div class="dropdown-content">
+                            <a href="retiros.php#retiros">Retiros</a>
+                            <a href="retiros.php#preguntasRespuestas">Preguntas retiros</a>
+                        </div>
+                    </li>
+                    <?php if ($sesionActiva): ?>
+                        <li class="dropdown">
+                            <a href="perfil.php" class="dropbtn">Perfil</a>
+                            <div class="dropdown-content">
+                                <a href="perfil.php#perfil">Mi perfil</a>
+                                <a href="perfil.php#calendario">Calendario</a>
+                                <a href="cerrarSesion.php">Cerrar sesión</a>
+                            </div>
+                        </li>
+                        <li class="botonResponsive">
+                            <a href="cerrarSesion.php">Cerrar sesión</a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if (!$sesionActiva): ?>
+                        <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
+                        <li class="registro"><a href="registrarse.php">Registrase</a></li>
+                    <?php endif; ?>
             </ul>
         </nav>
     </header>
@@ -377,4 +381,5 @@ if (isset($_SESSION['idPacienteLogin'])){
         </div>
     </footer>
     <script src="js/recursosGratuitos.js"></script>
+    <script src="./js/main.js"></script>
 </body>
