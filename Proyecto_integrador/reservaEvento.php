@@ -27,7 +27,6 @@ function obtenerDatosPaciente($idPaciente){
 $listaEventos= [];
 $listaEventos = obtenerEventos();
 $idPacienteLogin = null;
-$reservaFinalizada=false;
 
 // Validamos que la sesión este iniciada para seguir con la reserva 
 if (isset($_SESSION['idPacienteLogin'])){
@@ -53,7 +52,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Ejecutamos la sentencia preparada
         $insert->execute();
         $insert->close();
-        $reservaFinalizada=true;
+        header("Location: reservaEvento_Completada.php?idEvento=$idEventoSeleccionado");
+        exit();
     }
 }
 
@@ -104,10 +104,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         </select>
                     </div>
                 </div>
-                <!-- Msj - Reserva finalizada exitosamente -->
-                <?php if ($reservaFinalizada): ?>
-                    <p name="submitFinalizado" id="submitFinalizado"> Reserva realizada con éxito </p>
-                <?php endif; ?>
                 
                 <button class="botonform" type="submit" name="Enviar">Enviar formulario</button>
                 <button class="botonVolver" type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver inicio </button>
