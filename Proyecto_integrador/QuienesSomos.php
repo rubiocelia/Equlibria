@@ -102,12 +102,6 @@ if (isset($_SESSION['idPacienteLogin'])){
                 <h3>¿Quiénes somos?</h3>
             </div>
             <div class="contenedorFlex">
-            <div class="video">
-                <iframe width="560" height="430<" src="https://www.youtube.com/embed/5NYLyyKOadA?si=MXEN4cN1T0jYHHX_"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
             <div class="parrafo">
                 <p>En Equilibria, nos dedicamos apasionadamente a cultivar el bienestar mental y emocional. Somos un
                     equipo de profesionales comprometidos, liderados por expertos en psicología como la renombrada
@@ -120,6 +114,12 @@ if (isset($_SESSION['idPacienteLogin'])){
                     En Equilibria, creemos en el poder de la autenticidad y la comprensión, creando un espacio donde
                     cada individuo pueda encontrar equilibrio y fortaleza emocional.
                 </p>
+            </div>
+            <div class="video">
+                <iframe width="560" height="430 <"src="https://www.youtube.com/embed/5NYLyyKOadA?si=MXEN4cN1T0jYHHX_"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div>
         </div>
         </div>

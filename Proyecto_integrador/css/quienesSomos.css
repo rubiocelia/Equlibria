@@ -298,14 +298,14 @@ main {
 /* Estilo para el contenedor Flex */
 .contenedorFlex {
   display: flex;
-  align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
-  justify-content: space-between; /* Espacia los elementos uniformemente */
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan en la pantalla si no hay espacio suficiente */
+    flex-direction: row; /* Alinea los elementos horizontalmente */
+    justify-content: space-between; /* Espacia los elementos uniformemente */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
   margin-top: 50px;
 }
 
 .video, .parrafo {
-  flex-basis: 48%; /* Asigna un ancho inicial a los elementos, ajustando para el espacio entre */
+  flex: 1; /* Asigna un ancho inicial a los elementos, ajustando para el espacio entre */
 }
 
 .parrafo{
@@ -945,37 +945,50 @@ main {
     display: none;
     padding: 10;
   }
-  .subrayadoQuienesSomos {
-    margin-top: 50px;
-  }
   .subrayadoQuienesSomos p {
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 10px;
     text-align: justify center;
   }
 
   .subrayadoQuienesSomos {
     background-color: var(--contraste-claro);
-    height: 10px;
-    font-size: 28px;
+    height: 8px;
+    font-size: 33px;
     width: 300px;
     text-align: center;
     margin: 50px auto;
     font-family: "Bellefair";
-    margin-top: -550px;
+    margin-top: 600px;
   }
 
   .subrayadoQuienesSomos h3 {
     transform: translate(0px, -25px);
+    font-size: 33px;
   }
 
   .contenedorFlex {
-    flex-direction: column; /* Coloca los elementos en una columna en pantallas pequeñas */
+    margin-top: -30px;
+    flex-direction: column; /* Alinea los elementos verticalmente en pantallas más pequeñas */
   }
-  .video, .parrafo {
-      flex-basis: 100%; /* Los elementos ocupan todo el ancho del contenedor en pantallas pequeñas */
+  
+  .parrafo{
+    width: 300px;
+    order: 1;
+    font-size: 16px;
+  }
+  .video{
+    order: 2; /* Asegura que el video aparezca debajo del texto */
+    margin-top: 20px; /* Añade un espacio entre el texto y el video */
+    width: 100px;
+    height: 200px;
   }
 
+  iframe{
+    width: 350px;
+    height: 350px;
+    margin-left: -120px;
+  }
   .subrayadoPsicologos {
     background-color: var(--contraste-claro);
     height: 10px;
@@ -984,7 +997,7 @@ main {
     text-align: center;
     margin: 100px auto;
     font-family: "Bellefair";
-    margin-top: -230px;
+    margin-top: 650px;
     margin-left: 135px;
   }
   .subrayadoPsicologos h3 {
@@ -996,13 +1009,16 @@ main {
     font-size: 28px;
     width: 400px;
     text-align: center;
-    margin: 200px auto;
+    margin: 100px auto;
     font-family: "Bellefair";
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 30px;
   }
   .subrayadoAsistentesM h3 {
     transform: translate(0px, -25px);
+  }
+  .container3{
+    margin-top: -100px;
   }
   .subrayadoAsistentesN {
     background-color: var(--contraste-claro);
@@ -1010,9 +1026,9 @@ main {
     font-size: 28px;
     width: 350px;
     text-align: center;
-    margin: 50px auto;
+    margin: 100px auto;
     font-family: "Bellefair";
-    margin-top: -210px;
+    margin-top: -110px;
     margin-left: 65px;
   }
   .subrayadoAsistentesN h3 {
@@ -1026,21 +1042,22 @@ main {
     border-radius: 20px;
     height: 100%;
     margin-left: -115px;
-    margin-top: -400px;
+    margin-top: -300px;
     padding: 200px 0px;
   }
   .btn-big {
-    margin-top: -80px;
+    margin-top: -90px;
     width: 200px;
     height: 100px;
     font-size: 20px;
+    margin-left: 20px;
   }
 
   .testimonial-container .testimonial-wrapper {
     position: relative;
     max-width: 80rem;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .testimonial-wrapper .testimonial-box {
@@ -1056,7 +1073,7 @@ main {
     background: none;
     border-radius: 2rem;
     box-shadow: 0 0.5rem 0.5rem var(--verde-oscuro);
-    padding: 1rem 3rem;
+    padding: 1rem 5rem;
     border-top: 0.8rem solid var(--verde-oscuro);
     border-bottom: 0.8rem solid var(--verde-oscuro);
   }
