@@ -108,6 +108,7 @@ mysqli_close($conexion);
                     <p>¿No tienes una cuenta?<a href="registrarse.php"> Crea una cuenta</a></p>
                     <input type="hidden" name="sendTo" value="<?php echo $urlDestino; ?>">
                     <button type="submit" name="Login">Acceder a mi cuenta</button>
+                    <a href="../Proyecto_integrador/index.php"><button class="volverAtras" onclick="window.location.href='index.php';">Volver al Inicio</button></a>
                 </form>
             </div>
             <!-- Modal Structure -->

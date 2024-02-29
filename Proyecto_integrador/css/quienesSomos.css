@@ -294,8 +294,27 @@ main {
   font-size: 38px;
 }
 
-/* .video {
-} */
+/* Estilo para el contenedor Flex */
+.contenedorFlex {
+  display: flex;
+  align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+  justify-content: space-between; /* Espacia los elementos uniformemente */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en la pantalla si no hay espacio suficiente */
+}
+
+.video, .parrafo {
+  flex-basis: 48%; /* Asigna un ancho inicial a los elementos, ajustando para el espacio entre */
+}
+
+/* Estilos adicionales para garantizar la responsividad */
+@media (max-width: 768px) {
+  .contenedorFlex {
+      flex-direction: column; /* Coloca los elementos en una columna en pantallas pequeñas */
+  }
+  .video, .parrafo {
+      flex-basis: 100%; /* Los elementos ocupan todo el ancho del contenedor en pantallas pequeñas */
+  }
+}
 
 .container {
   display: flex;
