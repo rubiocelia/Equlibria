@@ -274,24 +274,25 @@ main {
 }
 
 .pgquienessomos p {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 10px;
   text-align: justify center;
 }
 
 .subrayadoQuienesSomos {
   background-color: var(--contraste-claro);
-  height: 10px;
-  font-size: 24px;
-  width: 300px;
+  height: 15px;
+  font-size: 48px;
+  width: 450px;
   text-align: center;
-  margin: 25px auto;
+  margin: 5px auto;
+  margin-top: -80px;
 }
 
 .subrayadoQuienesSomos h3 {
-  transform: translate(0px, -28px);
+  transform: translate(0px, -40px);
   font-family: "Bellefair";
-  font-size: 38px;
+  font-size: 48px;
 }
 
 /* Estilo para el contenedor Flex */
@@ -300,10 +301,18 @@ main {
   align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
   justify-content: space-between; /* Espacia los elementos uniformemente */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan en la pantalla si no hay espacio suficiente */
+  margin-top: 50px;
 }
 
 .video, .parrafo {
   flex-basis: 48%; /* Asigna un ancho inicial a los elementos, ajustando para el espacio entre */
+}
+
+.parrafo{
+  width: 700px;
+}
+.video{
+  margin-top: 14px;
 }
 
 /* Estilos adicionales para garantizar la responsividad */
@@ -761,7 +770,7 @@ main {
 }
 
 /* Estilos para pantallas de tablet */
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
   /* Modifica aquí los estilos para tablet */
   .subrayadoQuienesSomos {
     text-align: center;
@@ -959,6 +968,14 @@ main {
   .subrayadoQuienesSomos h3 {
     transform: translate(0px, -25px);
   }
+
+  .contenedorFlex {
+    flex-direction: column; /* Coloca los elementos en una columna en pantallas pequeñas */
+  }
+  .video, .parrafo {
+      flex-basis: 100%; /* Los elementos ocupan todo el ancho del contenedor en pantallas pequeñas */
+  }
+
   .subrayadoPsicologos {
     background-color: var(--contraste-claro);
     height: 10px;
@@ -1119,7 +1136,7 @@ main {
   }
 
   .formInicioSesion {
-    width: 80%;
+    width: 82%;
     border-radius: 15px;
     padding: 0px;
     margin: 10px;

@@ -103,7 +103,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             </div>
             <div class="contenedorFlex">
             <div class="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/5NYLyyKOadA?si=MXEN4cN1T0jYHHX_"
+                <iframe width="560" height="430<" src="https://www.youtube.com/embed/5NYLyyKOadA?si=MXEN4cN1T0jYHHX_"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
