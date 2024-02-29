@@ -71,10 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Validación del nombre de usuario
     var patronUsuario = /^[a-zA-Z0-9_]+$/; // Letras, números y guiones bajos
-    if (
-      usuarioCrear.value.trim() === "" ||
-      !patronUsuario.test(usuarioCrear.value)
-    ) {
+    if (usuarioCrear.value.trim() === "" || !patronUsuario.test(usuarioCrear.value)) {
       showModal(
         "Ingrese un nombre de usuario válido (solo letras, números y guiones bajos)."
       );
