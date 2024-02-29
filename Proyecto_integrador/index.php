@@ -83,6 +83,9 @@ if (isset($_SESSION['idPacienteLogin'])){
                             <a href="cerrarSesion.php">Cerrar sesión</a>
                         </div>
                     </li>
+                    <li class="botonResponsive">
+                    <a href="cerrarSesion.php">Cerrar sesión</a>
+                    </li>
                 <?php endif; ?>
                 <?php if (!$sesionActiva): ?>
                     <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>

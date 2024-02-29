@@ -49,21 +49,20 @@ main {
 }
 
 .boton_inicio {
-  margin-top: 95px; /* Mantenemos el tamaño */
+  margin-top: 95px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 397px; /* Mantenemos el tamaño */
-  height: 82px; /* Mantenemos el tamaño */
   font-family: "Chivo", sans-serif;
-  font-size: 32px; /* Mantenemos el tamaño */
-  border-radius: 15px;
+  font-size: 32px;
+  border-radius: 10px;
   border: 2px solid var(--verde-oscuro);
   background-color: var(--verde-claro);
   color: #000000;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+  padding: 10px 15px;
 }
 
 .boton_inicio:hover {
@@ -152,14 +151,13 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  width: 30%;
-  height: 40px;
   border: 2px solid var(--verde-oscuro);
   background-color: var(--contraste-claro);
   color: #000000;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   margin-top: 15px;
+  padding: 10px 15px;
 }
 
 .linkIndex:hover {
@@ -207,11 +205,11 @@ main {
 }
 
 .profesionales button {
-  border-radius: 10px;
+  border-radius: 15px;
   border: 2px solid var(--verde-oscuro);
   background-color: var(--verde-claro);
-  width: 15%;
-  height: 15%;
+  width: max-content;
+  padding: 10px;
   transition: background-color 0.3s, color 0.3s;
   font-size: 16px;
   margin-top: 20px;
@@ -254,7 +252,7 @@ main {
 .card-text p {
   padding: 2vw;
   margin: 0;
-  font-size: 1.3vw;
+  font-size: 16px;
   font-family: "Chivo", sans-serif;
 }
 
@@ -283,7 +281,7 @@ main {
 
   .pginicio h1 {
     font-family: "Righteous";
-    font-size: 4em;
+    font-size: 65px;
     color: var(--verde-oscuro);
   }
 
@@ -293,25 +291,6 @@ main {
   }
 
   .boton_inicio {
-    margin-top: 95px; /* Mantenemos el tamaño */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 397px; /* Mantenemos el tamaño */
-    height: 82px; /* Mantenemos el tamaño */
-    font-family: "Chivo", sans-serif;
-    font-size: 32px; /* Mantenemos el tamaño */
-    border-radius: 15px;
-    border: 2px solid var(--verde-oscuro);
-    background-color: var(--verde-claro);
-    color: #000000;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .boton_inicio:hover {
-    background-color: var(--verde-oscuro);
-    color: #000000;
+    font-size: 20px;
   }
 }

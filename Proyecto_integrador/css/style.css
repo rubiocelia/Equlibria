@@ -37,6 +37,10 @@ body {
   z-index: 1000;
 }
 
+.botonResponsive {
+  display: none;
+}
+
 .logo {
   max-height: 70px;
 }
@@ -64,7 +68,7 @@ nav {
 .menu li a {
   display: block;
   flex-direction: column;
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-decoration: none;
   color: black;
 }
@@ -728,7 +732,7 @@ a {
     flex-direction: column;
     margin-top: 10px;
     background-color: var(--verde-claro);
-    height: 320px;
+    height: min-content;
   }
 
   .dropbtn:hover {
@@ -743,6 +747,14 @@ a {
 
   .header .menu.open .dropdown-content {
     display: none;
+  }
+
+  .botonResponsive {
+    display: block;
+  }
+
+  .botonResponsive:hover {
+    background-color: var(--verde);
   }
 }
 
