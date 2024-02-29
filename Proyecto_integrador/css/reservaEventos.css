@@ -124,32 +124,32 @@
   }
 
 
-/* Estilos para pantallas más pequeñas que 992px */
+/* Estilos para tablet*/
 @media only screen and (max-width: 992px) {
   .filasFormulario {
-    flex-direction: column; /* Cambiar la dirección de las filas a columna */
+    flex-direction: column; 
 }
 .columnasForm {
-    width: 100%; /* Ajustar el ancho de las columnas al 100% en pantallas más pequeñas */
-    margin-bottom: 10px; /* Reducir el margen inferior entre columnas */
+    width: 100%; 
+    margin-bottom: 10px; 
 }
 }
 
-/* Estilos para pantallas más pequeñas que 575px */
+/* Estilos para movil */
 @media only screen and (max-width: 575px) {
   .contenedorForm {
-      padding: 20px; /* Reducir el espacio de relleno en pantallas más pequeñas */
+      padding: 20px; 
   }
   .filasFormulario {
-      flex-direction: column; /* Cambiar la dirección de las filas a columna en pantallas más pequeñas */
+      flex-direction: column; 
   }
   .columnasForm {
-      width: 100%; /* Ajustar el ancho de las columnas al 100% en pantallas más pequeñas */
-      margin-bottom: 10px; /* Reducir el margen inferior entre columnas */
+      width: 100%; 
+      margin-bottom: 10px; 
   }
   .botonform,
   .botonVolver {
-      width: 100%; /* Ajustar el ancho de los botones al 100% en pantallas más pequeñas */
+      width: 100%; 
   }
 }
 

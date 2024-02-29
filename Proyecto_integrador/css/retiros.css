@@ -21,10 +21,8 @@
     justify-content: center;
     gap: 30px;
   }
-    
-
     .price-container {
-      margin-right: 10px; /* Espaciado entre el precio y el botón */
+      margin-right: 10px; 
   }
   
   
@@ -58,7 +56,7 @@
     max-height: 350px;
     max-width: 100%;
     height: auto;
-    object-fit: cover; /* Esto cortará cualquier parte extra de la imagen para que encaje en el contenedor */
+    object-fit: cover;
     margin-top: 20px;
   }
   
@@ -203,7 +201,7 @@
   }
   
   .faq-item.show .faq-answer {
-    max-height: 1000px; /* sufficiently large number to handle content's height */
+    max-height: 1000px;
   }
   
   .faq-item.show .faq-icon {
@@ -211,46 +209,46 @@
   }
   .retiros,
 .faq-container {
-    width: 90%; /* En lugar de un ancho fijo, un porcentaje del ancho del padre */
-    max-width: 1100px; /* Establece un ancho máximo */
-    margin: 20px auto; /* Margen automático para centrar */
+    width: 90%; 
+    max-width: 1100px; 
+    margin: 20px auto; 
 }
 
 
-  /* Consulta de medios para ajustar estilos en tablet */
+  /* estilos en tablet */
 @media screen and (max-width: 992px) {
   .retiros,
   .faq-container {
-      width: 95%; /* Cambia el ancho en tablet */
+      width: 95%; 
   }
 }
 
-/* Consulta de medios para ajustar estilos en dispositivos móviles */
+/* estilos en dispositivos móviles */
 @media screen and (max-width: 575px) {
   .tarjetasRetiros {
-    padding: 0 10px; /* Mantiene el relleno horizontal */
+    padding: 0 10px; 
   }
   
   .retiros {
-    width: 100%; /* Asegura que los retiros ocupen todo el ancho disponible */
-    margin: 20px 0; /* Mantiene el margen superior e inferior para separar las tarjetas */
+    width: 100%;
+    margin: 20px 0; 
   }
   
   .detalles-retiros {
-    padding: 0 8px; /* Mantiene el relleno interno */
-    flex-direction: column; /* Cambia la dirección de flexbox a columna */
-    align-items: center; /* Centra los elementos en la columna */
-    gap: 10px; /* Añade un espacio entre los elementos del flexbox */
+    padding: 0 8px; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
   }
   
   .detalles-retiros span {
-    margin-bottom: 10px; /* Ajusta el margen inferior para el contenedor de precio */
-    text-align: center; /* Centra el texto del precio si es necesario */
+    margin-bottom: 10px; 
+    text-align: center; 
   }
   
   .retiros button {
-    width: 80%; /* Ajusta el ancho del botón si es necesario */
-    margin: 10px auto; /* Centra el botón y elimina el margen superior específico */
+    width: 80%; 
+    margin: 10px auto; 
   }
 }
 
