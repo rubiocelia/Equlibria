@@ -117,6 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <hr>
             <p>¿Tienes una cuenta?<a href="inicio_sesion.php"> Inicia sesión en tu cuenta</a></p>
             <button type="submit">Crear cuenta</button>
+            <a href="../Proyecto_integrador/index.php"><button class="volverAtras" onclick="window.location.href='index.php';">Volver al Inicio</button></a>
         </form>
     </div>
     <!-- Modal Structure -->

@@ -101,6 +101,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             <div class="subrayadoQuienesSomos">
                 <h3>¿Quiénes somos?</h3>
             </div>
+            <div class="contenedorFlex">
             <div class="video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/5NYLyyKOadA?si=MXEN4cN1T0jYHHX_"
                     title="YouTube video player" frameborder="0"
@@ -120,6 +121,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     cada individuo pueda encontrar equilibrio y fortaleza emocional.
                 </p>
             </div>
+        </div>
         </div>
         <div class="container" id="psicologos">
             <div class="subrayadoPsicologos">
