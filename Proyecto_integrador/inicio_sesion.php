@@ -90,7 +90,7 @@ mysqli_close($conexion);
                     <hr>
                     <label for="usuario_pacientes">Usuario:</label>
                     <input type="text" id="usuario_pacientes" name="usuario_pacientes">
-                    <span id="errorUsuario" class="error-mensaje"></span>
+                    <!-- <span id="errorUsuario" class="error-mensaje"></span> -->
 
                     <br><br>
 
@@ -101,7 +101,7 @@ mysqli_close($conexion);
                             <span class="eye-icon">🙉</span>
                         </span>
                     </div>
-                    <span id="errorContrasena" class="error-mensaje"></span>
+                    <!-- <span id="errorContrasena" class="error-mensaje"></span> -->
                     <hr>
                     <br>
 
@@ -110,5 +110,18 @@ mysqli_close($conexion);
                     <button type="submit" name="Login">Acceder a mi cuenta</button>
                 </form>
             </div>
+            <!-- Modal Structure -->
+    <div id="modal-backdrop" class="modal-backdrop" style="display:none;">
+    <div id="modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2>Atención ⚠️</h2>
+            <br>
+            <p id="modal-message">Mensaje del modal</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
