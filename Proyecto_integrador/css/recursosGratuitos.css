@@ -365,3 +365,85 @@ body {
     padding: 15px 25px;
   }
 }
+
+/* Estilos para pantallas de hasta 575px */
+@media screen and (max-width: 575px) {
+  body {
+    font-family: "Chivo", sans-serif;
+    margin: 0;
+    background-image: url(../img/fondoRecursosGratuitos.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 90%;
+  }
+
+  .tarjPodcasts .tarjetaPodcast {
+    width: 40%;
+  }
+
+  .fotoPod {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .libro_card {
+    margin: 0 auto;
+    flex-direction: row;
+    width: 87%;
+    height: 85vh;
+  }
+
+  .libro-img {
+    margin: auto;
+    width: 45%;
+    height: 100%;
+    border-radius: 10px 0 0 10px; /* Redondear las esquinas superiores */
+  }
+
+  .libro-info {
+    font-size: 1em;
+    margin: 25px 15px;
+    width: auto;
+  }
+
+  .libro-info h2 {
+    font-family: "Righteous";
+    font-size: 3.5vw;
+    margin-bottom: 1.25vw;
+  }
+
+  .libro-info h3 {
+    font-family: "Bellefair";
+    font-size: 2.2vw;
+    margin-bottom: 3.125vw;
+  }
+
+  .libro-info p,
+  .autor {
+    font-family: "Chivo", sans-serif;
+    margin-top: 1.25vw;
+    font-size: 1.8vw;
+    margin: 1.25vw 0;
+  }
+
+  .videos {
+    flex-direction: column;
+  }
+
+  .video,
+  .tarjetaPodcast {
+    width: 90%;
+  }
+
+  .video-gallery,
+  .tarjPodcasts {
+    gap: 40px;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+  }
+}

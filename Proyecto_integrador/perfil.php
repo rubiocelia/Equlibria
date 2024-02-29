@@ -65,6 +65,7 @@ mysqli_close($conexion);
         <a href="index.php"><img class="nombre" src="img/nombre.png" alt="" class="logo"></a>
         <nav>
             
+            
             <ul class="menu">
                 <li class="dropdown">
                     <a href="QuienesSomos.php" class="dropbtn">¿Quiénes somos?</a>
