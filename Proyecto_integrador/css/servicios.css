@@ -402,11 +402,18 @@ body {
 
 /* para tablet */
 @media only screen and (max-width: 992px) {
+  .pgservicios{
+    height: 60vh;
+  }
+  
   .pgservicios h1 {
     font-size: 3em;
   }
   .pgservicios h2 {
     font-size: 2.4em;
+  }
+  .textoSalud{
+    font-size: 1.5em;
   }
   .boton_servicios {
     width: 250px;
@@ -422,7 +429,7 @@ body {
   align-items: center;
 }
 .talleresServicios img{
-  flex: 0 0 40%;
+  flex: 0 0 50%;
   object-fit: cover;
   margin: auto;
   width: 50%;
@@ -430,16 +437,59 @@ body {
   border-radius: 10px 0 0 10px;
 }
 .tallerServicios button {
-  margin-top: 20px; /* Agrega un margen en la parte superior */
+  margin-top: 20px; 
+}
+.cursos {
+  flex-direction: column; /* Cambia la disposición a columna */
+  align-items: center; /* Centra los elementos */
+  text-align: center;
+}
+.cursos .imagenCurso img,
+.cursos .imagenCurso2 img {
+  width: 55%; 
+  border-radius: 10px; 
+  margin: 20px auto;
+}
+
+.tarjetaDescripcion,
+.tarjetaDescripcion2 {
+  width: 90%; /* Ancho del texto ajustado */
+  margin: 0 auto;
+  
+}
+.course-details {
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin: 20px auto; 
+}
+
+.tarjeta-link, 
+.tarjeta-link p {
+    width: 100%; 
+    text-align: center; 
+    margin: 10px 0; 
+    display: block; 
+  }
+
+.tarjeta-link button {
+  padding: 10px 20px; 
+  
+}
+/* Eliminamos cualquier estilo que altere la disposición de elementos para cursos impares y pares */
+.cursos:nth-child(odd),
+.cursos:nth-child(even) {
+  flex-direction: column;
+}
+
 }
 
 
 
-
-}
 
 /* para movil */
 @media only screen and (max-width: 575px) {
+
+  
   .pgservicios h1 {
     font-size: 2.5em;
   }
