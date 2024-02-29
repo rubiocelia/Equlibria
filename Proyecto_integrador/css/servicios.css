@@ -475,7 +475,8 @@ body {
   padding: 10px 20px; 
   
 }
-/* Eliminamos cualquier estilo que altere la disposición de elementos para cursos impares y pares */
+/* Eliminamos cualquier estilo que altere
+ la disposición de elementos para cursos impares y pares */
 .cursos:nth-child(odd),
 .cursos:nth-child(even) {
   flex-direction: column;
