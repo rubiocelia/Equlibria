@@ -152,12 +152,12 @@ if (isset($_SESSION['idPacienteLogin'])){
         </div>
         <div class="profesionales">
             <h2>¡Estos son nuestros profesionales!</h2>
-            <img src="img/prof1.png">
-            <img src="img/prof2.png">
-            <img src="img/prof3.png">
-            <img src="img/prof4.png">
-            <img src="img/prof5.png">
-            <img src="img/prof6.png">
+            <img class="prof1" src="img/prof1.png">
+            <img class="prof2" src="img/prof2.png">
+            <img class="prof3" src="img/prof3.png">
+            <img class="prof4" src="img/prof4.png">
+            <img class="prof5" src="img/prof5.png">
+            <img class="prof6" src="img/prof6.png">
             <br>
             <button>¡Conoce a nuestro equipo!</button>
         </div>

@@ -44,7 +44,6 @@ main {
 }
 
 .bienvenido p {
-  /* font-size: 16px; */
   font-family: "Bellefair";
 }
 
@@ -224,12 +223,12 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 0 15%;
+  margin: 0 80px;
 }
 
 .cursos {
   background-color: var(--verde-claro);
-  border-radius: 3vh;
+  border-radius: 15px;
   width: auto;
   max-width: calc(50% - 2vw);
   margin: 2vw auto;
@@ -286,11 +285,90 @@ main {
   }
 
   .bienvenido p {
-    font-size: 16px;
+    font-size: 25px;
     font-family: "Bellefair";
   }
 
   .boton_inicio {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .pginicio {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+  }
+
+  .pginicio h1 {
+    font-family: "Righteous";
+    font-size: 55px;
+    color: var(--verde-oscuro);
+  }
+
+  .bienvenido p {
+    font-size: 25px;
+
+    font-family: "Bellefair";
+  }
+
+  .boton_inicio {
+    font-size: 20px;
+  }
+
+  .prof1,
+  .prof5 {
+    display: none;
+  }
+
+  .profesionales img {
+    width: 150px;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cursos {
+    border-radius: 15px;
+    width: auto;
+    max-width: 80%;
+    padding: 10px;
+  }
+
+  .cursos img {
+    height: 100px;
+    width: auto;
+  }
+
+  .card-title h3 {
+    text-align: center;
+    padding: 1vw 0;
+  }
+
+  .card-text p {
+    padding: 2vw;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Chivo", sans-serif;
+  }
+
+  .card-link {
+    border-radius: 3vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1.5vw;
+  }
+
+  .card-link p {
+    margin: auto;
+    padding: 0 1vw;
+    font-family: "Chivo", sans-serif;
   }
 }

@@ -252,8 +252,8 @@ if (isset($_SESSION['idPacienteLogin'])){
                             <a href="https://www.amazon.es/Sin-miedo-comprobado-obsesiones-hipocondr%C3%ADa/dp/8425361109/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=34UX0ZA1WRONU&dib=eyJ2IjoiMSJ9.6T60ryL8luqEQBJYAiVEz_8yp8lohl-Zyzp4sJZPTm_tdpLa4QhP5JqBudyYxZI3NmtklDt2YF2w4S1BJmfGDzeQ-k8hLWg4Cj9seoQaSLCPr3Fs5Wq-dYpMSBcPXmMtW9ELyFk-CD9A9-NcgBQTRbHVKkqg3Whv_JsWowVXSD79DEEPIQTuik2HAxXw3WkbjPMWu-7jzPT__rKrEcJTyh_LBKBu6Tn_eDCyqgpLCVziGpco30g78R_3riYVTVcpNmlxtRmLRjUilS0XZGmOyN-_HCR6PslKxMRFlnRWdI0.2sdMc9es0TZIjUZi_QTa1Rh5D44QAtxR0Yq3AU2j8PA&dib_tag=se&keywords=Sin+miedo&qid=1708708340&sprefix=sin+miedo%2Caps%2C135&sr=8-1" class="btn-comprar" target="_blank">Comprar</a>
                         </div>
                     </div>
-                    <span class="flecha-derecha">🡢</span>
                 </div>
+                <span class="flecha-derecha">🡢</span>
             </div>
         </div>
         <div class="videos" id="videos">
