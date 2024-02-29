@@ -273,3 +273,45 @@ main {
   padding: 0 1vw;
   font-family: "Chivo", sans-serif;
 }
+
+@media screen and (max-width: 992px) {
+  .pginicio {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+  }
+
+  .pginicio h1 {
+    font-family: "Righteous";
+    font-size: 4em;
+    color: var(--verde-oscuro);
+  }
+
+  .bienvenido p {
+    font-size: 16px;
+    font-family: "Bellefair";
+  }
+
+  .boton_inicio {
+    margin-top: 95px; /* Mantenemos el tamaño */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 397px; /* Mantenemos el tamaño */
+    height: 82px; /* Mantenemos el tamaño */
+    font-family: "Chivo", sans-serif;
+    font-size: 32px; /* Mantenemos el tamaño */
+    border-radius: 15px;
+    border: 2px solid var(--verde-oscuro);
+    background-color: var(--verde-claro);
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .boton_inicio:hover {
+    background-color: var(--verde-oscuro);
+    color: #000000;
+  }
+}

@@ -57,7 +57,7 @@ nav {
   display: block;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 0;
+  margin-left: auto;
   width: 100%;
 }
 
@@ -569,13 +569,13 @@ a {
 }
 
 .modal-content h2 {
-font-size: 28px;
-font-family: "Bellefair";
+  font-size: 28px;
+  font-family: "Bellefair";
 }
 
 .modal-content p {
-font-size: 20px;
-font-family: "Chivo", sans-serif;
+  font-size: 20px;
+  font-family: "Chivo", sans-serif;
 }
 
 .modal-footer {
