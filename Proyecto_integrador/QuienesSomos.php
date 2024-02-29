@@ -27,6 +27,7 @@ if (isset($_SESSION['idPacienteLogin'])){
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../Proyecto_integrador/css/quienesSomos.css">
+    <link rel="stylesheet" href="../Proyecto_integrador/css/style.css">
     <script src="../Proyecto_integrador/js/validar_contacto.js"></script>
     <title>Quienes somos</title>
 </head>
@@ -84,6 +85,9 @@ if (isset($_SESSION['idPacienteLogin'])){
                         <a href="cerrarSesion.php">Cerrar sesión</a>
                     </div>
                 </li>
+                <li class="botonResponsive">
+                    <a href="cerrarSesion.php">Cerrar sesión</a>
+                    </li>
                 <?php endif; ?>
                 <?php if (!$sesionActiva): ?>
                 <li class="iniciarSesion"><a href="inicio_sesion.php">Iniciar sesión</a></li>
