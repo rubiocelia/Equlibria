@@ -306,10 +306,11 @@ main {
 
 .video, .parrafo {
   flex: 1; /* Asigna un ancho inicial a los elementos, ajustando para el espacio entre */
+  padding: 0px 20px;
 }
 
 .parrafo{
-  width: 700px;
+  width: 550px;
 }
 .video{
   margin-top: 14px;
@@ -873,21 +874,21 @@ main {
     height: 100%;
     margin-left: 0px;
     margin-top: -300px;
-    padding: 200px 0px;
+    padding: 200px 10px;
   }
-  .btn-big {
+  /* .btn-big {
     margin-top: 10px;
     width: 400px;
     height: 70px;
     font-size: 20px;
     cursor: pointer;
-  }
+  } */
 
   .testimonial-container .testimonial-wrapper {
     position: relative;
     max-width: 80rem;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .testimonial-wrapper .testimonial-box {
@@ -903,7 +904,7 @@ main {
     background: none;
     border-radius: 2rem;
     box-shadow: 0 0.5rem 0.5rem var(--verde-oscuro);
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
     border-top: 0.8rem solid var(--verde-oscuro);
     border-bottom: 0.8rem solid var(--verde-oscuro);
   }
@@ -976,7 +977,7 @@ main {
   iframe{
     width: 650px;
     height: 350px;
-    margin-left: -250px;
+    margin-left: -290px;
   }
   .menu {
     display: none;
@@ -1042,6 +1043,12 @@ main {
 
 /* Estilos para pantallas de dispositivos móviles */
 @media only screen and (max-width: 575px) {
+  .pgquienessomos {
+    text-align: center;
+    width: auto;
+    height: auto;
+    display: flex;
+  }
   .hamburger {
     display: block;
     text-align: right;
@@ -1124,8 +1131,7 @@ main {
     width: 300px;
     text-align: center;
     margin: 50px auto;
-    font-family: "Bellefair";
-    margin-top: 600px;
+    font-family: "Bellefair";;
   }
 
   .subrayadoQuienesSomos h3 {
@@ -1161,9 +1167,9 @@ main {
     font-size: 28px;
     width: 200px;
     text-align: center;
+    align-items: center;
     margin: 100px auto;
     font-family: "Bellefair";
-    margin-top: 650px;
     margin-left: 135px;
   }
   .subrayadoPsicologos h3 {
