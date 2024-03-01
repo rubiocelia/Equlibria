@@ -8,18 +8,18 @@ $idPacienteLogin = isset($_SESSION['idPacienteLogin']) ? $_SESSION['idPacienteLo
 
 if ($idPacienteLogin) {
     $sql = "(SELECT e.id_evento AS id, e.nombre_evento AS title, e.fechas_evento AS start, 'Evento' AS tipo
-             FROM eventos e
-             INNER JOIN reserva_eventos re ON e.id_evento = re.id_evento
-             WHERE re.id_paciente = ?)
-            UNION
-            (SELECT cp.id_cita_psicologica AS id, 
-             CONCAT('Cita psicológica con ', p.nombre_profesionales, ' ', p.apellidos_profesionales) AS title, 
-             CONCAT(DATE_FORMAT(cp.fechas_cita, '%Y-%m-%d'), ' ', cp.hora_cita) AS start, 
-             'Cita' AS tipo
-             FROM cita_psicologica cp
-             INNER JOIN profesionales p ON cp.id_profesionales = p.id_profesionales
-             WHERE cp.id_pacientes = ?)
-            ORDER BY start";
+         FROM eventos e
+         INNER JOIN reserva_eventos re ON e.id_evento = re.id_evento
+         WHERE re.id_paciente = ?)
+        UNION
+        (SELECT cp.id_cita_psicologica AS id, 
+         IF(cp.hora_cita IS NULL, CONCAT('Asistencia a domicilio con: ', p.nombre_profesionales, ' ', p.apellidos_profesionales), CONCAT('Cita psicológica con ', p.nombre_profesionales, ' ', p.apellidos_profesionales)) AS title, 
+         IF(cp.hora_cita IS NULL, DATE_FORMAT(cp.fechas_cita, '%Y-%m-%d'), CONCAT(DATE_FORMAT(cp.fechas_cita, '%Y-%m-%d'), ' ', cp.hora_cita)) AS start, 
+         IF(cp.hora_cita IS NULL, 'Asistencia domiciliaria', 'Cita') AS tipo
+         FROM cita_psicologica cp
+         INNER JOIN profesionales p ON cp.id_profesionales = p.id_profesionales
+         WHERE cp.id_pacientes = ?)
+        ORDER BY start";
 
     if ($stmt = $conexion->prepare($sql)) {
         $stmt->bind_param("ii", $idPacienteLogin, $idPacienteLogin);
