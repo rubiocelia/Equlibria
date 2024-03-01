@@ -401,7 +401,7 @@ body {
 
 
 /* para tablet */
-@media only screen and (max-width: 992px) {
+@media  screen and (max-width: 992px) {
  
   
   .pgservicios h1 {
@@ -484,7 +484,7 @@ body {
 
 
 /* para movil */
-@media only screen and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .pgservicios{
     background-image: none;
   }
