@@ -43,13 +43,13 @@ if (isset($_SESSION['idPacienteLogin'])){
     </head>
     <body class="reservaEvento">
         <div class="subrayado">
-            <h3>¡Apúntate!</h3>
+            <h3>Te esperamos</h3>
         </div>
         <div class="contenedorForm">
             <form class="formReserva" method="post" action="">
                 <div>
-                    <p>¡¡Reserva realizada con éxito!!</p>
-                    <span>Datos de la reserva: <?php echo $eventoReservado['nombre_evento']. ' || '.$eventoReservado['fechas_evento']. ' || ' .$eventoReservado['precio_evento']; ?></span>
+                    <p><strong>¡Reserva realizada con éxito! ✔️</strong></p>
+                    <span>📝 Datos de la reserva: <?php echo $eventoReservado['nombre_evento']. ' || '.$eventoReservado['fechas_evento']. ' || ' .$eventoReservado['precio_evento']; ?> </span>
                 </div>
                 <button class="botonVolver" type="button" name="VolverIndex" onclick="window.location.href='perfil.php';">Ir a mi perfil</button>
             </form>
