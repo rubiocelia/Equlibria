@@ -105,14 +105,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="text" id="usuario_pacientes" name="usuario_pacientes">
                 </div>
                 <div class="form-column">
-                    <div class="inputArea">
                         <label for="contrasena_pacientes">Contraseña:</label>
                         <input type="password" id="contrasena_pacientes" name="contrasena_pacientes">
-                    </div>
-                    <div class="container">
-                        <div class="strengthMeter"></div>
-                    </div>    
+                    </div>  
                 </div>
+                <div class="inputArea">
+                        <div class="container">
+                            <div class="strengthMeter"></div>
+                        </div>  
             </div>
             <hr>
             <p>¿Tienes una cuenta?<a href="inicio_sesion.php"> Inicia sesión en tu cuenta</a></p>
