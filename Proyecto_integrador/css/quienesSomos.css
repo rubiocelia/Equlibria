@@ -772,25 +772,40 @@ main {
 /* Estilos para pantallas de tablet */
 @media screen and (max-width: 992px) {
   /* Modifica aquí los estilos para tablet */
-  .subrayadoQuienesSomos {
-    text-align: center;
-    margin-left: 285px;
-  }
   .testimonial-slide h3 {
     text-align: center;
   }
   .testimonial-slide p {
     width: 400px;
   }
-  .subrayadoQuienesSomos {
-    margin-top: -400px;
-    width: 500px;
+  .subrayadoQuienesSomos p {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: justify center;
   }
+
+  .subrayadoQuienesSomos {
+    background-color: var(--contraste-claro);
+    height: 8px;
+    font-size: 33px;
+    width: 300px;
+    text-align: center;
+    margin: 50px auto;
+    font-family: "Bellefair";
+    margin-top: 200px;
+  }
+
+  .subrayadoQuienesSomos h3 {
+    transform: translate(0px, -25px);
+    font-size: 33px;
+  }
+
   .subrayadoPsicologos {
     margin-top: 150px;
     margin-left: 175px;
     margin-top: 300px;
     width: 700px;
+    text-align: center;
   }
   .subrayadoAsistentesM {
     margin-top: 150px;
@@ -798,20 +813,171 @@ main {
     margin-top: 300px;
     width: 600px;
   }
-  .testimonial-container .testimonial-wrapper {
-    width: 500px;
-    margin-left: 290px;
+  .subrayadoPsicologos {
+    background-color: var(--contraste-claro);
+    height: 10px;
+    font-size: 28px;
+    width: 200px;
+    text-align: center;
+    margin: 100px auto;
+    font-family: "Bellefair";
+    margin-top: 250px;
+    margin-left: 275px;
   }
-}
+  .subrayadoPsicologos h3 {
+    transform: translate(0px, -25px);
+  }
+  .subrayadoAsistentesM {
+    background-color: var(--contraste-claro);
+    height: 10px;
+    font-size: 28px;
+    width: 400px;
+    text-align: center;
+    margin: 100px auto;
+    font-family: "Bellefair";
+    margin-top: 10px;
+    margin-left: 175px;
+  }
+  .subrayadoAsistentesM h3 {
+    transform: translate(0px, -25px);
+  }
+  .container3{
+    margin-top: -100px;
+  }
+  .boton-cv{
+    font-size: 16px;
+  }
+  .subrayadoAsistentesN {
+    background-color: var(--contraste-claro);
+    height: 10px;
+    font-size: 28px;
+    width: 350px;
+    text-align: center;
+    margin: 100px auto;
+    font-family: "Bellefair";
+    margin-top: -170px;
+    margin-left: 200px;
+  }
+  .subrayadoAsistentesN h3 {
+    transform: translate(0px, -25px);
+  }
+  /* .testimonial-container .testimonial-wrapper {
+    width: 900px;
+  } */
+  .testimonial-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    margin-left: 0px;
+    margin-top: -300px;
+    padding: 200px 0px;
+  }
+  .btn-big {
+    margin-top: 10px;
+    width: 400px;
+    height: 70px;
+    font-size: 20px;
+    cursor: pointer;
+  }
 
-/* Esconde el menú por defecto en pantallas pequeñas y muestra el botón de hamburguesa */
-@media screen and (max-width: 992px) {
+  .testimonial-container .testimonial-wrapper {
+    position: relative;
+    max-width: 80rem;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .testimonial-wrapper .testimonial-box {
+    padding: 1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  .testimonial-content .testimonial-slide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: none;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 0.5rem var(--verde-oscuro);
+    padding: 1rem 5rem;
+    border-top: 0.8rem solid var(--verde-oscuro);
+    border-bottom: 0.8rem solid var(--verde-oscuro);
+  }
+
+  .testimonial-slide img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.5rem solid var(--verde-oscuro);
+  }
+
+  .testimonial-slide h3 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    font-family: "Bellefair";
+  }
+
+  .testimonial-slide p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Chivo", sans-serif;
+    text-align: justify;
+    width: 450px;
+  }
+
+  .testimonial-box .swiper-button-next,
+  .testimonial-box .swiper-button-prev {
+    color: var(--verde-oscuro);
+  }
+
+  .testimonial-box .swiper-button-next {
+    right: 0;
+  }
+
+  .testimonial-box .swiper-button-prev {
+    left: 0;
+  }
+
+  .testimonial-box .swiper-pagination-bullet {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .testimonial-box .swiper-pagination-bullet-active {
+    background: var(--verde-oscuro);
+  }
   .hamburger {
     display: block;
     text-align: right;
     margin-left: 240px;
   }
 
+  .contenedorFlex {
+    margin-top: -30px;
+    flex-direction: column; /* Alinea los elementos verticalmente en pantallas más pequeñas */
+  }
+  
+  .parrafo{
+    width: 600px;
+    font-size: 16px;
+  }
+  .video{
+    margin-top: 30px; /* Añade un espacio entre el texto y el video */
+    width: 100px;
+    height: 200px;
+  }
+
+  iframe{
+    width: 650px;
+    height: 350px;
+    margin-left: -250px;
+  }
   .menu {
     display: none;
     position: fixed;
@@ -1029,7 +1195,7 @@ main {
     margin: 100px auto;
     font-family: "Bellefair";
     margin-top: -110px;
-    margin-left: 65px;
+    margin-left: 57px;
   }
   .subrayadoAsistentesN h3 {
     transform: translate(0px, -25px);
@@ -1041,7 +1207,7 @@ main {
     width: 90%;
     border-radius: 20px;
     height: 100%;
-    margin-left: -115px;
+    margin-left: 30px;
     margin-top: -300px;
     padding: 200px 0px;
   }
