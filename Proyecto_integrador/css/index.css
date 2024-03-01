@@ -215,6 +215,7 @@ main {
   transition: background-color 0.3s, color 0.3s;
   font-size: 16px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .profesionales button:hover {
