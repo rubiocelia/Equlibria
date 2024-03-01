@@ -52,7 +52,7 @@ body {
   }
   
   .inicioSesion {
-    background-image: url(../img/fondoRegistro.png);
+    background-image: url(../img/fondoLibros.png);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Righteous";
@@ -250,3 +250,84 @@ body {
     text-decoration: none;
     display: inline-block;
   }
+  /* Estilos para pantallas de tablet */
+@media screen and (max-width: 992px) {
+    .inicioSesion {
+        background-image: url(../img/fondoLibros.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Righteous";
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 100vh;
+        margin-top: 15%;
+      }
+      .formInicioSesion hr {
+        height: 8px;
+        background-color: var(--verde-oscuro);
+        border-radius: 10px;
+        border-style: none;
+        margin: 28px -20px;
+        width: 115%;
+        text-align: center;
+      }
+      .subrayadoFormulario {
+        background-color: var(--contraste-claro);
+        height: 15px;
+        font-size: 30px;
+        width: 425px;
+        text-align: center;
+        margin: 30px auto;
+        font-family: "Righteous";
+        margin-top: -10px;
+      }
+      
+      .subrayadoFormulario h3 {
+        transform: translate(0px, -35px);
+        font-size: 48px;
+      }
+}
+
+/* Estilos para pantallas de dispositivos móviles */
+@media only screen and (max-width: 575px) {
+    .inicioSesion {
+        background-image: url(../img/fondoPerfil.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Righteous";
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 100vh;
+        margin-top: 25%;
+      }
+      .formInicioSesion hr {
+        height: 8px;
+        background-color: var(--verde-oscuro);
+        border-radius: 10px;
+        border-style: none;
+        margin: 28px -20px;
+        width: 115%;
+        text-align: center;
+      }
+      .subrayadoFormulario {
+        background-color: var(--contraste-claro);
+        height: 10px;
+        font-size: 30px;
+        width: 350px;
+        text-align: center;
+        margin: 30px auto;
+        font-family: "Righteous";
+        margin-top: -10px;
+      }
+      
+      .subrayadoFormulario h3 {
+        transform: translate(0px, -35px);
+        font-size: 40px;
+      }
+}
