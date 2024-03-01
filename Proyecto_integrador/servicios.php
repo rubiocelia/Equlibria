@@ -151,7 +151,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <img src="img/autoexigencia.jpg" alt="autoexigencia">
                     <div class="infotalleres">
                     <h3>Autoexigencia y perfeccionismo</h3>
-                    <p>En este taller trabajaremos en reconocer y acompañar nuestra autoexigenciaa y profundizaremos en
+                    <p>En este taller trabajaremos en reconocer nuestra autoexigencia y profundizaremos en
                         el origen.
                     </p>
                     <span class="online-details">🛒 Precio: 70€</span>
