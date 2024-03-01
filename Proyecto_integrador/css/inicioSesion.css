@@ -253,7 +253,7 @@ body {
   /* Estilos para pantallas de tablet */
 @media screen and (max-width: 992px) {
     .inicioSesion {
-        background-image: url(../img/fondoLibros.png);
+        background-image: url(../img/fondoPerfil.png);
         background-repeat: no-repeat;
         background-size: cover;
         font-family: "Righteous";
