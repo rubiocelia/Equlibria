@@ -82,13 +82,13 @@ main {
 
 .titBienvenido {
   color: var(--verde-oscuro);
-  font-size: 48px; /* Mantenemos el tamaño */
+  font-size: 48px;
   font-family: "Bellefair";
   margin-bottom: 2%;
 }
 
 .bienvenido p {
-  font-size: 40px; /* Mantenemos el tamaño */
+  font-size: 40px;
   text-align: center;
   margin: 0 20%;
 }
@@ -104,7 +104,7 @@ main {
 .subrayado {
   background-color: var(--verde);
   height: 10px;
-  font-size: 24px; /* Mantenemos el tamaño */
+  font-size: 24px;
   width: 300px;
   text-align: center;
   margin: 50px auto;
@@ -120,8 +120,8 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: var(--contraste-claro);
-  width: 400px; /* Mantenemos el tamaño */
-  height: 450px; /* Mantenemos el tamaño */
+  width: 400px;
+  height: 450px;
   border-radius: 10px;
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin: 3% 4%;
@@ -129,12 +129,12 @@ main {
 
 .taller img {
   border-radius: 10px 10px 0 0;
-  width: 400px; /* Mantenemos el tamaño */
+  width: 400px;
   height: auto;
 }
 
 .taller h3 {
-  font-size: 24px; /* Mantenemos el tamaño */
+  font-size: 24px;
   font-family: "Bellefair";
   text-align: center;
   padding: 25px;

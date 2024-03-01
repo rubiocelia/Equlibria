@@ -68,7 +68,7 @@ nav {
 }
 
 .menu.active {
-  display: block; /* Mostrar el menú cuando se hace clic en el icono de la hamburguesa */
+  display: block;
 }
 
 /* Estilo básico para el botón de hamburguesa */
@@ -298,31 +298,33 @@ main {
 /* Estilo para el contenedor Flex */
 .contenedorFlex {
   display: flex;
-    flex-direction: row; /* Alinea los elementos horizontalmente */
-    justify-content: space-between; /* Espacia los elementos uniformemente */
-    align-items: center; /* Alinea los elementos verticalmente en el centro */
+  flex-direction: row; /* Alinea los elementos horizontalmente */
+  justify-content: space-between; /* Espacia los elementos uniformemente */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
   margin-top: 50px;
 }
 
-.video, .parrafo {
+.video,
+.parrafo {
   flex: 1; /* Asigna un ancho inicial a los elementos, ajustando para el espacio entre */
   padding: 0px 20px;
 }
 
-.parrafo{
+.parrafo {
   width: 550px;
 }
-.video{
+.video {
   margin-top: 14px;
 }
 
 /* Estilos adicionales para garantizar la responsividad */
 @media (max-width: 768px) {
   .contenedorFlex {
-      flex-direction: column; /* Coloca los elementos en una columna en pantallas pequeñas */
+    flex-direction: column; /* Coloca los elementos en una columna en pantallas pequeñas */
   }
-  .video, .parrafo {
-      flex-basis: 100%; /* Los elementos ocupan todo el ancho del contenedor en pantallas pequeñas */
+  .video,
+  .parrafo {
+    flex-basis: 100%; /* Los elementos ocupan todo el ancho del contenedor en pantallas pequeñas */
   }
 }
 
@@ -842,10 +844,10 @@ main {
   .subrayadoAsistentesM h3 {
     transform: translate(0px, -25px);
   }
-  .container3{
+  .container3 {
     margin-top: -100px;
   }
-  .boton-cv{
+  .boton-cv {
     font-size: 16px;
   }
   .subrayadoAsistentesN {
@@ -963,18 +965,18 @@ main {
     margin-top: -30px;
     flex-direction: column; /* Alinea los elementos verticalmente en pantallas más pequeñas */
   }
-  
-  .parrafo{
+
+  .parrafo {
     width: 600px;
     font-size: 16px;
   }
-  .video{
+  .video {
     margin-top: 30px; /* Añade un espacio entre el texto y el video */
     width: 100px;
     height: 200px;
   }
 
-  iframe{
+  iframe {
     width: 650px;
     height: 350px;
     margin-left: -290px;
@@ -1131,7 +1133,7 @@ main {
     width: 300px;
     text-align: center;
     margin: 50px auto;
-    font-family: "Bellefair";;
+    font-family: "Bellefair";
   }
 
   .subrayadoQuienesSomos h3 {
@@ -1143,20 +1145,20 @@ main {
     margin-top: -30px;
     flex-direction: column; /* Alinea los elementos verticalmente en pantallas más pequeñas */
   }
-  
-  .parrafo{
+
+  .parrafo {
     width: 300px;
     order: 1;
     font-size: 16px;
   }
-  .video{
+  .video {
     order: 2; /* Asegura que el video aparezca debajo del texto */
     margin-top: 20px; /* Añade un espacio entre el texto y el video */
     width: 100px;
     height: 200px;
   }
 
-  iframe{
+  iframe {
     width: 350px;
     height: 350px;
     margin-left: -120px;
@@ -1189,7 +1191,7 @@ main {
   .subrayadoAsistentesM h3 {
     transform: translate(0px, -25px);
   }
-  .container3{
+  .container3 {
     margin-top: -100px;
   }
   .subrayadoAsistentesN {
