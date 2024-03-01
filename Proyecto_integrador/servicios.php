@@ -127,7 +127,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                     <img src="img/habilidadesSociales.jpg" alt="habilidadesSociales">
                     <div class="infotalleres">
                     <h3>Mejora habilidades sociales</h3>
-                    <p>En este taller de hablididades sociales trabajaremos todas las áreas en las que las habilidades
+                    <p>En este taller de hablididades sociales trabajaremos todas las áreas en las que
                          adquieren un papel importante.
                     </p>
                     <span class="online-details">🛒 Precio: 50€</span>
@@ -341,7 +341,7 @@ if (isset($_SESSION['idPacienteLogin'])){
         <!--------ASISTENCIA A DOMICILIO----- -->
 
 <div class="subrayado4">
-  <h3>Asistencia a domicilio para niños/as</h3>
+  <h3>Asistencia para niños/as</h3>
 </div>
 
         <div class="secionAsistentes">
