@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
 
-    alert("Cita finalizada exitosamente.");
     return;
   })
 })

@@ -14,6 +14,14 @@ function obtenerDatosPaciente($idPaciente){
     $conexion->close();
     return $paciente;
 }
+// Funcion para obtener el id de una cita
+function obtenerIDCitaPsicologica($idPaciente,$idProfesional,$fechaCita) {
+    $conexion = getConexion();
+    $consulta = $conexion->query("SELECT id_cita_psicologica AS idCita FROM cita_psicologica WHERE id_pacientes=$idPaciente AND id_profesionales=$idProfesional AND fechas_cita='$fechaCita' AND hora_cita IS NULL");
+    $cita = $consulta->fetch_assoc();
+    $conexion->close();
+    return $cita['idCita'];
+}
 // Inicializar variables
 $listaProfesionales= [];
 // Cuando esten las paginas conectadas quitar la siguiente linea. Se recibira en la llamada de POST.
@@ -43,6 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Ejecutamos la sentencia preparada
         $insert->execute();
         $insert->close();
+        $idCitaCreada=obtenerIDCitaPsicologica($idPacienteLogin,$id_profesional,$fecha_cita,$hora_cita);
+        header("Location: citaAsistencia_completada.php?idCita=$idCitaCreada");
+        exit();
     }
 }
 

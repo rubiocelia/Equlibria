@@ -15,6 +15,14 @@ function obtenerProfesionales() {
     $conexion->close();
     return $profesionales;
 }
+// Funcion para obtener el id de una cita
+function obtenerIDCitaPsicologica($idPaciente,$idProfesional,$fechaCita,$horaCita) {
+    $conexion = getConexion();
+    $consulta = $conexion->query("SELECT id_cita_psicologica AS idCita FROM cita_psicologica WHERE id_pacientes=$idPaciente AND id_profesionales=$idProfesional AND fechas_cita='$fechaCita' AND hora_cita='$horaCita'");
+    $cita = $consulta->fetch_assoc();
+    $conexion->close();
+    return $cita['idCita'];
+}
 // Función para recuperar los datos del paciente
 function obtenerDatosPaciente($idPaciente){
     $conexion = getConexion();
@@ -46,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $fecha_cita = $_POST['fecha_cita'] ?? '';
     $hora_cita = $_POST['hora_cita'] ?? '';
     // Acciones que vamos a realizar cuando el submit que ejecuta el POST es ENVIAR.
-    if (isset($_POST['Enviar'])) {
+    if (isset($_POST['Enviar_Form'])) {
         // Preparamos la sentencia para realizar en insert 
         $sql_insert = "INSERT INTO cita_psicologica (fechas_cita, hora_cita, id_pacientes, id_profesionales) VALUES (?, ?, ?, ?)";
         $insert = $conexion->prepare($sql_insert);
@@ -54,6 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Ejecutamos la sentencia preparada
         $insert->execute();
         $insert->close();
+        $idCitaCreada=obtenerIDCitaPsicologica($idPacienteLogin,$id_profesional,$fecha_cita,$hora_cita);
+        header("Location: citaPsicologia_completada.php?idCita=$idCitaCreada");
+        exit();
     }
 }
 
@@ -121,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     </div>
                 </div>
 
-                <button class="botonform" type="submit" name="Enviar">Enviar formulario</button>
+                <button class="botonform" type="submit" name="Enviar_Form">Enviar formulario</button>
                 <button class="botonVolver" type="button" name="VolverIndex" onclick="window.location.href='index.php';">Volver inicio</button>
             </form>
         </div>

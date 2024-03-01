@@ -15,7 +15,7 @@ function obtenerEvento($idEvento){
     $conexion->close();
     return $eventos;
 }
-// Inicializar variables
+
 $idEvento = $conexion->real_escape_string($_GET['idEvento']);
 $eventoReservado=obtenerEvento($idEvento);
 $idPacienteLogin;
@@ -39,7 +39,7 @@ if (isset($_SESSION['idPacienteLogin'])){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/reservaEventos.css">
         <link rel="icon" href="img/logo.png" type="image/x-icon">
-        <title>Reservar Completada</title>
+        <title>Reserva Completada</title>
     </head>
     <body class="reservaEvento">
         <div class="subrayado">
