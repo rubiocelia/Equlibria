@@ -249,7 +249,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                     incansablemente para asegurar que cada niño experimente un crecimiento saludable y
                                     positivo.</p>
                                 <br><br>
-                                <a href="cv/cv_beatriz.pdf" class="boton-cv" target="_blank">Ver CV</a>
+                                <a href="cv/CV Beatriz.pdf" class="boton-cv" target="_blank">Ver CV</a>
                             </div>
                             <div class="testimonial-slide swiper-slide">
                                 <img src="../Proyecto_integrador/img/prof3.png" alt="fernando">
@@ -265,7 +265,7 @@ if (isset($_SESSION['idPacienteLogin'])){
                                     Fernando trabaja incansablemente para fomentar un crecimiento positivo y saludable
                                     en cada niño.</p>
                                 <br><br>
-                                <a href="cv/cv_fernando.pdf" class="boton-cv" target="_blank">Ver CV</a>
+                                <a href="cv/CV Fernando.pdf" class="boton-cv" target="_blank">Ver CV</a>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
