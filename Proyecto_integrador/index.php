@@ -159,7 +159,7 @@ if (isset($_SESSION['idPacienteLogin'])){
             <img class="prof5" src="img/prof5.png">
             <img class="prof6" src="img/prof6.png">
             <br>
-            <button>¡Conoce a nuestro equipo!</button>
+            <a href="QuienesSomos.php#psicologos"><button>¡Conoce a nuestro equipo!</button></a>
         </div>
 
         <div>

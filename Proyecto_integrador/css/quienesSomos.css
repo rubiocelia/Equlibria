@@ -68,7 +68,7 @@ nav {
 }
 
 .menu.active {
-  display: block; /* Mostrar el menú cuando se hace clic en el icono de la hamburguesa */
+  display: block;
 }
 
 /* Estilo básico para el botón de hamburguesa */
@@ -298,30 +298,33 @@ main {
 /* Estilo para el contenedor Flex */
 .contenedorFlex {
   display: flex;
-    flex-direction: row; /* Alinea los elementos horizontalmente */
-    justify-content: space-between; /* Espacia los elementos uniformemente */
-    align-items: center; /* Alinea los elementos verticalmente en el centro */
+  flex-direction: row; /* Alinea los elementos horizontalmente */
+  justify-content: space-between; /* Espacia los elementos uniformemente */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
   margin-top: 50px;
 }
 
-.video, .parrafo {
+.video,
+.parrafo {
   flex: 1; /* Asigna un ancho inicial a los elementos, ajustando para el espacio entre */
+  padding: 0px 20px;
 }
 
-.parrafo{
-  width: 700px;
+.parrafo {
+  width: 550px;
 }
-.video{
+.video {
   margin-top: 14px;
 }
 
 /* Estilos adicionales para garantizar la responsividad */
 @media (max-width: 768px) {
   .contenedorFlex {
-      flex-direction: column; /* Coloca los elementos en una columna en pantallas pequeñas */
+    flex-direction: column; /* Coloca los elementos en una columna en pantallas pequeñas */
   }
-  .video, .parrafo {
-      flex-basis: 100%; /* Los elementos ocupan todo el ancho del contenedor en pantallas pequeñas */
+  .video,
+  .parrafo {
+    flex-basis: 100%; /* Los elementos ocupan todo el ancho del contenedor en pantallas pequeñas */
   }
 }
 
@@ -841,10 +844,10 @@ main {
   .subrayadoAsistentesM h3 {
     transform: translate(0px, -25px);
   }
-  .container3{
+  .container3 {
     margin-top: -100px;
   }
-  .boton-cv{
+  .boton-cv {
     font-size: 16px;
   }
   .subrayadoAsistentesN {
@@ -873,21 +876,21 @@ main {
     height: 100%;
     margin-left: 0px;
     margin-top: -300px;
-    padding: 200px 0px;
+    padding: 200px 10px;
   }
-  .btn-big {
+  /* .btn-big {
     margin-top: 10px;
     width: 400px;
     height: 70px;
     font-size: 20px;
     cursor: pointer;
-  }
+  } */
 
   .testimonial-container .testimonial-wrapper {
     position: relative;
     max-width: 80rem;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .testimonial-wrapper .testimonial-box {
@@ -903,7 +906,7 @@ main {
     background: none;
     border-radius: 2rem;
     box-shadow: 0 0.5rem 0.5rem var(--verde-oscuro);
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
     border-top: 0.8rem solid var(--verde-oscuro);
     border-bottom: 0.8rem solid var(--verde-oscuro);
   }
@@ -962,21 +965,21 @@ main {
     margin-top: -30px;
     flex-direction: column; /* Alinea los elementos verticalmente en pantallas más pequeñas */
   }
-  
-  .parrafo{
+
+  .parrafo {
     width: 600px;
     font-size: 16px;
   }
-  .video{
+  .video {
     margin-top: 30px; /* Añade un espacio entre el texto y el video */
     width: 100px;
     height: 200px;
   }
 
-  iframe{
+  iframe {
     width: 650px;
     height: 350px;
-    margin-left: -250px;
+    margin-left: -290px;
   }
   .menu {
     display: none;
@@ -1042,6 +1045,12 @@ main {
 
 /* Estilos para pantallas de dispositivos móviles */
 @media only screen and (max-width: 575px) {
+  .pgquienessomos {
+    text-align: center;
+    width: auto;
+    height: auto;
+    display: flex;
+  }
   .hamburger {
     display: block;
     text-align: right;
@@ -1125,7 +1134,6 @@ main {
     text-align: center;
     margin: 50px auto;
     font-family: "Bellefair";
-    margin-top: 600px;
   }
 
   .subrayadoQuienesSomos h3 {
@@ -1137,20 +1145,20 @@ main {
     margin-top: -30px;
     flex-direction: column; /* Alinea los elementos verticalmente en pantallas más pequeñas */
   }
-  
-  .parrafo{
+
+  .parrafo {
     width: 300px;
     order: 1;
     font-size: 16px;
   }
-  .video{
+  .video {
     order: 2; /* Asegura que el video aparezca debajo del texto */
     margin-top: 20px; /* Añade un espacio entre el texto y el video */
     width: 100px;
     height: 200px;
   }
 
-  iframe{
+  iframe {
     width: 350px;
     height: 350px;
     margin-left: -120px;
@@ -1161,9 +1169,9 @@ main {
     font-size: 28px;
     width: 200px;
     text-align: center;
+    align-items: center;
     margin: 100px auto;
     font-family: "Bellefair";
-    margin-top: 650px;
     margin-left: 135px;
   }
   .subrayadoPsicologos h3 {
@@ -1183,7 +1191,7 @@ main {
   .subrayadoAsistentesM h3 {
     transform: translate(0px, -25px);
   }
-  .container3{
+  .container3 {
     margin-top: -100px;
   }
   .subrayadoAsistentesN {
